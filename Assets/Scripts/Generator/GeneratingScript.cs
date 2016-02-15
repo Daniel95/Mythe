@@ -41,7 +41,7 @@ public class GeneratingScript : MonoBehaviour {
 		testScore++;
 		int whatToSpawn = Random.Range (0, gameObjectList.Count);
 		float xPosition = Random.Range (minXPosition, maxXPosition);
-		spawnPosition = new Vector2 (xPosition, 0);
+		spawnPosition = new Vector2 (xPosition, this.transform.position.y);
 
 		//This is where the object actually spawns.
 		Instantiate (gameObjectList [whatToSpawn],spawnPosition,Quaternion.identity);

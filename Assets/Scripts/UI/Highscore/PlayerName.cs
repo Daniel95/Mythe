@@ -2,11 +2,11 @@
 
 public class PlayerName : MonoBehaviour
 {
-    private string _playerName;
+    private string playerName;
 
     public string Name
     {
-        get { return _playerName; }
-        set { _playerName = value; }
+        get { return playerName; }
+        set { playerName = value; }
     }
 }

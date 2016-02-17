@@ -1169,9 +1169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minShakeTime: 2
-  maxShakeTime: 30
-  minShakeStrength: 0.1
-  maxShakeStrength: 0.25
+  maxShakeTime: 45
+  minShakeStrength: -0.06
+  maxShakeStrength: 0.06
 --- !u!1 &1476543080
 GameObject:
   m_ObjectHideFlags: 0

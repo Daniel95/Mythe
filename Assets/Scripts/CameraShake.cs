@@ -27,7 +27,6 @@ public class CameraShake : MonoBehaviour {
         //can only shake if not already shaking
         if (!shaking)
             StartCoroutine(Shake());
-            print("startshake");
     }
 
     private IEnumerator Shake()
@@ -37,26 +36,22 @@ public class CameraShake : MonoBehaviour {
         //save the initual position when when start shaking
         Vector3 startPos = transform.position;
 
-        float shakeTime = Random.Range(minShakeTime, maxShakeTime);
+        //choose a random number between minshake and maxshake, that is the amount of times we are going to shake
+        float shakeTimes = Random.Range(minShakeTime, maxShakeTime);
 
         //decrement the shakeTime until its 0 or below, then we stop shaking
-        while (shakeTime >= 0)
+        while (shakeTimes >= 0)
         {
-            shakeTime--;
+            //decrement the amount of shakes we have left
+            shakeTimes--;
 
-            float positionChange = Random.Range(minShakeStrength, maxShakeStrength);
-            if (Random.Range(0, 0.99f) < 0.5f)
-                positionChange *= -1;
+            //says the position is startpos x/y incremented by a random number between minShakeStrength and maxShakeStrength
+            transform.position = new Vector3(startPos.x + Random.Range(minShakeStrength, maxShakeStrength), startPos.y + Random.Range(minShakeStrength, maxShakeStrength), startPos.z);
 
-            //shake on the x or y as is randomly chosen
-            if (Random.Range(0, 0.99f) < 0.5f)
-                //the new pos is the startpos plus the position change on the x or y axis
-                transform.position = new Vector3(startPos.x + positionChange, startPos.y, startPos.z);
-            else
-                transform.position = new Vector3(startPos.x, startPos.y + positionChange, startPos.z);
             yield return new WaitForFixedUpdate();
         }
 
+        //reset the position to the position before we started shaking
         transform.position = startPos;
 
         shaking = false;

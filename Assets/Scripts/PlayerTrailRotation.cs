@@ -7,7 +7,7 @@ public class PlayerTrailRotation : MonoBehaviour {
 	private Vector3 scale;
 
 	private float scaling = 0.01f;
-	private float speed = -0.025f;
+	private float speed = -0.07f;
 
 	// Use this for initialization
 	void Start () {

@@ -47,7 +47,11 @@ public class GeneratingScript : MonoBehaviour {
 
 		//This is where the object actually spawns. This script now uses an ObjectPool.
 		spawnedObject = ObjectPool.instance.GetObjectForType (spawnableObjectList[whatToSpawn], true);
-		spawnedObject.transform.position = spawnPosition;
+        if(spawnedObject != null)
+        {
+            spawnedObject.transform.position = spawnPosition;
+        }
+		
 		StartCoroutine (SpawnCounter());
 	}
 

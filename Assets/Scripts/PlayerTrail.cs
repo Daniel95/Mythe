@@ -11,7 +11,7 @@ public class PlayerTrail : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		fwdSpeed = new Vector3 (0, speed, +0.1f);
+		fwdSpeed = new Vector3 (0, speed, +0.0001f);
 		scale = new Vector3 (scaling, scaling, scaling);
 	}
 	

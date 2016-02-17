@@ -29,7 +29,7 @@ public class WaterBar : MonoBehaviour {
         
     }
 
-    void Update() {
+    void FixedUpdate() {
 
 
         //this input with space can be deleted, its only for test purposes.
@@ -96,4 +96,5 @@ public class WaterBar : MonoBehaviour {
         temp.x = health;
         transform.localScale = temp;
 	}
+    
 }

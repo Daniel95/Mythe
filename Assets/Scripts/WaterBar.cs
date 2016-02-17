@@ -32,16 +32,7 @@ public class WaterBar : MonoBehaviour {
     void FixedUpdate() {
 
 
-        //this input with space can be deleted, its only for test purposes.
-        //-----
-        if (Input.GetKeyDown("space"))
-        {
-            addValue(0.1f);
-        }
-        //-----
-
-
-
+        
         if (health > maxHealth)
         {
             superSayenMode = true;
@@ -81,7 +72,7 @@ public class WaterBar : MonoBehaviour {
         }
         else
         {
-            health += speed * 4;
+            health += speed * 8;
         }
 
         //when your bar is zero.

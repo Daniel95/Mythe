@@ -16,18 +16,27 @@ public class PlayerTest : MonoBehaviour {
         
     }
 	
-	// Update is called once per frame
 	void Update () {
         speedx = Input.GetAxis("Horizontal");
         speedy = Input.GetAxis("Vertical");
         
         rigidbody2D.velocity = new Vector2(speedx *speed,speedy *speed);
 	}
-    void OnTriggerEnter2D(Collider2D other)
+
+
+    //this triggerenter needs to be added for the player so it can interact with other objects.
+    void OnTriggerStay2D(Collider2D other)
     {
-        //
-        Destroy(other.gameObject);
-        float _value = other.GetComponent<PickUp>().Value;
-        WaterBar.GetComponent<WaterBar>().addValue(_value);
+        
+        if(other.gameObject.GetComponent<InteractableObject>().DestroyOnTouch)
+        {
+            Destroy(other.gameObject);
+        }
+        float _value = other.gameObject.GetComponent<InteractableObject>().Value;
+        if(WaterBar != null)
+        {
+            WaterBar.GetComponent<WaterBar>().addValue(_value);
+        }
+        
     }
 }

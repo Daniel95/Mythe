@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class GeneratingScript : MonoBehaviour {
 	//The first list contains objects that will spawn from the start. The second one contains objects that will be spawned after the player has achieved a certain score.
 	[SerializeField]
-	private List<GameObject> gameObjectList = new List<GameObject> ();
+	private List<string> spawnableObjectList = new List<string> ();
 	[SerializeField]
-	private List<GameObject> extraObjectList = new List<GameObject> ();
+	private List<string> extraObjectList = new List<string> ();
 
 	[SerializeField]
 	private List<int> unlockValues = new List<int>();
@@ -27,6 +27,8 @@ public class GeneratingScript : MonoBehaviour {
 
 	private Vector2 spawnPosition;
 
+	private GameObject spawnedObject;
+
 
 	void Start()
 	{
@@ -39,13 +41,13 @@ public class GeneratingScript : MonoBehaviour {
 		//Possibly add new enemies.
 		AddNewObjects ();
 		testScore++;
-		int whatToSpawn = Random.Range (0, gameObjectList.Count);
+		int whatToSpawn = Random.Range (0, spawnableObjectList.Count);
 		float xPosition = Random.Range (minXPosition, maxXPosition);
 		spawnPosition = new Vector2 (xPosition, this.transform.position.y);
 
-		//This is where the object actually spawns.
-		Instantiate (gameObjectList [whatToSpawn],spawnPosition,Quaternion.identity);
-
+		//This is where the object actually spawns. This script now uses an ObjectPool.
+		spawnedObject = ObjectPool.instance.GetObjectForType (spawnableObjectList[whatToSpawn], true);
+		spawnedObject.transform.position = spawnPosition;
 		StartCoroutine (SpawnCounter());
 	}
 
@@ -65,7 +67,7 @@ public class GeneratingScript : MonoBehaviour {
 			if (testScore >= unlockValues[i]) 
 				{
 					unlockValues.Remove (unlockValues[i]);
-					gameObjectList.Add (extraObjectList [i]); 
+					spawnableObjectList.Add (extraObjectList [i]); 
 					extraObjectList.Remove (extraObjectList [i]);
 				}
 			}

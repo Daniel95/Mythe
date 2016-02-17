@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 439006}
   - 212: {fileID: 21238342}
   - 114: {fileID: 11408008}
+  - 114: {fileID: 11479814}
   m_Layer: 0
   m_Name: TestObject_4
   m_TagString: Untagged
@@ -41,6 +42,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: -0.15
+--- !u!114 &11479814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ffabd11518b4658a474c6ac764ae93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerEnd: 150
 --- !u!212 &21238342
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -90,6 +103,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: timerEnd
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

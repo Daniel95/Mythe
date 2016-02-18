@@ -24,9 +24,11 @@ public class Highscore : MonoBehaviour
 
         WWWForm form = new WWWForm();
         form.AddField("name", plrName);
+        form.AddField("score", _distance * _pickups);
         form.AddField("pickups", _pickups);
         form.AddField("distance", _distance);
         form.AddField("time", _time);
+        form.AddField("deaths", 10);
 
         WWW www = new WWW(url, form);
 
@@ -41,7 +43,7 @@ public class Highscore : MonoBehaviour
         string url = "http://14411.hosts.ma-cloud.nl/mythen/getscores.php";
 
         WWWForm form = new WWWForm();
-        form.AddField("getType", scoreToLoad);
+        form.AddField("scoreType", "time");
 
         WWW www = new WWW(url, form);
 
@@ -52,7 +54,6 @@ public class Highscore : MonoBehaviour
     IEnumerator WaitForRequest(WWW www, bool scoreAlreadyLoaded)
     {
         yield return www;
-
         if (scoreAlreadyLoaded)
         {
             print(www.text);

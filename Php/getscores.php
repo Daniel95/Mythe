@@ -15,13 +15,13 @@ if ($conn->connect_error) {
 
 //Read table in sql and order
 //$sql = "SELECT name, pickups FROM Scores ORDER BY cast(Scores as Signed) DESC";
-$sql="SELECT * FROM Scores ORDER BY '$scoreType'";
+$sql="SELECT * FROM Scores ORDER BY $scoreType DESC";
+//$sql="SELECT * FROM scores ORDER BY '$scoreType' DESC LIMIT 10";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        //echo $row["id"]. "-" .$row["name"]. "-" .$row["pickups"]. "-".$row["distance"]. "-".$row["time"]."-".$row["deaths"]."t/";
         echo $row["name"]. "-" .$row[$scoreType]. "\r\n";
     }
 } else {

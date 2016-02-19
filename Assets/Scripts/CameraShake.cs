@@ -10,10 +10,7 @@ public class CameraShake : MonoBehaviour {
     private int maxShakeTime;
 
     [SerializeField]
-    private float minShakeStrength;
-
-    [SerializeField]
-    private float maxShakeStrength;
+    private float shakeStrength;
 
     private bool shaking;
 
@@ -46,7 +43,7 @@ public class CameraShake : MonoBehaviour {
             shakeTimes--;
 
             //says the position is startpos x/y incremented by a random number between minShakeStrength and maxShakeStrength
-            transform.position = new Vector3(startPos.x + Random.Range(minShakeStrength, maxShakeStrength), startPos.y + Random.Range(minShakeStrength, maxShakeStrength), startPos.z);
+            transform.position = new Vector3(startPos.x + Random.Range(-shakeStrength, shakeStrength), startPos.y + Random.Range(-shakeStrength, shakeStrength), startPos.z);
 
             yield return new WaitForFixedUpdate();
         }

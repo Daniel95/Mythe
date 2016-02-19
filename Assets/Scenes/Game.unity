@@ -888,8 +888,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134, y: 99}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 162.3, y: -46}
+  m_SizeDelta: {x: 160, y: 320.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1148781811
 MonoBehaviour:
@@ -923,7 +923,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &1148781812
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1170,8 +1170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minShakeTime: 2
   maxShakeTime: 45
-  minShakeStrength: -0.06
-  maxShakeStrength: 0.06
+  shakeStrength: 0.01
 --- !u!1 &1476543080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,8 +1661,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 132, y: 99}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -132.8, y: -46.024994}
+  m_SizeDelta: {x: 160, y: 320.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062022564
 MonoBehaviour:
@@ -1697,7 +1696,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &2062022565
 CanvasRenderer:
   m_ObjectHideFlags: 0

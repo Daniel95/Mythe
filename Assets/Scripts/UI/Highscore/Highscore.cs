@@ -43,7 +43,7 @@ public class Highscore : MonoBehaviour
         string url = "http://14411.hosts.ma-cloud.nl/mythen/getscores.php";
 
         WWWForm form = new WWWForm();
-        form.AddField("scoreType", "time");
+        form.AddField("scoreType", "pickups");
 
         WWW www = new WWW(url, form);
 
@@ -57,6 +57,8 @@ public class Highscore : MonoBehaviour
         if (scoreAlreadyLoaded)
         {
             print(www.text);
+            board.MakeScoreBoard(www.text);
+            //print(www.text);
             //board.MakeTimeBoard(www.text);
         }
         else GetScore(scoreToLoad);

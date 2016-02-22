@@ -3,8 +3,8 @@ using System.Collections;
 
 public class BackgroundLooper : MonoBehaviour {
 
-	[SerializeField]
-	private float scrollingSpeed;
+    [SerializeField]
+    private float loopSpeed = 0.2f;
 
 	private Renderer bgRenderer;
 
@@ -14,7 +14,7 @@ public class BackgroundLooper : MonoBehaviour {
 
 	void FixedUpdate () {
 		//Sets the offset of the texture to give the illusion of looping
-		Vector2 offset = new Vector2 (0,Time.time*scrollingSpeed);
+		Vector2 offset = new Vector2 (0,Time.time* (loopSpeed * GameSpeed.Speed));
 		bgRenderer.material.mainTextureOffset = offset;﻿
 	}
 }

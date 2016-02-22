@@ -21,9 +21,9 @@ public class GeneratingScript : MonoBehaviour {
     private int yPosition;
 
 	[SerializeField]
-	private int minXPosition;
+	private float minXPosition;
 	[SerializeField]
-	private int maxXPosition;
+	private float maxXPosition;
 
 	//This is only for testing, will be removed later.
 	private int testScore;
@@ -61,7 +61,7 @@ public class GeneratingScript : MonoBehaviour {
 	IEnumerator SpawnCounter()
 	{
 		//Wait a random (but controlled) time in between spawns...
-		yield return new WaitForSeconds (Random.Range (minTimeInBetweenSpawns, maxTimeInBetweenSpawns));
+		yield return new WaitForSeconds (Random.Range (minTimeInBetweenSpawns, maxTimeInBetweenSpawns) / GameSpeed.Speed);
 		//Since the IENumerator and function call on each other objects will spawn in intervals.
 		SpawnNextObject ();
 	}

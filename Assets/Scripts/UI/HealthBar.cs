@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
 public class HealthBar : MonoBehaviour {
 
     private float health;
@@ -24,6 +24,7 @@ public class HealthBar : MonoBehaviour {
         currentHealth = maxHealth/2;
         health = currentHealth;
         speed = maxHealth / 1000;
+        StartCoroutine(NormalMode());
 	}
 
 	public void addValue(float _value){
@@ -31,43 +32,44 @@ public class HealthBar : MonoBehaviour {
         currentHealth += _value;
         
     }
+    
+    private IEnumerator SuperSayenMode()
+    {
+        superSayenMode = true;
+        //while you're in super sayen mode.
+        while (currentHealth > maxHealth / 2)
+        {
+            //your bar drops twice as fast.
+            currentHealth -= speed * 2;
+
+            //color is green.
+            waterRenderer.color = Color.green;
+
+            yield return new WaitForFixedUpdate();
+        }
+        superSayenMode = false;
+        StartCoroutine(NormalMode());
+    }
+    private IEnumerator NormalMode()
+    {
+
+        while(health < maxHealth)
+        {
+            //normal speed.
+            currentHealth -= speed;
+
+            //the color is based of the vaule, when it goes to zero, it becomes more red, when towards maxhealth, it becomes more blue.
+            waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
+            yield return new WaitForFixedUpdate();
+        }
+        currentHealth = maxHealth;
+        StartCoroutine(SuperSayenMode());
+    }
 
     void FixedUpdate()
     {
         if (playing)
         {
-            if (health > maxHealth)
-            {
-                superSayenMode = true;
-                currentHealth = maxHealth;
-            }
-
-            //when in supersayenform,
-            if (superSayenMode)
-            {
-                //your bar drops twice as fast.
-                currentHealth -= speed * 2;
-
-                //color is green.
-                waterRenderer.color = Color.green;
-
-                //goes over when you reach the half of your bar.
-                if (currentHealth < maxHealth / 2)
-                {
-                    superSayenMode = false;
-                }
-            }
-
-            //when you are in normal mode.
-            else
-            {
-                //normal speed.
-                currentHealth -= speed;
-
-                //the color is based of the vaule, when it goes to zero, it becomes more red, when towards maxhealth, it becomes more blue.
-                waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
-            }
-
             //this makes sure that when you add value, it will go towards to it, instead of transporting to the new value.
             if (health > currentHealth)
             {

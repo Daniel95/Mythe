@@ -14,9 +14,7 @@ if ($conn->connect_error) {
 }
 
 //Read table in sql and order
-//$sql = "SELECT name, pickups FROM Scores ORDER BY cast(Scores as Signed) DESC";
-$sql="SELECT * FROM Scores ORDER BY $scoreType DESC";
-//$sql="SELECT * FROM scores ORDER BY '$scoreType' DESC LIMIT 10";
+$sql="SELECT * FROM Scores ORDER BY $scoreType LIMIT 10";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

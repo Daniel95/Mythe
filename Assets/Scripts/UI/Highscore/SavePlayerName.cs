@@ -8,6 +8,9 @@ public class SavePlayerName : MonoBehaviour
     private PlayerName _plrName;
 
     [SerializeField]
+    private SceneLoader sceneLoader;
+
+    [SerializeField]
     private Button submitButton;
 
     [SerializeField]
@@ -20,18 +23,14 @@ public class SavePlayerName : MonoBehaviour
     {
         //we cannot click on the submit button until be entered our name
         submitButton.interactable = false;
-        var input = gameObject.GetComponent<InputField>();
-
-        //when the user is done typing, check if the name is correct
-        //input.onEndEdit.AddListener(SubmitName);
     }
 
-    public void SubmitName(string input)
+    public void SubmitName(string _input)
     {
-        if (input.Length > minNameLength && input.Length < maxNameLength)
+        if (_input.Length > minNameLength && _input.Length < maxNameLength)
         {
             //save the name in playerName script
-            _plrName.Name = input;
+            _plrName.Name = _input;
             //the player can click the button to continue
             submitButton.interactable = true;
             //the player can hit enter to continue
@@ -53,12 +52,6 @@ public class SavePlayerName : MonoBehaviour
         {
             yield return null;
         }
-        nextScene();
-    }
-
-
-    private void nextScene()
-    {
-        GetComponent<SceneLoader>().loadNextScene();
+        sceneLoader.loadNextScene();
     }
 }

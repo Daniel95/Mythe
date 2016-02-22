@@ -619,6 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plrName: {fileID: 303561830}
+  sceneLoader: {fileID: 1539685729}
   submitButton: {fileID: 1169934470}
   minNameLength: 2
   maxNameLength: 20

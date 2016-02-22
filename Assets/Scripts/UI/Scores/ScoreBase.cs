@@ -36,6 +36,14 @@ public class ScoreBase : MonoBehaviour {
 
     }
 
+    public void IncrementScore() {
+        if (counting) ChangeValue(1);
+    }
+
+    protected virtual void ChangeValue(int change) {
+        UpdateTextField();
+    }
+
     public virtual void ResetValue() {
         UpdateTextField();
     }

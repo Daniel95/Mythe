@@ -3,14 +3,24 @@ using System.Collections;
 
 public class Highscore : MonoBehaviour
 {
-    private bool loading;
+    [SerializeField]
+    private PlayerDistance plrDistance;
+
+    [SerializeField]
+    private PlayerDeaths plrDeaths;
+
+    [SerializeField]
+    private TimePlaying timePlaying;
+
+    [SerializeField]
+    private PlayerPickups plrPickups;
 
     private ScoreBoard board;
 
     private string plrName = "Anonymous";
 
     [SerializeField]
-    private string scoreToLoad = "distance";
+    private string scoreToLoad = "pickups";
 
     void Start()
     {
@@ -18,7 +28,11 @@ public class Highscore : MonoBehaviour
         if (GameObject.Find("plrName") != null) plrName = GameObject.Find("plrName").GetComponent<PlayerName>().Name;
     }
 
-    public void SaveScore(int _pickups, int _distance, int _time)
+    public void SavePlayerScores() {
+        Save(plrPickups.Pickups, plrDistance.Distance, timePlaying.TimeInt());
+    }
+
+    private void Save(int _pickups, int _distance, int _time)
     {
         string url = "http://14411.hosts.ma-cloud.nl/mythen/savescores.php";
 
@@ -43,7 +57,7 @@ public class Highscore : MonoBehaviour
         string url = "http://14411.hosts.ma-cloud.nl/mythen/getscores.php";
 
         WWWForm form = new WWWForm();
-        form.AddField("scoreType", "pickups");
+        form.AddField("scoreType", scoreToLoad);
 
         WWW www = new WWW(url, form);
 
@@ -54,12 +68,10 @@ public class Highscore : MonoBehaviour
     IEnumerator WaitForRequest(WWW www, bool scoreAlreadyLoaded)
     {
         yield return www;
+
         if (scoreAlreadyLoaded)
         {
-            print(www.text);
             board.MakeScoreBoard(www.text);
-            //print(www.text);
-            //board.MakeTimeBoard(www.text);
         }
         else GetScore(scoreToLoad);
     }

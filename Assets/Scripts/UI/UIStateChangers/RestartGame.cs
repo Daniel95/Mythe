@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class RestartGame : MonoBehaviour {
@@ -7,26 +8,22 @@ public class RestartGame : MonoBehaviour {
     private List<ScoreBase> scores;
 
     [SerializeField]
-    private GameObject scoreBoard;
+    private GameObject gameOverScreen;
 
     [SerializeField]
-    private GameObject finishButton;
-
-    void Start() {
-        gameObject.SetActive(false);
-    }
+    private HealthBar healthBar;
 
     public void Restart()
     {
-        scoreBoard.SetActive(false);
-
+        //reset every score, and continue counting score
         foreach (ScoreBase _score in scores)
         {
-            _score.Counting = true;
             _score.ResetValue();
+            _score.Counting = true;
         }
 
-        finishButton.SetActive(true);
-        gameObject.SetActive(false);
+        healthBar.Restart();
+
+        gameOverScreen.SetActive(false);
     }
 }

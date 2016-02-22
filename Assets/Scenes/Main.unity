@@ -242,7 +242,7 @@ GameObject:
   - 50: {fileID: 1787843274}
   - 114: {fileID: 1787843275}
   m_Layer: 0
-  m_Name: shuttle4
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,7 +304,10 @@ MonoBehaviour:
   maxSpeed: 5
   mass: 10
   followPath: 1
-  trail: {fileID: 101702, guid: 530514e073bb2455289698d379a1a16f, type: 2}
+  trail: {fileID: 150780, guid: 78980759e40d24f8286816c41ed130a2, type: 2}
+  fading: 0.2
+  spawnSpeedStill: 0.4
+  spawnSpeedNormal: 0.15
 --- !u!50 &1787843274
 Rigidbody2D:
   serializedVersion: 2

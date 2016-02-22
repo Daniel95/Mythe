@@ -28,8 +28,16 @@ public class PlayerMovement : MonoBehaviour {
 	private float green = 0f;
 	private float blue = 0f;
 
+	[SerializeField]
 	private float fading = 0.2f;
+
 	private float spawnSpeed = 0.1f;
+
+	[SerializeField]
+	private float spawnSpeedStill = 0.2f;
+
+	[SerializeField]
+	private float spawnSpeedNormal = 0.1f;
 
 	void Start () {
 		// we starten zonder beweging (geen velocity)
@@ -90,9 +98,10 @@ public class PlayerMovement : MonoBehaviour {
 		Vector2 desiredStep = currentTarget - currentPosition;
 
 		if (desiredStep.magnitude < 0.05) {
-			spawnSpeed = 0.2f;
+			spawnSpeed = spawnSpeedStill;
+			transform.localEulerAngles = new Vector3(0,0,90);
 		} else {
-			spawnSpeed = 0.1f;
+			spawnSpeed = spawnSpeedNormal;
 		// deze desiredStep mag niet groter zijn dan de maximale Speed
 		//
 		// als een vector ge'normalized' is .. dan houdt hij dezelfde richting

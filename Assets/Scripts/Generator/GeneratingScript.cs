@@ -8,6 +8,8 @@ public class GeneratingScript : MonoBehaviour {
 	private List<string> spawnableObjectList = new List<string> ();
 	[SerializeField]
 	private List<string> extraObjectList = new List<string> ();
+	[SerializeField]
+	private List<int> chunkLengthTime = new List<int>();
 
 	[SerializeField]
 	private List<int> unlockValues = new List<int>();
@@ -21,9 +23,9 @@ public class GeneratingScript : MonoBehaviour {
     private int yPosition;
 
 	[SerializeField]
-	private float minXPosition;
+	private int minXPosition;
 	[SerializeField]
-	private float maxXPosition;
+	private int maxXPosition;
 
 	//This is only for testing, will be removed later.
 	private int testScore;
@@ -32,11 +34,19 @@ public class GeneratingScript : MonoBehaviour {
 
 	private GameObject spawnedObject;
 
+	[SerializeField]
+	private bool amISpawningChunks;
+
+	private int spawnIndicator;
+
+
+
 
 	void Start()
 	{
 		//Start spawning objects!
-		StartCoroutine (SpawnCounter());
+		StartCoroutine (SpawnCounter(0));
+
 	}
 
 	void SpawnNextObject()
@@ -55,16 +65,25 @@ public class GeneratingScript : MonoBehaviour {
             spawnedObject.transform.position = spawnPosition;
         }
 		
-		StartCoroutine (SpawnCounter());
+		StartCoroutine (SpawnCounter(whatToSpawn));
 	}
 
-	IEnumerator SpawnCounter()
+	IEnumerator SpawnCounter(int whatChunk)
 	{
-		//Wait a random (but controlled) time in between spawns...
-		yield return new WaitForSeconds (Random.Range (minTimeInBetweenSpawns, maxTimeInBetweenSpawns) / GameSpeed.Speed);
+		if (amISpawningChunks) 
+		{
+			//If you spawn a chunk, wait a defined period.g
+			yield return new WaitForSeconds (chunkLengthTime [whatChunk]);
+		} 
+		else 
+		{
+			//Wait a random (but controlled) time in between spawns...
+			yield return new WaitForSeconds (Random.Range (minTimeInBetweenSpawns, maxTimeInBetweenSpawns));
+		}
 		//Since the IENumerator and function call on each other objects will spawn in intervals.
 		SpawnNextObject ();
 	}
+
 
 	void AddNewObjects()
 	{

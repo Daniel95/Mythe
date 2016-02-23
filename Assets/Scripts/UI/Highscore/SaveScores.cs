@@ -36,7 +36,7 @@ public class SaveScores : MonoBehaviour {
 
         WWWForm form = new WWWForm();
         form.AddField("name", plrName);
-        form.AddField("score", _distance * _pickups);
+        //form.AddField("score", _distance * _pickups);
         form.AddField("pickups", _pickups);
         form.AddField("distance", _distance);
         form.AddField("time", _time);

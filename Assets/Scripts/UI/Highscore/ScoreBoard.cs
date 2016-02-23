@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class ScoreBoard : MonoBehaviour
 {
@@ -29,12 +28,13 @@ public class ScoreBoard : MonoBehaviour
         string[] myStr = score.Trim().Split('\n');
 
         foreach (string text in myStr) {
-            string[] myStr2 = text.Split('_');
+            string[] myStr2 = text.Split('-');
             namesFieldTextField.text += myStr2[0] + "\n";
             scoresTextField.text += myStr2[1] + "\n";
         }
     }
 
+    /*
     public void MakeTimeBoard(string score)
     {
 
@@ -65,5 +65,5 @@ public class ScoreBoard : MonoBehaviour
             var time = string.Format("{0:00}:{1:00}:{2:00}", minStr, secStr, fracStr);
             scoresTextField.text += time + "\n";
         }
-    }
+    }*/
 }

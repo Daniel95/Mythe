@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class SavePlayerName : MonoBehaviour
@@ -20,9 +19,6 @@ public class SavePlayerName : MonoBehaviour
     [SerializeField]
     private int maxNameLength = 20;
 
-    [SerializeField]
-    private List<char> notAllowedCharacters;
-
     void Start()
     {
         //we cannot click on the submit button until be entered our name
@@ -31,7 +27,7 @@ public class SavePlayerName : MonoBehaviour
 
     public void SubmitName(string _input)
     {
-        if (_input.Length > minNameLength && _input.Length < maxNameLength && CharactersCheck(_input))
+        if (_input.Length > minNameLength && _input.Length < maxNameLength)
         {
             //save the name in playerName script
             _plrName.Name = _input;
@@ -57,18 +53,5 @@ public class SavePlayerName : MonoBehaviour
             yield return null;
         }
         sceneLoader.loadNextScene();
-    }
-
-    private bool CharactersCheck(string _input) {
-
-        for (int i = 0; i < _input.Length; i++) {
-            for (int b = 0; b < notAllowedCharacters.Count; b++) {
-                if (_input.ToCharArray()[i] == notAllowedCharacters[b])
-                {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 }

@@ -24,7 +24,7 @@ public class ScoreBase : MonoBehaviour {
         UpdateTextField();
     }
 
-    void FixedUpdate() {
+    void Update() {
         if (counting) Count();
     }
 

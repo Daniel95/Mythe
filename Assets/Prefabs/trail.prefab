@@ -67,7 +67,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_Color: {r: -0.19999997, g: 1, b: 0.000000029802322, a: 1}
+=======
+  m_Color: {r: 1, g: -0.19999997, b: 1, a: 1}
+>>>>>>> origin/Sprint-2
+=======
+  m_Color: {r: 0.8, g: 1, b: -0.19999997, a: 1}
+>>>>>>> parent of d03d3c4... Changed UI for Mobile format, fixed Highscores bugs
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000

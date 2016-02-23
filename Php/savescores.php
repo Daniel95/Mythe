@@ -18,7 +18,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, deaths) VALUES ('$name', '$score', '$pickups', '$distance', '$time,', '$deaths')";
+$sql = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, deaths) VALUES ('$name', '$score', '$pickup', '$distance', '$time,', '$deaths')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

@@ -38,9 +38,13 @@ public class HealthBar : MonoBehaviour {
         {
             if (health > maxHealth)
             {
+
+
                 superSayenMode = true;
                 currentHealth = maxHealth;
             }
+
+
 
             //when in supersayenform,
             if (superSayenMode)

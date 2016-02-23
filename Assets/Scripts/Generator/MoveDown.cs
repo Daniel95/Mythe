@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using System.Collections;
 
-public class MoveDown : MonoBehaviour
-{
-    [SerializeField]
-    private float moveDownSpeed = 0.11f;
+public class MoveDown : MonoBehaviour {
 
-    void FixedUpdate()
-    {
-        transform.Translate(new Vector3(0, -moveDownSpeed * GameSpeed.Speed, 0));
-    }
+	//Test script please ignore.
+
+	[SerializeField]
+	private float moveSpeed;
+
+	void FixedUpdate () {
+		transform.Translate (new Vector3 (0, moveSpeed, 0));
+	}
 }
-

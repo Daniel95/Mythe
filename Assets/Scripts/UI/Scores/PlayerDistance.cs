@@ -2,31 +2,30 @@
 
 public class PlayerDistance : ScoreBase {
 
-    [SerializeField]
-    private GameSpeed gameSpeed;
+    private float distanceValue;
 
-    private int distance;
+    private int distanceInt;
 
     protected override void Count()
     {
         base.Count();
-        distance = Mathf.RoundToInt(distance + GameSpeed.Speed);
+        distanceInt = Mathf.RoundToInt(distanceValue += 2 * Time.deltaTime);
         UpdateTextField();
     }
 
     protected override void UpdateTextField()
     {
         base.UpdateTextField();
-        textField.text = standardText + distance;
+        textField.text = standardText + distanceInt;
     }
 
     public override void ResetValue()
     {
-        distance = 0;
+        distanceValue = 0;
         base.ResetValue();
     }
 
     public int Distance {
-        get { return distance; }
+        get { return distanceInt; }
     }
 }

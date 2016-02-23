@@ -622,8 +622,7 @@ MonoBehaviour:
   sceneLoader: {fileID: 1539685729}
   submitButton: {fileID: 1169934470}
   minNameLength: 2
-  maxNameLength: 12
-  notAllowedCharacters: 5f00
+  maxNameLength: 20
 --- !u!114 &1539685726
 MonoBehaviour:
   m_ObjectHideFlags: 0

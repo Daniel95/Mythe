@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11408486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11442506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11450664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11457626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11462200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11464592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11475748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ffabd11518b4658a474c6ac764ae93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerEnd: 1000
+  timerEnd: 100
 --- !u!114 &11475924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11479126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -986,7 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11482300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -998,7 +998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11485988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11490706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11498840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1425,7 +1425,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: timerEnd
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: -0.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

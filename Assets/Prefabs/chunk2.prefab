@@ -579,7 +579,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189386}
   m_LocalRotation: {x: 0, y: 0, z: -0.060416315, w: 0.9981733}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.970585, y: 1.7503419, z: 0}
   m_LocalScale: {x: 1.6934613, y: 1.6934618, z: 1.6934617}
   m_Children:
   - {fileID: 422782}
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11405598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11406110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11410306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11419924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11427668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ffabd11518b4658a474c6ac764ae93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerEnd: 1000
+  timerEnd: 100
 --- !u!114 &11428182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11429418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11431138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11434436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11441480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11448076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11457210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1485,7 +1485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11461354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1535,7 +1535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11466468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11466592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1596,7 +1596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11476100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11478000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1645,7 +1645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11484774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11496878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11497160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1706,7 +1706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDownSpeed: 0.11
+  moveSpeed: -0.11
 --- !u!114 &11499282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2337,7 +2337,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: timerEnd
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: -0.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

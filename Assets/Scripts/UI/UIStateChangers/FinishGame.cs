@@ -7,21 +7,18 @@ public class FinishGame : MonoBehaviour {
     private List<ScoreBase> scores;
 
     [SerializeField]
-    private ScoreBoard scoreBoard;
+    private SaveScores saveScores;
 
     [SerializeField]
-    private GameObject restartButton;
+    private GameObject gameoverScreen;
 
     public void Finish() {
-
-        scoreBoard.gameObject.SetActive(true);
-        scoreBoard.Finished();
-
         foreach (ScoreBase _score in scores) {
             _score.Counting = false;
         }
 
-        restartButton.SetActive(true);
-        gameObject.SetActive(false);
+        gameoverScreen.SetActive(true);
+
+        saveScores.SavePlayerScores();
     }
 }

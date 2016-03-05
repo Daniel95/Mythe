@@ -1,23 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class ScoreBoard : MonoBehaviour
 {
     [SerializeField]
-    private PlayerDistance plrDistance;
-
-    [SerializeField]
-    private PlayerDeaths plrDeaths;
-
-    [SerializeField]
-    private TimePlaying timePlaying;
-
-    [SerializeField]
-    private PlayerPickups plrPickups;
-
-    private Highscore highScore;
+    private GameObject gameOverScreen;
 
     //private Text totalDeathsTextField;
     //private Text myDeathsTextField;
@@ -26,16 +14,25 @@ public class ScoreBoard : MonoBehaviour
 
     void Awake()
     {
-        highScore = GetComponent<Highscore>();
+        //highScore = GetComponent<Highscore>();
         //totalDeathsTextField = transform.Find("TotalDeathCounter").GetComponent<Text>();
         //myDeathsTextField = transform.Find("MyDeaths").GetComponent<Text>();
-        namesFieldTextField = transform.Find("NamesField").GetComponent<Text>();
-        scoresTextField = transform.Find("ScoresField").GetComponent<Text>();
+        namesFieldTextField = gameOverScreen.transform.Find("NamesField").GetComponent<Text>();
+        scoresTextField = gameOverScreen.transform.Find("ScoresField").GetComponent<Text>();
     }
 
-    public void Finished()
-    {
-        highScore.SaveScore(plrPickups.Pickups, plrDistance.Distance, timePlaying.TimeInt());
+    public void MakeScoreBoard(string score) {
+        //make the textfield clear so we can put a new score in them
+        namesFieldTextField.text = "";
+        scoresTextField.text = "";
+
+        string[] myStr = score.Trim().Split('\n');
+
+        foreach (string text in myStr) {
+            string[] myStr2 = text.Split('_');
+            namesFieldTextField.text += myStr2[0] + "\n";
+            scoresTextField.text += myStr2[1] + "\n";
+        }
     }
 
     public void MakeTimeBoard(string score)

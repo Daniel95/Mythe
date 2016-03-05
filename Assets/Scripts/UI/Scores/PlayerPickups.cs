@@ -5,22 +5,14 @@ public class PlayerPickups : ScoreBase {
 
     private int pickups;
 
-    protected override void Count()
-    {
-        base.Count();
-        if (Random.Range(0, 0.99f) < 0.01f)
-        {
-            incrementPickups();
-        }
-    }
-
     public int Pickups {
         get { return pickups; }
     }
 
-    public void incrementPickups() {
+    protected override void ChangeValue(int _value)
+    {
         pickups++;
-        UpdateTextField();
+        base.ChangeValue(_value);
     }
 
     protected override void UpdateTextField()

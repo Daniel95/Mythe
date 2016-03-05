@@ -13,8 +13,10 @@ public class BackgroundLooper : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		//Sets the offset of the texture to give the illusion of looping
-		Vector2 offset = new Vector2 (0,Time.time* (loopSpeed * GameSpeed.Speed));
-		bgRenderer.material.mainTextureOffset = offset;﻿
+        //Sets the offset of the texture to give the illusion of looping
+        //Vector2 offset = new Vector2 (0,Time.time* (loopSpeed * GameSpeed.SpeedMultiplier));
+
+        Vector2 offset = new Vector2(0, loopSpeed * GameSpeed.SpeedMultiplier);
+        bgRenderer.material.mainTextureOffset = offset;﻿
 	}
 }

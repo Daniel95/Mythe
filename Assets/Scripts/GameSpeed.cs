@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class GameSpeed : MonoBehaviour {
 
     [SerializeField]
     private float gameSpeedIncrement = 0.001f;
 
-    [SerializeField]
-    private static float speed = 1;
+    private static float startSpeed = 0.08f;
+
+    private static float speedMultiplier = 1;
 
     void FixedUpdate() {
-        speed += gameSpeedIncrement;
+        speedMultiplier += gameSpeedIncrement;
     }
 
     public void SuperMode()
@@ -18,7 +18,14 @@ public class GameSpeed : MonoBehaviour {
 
     }
 
-    public static float Speed {
-        get { return speed; }
+    public static float MoveSpeed {
+        //return startMoveSpeed * gameSpeed to know how fast things are moving
+        get { return startSpeed * speedMultiplier; }
+    }
+
+    public static float SpeedMultiplier
+    {
+        //return the speed multiplier, which is incremented
+        get { return speedMultiplier; }
     }
 }

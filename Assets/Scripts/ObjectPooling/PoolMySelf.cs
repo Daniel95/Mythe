@@ -1,20 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class PoolMySelf : MonoBehaviour {
 
-	private int timer = 0;
+    [SerializeField]
+    private int yDestroyPosition = -6;
 
-	[SerializeField]
-	private int timerEnd = 20;
-
-	void OnEnable()
-	{
-		timer = 0;
-	}
 	void Update () {
-		timer++;
-		if (timer >= timerEnd) {
+		if (transform.position.y < yDestroyPosition) {
 			//This puts the object pack into the object pool.
 			PoolMe();
 		}

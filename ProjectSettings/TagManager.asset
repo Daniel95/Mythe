@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - target
+  - pooltrigger
   layers:
   - Default
   - TransparentFX

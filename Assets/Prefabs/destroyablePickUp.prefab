@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: -0.11
+  moveSpeed: -0.2
 --- !u!114 &11409022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0.1
+  value: 0.01
   destroyOnTouch: 1
 --- !u!114 &11493418
 MonoBehaviour:
@@ -138,11 +138,23 @@ Prefab:
       objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 0}
       propertyPath: moveSpeed
-      value: -0.11
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: timerEnd
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: value
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: distanceDetection
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

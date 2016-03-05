@@ -4,7 +4,7 @@ using System.Collections;
 public class BackgroundLooper : MonoBehaviour {
 
     [SerializeField]
-    private float loopSpeed = 0.2f;
+    private float loopSpeed = 81.82f;
 
 	private Renderer bgRenderer;
 

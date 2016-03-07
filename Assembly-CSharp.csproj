@@ -45,13 +45,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\MouseInput.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovementRotation.cs" />
-     <Compile Include="Assets\Scripts\PlayerTrail.cs" />
-     <Compile Include="Assets\Scripts\PlayerTrailRotation.cs" />
-     <Compile Include="Assets\Scripts\WaypointsFollower.cs" />
-     <Compile Include="Assets\Scripts\WingMovement.cs" />
+     <Compile Include="Assets\Scripts\AI\InteractableObject.cs" />
+     <Compile Include="Assets\Scripts\AI\WaypointsFollower.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
+     <Compile Include="Assets\Scripts\Generator\GeneratingScript.cs" />
+     <Compile Include="Assets\Scripts\Generator\MoveDown.cs" />
+     <Compile Include="Assets\Scripts\LoopingBackground\BackgroundLooper.cs" />
+     <Compile Include="Assets\Scripts\ObjectPooling\ObjectPool.cs" />
+     <Compile Include="Assets\Scripts\ObjectPooling\PoolMySelf.cs" />
+     <Compile Include="Assets\Scripts\Player\MouseInput.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovementRotation.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerTrail.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerTrailRotation.cs" />
+     <Compile Include="Assets\Scripts\Player\RainbowEffect.cs" />
+     <Compile Include="Assets\Scripts\Player\TrailMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\TriggerDetection.cs" />
+     <Compile Include="Assets\Scripts\Player\WingMovement.cs" />
+     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\UI\Highscore\ChooseScoreToLoad.cs" />
+     <Compile Include="Assets\Scripts\UI\Highscore\Highscore.cs" />
+     <Compile Include="Assets\Scripts\UI\Highscore\LoadScores.cs" />
+     <Compile Include="Assets\Scripts\UI\Highscore\PlayerName.cs" />
+     <Compile Include="Assets\Scripts\UI\Highscore\SavePlayerName.cs" />
+     <Compile Include="Assets\Scripts\UI\Highscore\SaveScores.cs" />
+     <Compile Include="Assets\Scripts\UI\Highscore\ScoreBoard.cs" />
+     <Compile Include="Assets\Scripts\UI\Scores\PlayerDeaths.cs" />
+     <Compile Include="Assets\Scripts\UI\Scores\PlayerDistance.cs" />
+     <Compile Include="Assets\Scripts\UI\Scores\PlayerPickups.cs" />
+     <Compile Include="Assets\Scripts\UI\Scores\ScoreBase.cs" />
+     <Compile Include="Assets\Scripts\UI\Scores\TimePlaying.cs" />
+     <Compile Include="Assets\Scripts\UI\Tools\DontDestroyOnLoad.cs" />
+     <Compile Include="Assets\Scripts\UI\Tools\SceneLoader.cs" />
+     <Compile Include="Assets\Scripts\UI\UIStateChangers\FinishGame.cs" />
+     <Compile Include="Assets\Scripts\UI\UIStateChangers\PauseGame.cs" />
+     <Compile Include="Assets\Scripts\UI\UIStateChangers\RestartGame.cs" />
+     <Compile Include="Assets\Scripts\UI\UIStateChangers\SetStateOnStart.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

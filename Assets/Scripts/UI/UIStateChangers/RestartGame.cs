@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class RestartGame : MonoBehaviour {
@@ -13,6 +12,9 @@ public class RestartGame : MonoBehaviour {
     [SerializeField]
     private HealthBar healthBar;
 
+    [SerializeField]
+    private GameSpeed gameSpeed;
+
     public void Restart()
     {
         //reset every score, and continue counting score
@@ -23,6 +25,8 @@ public class RestartGame : MonoBehaviour {
         }
 
         healthBar.Restart();
+
+        gameSpeed.Reset();
 
         gameOverScreen.SetActive(false);
     }

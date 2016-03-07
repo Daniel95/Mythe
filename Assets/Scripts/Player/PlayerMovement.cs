@@ -37,24 +37,27 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField]
 	private float stillSpawnSpeed = 0.2f;
 
+	float getTrailSpeed=TrailMovement.trailDownForce;
+
 	void Start () {
 		// we starten zonder beweging (geen velocity)
 		currentVelocity = new Vector2(0, 0);
 		// we nemen de huidige positie over in een eigen variabele
 		currentPosition = transform.position;
-		StartCoroutine (spawnObject());
+		//StartCoroutine (spawnObject());
 		Seek ();
 	}
-	
+
 	// Elke frametick kijken we hoe we moeten sturen
 	void Update () {
 		Seek();
+
 	}
 
 	void spawnTrail () {
 		Instantiate(trail, transform.position, Quaternion.identity);
 	}
-	
+
 	public void setTarget(Vector2 target) {
 		currentTarget = target;
 	}
@@ -66,6 +69,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+	/*
 	private void getColor(){
 		if(red >= 1 && green < 1 && blue <= 0){
 			green += fading;
@@ -89,46 +93,58 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds (spawnSpeed);
 		StartCoroutine (spawnObject ());
 	}
+	*/
 
 	void Seek () {
 
 		// we berekenen eerst de afstand/Vector tot de 'target' (in dit voorbeeld het mikpunt)		
 		Vector2 desiredStep = currentTarget - currentPosition;
 
-		if (desiredStep.magnitude < 0.05) {
+		if (desiredStep.magnitude < 0.07f) {
 			spawnSpeed = stillSpawnSpeed;
+			transform.rotation = Quaternion.Euler(0, 0, 0);
+			TrailMovement.trailDownForce = -0.1f;
+
+			if (transform.rotation.eulerAngles.z <= -5f || transform.rotation.eulerAngles.z >= 5f) {
+				//transform.rotation.eulerAngles.z = transform.rotation.eulerAngles.z / 2f;
+			} else {
+				//transform.rotation.eulerAngles.z = 0f;
+			}
+
 		} else {
+			TrailMovement.trailDownForce = -0.01f;
+
 			spawnSpeed = movingSpawnSpeed;
-		// deze desiredStep mag niet groter zijn dan de maximale Speed
-		//
-		// als een vector ge'normalized' is .. dan houdt hij dezelfde richting
-		// maar zijn lengte/magnitude is 1
-		desiredStep.Normalize();
-		
-		// als je deze genormaliseerde vector weer vermenigvuldigt met de maximale snelheid dan
-		// wordt de lengte van deze Vector maxSpeed (aangezien 1 x maxSpeed = maxSpeed)
-		// de x en y van deze Vector wordt zo vanzelf omgerekend
-		Vector2 desiredVelocity = desiredStep * maxSpeed;
+			// deze desiredStep mag niet groter zijn dan de maximale Speed
+			//
+			// als een vector ge'normalized' is .. dan houdt hij dezelfde richting
+			// maar zijn lengte/magnitude is 1
+			desiredStep.Normalize();
 
-		// bereken wat de Vector moet zijn om bij te sturen om bij de desiredVelocity te komen
-		Vector2 steeringForce = desiredVelocity - currentVelocity;
+			// als je deze genormaliseerde vector weer vermenigvuldigt met de maximale snelheid dan
+			// wordt de lengte van deze Vector maxSpeed (aangezien 1 x maxSpeed = maxSpeed)
+			// de x en y van deze Vector wordt zo vanzelf omgerekend
+			Vector2 desiredVelocity = desiredStep * maxSpeed;
 
-		// uiteindelijk voegen we de steering force toe maar wel gedeeld door de 'mass'
-		// hierdoor gaat hij niet in een rechte lijn naar de target
-		// hoe zwaarder het object des te groter de bocht
-		currentVelocity += steeringForce / mass;
+			// bereken wat de Vector moet zijn om bij te sturen om bij de desiredVelocity te komen
+			Vector2 steeringForce = desiredVelocity - currentVelocity;
 
-		// Als laatste updaten we de positie door daar onze beweging (velocity) bij op te tellen
-		
-		currentPosition += currentVelocity * Time.deltaTime;
-		transform.position = currentPosition;
+			// uiteindelijk voegen we de steering force toe maar wel gedeeld door de 'mass'
+			// hierdoor gaat hij niet in een rechte lijn naar de target
+			// hoe zwaarder het object des te groter de bocht
+			currentVelocity += steeringForce / mass;
+
+			// Als laatste updaten we de positie door daar onze beweging (velocity) bij op te tellen
+
+			currentPosition += currentVelocity * Time.deltaTime;
+			transform.position = currentPosition;
 
 
-		// roteer het object in de goede richting
-		if(followPath){
-			float angle = Mathf.Atan2(currentVelocity.y, currentVelocity.x) * Mathf.Rad2Deg;
-			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-		}
+			// roteer het object in de goede richting
+			if(followPath){
+				float angle = (Mathf.Atan2(currentVelocity.y, currentVelocity.x) * Mathf.Rad2Deg) + 270f;
+				transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+			}
 		}
 	}
 }

@@ -12,9 +12,9 @@ public class GenerateOneObject : MonoBehaviour {
     {
         SpawnObject();
     }
-    void SpawnObject()
+    public void SpawnObject()
     {
-        GameObject temp = ObjectPool.instance.GetObjectForType("destroyablePickUp", false);
+        GameObject temp = ObjectPool.instance.GetObjectForType("Water", false);
         Vector3 pos = transform.position;
         if(temp != null)
         {

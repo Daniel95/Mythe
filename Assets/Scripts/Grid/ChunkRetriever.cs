@@ -22,6 +22,6 @@ public class ChunkRetriever : MonoBehaviour {
         chunkHolder.LoadChunk("000000000201000020000200000000");
         chunkHolder.LoadChunk("000000010000000010010000000000");
         chunkHolder.LoadChunk("000100000001000000000200001000000000000010");
-        generateChunk.StartSpawning();
+        //generateChunk.StartSpawning();
     }
 }

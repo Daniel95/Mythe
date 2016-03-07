@@ -9,6 +9,12 @@ public class GameSpeed : MonoBehaviour {
 
     private static float speedMultiplier = 1;
 
+    private float startSpeedSave;
+
+    void Start() {
+        startSpeedSave = startSpeed;
+    }
+
     void FixedUpdate() {
         speedMultiplier += gameSpeedIncrement;
     }
@@ -16,6 +22,12 @@ public class GameSpeed : MonoBehaviour {
     public void SuperMode()
     {    
 
+    }
+
+    public void Reset()
+    {
+        speedMultiplier = 1;
+        startSpeed = startSpeedSave;
     }
 
     public static float MoveSpeed {

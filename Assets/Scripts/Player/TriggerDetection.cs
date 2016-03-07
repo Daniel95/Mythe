@@ -26,6 +26,7 @@ public class TriggerDetection : MonoBehaviour {
             healthBar.addValue(_value);
             if (_value < 0)
             {
+                //Handheld.Vibrate();
                 shake.StartShake();
             }
             else {

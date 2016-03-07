@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
-public class HealthBar : MonoBehaviour {
+using System.Collections;
+public class HealthBar : MonoBehaviour
+{
 
     private float health;
     private float currentHealth;
@@ -11,67 +12,75 @@ public class HealthBar : MonoBehaviour {
     [SerializeField]
     private Image waterRenderer;
     private bool superSayenMode = false;
+    [SerializeField]
+    private GameObject generator;
+    [SerializeField]
+    private GameObject superGenerator;
 
     [SerializeField]
     private FinishGame finishGame;
 
     private bool playing = true;
 
-	void Start () {
+    void Start()
+    {
         //maxhealth is a scale value and currenthealth and speed are based from maxhealth.
         //this makes it possible to scale the bar without editing the script.
         maxHealth = transform.localScale.x;
-        currentHealth = maxHealth/2;
+        currentHealth = maxHealth / 2;
         health = currentHealth;
         speed = maxHealth / 1000;
-	}
+        StartCoroutine(NormalMode());
+    }
 
-	public void addValue(float _value){
+    public void addValue(float _value)
+    {
         //adds value to currenthealth.
         currentHealth += _value;
-        
+
+    }
+
+    private IEnumerator SuperSayenMode()
+    {
+        generator.SetActive(false);
+        superGenerator.SetActive(true);
+        superGenerator.GetComponent<GenerateOneObject>().SpawnObject();
+        superSayenMode = true;
+        //while you're in super sayen mode.
+        while (currentHealth > maxHealth / 2)
+        {
+            //your bar drops twice as fast.
+            currentHealth -= speed * 2;
+
+            //color is green.
+            waterRenderer.color = Color.green;
+
+            yield return new WaitForFixedUpdate();
+        }
+        superSayenMode = false;
+        StartCoroutine(NormalMode());
+    }
+    private IEnumerator NormalMode()
+    {
+        generator.SetActive(true);
+        generator.GetComponent<GenerateChunk>().MakeChunk();
+        superGenerator.SetActive(false);
+        while (health < maxHealth)
+        {
+            //normal speed.
+            currentHealth -= speed;
+
+            //the color is based of the vaule, when it goes to zero, it becomes more red, when towards maxhealth, it becomes more blue.
+            waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
+            yield return new WaitForFixedUpdate();
+        }
+        StartCoroutine(SuperSayenMode());
     }
 
     void FixedUpdate()
     {
         if (playing)
         {
-            if (health > maxHealth)
-            {
-
-
-                superSayenMode = true;
-                currentHealth = maxHealth;
-            }
-
-
-
-            //when in supersayenform,
-            if (superSayenMode)
-            {
-                //your bar drops twice as fast.
-                currentHealth -= speed * 2;
-
-                //color is green.
-                waterRenderer.color = Color.green;
-
-                //goes over when you reach the half of your bar.
-                if (currentHealth < maxHealth / 2)
-                {
-                    superSayenMode = false;
-                }
-            }
-
-            //when you are in normal mode.
-            else
-            {
-                //normal speed.
-                currentHealth -= speed;
-
-                //the color is based of the vaule, when it goes to zero, it becomes more red, when towards maxhealth, it becomes more blue.
-                waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
-            }
-
             //this makes sure that when you add value, it will go towards to it, instead of transporting to the new value.
             if (health > currentHealth)
             {
@@ -87,23 +96,34 @@ public class HealthBar : MonoBehaviour {
             {
                 Die();
             }
-
+            else if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
             //updates the scale of the water value giving visual feedback.
             Vector3 temp = transform.localScale;
             temp.x = health;
             transform.localScale = temp;
         }
-	}
+    }
 
-    private void Die() {
+    private void Die()
+    {
         playing = false;
         health = 0;
         finishGame.Finish();
     }
 
-    public void Restart() {
+    public void Restart()
+    {
         playing = true;
 
         currentHealth = maxHealth / 2;
     }
+    public bool SuperForm
+    {
+        get { return superSayenMode; }
+        set { value = superSayenMode; }
+    }
 }
+

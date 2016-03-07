@@ -17,6 +17,8 @@ public class FinishGame : MonoBehaviour {
             _score.Counting = false;
         }
 
+        //Handheld.Vibrate();
+
         gameoverScreen.SetActive(true);
 
         saveScores.SavePlayerScores();

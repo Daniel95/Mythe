@@ -11,27 +11,37 @@ public class TriggerDetection : MonoBehaviour {
     [SerializeField]
     private CameraShake shake;
 
+	[SerializeField]
+	private PowerupHandler powerUpHandler;
+
     //this triggerenter is for the player so it can interact with other objects.
     void OnTriggerStay2D(Collider2D _other)
     {
         if (_other.gameObject.GetComponent<InteractableObject>()) {
             InteractableObject interactableObject = _other.gameObject.GetComponent<InteractableObject>();
-
+			float _value = interactableObject.Value;
+			if (interactableObject.gameObject.tag == Tags.shieldPowerUp) 
+			{
+				powerUpHandler.addShield ();
+			}
+				
+			if (interactableObject.gameObject.tag == Tags.magnetPowerUp) 
+			{
+				powerUpHandler.addMagnet ();
+			}
             if (interactableObject.DestroyOnTouch)
             {
                 ObjectPool.instance.PoolObject(_other.gameObject);
             }
-            float _value = interactableObject.Value;
-
             healthBar.addValue(_value);
             if (_value < 0)
             {
-                //Handheld.Vibrate();
                 shake.StartShake();
             }
             else {
                 pickups.IncrementScore();
             }
+
         }
     }
 }

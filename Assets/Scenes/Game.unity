@@ -2363,6 +2363,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: powerUpHandler
+      value: 
+      objectReference: {fileID: 1589095229}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -2665,6 +2669,22 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476037335}
+--- !u!1 &1589095228 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 196514, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+  m_PrefabInternal: {fileID: 1309491408}
+--- !u!114 &1589095229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589095228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba98ac73e914c3a925f7a1f98d3f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isShieldActive: 0
 --- !u!1 &1590796939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3751,6 +3771,14 @@ MonoBehaviour:
     objectsInPool: 0
   - Prefab: {fileID: 166584, guid: 0881819bc111e334c87719a35b5a616b, type: 2}
     Count: 50
+    pool: []
+    objectsInPool: 0
+  - Prefab: {fileID: 174978, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
+    Count: 3
+    pool: []
+    objectsInPool: 0
+  - Prefab: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+    Count: 3
     pool: []
     objectsInPool: 0
 --- !u!4 &2015117533

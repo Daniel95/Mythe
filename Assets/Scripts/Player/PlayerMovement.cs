@@ -3,7 +3,12 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
-	[SerializeField]
+    private bool collided = false;
+    private GameObject collidingObject;
+    private float collidingObjectXsize;
+    private float playerXsize;
+
+    [SerializeField]
 	private float maxSpeed	=	5;
 
 	/** hoe zwaarder het object, hoe slechter hij kan bijsturen */
@@ -40,8 +45,10 @@ public class PlayerMovement : MonoBehaviour {
 	float getTrailSpeed=TrailMovement.trailDownForce;
 
 	void Start () {
-		// we starten zonder beweging (geen velocity)
-		currentVelocity = new Vector2(0, 0);
+        playerXsize = GetComponent<SpriteRenderer>().bounds.extents.x;
+
+        // we starten zonder beweging (geen velocity)
+        currentVelocity = new Vector2(0, 0);
 		// we nemen de huidige positie over in een eigen variabele
 		currentPosition = transform.position;
 		//StartCoroutine (spawnObject());
@@ -69,7 +76,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	/*
+    /*
 	private void getColor(){
 		if(red >= 1 && green < 1 && blue <= 0){
 			green += fading;
@@ -94,8 +101,27 @@ public class PlayerMovement : MonoBehaviour {
 		StartCoroutine (spawnObject ());
 	}
 	*/
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Debug.Log("coll");
+        if (coll.gameObject.tag == Tags.collider)
+        {
 
-	void Seek () {
+            collided = true;
+            collidingObject = coll.gameObject;
+            collidingObjectXsize = collidingObject.GetComponent<SpriteRenderer>().bounds.extents.x;
+        }
+    }
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == Tags.collider)
+        {
+            collided = false;
+        }
+
+    }
+
+    void Seek () {
 
 		// we berekenen eerst de afstand/Vector tot de 'target' (in dit voorbeeld het mikpunt)		
 		Vector2 desiredStep = currentTarget - currentPosition;
@@ -134,10 +160,32 @@ public class PlayerMovement : MonoBehaviour {
 			// hoe zwaarder het object des te groter de bocht
 			currentVelocity += steeringForce / mass;
 
-			// Als laatste updaten we de positie door daar onze beweging (velocity) bij op te tellen
-
-			currentPosition += currentVelocity * Time.deltaTime;
-			transform.position = currentPosition;
+            // Als laatste updaten we de positie door daar onze beweging (velocity) bij op te tellen
+            if (!collided)
+            {
+                currentPosition += currentVelocity * Time.deltaTime;
+            }
+            else
+            {
+                
+                if (transform.position.x < collidingObject.transform.position.x - collidingObjectXsize || transform.position.x > collidingObject.transform.position.x + collidingObjectXsize)
+                {
+                    currentPosition.y += currentVelocity.y * Time.deltaTime;
+                }
+                else
+                {
+                    if (transform.position.y > collidingObject.transform.position.y)
+                    {
+                        currentPosition -= new Vector2(0, -GameSpeed.MoveSpeed);
+                    }
+                    else
+                    {
+                        currentPosition += new Vector2(0, -GameSpeed.MoveSpeed);
+                    }
+                    currentPosition.x += currentVelocity.x * Time.deltaTime;
+                }
+            }
+            transform.position = currentPosition;
 
 
 			// roteer het object in de goede richting

@@ -8,31 +8,34 @@ public class ZoomInOut : MonoBehaviour {
     [SerializeField]
     private float zoomSpeed = 0.1f;
     private Camera camera;
-    private bool superForm;
-
     void Start()
     {
-        
         camera = GetComponent<Camera>();
     }
-    void Update()
+
+    public void ZoomOut()
     {
-        superForm = GameObject.Find("Canvas/Healthbar/Bar").GetComponent<HealthBar>().SuperForm;
-        if (superForm)
+        StartCoroutine(ZoomOutProcess());
+    }
+    public void ZoomIn()
+    {
+        StartCoroutine(ZoomInProcess());
+    }
+    IEnumerator ZoomOutProcess()
+    {
+        while (camera.orthographicSize <= superSize)
         {
-            
-            if (camera.orthographicSize <= superSize)
-            {
-                camera.orthographicSize += zoomSpeed;
-            }
-        }
-        else
-        {
-            if (camera.orthographicSize >= normalSize)
-            {
-                camera.orthographicSize -= zoomSpeed;
-            }
+            camera.orthographicSize += zoomSpeed;
+            yield return new WaitForFixedUpdate();
         }
     }
-
+    
+    IEnumerator ZoomInProcess()
+    {
+        while (camera.orthographicSize >= normalSize)
+        {
+            camera.orthographicSize -= zoomSpeed;
+            yield return new WaitForFixedUpdate();
+        }
+    }
 }

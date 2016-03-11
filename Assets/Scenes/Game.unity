@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3882c692618144f33ad9d770e66ec0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopSpeed: 500
+  loopSpeed: 382
 --- !u!23 &182868439
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -886,7 +886,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4921569e58a374e28a27a05cb543703c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31a370ba3182e39498186aca65697340, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1014,7 +1014,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4921569e58a374e28a27a05cb543703c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31a370ba3182e39498186aca65697340, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1769,7 +1769,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4921569e58a374e28a27a05cb543703c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31a370ba3182e39498186aca65697340, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2482,7 +2482,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4921569e58a374e28a27a05cb543703c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31a370ba3182e39498186aca65697340, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3781,6 +3781,14 @@ MonoBehaviour:
     Count: 3
     pool: []
     objectsInPool: 0
+  - Prefab: {fileID: 189310, guid: 7d0b44e5ba7ff4db79a61ee1c7d5ad9f, type: 2}
+    Count: 20
+    pool: []
+    objectsInPool: 0
+  - Prefab: {fileID: 176342, guid: 079cf13ed3cd44b248e796d7976c144e, type: 2}
+    Count: 20
+    pool: []
+    objectsInPool: 0
 --- !u!4 &2015117533
 Transform:
   m_ObjectHideFlags: 0
@@ -3804,12 +3812,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c37eb8cfd378d4fb8cddb088d18c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  divideGridHeightWaitTime: 3.8
+  divideGridHeightWaitTime: 2.6
   chunkLibary: {fileID: 2015117536}
   objectToSpawnNames:
   - 
-  - Obstacle Tree
+  - ObstacleTree
   - Water
+  - MagnetPowerUp
+  - ShieldPowerUp
   spawnPos: {fileID: 731716820}
 --- !u!114 &2015117535
 MonoBehaviour:
@@ -3822,7 +3832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d6c0d07aa4f342b374407a0d007a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeedIncrement: 0.00012
+  gameSpeedIncrement: 0.00013
+  startSpeed: 0.045
 --- !u!114 &2015117536
 MonoBehaviour:
   m_ObjectHideFlags: 0

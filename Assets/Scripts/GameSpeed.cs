@@ -5,14 +5,15 @@ public class GameSpeed : MonoBehaviour {
     [SerializeField]
     private float gameSpeedIncrement = 0.001f;
 
-    private static float startSpeed = 0.08f;
+    [SerializeField]
+    private float startSpeed = 0.02f;
+
+    private static float speed;
 
     private static float speedMultiplier = 1;
 
-    private float startSpeedSave;
-
     void Start() {
-        startSpeedSave = startSpeed;
+        speed = startSpeed;
     }
 
     void FixedUpdate() {
@@ -27,12 +28,12 @@ public class GameSpeed : MonoBehaviour {
     public void Reset()
     {
         speedMultiplier = 1;
-        startSpeed = startSpeedSave;
+        startSpeed = speed;
     }
 
     public static float MoveSpeed {
         //return startMoveSpeed * gameSpeed to know how fast things are moving
-        get { return startSpeed * speedMultiplier; }
+        get { return speed * speedMultiplier; }
     }
 
     public static float SpeedMultiplier

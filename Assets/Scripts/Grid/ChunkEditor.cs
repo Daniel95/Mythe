@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class ChunkEditor : MonoBehaviour {
+public class ChunkEditor : MonoBehaviour
+{
 
     [SerializeField]
     private GenerateChunk generateChunk;
@@ -18,16 +19,27 @@ public class ChunkEditor : MonoBehaviour {
 
     private int[,] editableChunk;
 
-    public void EditChunkHeight() {
+    void Awake()
+    {
+        editableChunk = new int[ChunkHolder.xLength, ChunkHolder.CurrentYLength];
+    }
+
+    public void EditChunkHeight()
+    {
+        int[,] temporaryGrid = editableChunk;
+
         //instantiate editableChunk again with a new y length
         editableChunk = new int[ChunkHolder.xLength, ChunkHolder.CurrentYLength];
+
+        CopyValuesIn2dArray(temporaryGrid);
 
         //if last Y Length is lower then the current Y Length, add nodes to the chunk
         if (lastYLength < ChunkHolder.CurrentYLength)
         {
             AddNodesToChunk();
         } //else remove nodes from chunk
-        else {
+        else
+        {
             RemoveNodesFromChunk();
         }
 
@@ -36,9 +48,12 @@ public class ChunkEditor : MonoBehaviour {
         chunkLibary.CompresChunk(editableChunk);
     }
 
-    public void AddNodesToChunk() {
+    public void AddNodesToChunk()
+    {
+        //the y length is the total length of the all the chunks, divided by its X length
         int currentYLength = transform.childCount / ChunkHolder.xLength;
 
+        //loop through every node in the chunk
         for (int y = currentYLength; y < ChunkHolder.CurrentYLength; y++)
         {
             for (int x = 0; x < ChunkHolder.xLength; x++)
@@ -68,6 +83,22 @@ public class ChunkEditor : MonoBehaviour {
         }
     }
 
+    //copies the values of the grid onto
+    public void CopyValuesIn2dArray(int[,] _temporaryGrid)
+    {
+        //loop through every node in the chunk
+        for (int y = 0; y < _temporaryGrid.Length / ChunkHolder.xLength; y++)
+        {
+            for (int x = 0; x < ChunkHolder.xLength; x++)
+            {
+                if (editableChunk.Length / ChunkHolder.xLength > y)
+                {
+                    editableChunk[x, y] = _temporaryGrid[x, y];
+                }
+            }
+        }
+    }
+
     public void EditChunk(int _xPos, int _yPos, int _value)
     {
         editableChunk[_xPos, _yPos] = _value;
@@ -82,9 +113,10 @@ public class ChunkEditor : MonoBehaviour {
     }
 
 
-    public void ResetChunk() {
+    public void ResetChunk()
+    {
         editableChunk = new int[ChunkHolder.xLength, ChunkHolder.CurrentYLength];
-        
+
         foreach (Node _node in transform.GetComponentsInChildren<Node>())
         {
             _node.Reset();

@@ -34,7 +34,7 @@ public class ShieldBubbleScript : MonoBehaviour {
 	{
 		if (_other.gameObject.GetComponent<InteractableObject> ()) {
 			InteractableObject interactableObject = _other.gameObject.GetComponent<InteractableObject> ();
-			float _value = interactableObject.Value;
+			float _value = interactableObject.HealthValue;
 			if (_value < 0) 
 			{
 				ObjectPool.instance.PoolObject(_other.gameObject);

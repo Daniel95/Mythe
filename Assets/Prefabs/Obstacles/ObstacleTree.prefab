@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11406124}
   - 114: {fileID: 11467068}
   m_Layer: 0
-  m_Name: Obstacle Tree
+  m_Name: ObstacleTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.99, y: -3.175, z: 0}
+  m_LocalPosition: {x: -1.4304483, y: -1.1261694, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -69,8 +69,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: -0.15
-  destroyOnTouch: 1
+  healthValue: -0.13
+  poolOnTouch: 0
+  animToPlayName: 
 --- !u!114 &11467068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,7 +83,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: -0.1
 --- !u!212 &21280954
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -135,6 +135,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: value
       value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: healthValue
+      value: -0.13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

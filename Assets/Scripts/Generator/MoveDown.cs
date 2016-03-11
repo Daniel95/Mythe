@@ -1,31 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class MoveDown : MonoBehaviour {
+public class MoveDown : MonoBehaviour
+{
+    private bool move = true;
 
-	//Test script please ignore.
+    void FixedUpdate()
+    {
+        if(move) transform.Translate(new Vector3(0, -GameSpeed.MoveSpeed, 0));
+    }
 
-	[SerializeField]
-	private float moveSpeed;
-
-	private float originalSpeed;
-
-	void Start()
-	{
-		originalSpeed = moveSpeed;
-	}
-
-	void FixedUpdate () {
-		transform.Translate (new Vector3 (0, moveSpeed, 0), Space.World);
-	}
-
-	public void StopMoving()
-	{
-		moveSpeed = 0;
-	}
-
-	public void StartMoving()
-	{
-		moveSpeed = originalSpeed;
-	}
+    public bool Move {
+        set { move = value; }
+    }
 }

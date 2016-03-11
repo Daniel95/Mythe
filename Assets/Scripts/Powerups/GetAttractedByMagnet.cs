@@ -15,7 +15,7 @@ public class GetAttractedByMagnet : MonoBehaviour {
 	{
 		if (_other.gameObject.tag == Tags.magnetEffect) 
 		{
-			moveDown.StopMoving ();
+            moveDown.Move = false;
 			this.transform.position = Vector2.MoveTowards (transform.position, playerObject.transform.position, 8*Time.deltaTime);
 		}
 	}

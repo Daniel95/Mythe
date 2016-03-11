@@ -7,5 +7,5 @@ public class Tags{
 	public static string player = "player";
 	public static string positivePickUp = "PositivePickUp";
 	public static string magnetEffect = "MagnetEffect";
-
+    public static string collider = "Collider";
 }

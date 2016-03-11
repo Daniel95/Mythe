@@ -121,44 +121,55 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-    void Seek () {
-
+    void Seek() {
+        /*Vector3 dir = new Vector3(currentTarget.x,currentTarget.y,0f) - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90 ;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * maxSpeed, ForceMode2D.Force);
+        */
+        
 		// we berekenen eerst de afstand/Vector tot de 'target' (in dit voorbeeld het mikpunt)		
 		Vector2 desiredStep = currentTarget - currentPosition;
 
-		if (desiredStep.magnitude < 0.07f) {
-			spawnSpeed = stillSpawnSpeed;
-			transform.rotation = Quaternion.Euler(0, 0, 0);
-			TrailMovement.trailDownForce = -0.1f;
+        if (desiredStep.magnitude < 0.07f)
+        {
+            spawnSpeed = stillSpawnSpeed;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            TrailMovement.trailDownForce = -0.1f;
 
-			if (transform.rotation.eulerAngles.z <= -5f || transform.rotation.eulerAngles.z >= 5f) {
-				//transform.rotation.eulerAngles.z = transform.rotation.eulerAngles.z / 2f;
-			} else {
-				//transform.rotation.eulerAngles.z = 0f;
-			}
+            if (transform.rotation.eulerAngles.z <= -5f || transform.rotation.eulerAngles.z >= 5f)
+            {
+                //transform.rotation.eulerAngles.z = transform.rotation.eulerAngles.z / 2f;
+            }
+            else
+            {
+                //transform.rotation.eulerAngles.z = 0f;
+            }
 
-		} else {
-			TrailMovement.trailDownForce = -0.01f;
+        }
+        else
+        {
+            TrailMovement.trailDownForce = -0.01f;
 
-			spawnSpeed = movingSpawnSpeed;
-			// deze desiredStep mag niet groter zijn dan de maximale Speed
-			//
-			// als een vector ge'normalized' is .. dan houdt hij dezelfde richting
-			// maar zijn lengte/magnitude is 1
-			desiredStep.Normalize();
+            spawnSpeed = movingSpawnSpeed;
+            // deze desiredStep mag niet groter zijn dan de maximale Speed
+            //
+            // als een vector ge'normalized' is .. dan houdt hij dezelfde richting
+            // maar zijn lengte/magnitude is 1
+            desiredStep.Normalize();
 
-			// als je deze genormaliseerde vector weer vermenigvuldigt met de maximale snelheid dan
-			// wordt de lengte van deze Vector maxSpeed (aangezien 1 x maxSpeed = maxSpeed)
-			// de x en y van deze Vector wordt zo vanzelf omgerekend
-			Vector2 desiredVelocity = desiredStep * maxSpeed;
+            // als je deze genormaliseerde vector weer vermenigvuldigt met de maximale snelheid dan
+            // wordt de lengte van deze Vector maxSpeed (aangezien 1 x maxSpeed = maxSpeed)
+            // de x en y van deze Vector wordt zo vanzelf omgerekend
+            Vector2 desiredVelocity = desiredStep * maxSpeed;
 
-			// bereken wat de Vector moet zijn om bij te sturen om bij de desiredVelocity te komen
-			Vector2 steeringForce = desiredVelocity - currentVelocity;
+            // bereken wat de Vector moet zijn om bij te sturen om bij de desiredVelocity te komen
+            Vector2 steeringForce = desiredVelocity - currentVelocity;
 
-			// uiteindelijk voegen we de steering force toe maar wel gedeeld door de 'mass'
-			// hierdoor gaat hij niet in een rechte lijn naar de target
-			// hoe zwaarder het object des te groter de bocht
-			currentVelocity += steeringForce / mass;
+            // uiteindelijk voegen we de steering force toe maar wel gedeeld door de 'mass'
+            // hierdoor gaat hij niet in een rechte lijn naar de target
+            // hoe zwaarder het object des te groter de bocht
+            currentVelocity += steeringForce / mass;
 
             // Als laatste updaten we de positie door daar onze beweging (velocity) bij op te tellen
             if (!collided)
@@ -167,8 +178,8 @@ public class PlayerMovement : MonoBehaviour {
             }
             else
             {
-                
-                if (transform.position.x < collidingObject.transform.position.x - collidingObjectXsize || transform.position.x > collidingObject.transform.position.x + collidingObjectXsize)
+
+                if (transform.position.x + playerXsize < collidingObject.transform.position.x - collidingObjectXsize || transform.position.x - playerXsize > collidingObject.transform.position.x + collidingObjectXsize)
                 {
                     currentPosition.y += currentVelocity.y * Time.deltaTime;
                 }
@@ -188,11 +199,14 @@ public class PlayerMovement : MonoBehaviour {
             transform.position = currentPosition;
 
 
-			// roteer het object in de goede richting
-			if(followPath){
-				float angle = (Mathf.Atan2(currentVelocity.y, currentVelocity.x) * Mathf.Rad2Deg) + 270f;
-				transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-			}
-		}
+            // roteer het object in de goede richting
+            if (followPath)
+            {
+                float angle = (Mathf.Atan2(currentVelocity.y, currentVelocity.x) * Mathf.Rad2Deg) + 270f;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            }
+        }
+    
+		
 	}
 }

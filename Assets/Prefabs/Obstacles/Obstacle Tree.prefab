@@ -13,9 +13,10 @@ GameObject:
   - 114: {fileID: 11445540}
   - 114: {fileID: 11406124}
   - 114: {fileID: 11467068}
+  - 61: {fileID: 6175826}
   m_Layer: 0
   m_Name: Obstacle Tree
-  m_TagString: Untagged
+  m_TagString: Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 154608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.99, y: -3.175, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,6 +47,20 @@ BoxCollider2D:
   m_Offset: {x: 0.021109978, y: -0.028144518}
   serializedVersion: 2
   m_Size: {x: 3.5564113, y: 2.9231305}
+--- !u!61 &6175826
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154608}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.011251767, y: -0.014413992}
+  serializedVersion: 2
+  m_Size: {x: 3.440782, y: 2.7860084}
 --- !u!114 &11406124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: -0.15
-  destroyOnTouch: 1
+  destroyOnTouch: 0
 --- !u!114 &11467068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,6 +150,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: value
       value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: destroyOnTouch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Collider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
     private float speed = 0.01f;
     [SerializeField]
     private Image waterRenderer;
+    private bool superSayenMode = false;
     [SerializeField]
     private GameObject generator;
     [SerializeField]
@@ -44,10 +45,7 @@ public class HealthBar : MonoBehaviour
         generator.SetActive(false);
         superGenerator.SetActive(true);
         superGenerator.GetComponent<GenerateOneObject>().SpawnObject();
-        GameObject.Find("Main Camera").GetComponent<ZoomInOut>().ZoomOut();
-        GameObject.Find("Sky/Little Sky").GetComponent<SkyMovingDown>().FormingSky();
-        GameObject.Find("Sky/Big Sky").GetComponent<SkyMovingDown>().FormingSky();
-
+        superSayenMode = true;
         //while you're in super sayen mode.
         while (currentHealth > maxHealth / 2)
         {
@@ -59,6 +57,7 @@ public class HealthBar : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
+        superSayenMode = false;
         StartCoroutine(NormalMode());
     }
     private IEnumerator NormalMode()
@@ -66,9 +65,6 @@ public class HealthBar : MonoBehaviour
         generator.SetActive(true);
         generator.GetComponent<GenerateChunk>().MakeChunk();
         superGenerator.SetActive(false);
-        GameObject.Find("Main Camera").GetComponent<ZoomInOut>().ZoomIn();
-        GameObject.Find("Sky/Little Sky").GetComponent<SkyMovingDown>().FormingGround();
-        GameObject.Find("Sky/Big Sky").GetComponent<SkyMovingDown>().FormingGround();
         while (health < maxHealth)
         {
             //normal speed.
@@ -123,6 +119,11 @@ public class HealthBar : MonoBehaviour
         playing = true;
 
         currentHealth = maxHealth / 2;
+    }
+    public bool SuperForm
+    {
+        get { return superSayenMode; }
+        set { value = superSayenMode; }
     }
 }
 

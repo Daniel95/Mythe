@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class GenerateChunk : MonoBehaviour {
-
-	[SerializeField]
-	private ChunkUnlocker chunkUnlocker;
 
     [SerializeField]
     private float divideGridHeightWaitTime = 3.8f;
@@ -14,7 +10,7 @@ public class GenerateChunk : MonoBehaviour {
     private ChunkHolder chunkLibary;
 
     [SerializeField]
-	List<string> objectToSpawnNames;
+    private string[] objectToSpawnNames;
 
     [SerializeField]
     private GameObject spawnPos;
@@ -31,7 +27,6 @@ public class GenerateChunk : MonoBehaviour {
 
     public void MakeChunk()
     {
-		chunkUnlocker.UnlockChunks ();
         //get a random chunk
         int[,] chunkToSpawn = chunkLibary.GetRandomChunk();
 
@@ -42,7 +37,7 @@ public class GenerateChunk : MonoBehaviour {
         {
             for (int x = 0; x < ChunkHolder.xLength; x++)
             {
-				if (objectToSpawnNames[chunkToSpawn[x, y]] != "")
+                if (objectToSpawnNames[chunkToSpawn[x, y]] != "")
                 {
                     //put the number of the grid into the objectToSpawnName array to check the right name for that object, then send it to object pool
                     GameObject spawnedObject = ObjectPool.instance.GetObjectForType(objectToSpawnNames[chunkToSpawn[x, y]], true);
@@ -72,6 +67,6 @@ public class GenerateChunk : MonoBehaviour {
 
     public int objToSpawnNameLength()
     {
-		return objectToSpawnNames.Count;
+        return objectToSpawnNames.Length;
     }
 }

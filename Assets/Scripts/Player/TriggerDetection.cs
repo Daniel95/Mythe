@@ -46,7 +46,7 @@ public class TriggerDetection : MonoBehaviour {
     }
 
     //this triggerenter is for the player so it can interact with other objects.
-    void OnTriggerEnter2D(Collider2D _other)
+    void OnTriggerStay2D(Collider2D _other)
     {
         if (_other.gameObject.GetComponent<InteractableObject>()) {
 

@@ -3661,6 +3661,7 @@ GameObject:
   - 114: {fileID: 2015117536}
   - 114: {fileID: 2015117534}
   - 114: {fileID: 2015117537}
+  - 114: {fileID: 2015117538}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -3773,7 +3774,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chunkHolder: {fileID: 2015117536}
-  generateChunk: {fileID: 2015117534}
+  chunkUnlocker: {fileID: 2015117538}
+--- !u!114 &2015117538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015117531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec8a04576e554931b209d86953d7ea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunkHolder: {fileID: 2015117536}
+  playerDistance: {fileID: 702655280}
+  notUnlockedChunks: []
+  unlockValues: 
 --- !u!1 &2019308182
 GameObject:
   m_ObjectHideFlags: 0

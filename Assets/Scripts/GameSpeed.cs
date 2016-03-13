@@ -3,10 +3,10 @@
 public class GameSpeed : MonoBehaviour {
 
     [SerializeField]
-    private float gameSpeedIncrement = 0.001f;
+    private float gameSpeedIncrement = 0.00015f;
 
     [SerializeField]
-    private float startSpeed = 0.02f;
+    private float startSpeed = 0.05f;
 
     private static float speed;
 

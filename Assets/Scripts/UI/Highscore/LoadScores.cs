@@ -21,13 +21,13 @@ public class LoadScores : MonoBehaviour {
         WWW www = new WWW(url, form);
 
         //if done loading, send text from file to UI
-        StartCoroutine(WaitForRequest(www));
+        StartCoroutine(WaitForRequest(www, _scoreType));
     }
 
-    IEnumerator WaitForRequest(WWW www)
+    IEnumerator WaitForRequest(WWW _www, string _scoreType)
     {
-        yield return www;
+        yield return _www;
 
-        board.MakeScoreBoard(www.text);
+        board.MakeABoard(_www.text, _scoreType);
     }
 }

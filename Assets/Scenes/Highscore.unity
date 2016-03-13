@@ -120,6 +120,7 @@ MonoBehaviour:
   - score
   - pickups
   - distance
+  - time
   scoresNamesIndex: 0
   loadScoresOnStart: 1
 --- !u!114 &19900472

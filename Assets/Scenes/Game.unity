@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3882c692618144f33ad9d770e66ec0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopSpeed: 382
+  loopSpeed: 330
 --- !u!23 &182868439
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3747,8 +3747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d6c0d07aa4f342b374407a0d007a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeedIncrement: 0.000135
-  startSpeed: 0.045
+  gameSpeedIncrement: 0.00015
+  startSpeed: 0.05
 --- !u!114 &2015117536
 MonoBehaviour:
   m_ObjectHideFlags: 0

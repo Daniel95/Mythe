@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c37eb8cfd378d4fb8cddb088d18c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  divideGridHeightWaitTime: 4
+  divideGridHeightWaitTime: 2.6
   chunkLibary: {fileID: 1032019681}
   objectToSpawnNames:
   - 
@@ -1508,7 +1508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d6c0d07aa4f342b374407a0d007a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeedIncrement: 0.0003
+  gameSpeedIncrement: 0.00015
+  startSpeed: 0.05
 --- !u!1 &1142491295
 GameObject:
   m_ObjectHideFlags: 0

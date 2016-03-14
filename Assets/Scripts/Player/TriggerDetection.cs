@@ -11,17 +11,25 @@ public class TriggerDetection : MonoBehaviour {
     [SerializeField]
     private CameraShake shake;
 
-	[SerializeField]
-	private PowerupHandler powerUpHandler;
+    [SerializeField]
+    private PowerupHandler powerUpHandler;
 
     private InteractableObject interactableObject;
 
+    void OnCollisionEnter2D(Collision2D _other) {
+        HandleCollisionEnter(_other.gameObject);
+    }
+
     void OnTriggerEnter2D(Collider2D _other) {
+        HandleCollisionEnter(_other.gameObject);
+    }
+
+    private void HandleCollisionEnter(GameObject _other) {
         if (_other.gameObject.GetComponent<InteractableObject>())
         {
             //save the script of _other, in the variable
             interactableObject = _other.gameObject.GetComponent<InteractableObject>();
-            
+
             if (interactableObject.gameObject.tag == Tags.shieldPowerUp)
                 powerUpHandler.addShield();
             else if (interactableObject.gameObject.tag == Tags.magnetPowerUp)

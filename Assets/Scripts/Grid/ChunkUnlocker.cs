@@ -9,12 +9,10 @@ public class ChunkUnlocker : MonoBehaviour {
 	[SerializeField]
 	private PlayerDistance playerDistance;
 
-
 	public List<string> notUnlockedChunks;
 
 	[SerializeField]
 	private List<int> unlockValues;
-
 
 	public void UnlockChunks()
 	{

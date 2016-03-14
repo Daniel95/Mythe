@@ -12,10 +12,12 @@ public class LoadScores : MonoBehaviour {
 
     public void Load(string _scoreType)
     {
-
+        //the locations of the php file
         string url = "http://14411.hosts.ma-cloud.nl/mythen/getscores.php";
 
         WWWForm form = new WWWForm();
+
+        //give the scoreType to the php file, under the name scoreType
         form.AddField("scoreType", _scoreType);
 
         WWW www = new WWW(url, form);
@@ -28,6 +30,7 @@ public class LoadScores : MonoBehaviour {
     {
         yield return _www;
 
+        //sends the score results to scoreBoard script
         board.MakeABoard(_www.text, _scoreType);
     }
 }

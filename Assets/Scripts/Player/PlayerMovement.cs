@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour {
 		// we nemen de huidige positie over in een eigen variabele
 		currentPosition = transform.position;
 
+        StartCoroutine(SpawnObject());
+
         rb = GetComponent<Rigidbody2D>();
 	}
 
@@ -110,8 +112,8 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    /*
-	private void getColor(){
+    
+	private void GetColor(){
 		if(red >= 1 && green < 1 && blue <= 0){
 			green += fading;
 		} else if(red >= 0 && green >= 1 && blue <= 0){
@@ -127,12 +129,12 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	private IEnumerator spawnObject(){
+	private IEnumerator SpawnObject(){
 		Instantiate(trail, transform.position+new Vector3(0,0,+1), transform.rotation);
-		getColor ();
+		GetColor ();
 		trail.GetComponent<SpriteRenderer> ().color = new Color(red,green,blue);
 		yield return new WaitForSeconds (spawnSpeed);
-		StartCoroutine (spawnObject ());
+		StartCoroutine (SpawnObject ());
 	}
-	*/
+	
 }

@@ -1508,13 +1508,12 @@ RectTransform:
 --- !u!114 &602601230
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11418836, guid: e304b102b495fc3419b82b7e0271c15a,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 602601228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd970f545be9bee40b34cc6fb35d3177, type: 3}
+  m_Script: {fileID: 11500000, guid: 682fc7139ba6342609c5195e73ea0212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startState: 0

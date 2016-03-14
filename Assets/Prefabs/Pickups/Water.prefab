@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: 0.1
+  healthValue: 0.2
   poolOnTouch: 1
   animToPlayName: Water Splash
 --- !u!114 &11493418
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ffabd11518b4658a474c6ac764ae93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yDestroyPosition: -6
+  yDestroyPosition: -8
 --- !u!212 &21270148
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -184,7 +184,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: yDestroyPosition
-      value: -6
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: value
@@ -192,7 +192,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: healthValue
-      value: 0.1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: poolOnTouch
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

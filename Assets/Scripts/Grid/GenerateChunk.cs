@@ -15,6 +15,7 @@ public class GenerateChunk : MonoBehaviour {
     [SerializeField]
     private GameObject spawnPos;
 
+    private bool superMode = false;
     private bool alreadySpawning;
 
     public void StartSpawning() {
@@ -42,7 +43,7 @@ public class GenerateChunk : MonoBehaviour {
                     //put the number of the grid into the objectToSpawnName array to check the right name for that object, then send it to object pool
                     GameObject spawnedObject = ObjectPool.instance.GetObjectForType(objectToSpawnNames[chunkToSpawn[x, y]], true);
 
-                    spawnedObject.transform.position = new Vector2(x, -y + yLength) + (Vector2)spawnPos.transform.position;
+                    spawnedObject.transform.position = new Vector3(x, -y + yLength,spawnedObject.transform.position.z) + (Vector3)spawnPos.transform.position;
                 }
             }
         }
@@ -62,11 +63,16 @@ public class GenerateChunk : MonoBehaviour {
         yield return new WaitForSeconds(timeToWait);
 
         //Since the IENumerator and function call on each other objects will spawn in intervals.
-        MakeChunk();
+        if(!GameObject.Find("Canvas/Healthbar/Bar").GetComponent<HealthBar>().SuperForm)
+        {
+            MakeChunk();
+        }
+        
     }
 
     public int objToSpawnNameLength()
     {
         return objectToSpawnNames.Length;
     }
+
 }

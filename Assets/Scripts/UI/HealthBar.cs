@@ -42,12 +42,12 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator SuperSayenMode()
     {
-        generator.SetActive(false);
+        generator.GetComponent<GameSpeed>().SuperMode();
         superGenerator.SetActive(true);
         superGenerator.GetComponent<GenerateOneObject>().SpawnObject();
         superSayenMode = true;
         //while you're in super sayen mode.
-        while (currentHealth > maxHealth / 2)
+        while (health > maxHealth / 2)
         {
             //your bar drops twice as fast.
             currentHealth -= speed * 2;
@@ -62,7 +62,7 @@ public class HealthBar : MonoBehaviour
     }
     private IEnumerator NormalMode()
     {
-        generator.SetActive(true);
+        generator.GetComponent<GameSpeed>().NormalMode();
         generator.GetComponent<GenerateChunk>().MakeChunk();
         superGenerator.SetActive(false);
         while (health < maxHealth)
@@ -74,6 +74,7 @@ public class HealthBar : MonoBehaviour
             waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
             yield return new WaitForFixedUpdate();
         }
+        superSayenMode = true;
         StartCoroutine(SuperSayenMode());
     }
 

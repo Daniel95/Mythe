@@ -107,10 +107,15 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         playing = false;
-        health = 0;
+        health = currentHealth = 0;
+
+        Vector3 temp = transform.localScale;
+        temp.x = health;
+        transform.localScale = temp;
+
         finishGame.Finish();
     }
 

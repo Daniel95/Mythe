@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21280954}
   - 61: {fileID: 6116458}
   - 114: {fileID: 11445540}
-  - 114: {fileID: 11406124}
   - 114: {fileID: 11467068}
+  - 114: {fileID: 11486202}
   m_Layer: 0
   m_Name: ObstacleTree
   m_TagString: Untagged
@@ -46,18 +46,6 @@ BoxCollider2D:
   m_Offset: {x: 0.021109978, y: -0.028144518}
   serializedVersion: 2
   m_Size: {x: 3.5564113, y: 2.9231305}
---- !u!114 &11406124
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ffabd11518b4658a474c6ac764ae93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yDestroyPosition: -6
 --- !u!114 &11445540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: -0.13
+  healthValue: -0.1
   poolOnTouch: 0
   animToPlayName: 
 --- !u!114 &11467068
@@ -83,6 +71,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11486202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544125c2da3b10841b7cc64f7306188e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yDestroyPosition: -6
 --- !u!212 &21280954
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -138,7 +138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: healthValue
-      value: -0.13
+      value: -0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

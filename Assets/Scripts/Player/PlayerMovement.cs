@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour {
 		currentVelocity = new Vector2(0, 0);
 		// we nemen de huidige positie over in een eigen variabele
 		currentPosition = transform.position;
-		//StartCoroutine (spawnObject());
+		StartCoroutine (spawnObject());
 		Seek ();
 	}
 
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	/*
+
 	private void getColor(){
 		if(red >= 1 && green < 1 && blue <= 0){
 			green += fading;
@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds (spawnSpeed);
 		StartCoroutine (spawnObject ());
 	}
-	*/
+
 
 	void Seek () {
 

@@ -45,6 +45,9 @@ public class ScoreBoard : MonoBehaviour
             scoresTextField.text += myStr2[1] + "\n";
         }
     }
+
+
+
     
     private void MakeTimeBoard(string _score)
     {

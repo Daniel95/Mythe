@@ -17,6 +17,7 @@ public class MouseInput : MonoBehaviour {
 	void Update () {
 		
 			Vector2 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			targetPosition.y += 1f;
 			playerMovement.setTarget(targetPosition);
 			targetIcon.transform.position = targetPosition;
 

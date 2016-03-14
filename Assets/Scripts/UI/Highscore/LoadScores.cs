@@ -4,7 +4,7 @@ using System.Collections;
 public class LoadScores : MonoBehaviour {
 
     [SerializeField]
-    private GameObject noConnectionImage;
+    private GameObject NoConnectionImage;
 
     private ScoreBoard board;
 
@@ -33,14 +33,12 @@ public class LoadScores : MonoBehaviour {
     {
         yield return _www;
 
-        //sends the score results to scoreBoard script
         if (_www.text == "")
         {
-            noConnectionImage.SetActive(true);
-        }
-        else
-        {
-            noConnectionImage.SetActive(false);
+            NoConnectionImage.SetActive(true);
+        } else {
+            NoConnectionImage.SetActive(false);
+            //sends the score results to scoreBoard script
             board.MakeABoard(_www.text, _scoreType);
         }
     }

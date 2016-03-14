@@ -3,6 +3,9 @@ using System.Collections;
 
 public class LoadScores : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject noConnectionImage;
+
     private ScoreBoard board;
 
     void Awake()
@@ -31,6 +34,14 @@ public class LoadScores : MonoBehaviour {
         yield return _www;
 
         //sends the score results to scoreBoard script
-        board.MakeABoard(_www.text, _scoreType);
+        if (_www.text == "")
+        {
+            noConnectionImage.SetActive(true);
+        }
+        else
+        {
+            noConnectionImage.SetActive(false);
+            board.MakeABoard(_www.text, _scoreType);
+        }
     }
 }

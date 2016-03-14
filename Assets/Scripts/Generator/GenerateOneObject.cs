@@ -14,7 +14,7 @@ public class GenerateOneObject : MonoBehaviour {
     }
     public void SpawnObject()
     {
-        GameObject temp = ObjectPool.instance.GetObjectForType("Water", false);
+        GameObject temp = ObjectPool.instance.GetObjectForType("SkyWater", false);
         Vector3 pos = transform.position;
         if(temp != null)
         {

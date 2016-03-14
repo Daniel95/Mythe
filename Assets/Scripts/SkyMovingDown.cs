@@ -2,19 +2,17 @@
 using System.Collections;
 
 public class SkyMovingDown : MonoBehaviour {
-    private float heigth;
+    
     [SerializeField]
     private bool superForm = false;
     [SerializeField]
     private float fadeSpeed = 0.01f;
-    private GameObject secondImage;
+    
     [SerializeField]
     private bool delayAble = false;
-
-	void Start () {
+    private GameObject secondImage;
+    void Start () {
         secondImage = transform.FindChild("sky").gameObject;
-        heigth = (transform.FindChild("up").transform.position.y -transform.position.y) * 2f;
-
         StartCoroutine(NormalForm());
     }
     IEnumerator SkyForm()
@@ -57,9 +55,6 @@ public class SkyMovingDown : MonoBehaviour {
 
     void FixedUpdate () {
         superForm = GameObject.Find("Canvas/Healthbar/Bar").GetComponent<HealthBar>().SuperForm;
-        if (transform.position.y < - heigth)
-        {
-            transform.Translate(new Vector2(0f,heigth));
-        }
+        
 	}
 }

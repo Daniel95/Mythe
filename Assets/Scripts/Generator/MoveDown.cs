@@ -6,7 +6,7 @@ public class MoveDown : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(move) transform.Translate(new Vector3(0, -GameSpeed.MoveSpeed, 0));
+        if(move) transform.Translate(new Vector3(0, -GameSpeed.MoveSpeed, 0),Space.World);
     }
 
     public bool Move {

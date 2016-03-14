@@ -1516,7 +1516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682fc7139ba6342609c5195e73ea0212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  startState: 0
 --- !u!1 &702655279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,7 +1979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 2
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -2382,6 +2382,10 @@ Prefab:
     - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: minMoveDistance
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: spawnSpeed
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}

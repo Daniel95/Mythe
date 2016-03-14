@@ -4,11 +4,11 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
 	[SerializeField]
-	private float maxSpeed	=	5;
+	private float maxSpeed = 5;
 
 	/** hoe zwaarder het object, hoe slechter hij kan bijsturen */
 	[SerializeField]
-	private float mass		=	20;
+	private float mass = 20;
 
 	/** boolean of het object de richting op kijkt waar we naar toe bewegen */
 	[SerializeField]
@@ -37,6 +37,11 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField]
 	private float stillSpawnSpeed = 0.2f;
 
+    [SerializeField]
+    private float minMoveDistance = 1.5f;
+
+    private Rigidbody2D rb;
+
 	float getTrailSpeed=TrailMovement.trailDownForce;
 
 	void Start () {
@@ -44,32 +49,68 @@ public class PlayerMovement : MonoBehaviour {
 		currentVelocity = new Vector2(0, 0);
 		// we nemen de huidige positie over in een eigen variabele
 		currentPosition = transform.position;
-		//StartCoroutine (spawnObject());
-		Seek ();
+
+        rb = GetComponent<Rigidbody2D>();
 	}
 
 	// Elke frametick kijken we hoe we moeten sturen
-	void Update () {
-		Seek();
+	void FixedUpdate () {
+        // we berekenen eerst de afstand/Vector tot de 'target' (in dit voorbeeld het mikpunt)		
+        Vector2 desiredStep = currentTarget - currentPosition;
 
-	}
+        if (Vector3.Distance(transform.position, currentTarget) < minMoveDistance)
+        {
+            spawnSpeed = stillSpawnSpeed;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            TrailMovement.trailDownForce = -0.1f;
 
-	void spawnTrail () {
-		Instantiate(trail, transform.position, Quaternion.identity);
-	}
+            rb.velocity = Vector2.zero;
+            rb.MovePosition(currentTarget);
 
-	public void setTarget(Vector2 target) {
-		currentTarget = target;
-	}
+            if (transform.rotation.eulerAngles.z <= -5f || transform.rotation.eulerAngles.z >= 5f)
+            {
+                //transform.rotation.eulerAngles.z = transform.rotation.eulerAngles.z / 2f;
+            }
+            else
+            {
+                //transform.rotation.eulerAngles.z = 0f;
+            }
+        }
+        else
+        {
+            TrailMovement.trailDownForce = -0.01f;
 
-	// van buitenaf kun je de huidige target uitlezen
-	public Vector2 Target {
-		get {
-			return currentTarget;
-		}
-	}
+            spawnSpeed = movingSpawnSpeed;
 
-	/*
+            rb.velocity = transform.up * maxSpeed;
+
+            Vector3 dir = new Vector3(currentTarget.x, currentTarget.y, 0f) - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+
+    }
+
+    void spawnTrail()
+    {
+        Instantiate(trail, transform.position, Quaternion.identity);
+    }
+
+    public void setTarget(Vector2 target)
+    {
+        currentTarget = target;
+    }
+
+    // van buitenaf kun je de huidige target uitlezen
+    public Vector2 Target
+    {
+        get
+        {
+            return currentTarget;
+        }
+    }
+
+    /*
 	private void getColor(){
 		if(red >= 1 && green < 1 && blue <= 0){
 			green += fading;
@@ -94,57 +135,4 @@ public class PlayerMovement : MonoBehaviour {
 		StartCoroutine (spawnObject ());
 	}
 	*/
-
-	void Seek () {
-
-		// we berekenen eerst de afstand/Vector tot de 'target' (in dit voorbeeld het mikpunt)		
-		Vector2 desiredStep = currentTarget - currentPosition;
-
-		if (desiredStep.magnitude < 0.07f) {
-			spawnSpeed = stillSpawnSpeed;
-			transform.rotation = Quaternion.Euler(0, 0, 0);
-			TrailMovement.trailDownForce = -0.1f;
-
-			if (transform.rotation.eulerAngles.z <= -5f || transform.rotation.eulerAngles.z >= 5f) {
-				//transform.rotation.eulerAngles.z = transform.rotation.eulerAngles.z / 2f;
-			} else {
-				//transform.rotation.eulerAngles.z = 0f;
-			}
-
-		} else {
-			TrailMovement.trailDownForce = -0.01f;
-
-			spawnSpeed = movingSpawnSpeed;
-			// deze desiredStep mag niet groter zijn dan de maximale Speed
-			//
-			// als een vector ge'normalized' is .. dan houdt hij dezelfde richting
-			// maar zijn lengte/magnitude is 1
-			desiredStep.Normalize();
-
-			// als je deze genormaliseerde vector weer vermenigvuldigt met de maximale snelheid dan
-			// wordt de lengte van deze Vector maxSpeed (aangezien 1 x maxSpeed = maxSpeed)
-			// de x en y van deze Vector wordt zo vanzelf omgerekend
-			Vector2 desiredVelocity = desiredStep * maxSpeed;
-
-			// bereken wat de Vector moet zijn om bij te sturen om bij de desiredVelocity te komen
-			Vector2 steeringForce = desiredVelocity - currentVelocity;
-
-			// uiteindelijk voegen we de steering force toe maar wel gedeeld door de 'mass'
-			// hierdoor gaat hij niet in een rechte lijn naar de target
-			// hoe zwaarder het object des te groter de bocht
-			currentVelocity += steeringForce / mass;
-
-			// Als laatste updaten we de positie door daar onze beweging (velocity) bij op te tellen
-
-			currentPosition += currentVelocity * Time.deltaTime;
-			transform.position = currentPosition;
-
-
-			// roteer het object in de goede richting
-			if(followPath){
-				float angle = (Mathf.Atan2(currentVelocity.y, currentVelocity.x) * Mathf.Rad2Deg) + 270f;
-				transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-			}
-		}
-	}
 }

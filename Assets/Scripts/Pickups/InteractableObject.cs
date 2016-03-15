@@ -15,8 +15,12 @@ public class InteractableObject : MonoBehaviour {
 	[SerializeField]
 	private string animToPlayName;
 
+    [SerializeField]
+    private float animScale = 1;
 
-	[SerializeField]
+    private float startScale;
+
+    [SerializeField]
 	private bool playAnimOnDeath = true;
 
 	private Animator anim;
@@ -27,6 +31,7 @@ public class InteractableObject : MonoBehaviour {
 	void Start() {
 		anim = GetComponent<Animator>();
 		coll = GetComponent<Collider2D>();
+        startScale = transform.localScale.x;
 	}
 
 	public virtual void Touched() 
@@ -59,12 +64,16 @@ public class InteractableObject : MonoBehaviour {
 			yield return new WaitForFixedUpdate();
 		}
 
+        transform.localScale = new Vector2(animScale, animScale);
+
 		//when started, wait for it to end
 		while(anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName))
 		{
 			yield return new WaitForFixedUpdate();
 		}
 
-		ObjectPool.instance.PoolObject(gameObject);
-	}
+        transform.localScale = new Vector2(startScale, startScale);
+
+        ObjectPool.instance.PoolObject(gameObject);
+    }
 }

@@ -2,69 +2,69 @@
 using System.Collections;
 
 public class InteractableObject : MonoBehaviour {
-    /*
+	/*
     This class is for each object where the play can interact with effecting the waterbar.
     It contains two varriables, the value (can be negative for obstacles and positive for pickups increasing or decreasing the water bar.
     */
-    [SerializeField]
-    private float healthValue = 0.12f;
+	[SerializeField]
+	private float healthValue = 0.12f;
 
-    [SerializeField]
-    private float animSize = 1;
+	[SerializeField]
+	private bool poolOnTouch;
 
-    [SerializeField]
-    private bool poolOnTouch;
+	[SerializeField]
+	private string animToPlayName;
 
-    [SerializeField]
-    private string animToPlayName;
 
-    private float startSize;
+	[SerializeField]
+	private bool playAnimOnDeath = true;
 
-    private Animator anim;
+	private Animator anim;
 
-    private Collider2D coll;
+	private Collider2D coll;
 
-    void Start() {
-        anim = GetComponent<Animator>();
-        coll = GetComponent<Collider2D>();
 
-        startSize = transform.localScale.x;
-    }
+	void Start() {
+		anim = GetComponent<Animator>();
+		coll = GetComponent<Collider2D>();
+	}
 
-    public virtual void Touched() {
-        if (anim != null)
-        {
-            //play the animation
-            anim.SetTrigger(animToPlayName);
+	public virtual void Touched() 
+	{
+		if (playAnimOnDeath) 
+		{
+			//play the animation
+			anim.SetTrigger (animToPlayName);
 
-            //destroy this object after the animation if boolean is true
-            if (poolOnTouch)
-                StartCoroutine(PoolAfterAnimation());
-        }
-    }
+			//destroy this object after the animation if boolean is true
+			if (poolOnTouch) 
+			{
+				StartCoroutine (PoolAfterAnimation ());
+			}
+		} 
+		else if (poolOnTouch)
+			ObjectPool.instance.PoolObject(gameObject);
+	}
 
-    public float HealthValue
-    {
-        get { return healthValue; }
-    }
+	public float HealthValue
+	{
+		get { return healthValue; }
+	}
 
-    IEnumerator PoolAfterAnimation()
-    {
-        //wait for the animation to start
-        while (!anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName)) {
-            yield return new WaitForFixedUpdate();
-        }
+	IEnumerator PoolAfterAnimation()
+	{
+		//coll.enabled = false;
+		//wait for the animation to start
+		while (!anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName)) {
+			yield return new WaitForFixedUpdate();
+		}
 
-        transform.localScale = new Vector2(animSize, animSize);
+		//when started, wait for it to end
+		while(anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName))
+		{
+			yield return new WaitForFixedUpdate();
+		}
 
-        //when started, wait for it to end
-        while (anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName))
-        {
-            yield return new WaitForFixedUpdate();
-        }
-
-        transform.localScale = new Vector2(startSize, startSize);
-
-        ObjectPool.instance.PoolObject(gameObject);
-    }
+		ObjectPool.instance.PoolObject(gameObject);
+	}
 }

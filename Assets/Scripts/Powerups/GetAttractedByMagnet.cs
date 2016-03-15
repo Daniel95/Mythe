@@ -5,18 +5,31 @@ public class GetAttractedByMagnet : MonoBehaviour {
 	private GameObject playerObject; 
 	private MoveDown moveDown;
 
+	private bool haveIBeenAttracted;
+
 	void Start()
 	{
 		playerObject = GameObject.FindGameObjectWithTag (Tags.player);
 		moveDown = GetComponent<MoveDown> ();
 	}
 
-	void OnTriggerStay2D(Collider2D _other)
+	void OnEnable()
+	{
+		haveIBeenAttracted = false;
+	}
+
+	void OnTriggerEnter2D(Collider2D _other)
 	{
 		if (_other.gameObject.tag == Tags.magnetEffect) 
 		{
             moveDown.Move = false;
-			this.transform.position = Vector2.MoveTowards (transform.position, playerObject.transform.position, 8*Time.deltaTime);
+			haveIBeenAttracted = true;
 		}
+	}
+
+	void Update()
+	{
+		if(haveIBeenAttracted)
+		this.transform.position = Vector2.MoveTowards (transform.position, playerObject.transform.position, 8*Time.deltaTime);	
 	}
 }

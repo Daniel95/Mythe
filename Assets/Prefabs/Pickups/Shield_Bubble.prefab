@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c0b408c53164c96b17e3b363b984a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extraTimeAfterHit: 1
+  shrinkRate: 0.007
 --- !u!212 &21282556
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,6 +118,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shrinkRate
+      value: 0.007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

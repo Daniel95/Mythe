@@ -10,10 +10,15 @@ public class InteractableObject : MonoBehaviour {
     private float healthValue = 0.12f;
 
     [SerializeField]
+    private float animSize = 1;
+
+    [SerializeField]
     private bool poolOnTouch;
 
     [SerializeField]
     private string animToPlayName;
+
+    private float startSize;
 
     private Animator anim;
 
@@ -22,6 +27,8 @@ public class InteractableObject : MonoBehaviour {
     void Start() {
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+
+        startSize = transform.localScale.x;
     }
 
     public virtual void Touched() {
@@ -47,12 +54,16 @@ public class InteractableObject : MonoBehaviour {
         while (!anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName)) {
             yield return new WaitForFixedUpdate();
         }
-        
+
+        transform.localScale = new Vector2(animSize, animSize);
+
         //when started, wait for it to end
-        while(anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName))
+        while (anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName))
         {
             yield return new WaitForFixedUpdate();
         }
+
+        transform.localScale = new Vector2(startSize, startSize);
 
         ObjectPool.instance.PoolObject(gameObject);
     }

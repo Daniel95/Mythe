@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadScores: {fileID: 1672520437}
+  scoreBoard: {fileID: 1672520438}
   scoreNames:
   - distance
   - pickups
@@ -3274,6 +3275,7 @@ MonoBehaviour:
   - {fileID: 1399119811}
   saveScores: {fileID: 1672520434}
   gameoverScreen: {fileID: 602601228}
+  loadScoreController: {fileID: 79342297}
 --- !u!114 &1672520434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3286,6 +3288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6397568ca451ae446851bb418e5cbadd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveURL: http://14411.hosts.ma-cloud.nl/mythen/savescores.php
   plrDistance: {fileID: 702655280}
   plrDeaths: {fileID: 1399119811}
   timePlaying: {fileID: 2019308183}
@@ -3303,6 +3306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4683365883cd725468a292b8df402ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataFieldName: scoreType
   NoConnectionImage: {fileID: 1765784674}
 --- !u!114 &1672520438
 MonoBehaviour:

@@ -1,7 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LoadScores : MonoBehaviour {
+public class LoadData : MonoBehaviour {
+
+    //delegate type
+    public delegate void LoadDataMethods(string stringVar, string stringVar2);
+
+    //delegate instance
+    public LoadDataMethods FinishedLoading;
+
+    [SerializeField]
+    private string dataFieldName = "scoreType";
 
     [SerializeField]
     private GameObject NoConnectionImage;
@@ -21,7 +30,7 @@ public class LoadScores : MonoBehaviour {
         WWWForm form = new WWWForm();
 
         //give the scoreType to the php file, under the name scoreType
-        form.AddField("scoreType", _scoreType);
+        form.AddField(dataFieldName, _scoreType);
 
         WWW www = new WWW(url, form);
 
@@ -38,8 +47,11 @@ public class LoadScores : MonoBehaviour {
             NoConnectionImage.SetActive(true);
         } else {
             NoConnectionImage.SetActive(false);
+
             //sends the score results to scoreBoard script
-            board.MakeABoard(_www.text, _scoreType);
+            //board.MakeABoard(_www.text, _scoreType);
+
+            FinishedLoading(_www.text, _scoreType);
         }
     }
 }

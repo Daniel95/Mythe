@@ -2,10 +2,13 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class ChooseScoreToLoad : MonoBehaviour {
+public class LoadScoreController : MonoBehaviour {
 
     [SerializeField]
-    private LoadScores loadScores;
+    private LoadData loadScores;
+
+    [SerializeField]
+    private ScoreBoard scoreBoard;
 
     [SerializeField]
     private List<string> scoreNames;
@@ -20,10 +23,20 @@ public class ChooseScoreToLoad : MonoBehaviour {
 
     void Start() {
         textField = transform.Find("Text").GetComponent<Text>();
-        if(loadScoresOnStart) LoadNewScores(0);
+        if(loadScoresOnStart) LoadScoreType(0);
     }
 
-    public void LoadNewScores(int _change) {
+    void OnEnable()
+    {
+        loadScores.FinishedLoading += DoneLoading;
+    }
+
+    void OnDisable()
+    {
+        loadScores.FinishedLoading -= DoneLoading;
+    }
+
+    public void LoadScoreType(int _change) {
 
         //decrement or increment the index of the list
         scoresNamesIndex += _change;
@@ -37,5 +50,9 @@ public class ChooseScoreToLoad : MonoBehaviour {
 
         //load the new score
         loadScores.Load(scoreNames[scoresNamesIndex]);
+    }
+
+    void DoneLoading(string _data, string _dataType) {
+        scoreBoard.MakeABoard(_data, _dataType);
     }
 }

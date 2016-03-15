@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
     private GameObject superGenerator;
 
     [SerializeField]
-    private FinishGame finishGame;
+    private FinishGameController finishGame;
 
     private bool playing = true;
 

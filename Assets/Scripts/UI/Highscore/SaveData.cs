@@ -1,7 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SaveScores : MonoBehaviour {
+public class SaveData : MonoBehaviour {
+
+    //delegate type
+    public delegate void SaveMethods();
+
+    //delegate instance
+    public SaveMethods FinishedSaving;
+
+    [SerializeField]
+    private string saveURL = "http://14411.hosts.ma-cloud.nl/mythen/savescores.php";
 
     [SerializeField]
     private PlayerDistance plrDistance;
@@ -16,7 +25,7 @@ public class SaveScores : MonoBehaviour {
     private PlayerPickups plrPickups;
 
     [SerializeField]
-    private ChooseScoreToLoad chooseScoreToLoad;
+    private LoadScoreController chooseScoreToLoad;
 
     private string plrName = "Anonymous";
 
@@ -32,11 +41,11 @@ public class SaveScores : MonoBehaviour {
 
     private void Save(int _pickups, int _distance, int _time)
     {
-        string url = "http://14411.hosts.ma-cloud.nl/mythen/savescores.php";
+        string url = saveURL;
 
+        //maak dictionary ~~~~
         WWWForm form = new WWWForm();
         form.AddField("name", plrName);
-        //form.AddField("score", _distance * _pickups);
         form.AddField("pickups", _pickups);
         form.AddField("distance", _distance);
         form.AddField("time", _time);
@@ -44,7 +53,7 @@ public class SaveScores : MonoBehaviour {
 
         WWW www = new WWW(url, form);
 
-        //if done loading, send text from file to UI
+        //if done loading, send text from file to Scoreboard
         StartCoroutine(WaitForRequest(www, false));
     }
 
@@ -52,6 +61,7 @@ public class SaveScores : MonoBehaviour {
     {
         yield return www;
 
-        chooseScoreToLoad.LoadNewScores(0);
+        //chooseScoreToLoad.LoadNewScores(0);
+        FinishedSaving();
     }
 }

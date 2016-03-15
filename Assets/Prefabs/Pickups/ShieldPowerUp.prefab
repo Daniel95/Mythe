@@ -76,8 +76,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 0.12
-  poolOnTouch: 0
+  poolOnTouch: 1
   animToPlayName: 
+  playAnimOnDeath: 0
 --- !u!114 &11445042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +138,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: playAnimOnDeath
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: poolOnTouch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 176342}

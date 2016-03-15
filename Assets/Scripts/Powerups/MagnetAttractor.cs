@@ -8,7 +8,7 @@ public class MagnetAttractor : MonoBehaviour {
 	void Start()
 	{
 		playerObject = GameObject.FindGameObjectWithTag (Tags.player);
-		StartCoroutine (WaitAndDestroy (15));
+		StartCoroutine (WaitAndDestroy (10));
 	}
 
 	void Update () 

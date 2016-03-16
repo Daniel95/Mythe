@@ -89,9 +89,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 0.005
-  animSize: 1.5
   poolOnTouch: 1
   animToPlayName: Water Splash
+  animScale: 1.5
+  playAnimOnDeath: 1
 --- !u!114 &11438120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,6 +158,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: animSize
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: animScale
       value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []

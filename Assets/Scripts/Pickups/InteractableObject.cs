@@ -27,7 +27,6 @@ public class InteractableObject : MonoBehaviour {
 
 	private Collider2D coll;
 
-
 	void Start() {
 		anim = GetComponent<Animator>();
 		coll = GetComponent<Collider2D>();

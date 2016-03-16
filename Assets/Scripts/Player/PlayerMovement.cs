@@ -4,25 +4,18 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
 	[SerializeField]
-	private float maxSpeed = 5;
+	private float moveSpeed = 5;
 
-	/** hoe zwaarder het object, hoe slechter hij kan bijsturen */
-	[SerializeField]
-	private float mass = 20;
-
-	/** boolean of het object de richting op kijkt waar we naar toe bewegen */
-	[SerializeField]
-	private bool followPath = false;
+    [SerializeField]
+    private float rotateSpeed = 1;
 
 	[SerializeField]
 	private GameObject trail;
 
-	/** Vector om onze huidige velocity bij te houden (x en y stap) */
-	private Vector2 currentVelocity;
-	/** Vector om onze huidige positie bij te houden (x en y positie) */
-	private Vector2 currentPosition;
-	/** Vector om de locatie bij te houden waar we heen willen */
+	//the current target we are moving towards
 	private Vector2 currentTarget;
+
+    private Quaternion targetRotation;
 
 	private float red = 1f;
 	private float green = 0f;
@@ -40,16 +33,14 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private float minMoveDistance = 1.5f;
 
+    [SerializeField]
+    private float minRotateDistance = 0.1f;
+
     private Rigidbody2D rb;
 
 	float getTrailSpeed=TrailMovement.trailDownForce;
 
 	void Start () {
-		// we starten zonder beweging (geen velocity)
-		currentVelocity = new Vector2(0, 0);
-		// we nemen de huidige positie over in een eigen variabele
-		currentPosition = transform.position;
-
         StartCoroutine(SpawnObject());
 
         rb = GetComponent<Rigidbody2D>();
@@ -57,13 +48,14 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Elke frametick kijken we hoe we moeten sturen
 	void FixedUpdate () {
-        // we berekenen eerst de afstand/Vector tot de 'target' (in dit voorbeeld het mikpunt)		
-        Vector2 desiredStep = currentTarget - currentPosition;
+
+
 
         if (Vector3.Distance(transform.position, currentTarget) < minMoveDistance)
         {
             spawnSpeed = stillSpawnSpeed;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            //transform.rotation = Quaternion.Euler(0, 0, 0);
+            targetRotation = Quaternion.Euler(0, 0, 0);
             TrailMovement.trailDownForce = -0.1f;
 
             rb.velocity = Vector2.zero;
@@ -84,13 +76,23 @@ public class PlayerMovement : MonoBehaviour {
 
             spawnSpeed = movingSpawnSpeed;
 
-            rb.velocity = transform.up * maxSpeed;
+            rb.velocity = transform.up * moveSpeed;
 
+            
+            Vector2 vectorToTarget = currentTarget - new Vector2(transform.position.x, transform.position.y);
+            float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - 90;
+            targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            
+            /*
             Vector3 dir = new Vector3(currentTarget.x, currentTarget.y, 0f) - transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            */
         }
 
+        if (Mathf.Abs(transform.rotation.z - targetRotation.z) > minRotateDistance)
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed);
+        else transform.rotation = targetRotation;
     }
 
     void spawnTrail()

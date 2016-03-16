@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11466708}
   - 58: {fileID: 5843568}
   - 114: {fileID: 11447412}
+  - 114: {fileID: 11419598}
   m_Layer: 0
   m_Name: player 1
   m_TagString: player
@@ -42,11 +43,11 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196514}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -64,7 +65,20 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.9092339
+--- !u!114 &11419598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54937eaadd7512c42b1585927333b7b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yDestroyPosition: -6
+  healthBar: {fileID: 0}
 --- !u!114 &11447412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,12 +117,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc2230882b4c446cbe8f910c74464da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 6.5
+  moveSpeed: 4.5
+  rotateSpeed: 0.3
   mass: 6
   followPath: 1
   trail: {fileID: 101702, guid: 530514e073bb2455289698d379a1a16f, type: 2}
   movingSpawnSpeed: 0.1
   stillSpawnSpeed: 0.2
+  minMoveDistance: 0.2
 --- !u!114 &11478424
 MonoBehaviour:
   m_ObjectHideFlags: 1

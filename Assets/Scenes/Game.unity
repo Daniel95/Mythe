@@ -1493,23 +1493,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 539652147}
---- !u!1 &544633930 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 196514, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-  m_PrefabInternal: {fileID: 1309491408}
---- !u!114 &544633931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 544633930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54937eaadd7512c42b1585927333b7b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yDestroyPosition: -6
-  healthBar: {fileID: 2094346090}
 --- !u!1 &602601228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,37 +2457,13 @@ Prefab:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    - target: {fileID: 5095054, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095054, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095054, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095054, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_Mass
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: maxSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5843568, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_Radius
-      value: 0.9092339
-      objectReference: {fileID: 0}
+    - target: {fileID: 11419598, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 2094346090}
     - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: minMoveDistance
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: spawnSpeed
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
@@ -4200,7 +4159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7be96050d3d9944aa63a2eb30a44a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.04
   waterRenderer: {fileID: 48997680}
   generator: {fileID: 2015117531}
   superGenerator: {fileID: 1927615735}

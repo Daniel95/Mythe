@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour {
 
         TrailMovement.trailDownForce = -0.01f;
 
-        spawnSpeed = movingSpawnSpeed - (speed / 50);
+        spawnSpeed = movingSpawnSpeed - (speed / 40);
     }
 
     void spawnTrail()

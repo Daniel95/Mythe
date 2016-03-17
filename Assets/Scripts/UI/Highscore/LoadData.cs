@@ -49,8 +49,6 @@ public class LoadData : MonoBehaviour {
             NoConnectionImage.SetActive(false);
 
             //sends the score results to scoreBoard script
-            //board.MakeABoard(_www.text, _scoreType);
-
             FinishedLoading(_www.text, _scoreType);
         }
     }

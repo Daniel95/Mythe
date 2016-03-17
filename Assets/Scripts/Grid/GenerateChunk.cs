@@ -15,7 +15,7 @@ public class GenerateChunk : MonoBehaviour {
     [SerializeField]
     private GameObject spawnPos;
 
-    private bool superMode = false;
+    private bool shouldSpawn = true;
     private bool alreadySpawning;
 
     public void StartSpawning() {
@@ -48,8 +48,9 @@ public class GenerateChunk : MonoBehaviour {
             }
         }
 
-        //start counting down again before spawning a new one
-        StartCoroutine(WaitBeforeNextSpawn(yLength));
+        if (shouldSpawn)
+            //start counting down again before spawning a new one
+            StartCoroutine(WaitBeforeNextSpawn(yLength));
     }
 
     IEnumerator WaitBeforeNextSpawn(int _ylenth)
@@ -63,11 +64,26 @@ public class GenerateChunk : MonoBehaviour {
         yield return new WaitForSeconds(timeToWait);
 
         //Since the IENumerator and function call on each other objects will spawn in intervals.
-        if(!GameObject.Find("Canvas/Healthbar/Bar").GetComponent<HealthBar>().SuperForm)
-        {
+        if(shouldSpawn)
             MakeChunk();
-        }
-        
+    }
+
+    public void PauzeSpawning(float _pauzeTime) {
+        StartCoroutine(Pauze(_pauzeTime));  
+    }
+
+    IEnumerator Pauze(float _pauzeTime)
+    {
+        //we are unable to spawn chunks
+        shouldSpawn = false;
+
+        //the time it takes to resume spawning
+        yield return new WaitForSeconds(_pauzeTime);
+
+        //we are now able to spawn chunks
+        shouldSpawn = true;
+        //start the spawning again
+        MakeChunk();
     }
 
     public int objToSpawnNameLength()
@@ -75,4 +91,7 @@ public class GenerateChunk : MonoBehaviour {
         return objectToSpawnNames.Length;
     }
 
+    public bool ShouldSpawn {
+        set { shouldSpawn = value; }
+    }
 }

@@ -3347,6 +3347,18 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 196514, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_PrefabInternal: {fileID: 1309491408}
+--- !u!114 &1871364898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871364897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e8b51152091419e9ab3a88da05ac9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fading: 0.02
 --- !u!82 &1871364906
 AudioSource:
   m_ObjectHideFlags: 0

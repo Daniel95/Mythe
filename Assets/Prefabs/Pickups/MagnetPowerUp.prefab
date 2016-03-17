@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 0.12
-  poolOnTouch: 0
+  poolOnTouch: 1
   animToPlayName: 
   animScale: 1
   playAnimOnDeath: 0

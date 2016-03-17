@@ -30,12 +30,6 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField]
 	private float stillSpawnSpeed = 0.2f;
 
-    [SerializeField]
-    private float minMoveDistance = 1.5f;
-
-    [SerializeField]
-    private float minRotateDistance = 0.1f;
-
     private Rigidbody2D rb;
 
 	float getTrailSpeed=TrailMovement.trailDownForce;
@@ -46,53 +40,29 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
 	}
 
-	// Elke frametick kijken we hoe we moeten sturen
 	void FixedUpdate () {
+        //the difference in vector to the target
+        Vector2 vectorToTarget = currentTarget - new Vector2(transform.position.x, transform.position.y);
 
+        //the players movespeed it the vector to target multiplied by movespeed
+        //so the farther away the target is, the faster the players speed
+        rb.velocity = vectorToTarget * moveSpeed;
 
+        //calculate the angle to our target
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - 90;
 
-        if (Vector3.Distance(transform.position, currentTarget) < minMoveDistance)
-        {
-            spawnSpeed = stillSpawnSpeed;
-            //transform.rotation = Quaternion.Euler(0, 0, 0);
-            targetRotation = Quaternion.Euler(0, 0, 0);
-            TrailMovement.trailDownForce = -0.1f;
+        //use the angle to get the rotation to our target
+        targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-            rb.velocity = Vector2.zero;
-            rb.MovePosition(currentTarget);
+        //move to the targetrotation over time
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed);
 
-            if (transform.rotation.eulerAngles.z <= -5f || transform.rotation.eulerAngles.z >= 5f)
-            {
-                //transform.rotation.eulerAngles.z = transform.rotation.eulerAngles.z / 2f;
-            }
-            else
-            {
-                //transform.rotation.eulerAngles.z = 0f;
-            }
-        }
-        else
-        {
-            TrailMovement.trailDownForce = -0.01f;
+        //the speed of the player, the x speed + y speed (made absulute) = total speed.
+        float speed = Mathf.Abs(vectorToTarget.x + vectorToTarget.y);
 
-            spawnSpeed = movingSpawnSpeed;
+        TrailMovement.trailDownForce = -0.01f;
 
-            rb.velocity = transform.up * moveSpeed;
-
-            
-            Vector2 vectorToTarget = currentTarget - new Vector2(transform.position.x, transform.position.y);
-            float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - 90;
-            targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            
-            /*
-            Vector3 dir = new Vector3(currentTarget.x, currentTarget.y, 0f) - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            */
-        }
-
-        if (Mathf.Abs(transform.rotation.z - targetRotation.z) > minRotateDistance)
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed);
-        else transform.rotation = targetRotation;
+        spawnSpeed = movingSpawnSpeed - (speed / 50);
     }
 
     void spawnTrail()

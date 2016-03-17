@@ -116,8 +116,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62.1, y: -14.125}
-  m_SizeDelta: {x: 117.4, y: 117.65}
+  m_AnchoredPosition: {x: 61.6, y: -7.9}
+  m_SizeDelta: {x: 117.4, y: 130.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016874
 MonoBehaviour:
@@ -151,20 +151,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Artists
-
-
-    Yanniek
-
-    Yessie
-
-    Badschuim666
-
-    Tiemen.
-
-    Nathalie Verduin
-
-    Jacky'
+  m_Text: "Artists\n\nJaime van Dijk\r\nYessie Weber\r\nTiemen Savonije\r\nJacky Schoen\r\nNathalie
+    Verduin\nYanniek Klijn"
 --- !u!222 &2016875
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -263,7 +251,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42.6, y: 59.7}
+  m_AnchoredPosition: {x: 49.3, y: 59.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44897248
@@ -704,7 +692,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61.299995, y: -14.1}
+  m_AnchoredPosition: {x: -61.29999, y: -1.6999879}
   m_SizeDelta: {x: 122.6, y: 117.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873795076

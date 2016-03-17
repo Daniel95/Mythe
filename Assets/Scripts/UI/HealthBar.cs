@@ -20,6 +20,12 @@ public class HealthBar : MonoBehaviour
     [SerializeField]
     private FinishGameController finishGame;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip audioClip;
+
     private bool playing = true;
 
     void Start()
@@ -46,6 +52,7 @@ public class HealthBar : MonoBehaviour
         superGenerator.SetActive(true);
         superGenerator.GetComponent<GenerateOneObject>().SpawnObject();
         superSayenMode = true;
+        audioSource.PlayOneShot(audioClip);
         //while you're in super sayen mode.
         while (health > maxHealth / 2)
         {
@@ -112,7 +119,7 @@ public class HealthBar : MonoBehaviour
     {
         playing = false;
         health = currentHealth = 0;
-
+        audioSource.PlayOneShot(audioClip);
         Vector3 temp = transform.localScale;
         temp.x = health;
         transform.localScale = temp;

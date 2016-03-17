@@ -11,6 +11,10 @@ public class ChunkUnlocker : MonoBehaviour {
 
 	public List<string> notUnlockedChunks;
 
+    private List<string> alreadyUnlockedChunks;
+
+    private List<int> alreadyUnlockedValues;
+
 	[SerializeField]
 	private List<int> unlockValues;
 
@@ -22,9 +26,23 @@ public class ChunkUnlocker : MonoBehaviour {
 			if (distance >= unlockValues[i]) 
 			{
 				unlockValues.Remove (unlockValues[i]);
+                alreadyUnlockedValues.Add(unlockValues[i]);
 				chunkHolder.LoadChunk (notUnlockedChunks [i]);
 				notUnlockedChunks.Remove (notUnlockedChunks [i]);
+                alreadyUnlockedValues.Add(alreadyUnlockedValues[i]);
 			}
 		}
 	}
+
+    public void RelockChunks()
+    {
+        for (int i = 0; i < this.alreadyUnlockedChunks.Count; i++)
+        {
+            unlockValues.Add(alreadyUnlockedValues[i]);
+            notUnlockedChunks.Add(alreadyUnlockedChunks[i]);
+            alreadyUnlockedChunks.Remove(alreadyUnlockedChunks[i]);
+            alreadyUnlockedValues.Remove(alreadyUnlockedValues[i]);
+        }
+    }
+
 }

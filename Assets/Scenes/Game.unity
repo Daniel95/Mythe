@@ -1198,7 +1198,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000002861, y: -51.7}
+  m_AnchoredPosition: {x: -0.000002861, y: 84}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &539652149
@@ -3110,7 +3110,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -140.9, y: -93.8}
+  m_AnchoredPosition: {x: -117, y: -93.8}
   m_SizeDelta: {x: 316.5, y: 51.799988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680472202
@@ -4047,6 +4047,7 @@ MonoBehaviour:
   generator: {fileID: 2015117531}
   gameSpeed: {fileID: 2015117535}
   superGenerator: {fileID: 1927615735}
+  playerObject: {fileID: 1871364897}
   generateChunk: {fileID: 2015117534}
   finishGame: {fileID: 1672520433}
   cameraZoom: {fileID: 1712116979}

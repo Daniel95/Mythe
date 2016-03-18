@@ -18,7 +18,8 @@ public class HealthBar : MonoBehaviour
 
     [SerializeField]
     private GameObject superGenerator;
-
+    [SerializeField]
+    private GameObject playerObject;
     [SerializeField]
     private GenerateChunk generateChunk;
 
@@ -147,6 +148,7 @@ public class HealthBar : MonoBehaviour
         transform.localScale = temp;
 
         finishGame.Finish();
+        playerObject.SetActive(false);
     }
 
     public void Restart()
@@ -154,6 +156,8 @@ public class HealthBar : MonoBehaviour
         StartCoroutine(UpdateHealthbar());
         generateChunk.PauzeSpawning(3);
         currentHealth = maxHealth / 2;
+        playerObject.SetActive(true);
+        playerObject.GetComponent<PlayerMovement>().spawnTrail();
     }
 }
 

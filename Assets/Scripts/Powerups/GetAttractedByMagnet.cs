@@ -29,7 +29,7 @@ public class GetAttractedByMagnet : MonoBehaviour {
 
 	void Update()
 	{
-		if(haveIBeenAttracted)
+		if(haveIBeenAttracted && playerObject != null)
 		this.transform.position = Vector2.MoveTowards (transform.position, playerObject.transform.position, 8*Time.deltaTime);	
 	}
 }

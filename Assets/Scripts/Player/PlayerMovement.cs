@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 	float getTrailSpeed=TrailMovement.trailDownForce;
 
 	void Start () {
-        StartCoroutine(SpawnObject());
+        spawnTrail();
 
         rb = GetComponent<Rigidbody2D>();
 	}
@@ -65,9 +65,9 @@ public class PlayerMovement : MonoBehaviour {
         spawnSpeed = movingSpawnSpeed - (speed / 40);
     }
 
-    void spawnTrail()
+    public void spawnTrail()
     {
-        Instantiate(trail, transform.position, Quaternion.identity);
+        StartCoroutine(SpawnObject());
     }
 
     public void setTarget(Vector2 target)

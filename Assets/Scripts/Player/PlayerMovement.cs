@@ -38,12 +38,11 @@ public class PlayerMovement : MonoBehaviour {
 	float getTrailSpeed=TrailMovement.trailDownForce;
 
 	void Start () {
-        spawnTrail();
-
         rb = GetComponent<Rigidbody2D>();
-	}
+        StartCoroutine(SpawnTrail());
+    }
 
-	void FixedUpdate () {
+    void FixedUpdate () {
         //the difference in vector to the target
         Vector2 vectorToTarget = currentTarget - new Vector2(transform.position.x, transform.position.y);
 
@@ -65,17 +64,9 @@ public class PlayerMovement : MonoBehaviour {
 
         TrailMovement.trailDownForce = -0.01f;
 
-<<<<<<< HEAD
         spawnSpeed = movingSpawnSpeed - (speed / 30) * GameSpeed.SpeedMultiplier;
-=======
-        spawnSpeed = movingSpawnSpeed - (speed / 40);
     }
 
-    public void spawnTrail()
-    {
-        StartCoroutine(SpawnObject());
->>>>>>> origin/Sprint-2
-    }
     
     public void setTarget(Vector2 target)
     {
@@ -108,9 +99,11 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	private IEnumerator SpawnObject(){
-		//Instantiate(trail, transform.position+new Vector3(0,0,+1), transform.rotation);
+    public void StartTrailSpawning() {
+        StartCoroutine(SpawnTrail());
+    }
 
+	private IEnumerator SpawnTrail(){
         GameObject trail = ObjectPool.instance.GetObjectForType("Trail", false);
         trail.transform.position = spawnPoint.position + new Vector3(0, 0, +1);
         trail.transform.rotation = transform.rotation;
@@ -119,7 +112,7 @@ public class PlayerMovement : MonoBehaviour {
         GetColor ();
 		trail.GetComponent<SpriteRenderer> ().color = new Color(red,green,blue);
 		yield return new WaitForSeconds (spawnSpeed);
-		StartCoroutine (SpawnObject ());
+		StartCoroutine (SpawnTrail());
 	}
 	
 }

@@ -23,7 +23,7 @@ public class RestartGame : MonoBehaviour {
             _score.ResetValue();
             _score.Counting = true;
         }
-        Debug.Log("restrart");
+
         healthBar.Restart();
 
         gameSpeed.Reset();

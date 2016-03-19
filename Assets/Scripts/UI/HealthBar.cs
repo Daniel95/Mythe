@@ -154,14 +154,12 @@ public class HealthBar : MonoBehaviour
     {
         generateChunk.PauzeSpawning(3);
         currentHealth = maxHealth / 2;
-<<<<<<< HEAD
 
         //start the updatehealth after reseting player health, otherwise it will trigger die() & try to get highscores
         StartCoroutine(UpdateHealthbar());
-=======
+
         playerObject.SetActive(true);
-        playerObject.GetComponent<PlayerMovement>().spawnTrail();
->>>>>>> origin/Sprint-2
+        playerObject.GetComponent<PlayerMovement>().StartTrailSpawning();
     }
 }
 

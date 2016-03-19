@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class LoadScoreController : MonoBehaviour {
 
     [SerializeField]
-    private LoadData loadScores;
+    private LoadData loadData;
 
     [SerializeField]
     private ScoreBoard scoreBoard;
@@ -24,16 +24,17 @@ public class LoadScoreController : MonoBehaviour {
     void Start() {
         textField = transform.Find("Text").GetComponent<Text>();
         if(loadScoresOnStart) LoadScoreType(0);
+        loadScoresOnStart = false;
     }
 
     void OnEnable()
     {
-        loadScores.FinishedLoading += DoneLoading;
+        loadData.FinishedLoading += DoneLoading;
     }
 
     void OnDisable()
     {
-        loadScores.FinishedLoading -= DoneLoading;
+        loadData.FinishedLoading -= DoneLoading;
     }
 
     public void LoadScoreType(int _change) {
@@ -49,7 +50,7 @@ public class LoadScoreController : MonoBehaviour {
         textField.text = (scoreNames[scoresNamesIndex]);
 
         //load the new score
-        loadScores.Load(scoreNames[scoresNamesIndex]);
+        loadData.Load(scoreNames[scoresNamesIndex]);
     }
 
     void DoneLoading(string _data, string _dataType) {

@@ -39,7 +39,7 @@ public class HealthBar : MonoBehaviour
     [SerializeField]
     private AudioClip audioClip;
 
-    private bool superSayenMode;
+    private bool restarted;
 
     void Start()
     {
@@ -111,7 +111,6 @@ public class HealthBar : MonoBehaviour
             waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
             yield return new WaitForFixedUpdate();
         }
-        //superSayenMode = true;
         StartCoroutine(SuperMode());
     }
 
@@ -151,9 +150,11 @@ public class HealthBar : MonoBehaviour
 
     public void Restart()
     {
-        StartCoroutine(UpdateHealthbar());
         generateChunk.PauzeSpawning(3);
         currentHealth = maxHealth / 2;
+
+        //start the updatehealth after reseting player health, otherwise it will trigger die() & try to get highscores
+        StartCoroutine(UpdateHealthbar());
     }
 }
 

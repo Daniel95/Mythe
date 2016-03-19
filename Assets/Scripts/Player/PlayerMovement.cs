@@ -10,7 +10,10 @@ public class PlayerMovement : MonoBehaviour {
     private float rotateSpeed = 1;
 
 	[SerializeField]
-	private GameObject trail;
+	private string trailName;
+
+    [SerializeField]
+    private Transform spawnPoint;
 
 	//the current target we are moving towards
 	private Vector2 currentTarget;
@@ -62,14 +65,9 @@ public class PlayerMovement : MonoBehaviour {
 
         TrailMovement.trailDownForce = -0.01f;
 
-        spawnSpeed = movingSpawnSpeed - (speed / 40);
+        spawnSpeed = movingSpawnSpeed - (speed / 30) * GameSpeed.SpeedMultiplier;
     }
-
-    void spawnTrail()
-    {
-        Instantiate(trail, transform.position, Quaternion.identity);
-    }
-
+    
     public void setTarget(Vector2 target)
     {
         currentTarget = target;
@@ -102,8 +100,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	private IEnumerator SpawnObject(){
-		Instantiate(trail, transform.position+new Vector3(0,0,+1), transform.rotation);
-		GetColor ();
+		//Instantiate(trail, transform.position+new Vector3(0,0,+1), transform.rotation);
+
+        GameObject trail = ObjectPool.instance.GetObjectForType("Trail", false);
+        trail.transform.position = spawnPoint.position + new Vector3(0, 0, +1);
+        trail.transform.rotation = transform.rotation;
+
+
+        GetColor ();
 		trail.GetComponent<SpriteRenderer> ().color = new Color(red,green,blue);
 		yield return new WaitForSeconds (spawnSpeed);
 		StartCoroutine (SpawnObject ());

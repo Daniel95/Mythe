@@ -18,7 +18,8 @@ public class HealthBar : MonoBehaviour
 
     [SerializeField]
     private GameObject superGenerator;
-
+    [SerializeField]
+    private GameObject playerObject;
     [SerializeField]
     private GenerateChunk generateChunk;
 
@@ -146,15 +147,21 @@ public class HealthBar : MonoBehaviour
         transform.localScale = temp;
 
         finishGame.Finish();
+        playerObject.SetActive(false);
     }
 
     public void Restart()
     {
         generateChunk.PauzeSpawning(3);
         currentHealth = maxHealth / 2;
+<<<<<<< HEAD
 
         //start the updatehealth after reseting player health, otherwise it will trigger die() & try to get highscores
         StartCoroutine(UpdateHealthbar());
+=======
+        playerObject.SetActive(true);
+        playerObject.GetComponent<PlayerMovement>().spawnTrail();
+>>>>>>> origin/Sprint-2
     }
 }
 

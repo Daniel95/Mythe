@@ -10,20 +10,28 @@ public class AimForward : MonoBehaviour {
     private float distanceDetection;
     public void Start()
     {
-        target = GameObject.Find("player").transform;
         StartCoroutine(Aim());
     }
     IEnumerator Aim()
     {
-        moves = false;
-        while(Vector2.Distance(target.position, transform.position) > distanceDetection)
+        GameObject player = GameObject.Find("player");
+        if (player != null)
         {
-            direction = new Vector2((target.position.x - transform.position.x), (target.position.y - transform.position.y));
-            direction.Normalize();
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            yield return new WaitForFixedUpdate();
+            target = player.transform;
         }
+        moves = false;
+        while(target != null)
+        {
+            while (Vector2.Distance(target.position, transform.position) > distanceDetection)
+            {
+                direction = new Vector2((target.position.x - transform.position.x), (target.position.y - transform.position.y));
+                direction.Normalize();
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                yield return new WaitForFixedUpdate();
+            }
+        }
+        
         if (GetComponent<MoveDown>() != null)
         {
             GetComponent<MoveDown>().enabled = false;

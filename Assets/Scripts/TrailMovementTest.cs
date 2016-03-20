@@ -34,7 +34,10 @@ public class TrailMovementTest : MonoBehaviour {
     private float neckDistance = 0.2f;
 
     [SerializeField]
-    private float trailScale = 0.5f;
+    private HealthBar healthBar;
+
+    //[SerializeField]
+    //private float trailScale = 0.5f;
 
     private List<Transform> trailParts = new List<Transform>();
 
@@ -88,8 +91,6 @@ public class TrailMovementTest : MonoBehaviour {
             if (Vector2.Distance(currentTrail.position, lastPosition) > minDistance)
             {
                 //move to the object, the further the object is, the faster we move. we use this to counter the gravity of the trail
-                //velocity += (new Vector3(vectorToTarget.x, vectorToTarget.y, 0) * trailAutoSpeedMultiplier) * GameSpeed.SpeedMultiplier;
-
                 velocity += (new Vector3(vectorToTarget.x, vectorToTarget.y, 0) * trailAutoSpeedMultiplier) * (GameSpeed.SpeedMultiplier + GameSpeed.ExtraSpeed * superModeSpeedMultiplier);
 
                 //move when the players moves
@@ -154,5 +155,9 @@ public class TrailMovementTest : MonoBehaviour {
 
             trailParts.Remove(trailParts[_numberInList]);
         }
+    }
+
+    public int MaxTrailLength {
+        get { return trailMaxLength; }
     }
 }

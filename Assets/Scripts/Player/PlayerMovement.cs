@@ -32,16 +32,13 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField]
 	private float movingSpawnSpeed = 0.1f;
 
-	[SerializeField]
-	private float stillSpawnSpeed = 0.2f;
-
     private Rigidbody2D rb;
 
 	float getTrailSpeed=TrailMovement.trailDownForce;
 
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine(SpawnTrail());
+        //StartCoroutine(SpawnTrail());
     }
 
     void FixedUpdate () {
@@ -117,7 +114,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
     public void StartTrailSpawning() {
-        StartCoroutine(SpawnTrail());
+        //StartCoroutine(SpawnTrail());
     }
 
 	private IEnumerator SpawnTrail(){

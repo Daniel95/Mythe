@@ -170,5 +170,9 @@ public class HealthBar : MonoBehaviour
         playerObject.SetActive(true);
         playerObject.GetComponent<PlayerMovement>().StartTrailSpawning();
     }
+
+    public float CurrentHealth {
+        get { return currentHealth; }
+    }
 }
 

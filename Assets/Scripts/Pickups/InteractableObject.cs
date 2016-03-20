@@ -25,11 +25,8 @@ public class InteractableObject : MonoBehaviour {
 
 	private Animator anim;
 
-	private Collider2D coll;
-
 	void Start() {
 		anim = GetComponent<Animator>();
-		coll = GetComponent<Collider2D>();
         startScale = transform.localScale.x;
 	}
 

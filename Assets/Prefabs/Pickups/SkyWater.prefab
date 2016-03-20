@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 482072}
   - 212: {fileID: 21226950}
   - 114: {fileID: 11432634}
-  - 114: {fileID: 11401994}
   - 114: {fileID: 11438120}
   - 114: {fileID: 11478904}
   - 95: {fileID: 9516094}
   - 58: {fileID: 5801222}
+  - 114: {fileID: 11484852}
   m_Layer: 0
   m_Name: SkyWater
   m_TagString: Untagged
@@ -65,18 +65,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11401994
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ffabd11518b4658a474c6ac764ae93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yDestroyPosition: -8
 --- !u!114 &11432634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +103,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24f521fe48aa47c4b192db1029e3d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11484852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544125c2da3b10841b7cc64f7306188e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yDestroyPosition: -6
 --- !u!212 &21226950
 SpriteRenderer:
   m_ObjectHideFlags: 1

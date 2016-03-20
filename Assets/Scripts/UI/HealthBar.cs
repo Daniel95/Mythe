@@ -165,6 +165,7 @@ public class HealthBar : MonoBehaviour
         trailMovement.StartTrail();
 
         playerObject.SetActive(true);
+        playerObject.transform.position = new Vector2(0, 0);
         playerObject.GetComponent<PlayerMovement>().StartTrailSpawning();
     }
 

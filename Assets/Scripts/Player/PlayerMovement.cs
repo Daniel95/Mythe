@@ -4,7 +4,9 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
 	[SerializeField]
-	private float moveSpeed = 5;
+	private float speedMultiplier = 5;
+
+    private float totalSpeed;
 
     [SerializeField]
     private float rotateSpeed = 1;
@@ -46,9 +48,24 @@ public class PlayerMovement : MonoBehaviour {
         //the difference in vector to the target
         Vector2 vectorToTarget = currentTarget - new Vector2(transform.position.x, transform.position.y);
 
-        //the players movespeed it the vector to target multiplied by movespeed
+        //the players speed it the vector to target multiplied by speedMultiplier
         //so the farther away the target is, the faster the players speed
-        rb.velocity = vectorToTarget * moveSpeed;
+        /*
+        Vector2 speedVector = vectorToTarget;
+
+        if (Mathf.Abs(vectorToTarget.x) > maxSpeedVector)
+        {
+            if(vectorToTarget.x < 0) speedVector.x = -maxSpeedVector;
+            else speedVector.x = maxSpeedVector;
+
+        }
+        if (Mathf.Abs(vectorToTarget.y) > maxSpeedVector)
+        {
+            if (vectorToTarget.y < 0) speedVector.y = -maxSpeedVector;
+            else speedVector.y = maxSpeedVector;
+        }*/
+
+        rb.velocity = vectorToTarget * speedMultiplier;
 
         //calculate the angle to our target
         float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - 90;
@@ -60,11 +77,11 @@ public class PlayerMovement : MonoBehaviour {
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed);
 
         //the speed of the player, the x speed + y speed (made absulute) = total speed.
-        float speed = Mathf.Abs(vectorToTarget.x + vectorToTarget.y);
+        totalSpeed = Mathf.Abs(vectorToTarget.x + vectorToTarget.y) * speedMultiplier;
 
         TrailMovement.trailDownForce = -0.01f;
 
-        spawnSpeed = movingSpawnSpeed - (speed / 30) * GameSpeed.SpeedMultiplier;
+        spawnSpeed = movingSpawnSpeed - (totalSpeed / 30) * GameSpeed.SpeedMultiplier;
     }
 
     
@@ -114,5 +131,9 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds (spawnSpeed);
 		StartCoroutine (SpawnTrail());
 	}
-	
+
+    public float TotalSpeed
+    {
+        get { return totalSpeed; }
+    }
 }

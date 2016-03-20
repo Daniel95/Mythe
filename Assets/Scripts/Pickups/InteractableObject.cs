@@ -7,7 +7,7 @@ public class InteractableObject : MonoBehaviour {
     It contains two varriables, the value (can be negative for obstacles and positive for pickups increasing or decreasing the water bar.
     */
 	[SerializeField]
-	private float healthValue = 0.12f;
+	private float healthValue = 0.1f;
 
 	[SerializeField]
 	private bool poolOnTouch;

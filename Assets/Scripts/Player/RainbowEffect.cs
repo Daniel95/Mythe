@@ -8,7 +8,7 @@ public class RainbowEffect : MonoBehaviour {
 	private float blue = 0;
 
 	[SerializeField]
-	private float fading;
+	private float fading = 0.02f;
 	
 	// Update is called once per frame
 	void Update () {

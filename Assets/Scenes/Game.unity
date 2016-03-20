@@ -813,6 +813,7 @@ GameObject:
   - 114: {fileID: 539652151}
   - 114: {fileID: 539652150}
   - 114: {fileID: 539652149}
+  - 114: {fileID: 539652153}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -851,6 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b432467123a34a348ae8996466e09e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 539652153}
   scores:
   - {fileID: 702655280}
   - {fileID: 2019308183}
@@ -947,6 +949,17 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 539652147}
+--- !u!114 &539652153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539652147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dab57eb5778074381b10884a7e484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &602601228
 GameObject:
   m_ObjectHideFlags: 0

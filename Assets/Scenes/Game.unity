@@ -3113,5 +3113,6 @@ MonoBehaviour:
   skiesMovingDown:
   - {fileID: 1228172285}
   - {fileID: 349874319}
+  trailMovement: {fileID: 752591566}
   audioSource: {fileID: 193224767}
   audioClip: {fileID: 8300000, guid: f24af892ae4eaf94fbaf0e712822e05e, type: 3}

@@ -26,7 +26,7 @@ public class TrailTriggerDetection : MonoBehaviour {
     }
 
     public void Destroy() {
-        trailMovement.DestroyTrailParts(numberInList);
+        trailMovement.DestroyTrailParts(numberInList, true);
     }
 
     public int NumberInList {

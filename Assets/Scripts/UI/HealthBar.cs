@@ -64,8 +64,6 @@ public class HealthBar : MonoBehaviour
     {
         //adds value to currenthealth.
         currentHealth += _value;
-        if (_value > 0)
-            trailMovement.SpawnTrail();
     }
 
     private IEnumerator SuperMode()
@@ -151,7 +149,6 @@ public class HealthBar : MonoBehaviour
         temp.x = health;
         transform.localScale = temp;
 
-        trailMovement.DestroyTrailParts(0);
 
         finishGame.Finish();
         playerObject.SetActive(false);
@@ -165,7 +162,7 @@ public class HealthBar : MonoBehaviour
         //start the updatehealth after reseting player health, otherwise it will trigger die() & try to get highscores
         StartCoroutine(UpdateHealthbar());
 
-        trailMovement.SpawnStartTrail();
+        trailMovement.StartTrail();
 
         playerObject.SetActive(true);
         playerObject.GetComponent<PlayerMovement>().StartTrailSpawning();
@@ -173,6 +170,11 @@ public class HealthBar : MonoBehaviour
 
     public float CurrentHealth {
         get { return currentHealth; }
+    }
+
+    public float MaxHealth
+    {
+        get { return maxHealth; }
     }
 }
 

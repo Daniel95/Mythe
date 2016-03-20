@@ -36,6 +36,10 @@ public class TrailMovementTest : MonoBehaviour {
     [SerializeField]
     private HealthBar healthBar;
 
+    private float healthPerTrail = 0;
+
+    private int trailsAmount = 0;
+
     //[SerializeField]
     //private float trailScale = 0.5f;
 
@@ -45,10 +49,11 @@ public class TrailMovementTest : MonoBehaviour {
     void Start()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
-        SpawnStartTrail();
+
+        StartTrail();
     }
 
-    public void SpawnStartTrail() {
+    public void StartTrail() {
         StartCoroutine(WaitForObjectPool());
     }
 
@@ -57,15 +62,16 @@ public class TrailMovementTest : MonoBehaviour {
         //wait one frame, so the object pool is loaded
         yield return new WaitForFixedUpdate();
 
-        for (int i = 0; i < trailStartLength; i++)
-        {
-            SpawnTrail();
-        }
+        healthPerTrail = healthBar.MaxHealth / trailMaxLength;
+
+        StartCoroutine(TrailLengthHandler());
     }
 
-    // Update the movement of the Trails!
+    
     void FixedUpdate () {
         Vector2 lastPosition = trailConnectPoint.position;
+
+        // Update the movement of the Trails
         for (int i = 0; i < trailParts.Count; i++) {
             
             //so i dont have to wirte trailsParts[i] all the time
@@ -103,7 +109,36 @@ public class TrailMovementTest : MonoBehaviour {
             //set lastPosition on our new position. we use this so we know where the next trail parts needs to rotate to.
             lastPosition = currentTrail.transform.position;
         }
-	}
+    }
+
+    public void StartTrailLengthHandler() {
+        StartCoroutine(TrailLengthHandler());
+    }
+
+    IEnumerator TrailLengthHandler()
+    {
+        while (healthBar.CurrentHealth != 0)
+        {
+            trailsAmount = Mathf.RoundToInt(healthBar.CurrentHealth / healthPerTrail);
+
+            //spawn trails
+            if (trailsAmount > trailParts.Count)
+            {
+                int difference = trailsAmount - trailParts.Count;
+                for (int i = difference; i > 0; i--)
+                {
+                    SpawnTrail();
+                }
+                //remove trails
+            }
+            else if (trailsAmount < trailParts.Count)
+            {
+                DestroyTrailParts(trailsAmount, false);
+            }
+
+            yield return new WaitForFixedUpdate();
+        }
+    }
 
     public void SpawnTrail() {
         if (trailParts.Count < trailMaxLength)
@@ -125,21 +160,27 @@ public class TrailMovementTest : MonoBehaviour {
             //give the trailpart its number in the list, we use this when we remove the trail part later.
             spawnedObject.GetComponent<TrailTriggerDetection>().NumberInList = trailParts.Count;
 
-            spawnedObject.GetComponent<DistanceJoint2D>().enabled = true;
+            DistanceJoint2D distanceJoint2D = spawnedObject.GetComponent<DistanceJoint2D>();
+
+            distanceJoint2D.enabled = true;
             if (trailParts.Count == 1)
             {
-                spawnedObject.GetComponent<DistanceJoint2D>().connectedBody = trailConnectPoint.GetComponent<Rigidbody2D>();
-                spawnedObject.GetComponent<DistanceJoint2D>().distance = neckDistance;
+                distanceJoint2D.connectedBody = trailConnectPoint.GetComponent<Rigidbody2D>();
+                distanceJoint2D.distance = neckDistance;
             }
             else {
-                spawnedObject.GetComponent<DistanceJoint2D>().connectedBody = trailParts[trailParts.Count - 2].GetComponent<Rigidbody2D>();
-                spawnedObject.GetComponent<DistanceJoint2D>().distance = distanceBetweenTrails;
+                distanceJoint2D.connectedBody = trailParts[trailParts.Count - 2].GetComponent<Rigidbody2D>();
+                distanceJoint2D.distance = distanceBetweenTrails;
             }
             
         }
     }
 
-    public void DestroyTrailParts(int _numberInList) {
+    public void DestroyTrailParts(int _numberInList, bool _doDamage) {
+
+        //do damage to the players healthbar when the trail is being cut off
+        if(_doDamage)
+            healthBar.addValue((_numberInList - trailParts.Count) * healthPerTrail);
 
         //save the list length, because we dont want it to change while we are looping the for loop
         int listLenght = trailParts.Count;
@@ -152,12 +193,7 @@ public class TrailMovementTest : MonoBehaviour {
             trailParts[_numberInList].GetComponent<DistanceJoint2D>().enabled = false;
 
             trailParts[_numberInList].GetComponent<MoveDown>().enabled = true;
-
             trailParts.Remove(trailParts[_numberInList]);
         }
-    }
-
-    public int MaxTrailLength {
-        get { return trailMaxLength; }
     }
 }

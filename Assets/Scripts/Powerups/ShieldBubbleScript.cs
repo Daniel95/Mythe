@@ -25,7 +25,12 @@ public class ShieldBubbleScript : MonoBehaviour {
 		playerObject = GameObject.FindGameObjectWithTag (Tags.player);
 		powerupHandler = playerObject.GetComponent<PowerupHandler> ();
 		shake = GameObject.Find ("MainCamera").GetComponent<CameraShake> ();
+	}
+
+	void OnEnable()
+	{
 		StartCoroutine (WaitAndMakeDestroyable (3));
+
 	}
 
 	void Update () {

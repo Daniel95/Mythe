@@ -8,7 +8,12 @@ public class MagnetAttractor : MonoBehaviour {
 	void Start()
 	{
 		playerObject = GameObject.FindGameObjectWithTag (Tags.player);
+	}
+
+	void OnEnable()
+	{
 		StartCoroutine (WaitAndDestroy (8));
+
 	}
 
 	void Update () 
@@ -18,7 +23,7 @@ public class MagnetAttractor : MonoBehaviour {
 
 	IEnumerator WaitAndDestroy(float waitTime) {
 		yield return new WaitForSeconds(waitTime);
-		ObjectPool.instance.PoolObject (gameObject);	
+		ObjectPool.instance.PoolObject (gameObject);
 	}
 
 }

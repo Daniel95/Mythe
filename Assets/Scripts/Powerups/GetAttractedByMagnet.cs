@@ -29,7 +29,19 @@ public class GetAttractedByMagnet : MonoBehaviour {
 
 	void Update()
 	{
+<<<<<<< HEAD
 		if(haveIBeenAttracted && playerObject != null)
 		this.transform.position = Vector2.MoveTowards (transform.position, playerObject.transform.position, 8*Time.deltaTime);	
+=======
+		if (haveIBeenAttracted && playerObject != null) 
+		{
+			if (playerObject != null)
+				this.transform.position = Vector2.MoveTowards (transform.position, playerObject.transform.position, 8 * Time.deltaTime);
+			else {
+				moveDown.Move = true;
+			}
+
+		}
+>>>>>>> origin/Sprint-2
 	}
 }

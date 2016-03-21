@@ -22,8 +22,16 @@ public class RestartGame : MonoBehaviour {
 
     public void Restart()
     {
+<<<<<<< HEAD
+		gameSpeed.Reset ();
+
         sceneLoader.loadNewScene("Game");
 
+
+=======
+        sceneLoader.loadNewScene("Game");
+
+>>>>>>> origin/Sprint-2
         /*
         //reset every score, and continue counting score
         foreach (ScoreBase _score in scores)
@@ -34,7 +42,7 @@ public class RestartGame : MonoBehaviour {
 
         healthBar.Restart();
 
-        gameSpeed.Reset();
+        c
 
         gameOverScreen.SetActive(false);
         */

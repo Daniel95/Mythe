@@ -199,7 +199,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -228.4, y: 147.5}
+  m_AnchoredPosition: {x: -229.8, y: 150.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &103452405
@@ -388,7 +388,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.7, y: -62.9}
+  m_AnchoredPosition: {x: 75.8, y: -30.9}
   m_SizeDelta: {x: 134.8, y: 25.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411975786
@@ -811,7 +811,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.7, y: -96.4}
+  m_AnchoredPosition: {x: 75.8, y: -64.4}
   m_SizeDelta: {x: 139.7, y: 36.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &730824017
@@ -952,7 +952,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125.3, y: -135.6}
+  m_AnchoredPosition: {x: 127.4, y: -103.6}
   m_SizeDelta: {x: 265.8, y: 43.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803313332
@@ -1069,7 +1069,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.3, y: -36.2}
+  m_AnchoredPosition: {x: 77.4, y: -4.2}
   m_SizeDelta: {x: 134.8, y: 25.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842366433
@@ -1556,7 +1556,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202.3, y: -56.9}
+  m_AnchoredPosition: {x: 204.4, y: -24.9}
   m_SizeDelta: {x: 96.15, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142491297
@@ -1928,7 +1928,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202.3, y: -93.2}
+  m_AnchoredPosition: {x: 204.4, y: -61.2}
   m_SizeDelta: {x: 98, y: 36.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106262271

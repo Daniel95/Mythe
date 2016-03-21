@@ -6,14 +6,14 @@ public class TrailTriggerDetection : MonoBehaviour {
     [SerializeField]
     private string destroyTag = "Obstacle";
 
-    private TrailMovementTest trailMovement;
+    private TrailLengthHandler trailLengthHandler;
 
     private int numberInList;
 
     public bool removed;
 
     void Start() {
-        trailMovement = GetComponentInParent<TrailMovementTest>();
+        trailLengthHandler = GetComponentInParent<TrailLengthHandler>();
     }
 
     public void Reset() {
@@ -32,7 +32,7 @@ public class TrailTriggerDetection : MonoBehaviour {
     }
 
     public void Destroy() {
-        if(!removed) trailMovement.RemoveTrailParts(numberInList, true);
+        if(!removed) trailLengthHandler.RemoveTrailParts(numberInList, true);
     }
 
     public int NumberInList {

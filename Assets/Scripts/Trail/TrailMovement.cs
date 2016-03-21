@@ -2,20 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class TrailMovementTest : MonoBehaviour {
-
-
-    [SerializeField]
-    private string trailPoolName = "TrailTest";
+public class TrailMovement : MonoBehaviour {
 
     [SerializeField]
-    private int trailStartLength = 4;
-
-    [SerializeField]
-    private int trailMaxLength = 20;
-
-    [SerializeField]
-    private int trailMinCutLength = 3;
+    private TrailLengthHandler trailLengthHandler;
 
     [SerializeField]
     private Transform player;
@@ -29,20 +19,13 @@ public class TrailMovementTest : MonoBehaviour {
     private float trailAutoSpeedMultiplier = 4;
 
     [SerializeField]
-    private float superModeSpeedMultiplier;
+    private float superModeSpeedMultiplier = 20;
 
     [SerializeField]
     private float distanceBetweenTrails = 0.5f;
 
     [SerializeField]
     private float neckDistance = 0.2f;
-
-    [SerializeField]
-    private HealthBar healthBar;
-
-    private float healthPerTrail = 0;
-
-    private int trailsAmount = 0;
 
     //[SerializeField]
     //private float trailScale = 0.5f;
@@ -65,9 +48,8 @@ public class TrailMovementTest : MonoBehaviour {
         //wait one frame, so the object pool is loaded
         yield return new WaitForFixedUpdate();
 
-        healthPerTrail = healthBar.MaxHealth / trailMaxLength;
-
-        StartCoroutine(TrailLengthHandler());
+        trailLengthHandler.StartTrailLengthUpdater();
+        //StartCoroutine(TrailLengthHandler());
     }
 
     
@@ -114,10 +96,29 @@ public class TrailMovementTest : MonoBehaviour {
         }
     }
 
+    public List<Transform> TrailParts {
+        get { return trailParts; }
+    }
+
+    public Transform TrailConnectPoint {
+        get { return trailConnectPoint; }
+    }
+
+    public float DistanceBetweenTrails
+    {
+        get { return distanceBetweenTrails; }
+    }
+
+    public float NeckDistance {
+        get { return neckDistance; }
+    }
+
+    /*
     public void StartTrailLengthHandler() {
         StartCoroutine(TrailLengthHandler());
     }
 
+    
     IEnumerator TrailLengthHandler()
     {
         while (healthBar.CurrentHealth != 0)
@@ -206,4 +207,5 @@ public class TrailMovementTest : MonoBehaviour {
             trailParts.Remove(trailToRemove);
         }
     }
+    */
 }

@@ -34,11 +34,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody2D rb;
 
-	float getTrailSpeed=TrailMovement.trailDownForce;
-
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
-        //StartCoroutine(SpawnTrail());
     }
 
     void FixedUpdate () {
@@ -47,21 +44,6 @@ public class PlayerMovement : MonoBehaviour {
 
         //the players speed it the vector to target multiplied by speedMultiplier
         //so the farther away the target is, the faster the players speed
-        /*
-        Vector2 speedVector = vectorToTarget;
-
-        if (Mathf.Abs(vectorToTarget.x) > maxSpeedVector)
-        {
-            if(vectorToTarget.x < 0) speedVector.x = -maxSpeedVector;
-            else speedVector.x = maxSpeedVector;
-
-        }
-        if (Mathf.Abs(vectorToTarget.y) > maxSpeedVector)
-        {
-            if (vectorToTarget.y < 0) speedVector.y = -maxSpeedVector;
-            else speedVector.y = maxSpeedVector;
-        }*/
-
         rb.velocity = vectorToTarget * speedMultiplier;
 
         //calculate the angle to our target
@@ -75,8 +57,6 @@ public class PlayerMovement : MonoBehaviour {
 
         //the speed of the player, the x speed + y speed (made absulute) = total speed.
         totalSpeed = Mathf.Abs(vectorToTarget.x + vectorToTarget.y) * speedMultiplier;
-
-        TrailMovement.trailDownForce = -0.01f;
 
         spawnSpeed = movingSpawnSpeed - (totalSpeed / 30) * GameSpeed.SpeedMultiplier;
     }
@@ -95,39 +75,6 @@ public class PlayerMovement : MonoBehaviour {
             return currentTarget;
         }
     }
-
-    
-	private void GetColor(){
-		if(red >= 1 && green < 1 && blue <= 0){
-			green += fading;
-		} else if(red >= 0 && green >= 1 && blue <= 0){
-			red -= fading;
-		} else if(red <= 0 && green >= 1 && blue < 1){
-			blue += fading;
-		} else if(red <= 0 && green >= 0 && blue >= 1){
-			green -= fading;
-		} else if(red < 1 && green <= 0 && blue >= 1){
-			red += fading;
-		} else if(red >= 1 && green <= 0 && blue >= 0){
-			blue -= fading;
-		}
-	}
-
-    public void StartTrailSpawning() {
-        //StartCoroutine(SpawnTrail());
-    }
-
-	private IEnumerator SpawnTrail(){
-        GameObject trail = ObjectPool.instance.GetObjectForType("Trail", false);
-        trail.transform.position = spawnPoint.position + new Vector3(0, 0, +1);
-        trail.transform.rotation = transform.rotation;
-
-
-        GetColor ();
-		trail.GetComponent<SpriteRenderer> ().color = new Color(red,green,blue);
-		yield return new WaitForSeconds (spawnSpeed);
-		StartCoroutine (SpawnTrail());
-	}
 
     public float TotalSpeed
     {

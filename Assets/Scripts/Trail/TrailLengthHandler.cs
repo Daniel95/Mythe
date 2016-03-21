@@ -1,0 +1,124 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class TrailLengthHandler : MonoBehaviour {
+
+    [SerializeField]
+    private string trailPoolName = "TrailTest";
+
+    [SerializeField]
+    private TrailMovement trailMovement;
+
+    [SerializeField]
+    private HealthBar healthBar;
+
+    [SerializeField]
+    private int trailMaxLength = 20;
+
+    [SerializeField]
+    private int trailMinCutLength = 3;
+
+    private float healthPerTrail = 0;
+
+    private int trailsAmount = 0;
+
+    public void StartTrailLengthUpdater()
+    {
+        healthPerTrail = healthBar.MaxHealth / trailMaxLength;
+
+        StartCoroutine(TrailLengthUpdate());
+    }
+
+    IEnumerator TrailLengthUpdate()
+    {
+        while (healthBar.CurrentHealth != 0)
+        {
+            //calculate the amount of trails the player must have
+            trailsAmount = Mathf.RoundToInt(healthBar.CurrentHealth / healthPerTrail);
+
+            //spawn trails
+            if (trailsAmount > trailMovement.TrailParts.Count)
+            {
+                int difference = trailsAmount - trailMovement.TrailParts.Count;
+                for (int i = difference; i > 0; i--)
+                {
+                    SpawnTrail();
+                }
+            }
+            else if (trailsAmount < trailMovement.TrailParts.Count && trailsAmount >= 0)//remove trails
+            {
+                RemoveTrailParts(trailsAmount, false);
+            }
+
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    public void SpawnTrail()
+    {
+        if (trailMovement.TrailParts.Count < trailMaxLength)
+        {
+            //get the object out of the pool
+            GameObject spawnedObject = ObjectPool.instance.GetObjectForType(trailPoolName, true);
+
+            spawnedObject.transform.parent = transform;
+
+            //add the object to the trail list
+            trailMovement.TrailParts.Add(spawnedObject.transform);
+
+            //set the position of the trail
+            if (trailMovement.TrailParts.Count == 1) spawnedObject.transform.position = trailMovement.TrailConnectPoint.position;
+            else spawnedObject.transform.position = trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].position;
+
+            spawnedObject.GetComponent<MoveDown>().enabled = false;
+            spawnedObject.GetComponent<InteractableObject>().isEnabled = false;
+
+            //give the trailpart its number in the list, we use this when we remove the trail part later.
+            TrailTriggerDetection trailTriggerDetection = spawnedObject.GetComponent<TrailTriggerDetection>();
+
+            trailTriggerDetection.Reset();
+            trailTriggerDetection.NumberInList = trailMovement.TrailParts.Count;
+
+            DistanceJoint2D distanceJoint2D = spawnedObject.GetComponent<DistanceJoint2D>();
+
+            if (trailMovement.TrailParts.Count == 1)
+            {
+                distanceJoint2D.connectedBody = trailMovement.TrailConnectPoint.GetComponent<Rigidbody2D>();
+                distanceJoint2D.distance = trailMovement.NeckDistance;
+            }
+            else
+            {
+                distanceJoint2D.connectedBody = trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].GetComponent<Rigidbody2D>();
+                distanceJoint2D.distance = trailMovement.DistanceBetweenTrails;
+            }
+            distanceJoint2D.enabled = true;
+        }
+    }
+
+    public void RemoveTrailParts(int _numberInList, bool _doDamage)
+    {
+        //do damage to the players healthbar when the trail is being cut off
+        if (_doDamage)
+        {
+            if (_numberInList <= trailMinCutLength)
+                _numberInList = trailMinCutLength;
+            healthBar.addValue((_numberInList - trailMovement.TrailParts.Count) * healthPerTrail);
+        }
+
+        //save the list length, because we dont want it to change while we are looping the for loop
+        int listLenght = trailMovement.TrailParts.Count;
+
+        //look at the numberInList of the trail part, destroy this trail and every trail that is higher in the list than us.
+        for (int i = trailMovement.TrailParts.Count - 1; i >= _numberInList; i--)
+        {
+            Transform trailToRemove = trailMovement.TrailParts[i];
+
+            trailToRemove.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            trailToRemove.GetComponent<DistanceJoint2D>().enabled = false;
+            trailToRemove.GetComponent<DistanceJoint2D>().connectedBody = null;
+            trailToRemove.GetComponent<MoveDown>().enabled = trailToRemove.GetComponent<TrailTriggerDetection>().Removed = true;
+            trailToRemove.GetComponent<InteractableObject>().isEnabled = true;
+            trailMovement.TrailParts.Remove(trailToRemove);
+        }
+    }
+}

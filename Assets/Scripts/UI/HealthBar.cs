@@ -35,9 +35,6 @@ public class HealthBar : MonoBehaviour
     private SkyMovingDown[] skiesMovingDown;
 
     [SerializeField]
-    private TrailMovementTest trailMovement;
-
-    [SerializeField]
     private AudioSource audioSource;
 
     [SerializeField]
@@ -154,6 +151,7 @@ public class HealthBar : MonoBehaviour
         playerObject.SetActive(false);
     }
 
+    /*
     public void Restart()
     {
         generateChunk.PauzeSpawning(3);
@@ -166,8 +164,7 @@ public class HealthBar : MonoBehaviour
 
         playerObject.SetActive(true);
         playerObject.transform.position = new Vector2(0, 0);
-        playerObject.GetComponent<PlayerMovement>().StartTrailSpawning();
-    }
+    }*/
 
     public float CurrentHealth
     {

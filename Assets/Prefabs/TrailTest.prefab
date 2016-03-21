@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11491962}
   - 232: {fileID: 23241284}
   - 114: {fileID: 11458594}
+  - 114: {fileID: 11492262}
   m_Layer: 0
   m_Name: TrailTest
   m_TagString: Untagged
@@ -77,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
 --- !u!114 &11458594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,6 +115,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yDestroyPosition: -6
+--- !u!114 &11492262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112786}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthValue: 0.11
+  poolOnTouch: 0
+  animToPlayName: 
+  animScale: 1
+  playAnimOnDeath: 0
 --- !u!212 &21222508
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -174,7 +192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_GravityScale
@@ -207,6 +225,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_EnableCollision
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: healthValue
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playAnimOnDeath
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

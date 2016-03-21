@@ -25,6 +25,9 @@ public class InteractableObject : MonoBehaviour {
 
 	private Animator anim;
 
+
+	public bool isEnabled = true;
+
 	void Start() {
 		anim = GetComponent<Animator>();
         startScale = transform.localScale.x;
@@ -32,19 +35,18 @@ public class InteractableObject : MonoBehaviour {
 
 	public virtual void Touched() 
 	{
-		if (playAnimOnDeath) 
-		{
-			//play the animation
-			anim.SetTrigger (animToPlayName);
+		if (isEnabled) {
+			if (playAnimOnDeath) {
+				//play the animation
+				anim.SetTrigger (animToPlayName);
 
-			//destroy this object after the animation if boolean is true
-			if (poolOnTouch) 
-			{
-				StartCoroutine (PoolAfterAnimation ());
-			}
-		} 
-		else if (poolOnTouch)
-			ObjectPool.instance.PoolObject(gameObject);
+				//destroy this object after the animation if boolean is true
+				if (poolOnTouch) {
+					StartCoroutine (PoolAfterAnimation ());
+				}
+			} else if (poolOnTouch)
+				ObjectPool.instance.PoolObject (gameObject);
+		}
 	}
 
 	public float HealthValue

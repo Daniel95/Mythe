@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class TrailMovementTest : MonoBehaviour {
 
+
     [SerializeField]
     private string trailPoolName = "TrailTest";
 
@@ -52,7 +53,6 @@ public class TrailMovementTest : MonoBehaviour {
     void Start()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
-
         StartTrail();
     }
 
@@ -158,6 +158,7 @@ public class TrailMovementTest : MonoBehaviour {
             else spawnedObject.transform.position = trailParts[trailParts.Count - 2].position;
 
             spawnedObject.GetComponent<MoveDown>().enabled = false;
+			spawnedObject.GetComponent<InteractableObject> ().isEnabled = false;
 
             //give the trailpart its number in the list, we use this when we remove the trail part later.
             TrailTriggerDetection trailTriggerDetection = spawnedObject.GetComponent<TrailTriggerDetection>();

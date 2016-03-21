@@ -68,13 +68,15 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator SuperMode()
     {
-        gameSpeed.SuperMode();
         superGenerator.SetActive(true);
         generateOneObject.SpawnObject();
         generateChunk.ShouldSpawn = false;
+        waterRenderer.color = Color.green;
+        yield return new WaitForSeconds(1.5f);
         cameraZoom.ZoomCameraOut();
-
-        for (int i = 0; i < skiesMovingDown.Length; i++) {
+        gameSpeed.SuperMode();
+        for (int i = 0; i < skiesMovingDown.Length; i++)
+        {
             skiesMovingDown[i].FormingSky();
         }
 
@@ -86,7 +88,7 @@ public class HealthBar : MonoBehaviour
             currentHealth -= loseHealthSpeed * 2;
 
             //color is green.
-            waterRenderer.color = Color.green;
+
 
             yield return new WaitForFixedUpdate();
         }
@@ -98,7 +100,6 @@ public class HealthBar : MonoBehaviour
     {
         gameSpeed.NormalMode();
         superGenerator.SetActive(false);
-
         cameraZoom.ZoomCameraIn();
 
         for (int i = 0; i < skiesMovingDown.Length; i++)
@@ -106,7 +107,7 @@ public class HealthBar : MonoBehaviour
             skiesMovingDown[i].FormingGround();
         }
 
-        while (health < maxHealth)
+        while (currentHealth < maxHealth)
         {
             //normal speed.
             currentHealth -= loseHealthSpeed;
@@ -125,7 +126,7 @@ public class HealthBar : MonoBehaviour
             //this makes sure that when you add value, it will go towards to it, instead of transporting to the new value.
             if (health > currentHealth)
                 health = currentHealth;
-            else if(currentHealth > maxHealth)
+            else if (currentHealth > maxHealth)
                 currentHealth = maxHealth;
             else
                 health += loseHealthSpeed * 8;
@@ -149,7 +150,6 @@ public class HealthBar : MonoBehaviour
         temp.x = health;
         transform.localScale = temp;
 
-
         finishGame.Finish();
         playerObject.SetActive(false);
     }
@@ -169,7 +169,8 @@ public class HealthBar : MonoBehaviour
         playerObject.GetComponent<PlayerMovement>().StartTrailSpawning();
     }
 
-    public float CurrentHealth {
+    public float CurrentHealth
+    {
         get { return currentHealth; }
     }
 

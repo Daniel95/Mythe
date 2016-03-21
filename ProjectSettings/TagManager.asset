@@ -6,6 +6,14 @@ TagManager:
   tags:
   - target
   - pooltrigger
+  - tail1
+  - tail2
+  - tail3
+  - MagnetPowerUp
+  - ShieldPowerUp
+  - MagnetEffect
+  - player
+  - Obstacle
   layers:
   - Default
   - TransparentFX

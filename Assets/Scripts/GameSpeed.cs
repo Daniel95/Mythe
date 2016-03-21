@@ -23,10 +23,12 @@ public class GameSpeed : MonoBehaviour
     {
         speedMultiplier += gameSpeedIncrement;
     }
+
     public void SuperMode()
     {
         StartCoroutine(SuperModeAceleration());
     }
+
     IEnumerator SuperModeAceleration()
     {
         while (extraSpeed < 0.15f)
@@ -35,10 +37,12 @@ public class GameSpeed : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
     }
+
     public void NormalMode()
     {
         StartCoroutine(NormalModeAceleration());
     }
+
     IEnumerator NormalModeAceleration()
     {
         while (extraSpeed > 0)
@@ -47,11 +51,16 @@ public class GameSpeed : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
     }
+
     public void Reset()
     {
         speedMultiplier = 1;
         startSpeed = speed;
 
+    }
+
+    public static float ExtraSpeed {
+        get { return extraSpeed; }
     }
 
     public static float MoveSpeed

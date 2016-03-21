@@ -15,13 +15,6 @@ public class LoadData : MonoBehaviour {
     [SerializeField]
     private GameObject NoConnectionImage;
 
-    private ScoreBoard board;
-
-    void Awake()
-    {
-        board = GetComponent<ScoreBoard>();
-    }
-
     public void Load(string _scoreType)
     {
         //the locations of the php file
@@ -47,6 +40,8 @@ public class LoadData : MonoBehaviour {
             NoConnectionImage.SetActive(true);
         } else {
             NoConnectionImage.SetActive(false);
+
+            if (FinishedLoading == null) print("is null");
 
             //sends the score results to scoreBoard script
             FinishedLoading(_www.text, _scoreType);

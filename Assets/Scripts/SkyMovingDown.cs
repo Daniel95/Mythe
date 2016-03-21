@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SkyMovingDown : MonoBehaviour
 {
-    private float heigth;
+    //private float heigth;
     [SerializeField]
     private float fadeSpeed = 0.01f;
     private GameObject secondImage;
@@ -13,7 +13,7 @@ public class SkyMovingDown : MonoBehaviour
     void Start()
     {
         secondImage = transform.FindChild("sky").gameObject;
-        heigth = (transform.FindChild("up").transform.position.y - transform.position.y) * 2f;
+        //heigth = (transform.FindChild("up").transform.position.y - transform.position.y) * 2f;
     }
     public void FormingSky()
     {

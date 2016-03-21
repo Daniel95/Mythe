@@ -18,7 +18,8 @@ public class HealthBar : MonoBehaviour
 
     [SerializeField]
     private GameObject superGenerator;
-
+    [SerializeField]
+    private GameObject playerObject;
     [SerializeField]
     private GenerateChunk generateChunk;
 
@@ -34,12 +35,15 @@ public class HealthBar : MonoBehaviour
     private SkyMovingDown[] skiesMovingDown;
 
     [SerializeField]
+    private TrailMovementTest trailMovement;
+
+    [SerializeField]
     private AudioSource audioSource;
 
     [SerializeField]
     private AudioClip audioClip;
 
-    private bool superSayenMode;
+    private bool restarted;
 
     void Start()
     {
@@ -111,7 +115,6 @@ public class HealthBar : MonoBehaviour
             waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
             yield return new WaitForFixedUpdate();
         }
-        //superSayenMode = true;
         StartCoroutine(SuperMode());
     }
 
@@ -146,14 +149,33 @@ public class HealthBar : MonoBehaviour
         temp.x = health;
         transform.localScale = temp;
 
+
         finishGame.Finish();
+        playerObject.SetActive(false);
     }
 
     public void Restart()
     {
-        StartCoroutine(UpdateHealthbar());
         generateChunk.PauzeSpawning(3);
         currentHealth = maxHealth / 2;
+
+        //start the updatehealth after reseting player health, otherwise it will trigger die() & try to get highscores
+        StartCoroutine(UpdateHealthbar());
+
+        trailMovement.StartTrail();
+
+        playerObject.SetActive(true);
+        playerObject.transform.position = new Vector2(0, 0);
+        playerObject.GetComponent<PlayerMovement>().StartTrailSpawning();
+    }
+
+    public float CurrentHealth {
+        get { return currentHealth; }
+    }
+
+    public float MaxHealth
+    {
+        get { return maxHealth; }
     }
 }
 

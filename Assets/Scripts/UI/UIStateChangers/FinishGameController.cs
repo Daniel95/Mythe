@@ -26,11 +26,12 @@ public class FinishGameController : MonoBehaviour {
     }
 
     public void Finish() {
+
         foreach (ScoreBase _score in scores) {
             _score.Counting = false;
         }
 
-        //Handheld.Vibrate();
+        Handheld.Vibrate();
 
         gameoverScreen.SetActive(true);
 

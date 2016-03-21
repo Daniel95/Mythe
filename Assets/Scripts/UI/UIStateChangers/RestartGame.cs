@@ -4,6 +4,9 @@ using System.Collections.Generic;
 public class RestartGame : MonoBehaviour {
 
     [SerializeField]
+    private SceneLoader sceneLoader;
+
+    [SerializeField]
     private List<ScoreBase> scores;
 
     [SerializeField]
@@ -15,8 +18,21 @@ public class RestartGame : MonoBehaviour {
     [SerializeField]
     private GameSpeed gameSpeed;
 
+
+
     public void Restart()
     {
+<<<<<<< HEAD
+		gameSpeed.Reset ();
+
+        sceneLoader.loadNewScene("Game");
+
+
+=======
+        sceneLoader.loadNewScene("Game");
+
+>>>>>>> origin/Sprint-2
+        /*
         //reset every score, and continue counting score
         foreach (ScoreBase _score in scores)
         {
@@ -26,8 +42,9 @@ public class RestartGame : MonoBehaviour {
 
         healthBar.Restart();
 
-        gameSpeed.Reset();
+        c
 
         gameOverScreen.SetActive(false);
+        */
     }
 }

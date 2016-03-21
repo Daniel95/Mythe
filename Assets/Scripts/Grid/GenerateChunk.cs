@@ -43,7 +43,10 @@ public class GenerateChunk : MonoBehaviour {
                     //put the number of the grid into the objectToSpawnName array to check the right name for that object, then send it to object pool
                     GameObject spawnedObject = ObjectPool.instance.GetObjectForType(objectToSpawnNames[chunkToSpawn[x, y]], true);
 
-                    spawnedObject.transform.position = new Vector3(x, -y + yLength,spawnedObject.transform.position.z) + (Vector3)spawnPos.transform.position;
+                    if (spawnedObject == null)
+                        print(objectToSpawnNames[chunkToSpawn[x, y]] + " does not exist in objectpool");
+                    else
+                        spawnedObject.transform.position = new Vector3(x, -y + yLength,spawnedObject.transform.position.z) + spawnPos.transform.position;
                 }
             }
         }

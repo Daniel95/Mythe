@@ -1901,7 +1901,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79342297}
-        m_MethodName: LoadNewScores
+        m_MethodName: LoadScoreType
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2184,7 +2184,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79342297}
-        m_MethodName: LoadNewScores
+        m_MethodName: LoadScoreType
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

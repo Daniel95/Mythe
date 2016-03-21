@@ -883,13 +883,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 539652153}
-  scores:
-  - {fileID: 702655280}
-  - {fileID: 2019308183}
-  - {fileID: 146991383}
-  - {fileID: 1399119811}
-  gameOverScreen: {fileID: 602601228}
-  healthBar: {fileID: 2094346090}
   gameSpeed: {fileID: 2015117535}
 --- !u!114 &539652150
 MonoBehaviour:
@@ -1169,6 +1162,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 752591567}
   - 114: {fileID: 752591566}
+  - 114: {fileID: 752591568}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -1187,17 +1181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b3470f500698242975fac60ea0b6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailPoolName: TrailTest
-  trailStartLength: 4
-  trailMaxLength: 15
-  trailMinCutLength: 3
+  trailLengthHandler: {fileID: 752591568}
   player: {fileID: 1871364907}
   trailConnectPoint: {fileID: 754954601}
-  trailAutoSpeedMultiplier: 5
-  superModeSpeedMultiplier: 20
-  distanceBetweenTrails: 0.4
-  neckDistance: 0.25
-  healthBar: {fileID: 2094346090}
+  trailAutoSpeedMultiplier: 4
+  superModeSpeedMultiplier: 0
+  distanceBetweenTrails: 0.5
+  neckDistance: 0.2
 --- !u!4 &752591567
 Transform:
   m_ObjectHideFlags: 0
@@ -1210,6 +1200,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &752591568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752591565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92c8cff1a21d6b4f83bb1037cd755dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trailPoolName: TrailTest
+  trailMovement: {fileID: 752591566}
+  healthBar: {fileID: 2094346090}
+  trailMaxLength: 20
+  trailMinCutLength: 3
 --- !u!4 &754954601 stripped
 Transform:
   m_PrefabParentObject: {fileID: 489012, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
@@ -3170,6 +3176,5 @@ MonoBehaviour:
   - {fileID: 850627354}
   - {fileID: 1449604271}
   - {fileID: 1981823744}
-  trailMovement: {fileID: 752591566}
   audioSource: {fileID: 193224767}
   audioClip: {fileID: 8300000, guid: f24af892ae4eaf94fbaf0e712822e05e, type: 3}

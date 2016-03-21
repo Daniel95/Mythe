@@ -10,8 +10,14 @@ public class TrailTriggerDetection : MonoBehaviour {
 
     private int numberInList;
 
+    public bool removed;
+
     void Start() {
         trailMovement = GetComponentInParent<TrailMovementTest>();
+    }
+
+    public void Reset() {
+        removed = false;
     }
 
     void OnTriggerEnter2D(Collider2D _other) {
@@ -26,10 +32,14 @@ public class TrailTriggerDetection : MonoBehaviour {
     }
 
     public void Destroy() {
-        trailMovement.DestroyTrailParts(numberInList, true);
+        if(!removed) trailMovement.RemoveTrailParts(numberInList, true);
     }
 
     public int NumberInList {
         set { numberInList = value; }
+    }
+
+    public bool Removed {
+        set { removed = value; }
     }
 }

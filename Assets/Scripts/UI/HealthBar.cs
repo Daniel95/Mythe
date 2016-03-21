@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
     private float currentHealth;
     private float maxHealth;
     [SerializeField]
-    private float loseHealthSpeed = 0.03f;
+    private float loseHealthSpeed = 0.0012f;
     [SerializeField]
     private Image waterRenderer;
 

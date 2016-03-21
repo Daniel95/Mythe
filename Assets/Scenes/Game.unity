@@ -1160,6 +1160,7 @@ MonoBehaviour:
   trailPoolName: TrailTest
   trailStartLength: 4
   trailMaxLength: 15
+  trailMinCutLength: 3
   player: {fileID: 1871364907}
   trailConnectPoint: {fileID: 754954601}
   trailAutoSpeedMultiplier: 5

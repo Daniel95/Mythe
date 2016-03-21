@@ -14,6 +14,9 @@ public class TrailMovementTest : MonoBehaviour {
     private int trailMaxLength = 20;
 
     [SerializeField]
+    private int trailMinCutLength = 3;
+
+    [SerializeField]
     private Transform player;
 
     [SerializeField]
@@ -85,7 +88,7 @@ public class TrailMovementTest : MonoBehaviour {
 
             //use the angle to get the rotation to our target
             currentTrail.rotation = Quaternion.Euler(0, 0, angle);
-            
+
             //give the trail gravity
             Vector3 velocity = new Vector3(0, -GameSpeed.MoveSpeed * 50, 0);
 
@@ -119,6 +122,7 @@ public class TrailMovementTest : MonoBehaviour {
     {
         while (healthBar.CurrentHealth != 0)
         {
+            //calculate the amount of trails the player must have
             trailsAmount = Mathf.RoundToInt(healthBar.CurrentHealth / healthPerTrail);
 
             //spawn trails
@@ -129,11 +133,9 @@ public class TrailMovementTest : MonoBehaviour {
                 {
                     SpawnTrail();
                 }
-                //remove trails
-            }
-            else if (trailsAmount < trailParts.Count)
+            } else if (trailsAmount < trailParts.Count && trailsAmount >= 0)//remove trails
             {
-                DestroyTrailParts(trailsAmount, false);
+                RemoveTrailParts(trailsAmount, false);
             }
 
             yield return new WaitForFixedUpdate();
@@ -158,11 +160,13 @@ public class TrailMovementTest : MonoBehaviour {
             spawnedObject.GetComponent<MoveDown>().enabled = false;
 
             //give the trailpart its number in the list, we use this when we remove the trail part later.
-            spawnedObject.GetComponent<TrailTriggerDetection>().NumberInList = trailParts.Count;
+            TrailTriggerDetection trailTriggerDetection = spawnedObject.GetComponent<TrailTriggerDetection>();
+
+            trailTriggerDetection.Reset();
+            trailTriggerDetection.NumberInList = trailParts.Count;
 
             DistanceJoint2D distanceJoint2D = spawnedObject.GetComponent<DistanceJoint2D>();
 
-            
             if (trailParts.Count == 1)
             {
                 distanceJoint2D.connectedBody = trailConnectPoint.GetComponent<Rigidbody2D>();
@@ -176,24 +180,28 @@ public class TrailMovementTest : MonoBehaviour {
         }
     }
 
-    public void DestroyTrailParts(int _numberInList, bool _doDamage) {
-
+    public void RemoveTrailParts(int _numberInList, bool _doDamage) {
         //do damage to the players healthbar when the trail is being cut off
-        if(_doDamage)
+        if (_doDamage)
+        {
+            if (_numberInList <= trailMinCutLength)
+                _numberInList = trailMinCutLength;
             healthBar.addValue((_numberInList - trailParts.Count) * healthPerTrail);
+        }
 
         //save the list length, because we dont want it to change while we are looping the for loop
         int listLenght = trailParts.Count;
-
+        
         //look at the numberInList of the trail part, destroy this trail and every trail that is higher in the list than us.
-        for (int i = _numberInList; i < listLenght; i++) {
+        for (int i = trailParts.Count - 1; i >= _numberInList; i--)
+        {
+            Transform trailToRemove = trailParts[i];
 
-            trailParts[_numberInList].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
-            trailParts[_numberInList].GetComponent<DistanceJoint2D>().enabled = false;
-
-            trailParts[_numberInList].GetComponent<MoveDown>().enabled = true;
-            trailParts.Remove(trailParts[_numberInList]);
+            trailToRemove.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            trailToRemove.GetComponent<DistanceJoint2D>().enabled = false;
+            trailToRemove.GetComponent<DistanceJoint2D>().connectedBody = null;
+            trailToRemove.GetComponent<MoveDown>().enabled = trailToRemove.GetComponent<TrailTriggerDetection>().Removed = true;
+            trailParts.Remove(trailToRemove);
         }
     }
 }

@@ -4,29 +4,39 @@ using System.Collections.Generic;
 public class RestartGame : MonoBehaviour {
 
     [SerializeField]
+    private SceneLoader sceneLoader;
+
+    [SerializeField]
     private List<ScoreBase> scores;
 
     [SerializeField]
-    private GameObject scoreBoard;
+    private GameObject gameOverScreen;
 
     [SerializeField]
-    private GameObject finishButton;
+    private HealthBar healthBar;
 
-    void Start() {
-        gameObject.SetActive(false);
-    }
+    [SerializeField]
+    private GameSpeed gameSpeed;
+
+
 
     public void Restart()
     {
-        scoreBoard.SetActive(false);
+        sceneLoader.loadNewScene("Game");
 
+        /*
+        //reset every score, and continue counting score
         foreach (ScoreBase _score in scores)
         {
-            _score.Counting = true;
             _score.ResetValue();
+            _score.Counting = true;
         }
 
-        finishButton.SetActive(true);
-        gameObject.SetActive(false);
+        healthBar.Restart();
+
+        gameSpeed.Reset();
+
+        gameOverScreen.SetActive(false);
+        */
     }
 }

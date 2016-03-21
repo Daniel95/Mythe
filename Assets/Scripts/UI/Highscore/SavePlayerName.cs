@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class SavePlayerName : MonoBehaviour
 {
     [SerializeField]
     private PlayerName _plrName;
+
+    [SerializeField]
+    private SceneLoader sceneLoader;
 
     [SerializeField]
     private Button submitButton;
@@ -16,22 +20,21 @@ public class SavePlayerName : MonoBehaviour
     [SerializeField]
     private int maxNameLength = 20;
 
+    [SerializeField]
+    private List<char> notAllowedCharacters;
+
     void Start()
     {
         //we cannot click on the submit button until be entered our name
         submitButton.interactable = false;
-        var input = gameObject.GetComponent<InputField>();
-
-        //when the user is done typing, check if the name is correct
-        //input.onEndEdit.AddListener(SubmitName);
     }
 
-    public void SubmitName(string input)
+    public void SubmitName(string _input)
     {
-        if (input.Length > minNameLength && input.Length < maxNameLength)
+        if (_input.Length > minNameLength && _input.Length < maxNameLength && CharactersCheck(_input))
         {
             //save the name in playerName script
-            _plrName.Name = input;
+            _plrName.Name = _input;
             //the player can click the button to continue
             submitButton.interactable = true;
             //the player can hit enter to continue
@@ -53,12 +56,19 @@ public class SavePlayerName : MonoBehaviour
         {
             yield return null;
         }
-        nextScene();
+        sceneLoader.loadNextScene();
     }
 
+    private bool CharactersCheck(string _input) {
 
-    private void nextScene()
-    {
-        GetComponent<SceneLoader>().loadNextScene();
+        for (int i = 0; i < _input.Length; i++) {
+            for (int b = 0; b < notAllowedCharacters.Count; b++) {
+                if (_input.ToCharArray()[i] == notAllowedCharacters[b])
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

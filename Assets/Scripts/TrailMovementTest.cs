@@ -202,6 +202,7 @@ public class TrailMovementTest : MonoBehaviour {
             trailToRemove.GetComponent<DistanceJoint2D>().enabled = false;
             trailToRemove.GetComponent<DistanceJoint2D>().connectedBody = null;
             trailToRemove.GetComponent<MoveDown>().enabled = trailToRemove.GetComponent<TrailTriggerDetection>().Removed = true;
+			trailParts[_numberInList].GetComponent<InteractableObject> ().isEnabled = true;
             trailParts.Remove(trailToRemove);
         }
     }

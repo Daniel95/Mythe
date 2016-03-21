@@ -115,7 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b76e7a3c27e1e4c8b6ae320c033369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScores: {fileID: 2066567307}
+  loadData: {fileID: 2066567307}
+  scoreBoard: {fileID: 2066567308}
   scoreNames:
   - score
   - pickups
@@ -1064,7 +1065,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 19900471}
-        m_MethodName: LoadNewScores
+        m_MethodName: LoadScoreType
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1189,7 +1190,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 19900471}
-        m_MethodName: LoadNewScores
+        m_MethodName: LoadScoreType
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1384,6 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4683365883cd725468a292b8df402ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataFieldName: scoreType
   NoConnectionImage: {fileID: 546941938}
 --- !u!114 &2066567308
 MonoBehaviour:

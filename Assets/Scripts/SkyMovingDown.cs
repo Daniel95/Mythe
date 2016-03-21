@@ -9,11 +9,13 @@ public class SkyMovingDown : MonoBehaviour
     private GameObject secondImage;
     [SerializeField]
     private bool delayAble = false;
+    [SerializeField]
+    private float maxAlpha = 1;
+
 
     void Start()
     {
         secondImage = transform.FindChild("sky").gameObject;
-        //heigth = (transform.FindChild("up").transform.position.y - transform.position.y) * 2f;
     }
     public void FormingSky()
     {
@@ -30,7 +32,7 @@ public class SkyMovingDown : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         Color temp = GetComponent<SpriteRenderer>().color;
-        while (temp.a <= 1)
+        while (temp.a <= maxAlpha)
         {
             temp.a += fadeSpeed;
             GetComponent<SpriteRenderer>().color = secondImage.GetComponent<SpriteRenderer>().color = temp;

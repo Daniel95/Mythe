@@ -71,7 +71,7 @@ public class TrailLengthHandler : MonoBehaviour {
             else spawnedObject.transform.position = trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].position;
 
             spawnedObject.GetComponent<MoveDown>().enabled = false;
-            spawnedObject.GetComponent<InteractableObject>().isEnabled = false;
+            spawnedObject.GetComponent<InteractableObject>().IsEnabled = false;
 
             //give the trailpart its number in the list, we use this when we remove the trail part later.
             TrailTriggerDetection trailTriggerDetection = spawnedObject.GetComponent<TrailTriggerDetection>();
@@ -81,14 +81,18 @@ public class TrailLengthHandler : MonoBehaviour {
 
             DistanceJoint2D distanceJoint2D = spawnedObject.GetComponent<DistanceJoint2D>();
 
-            if (trailMovement.TrailParts.Count == 1)
+            if (trailMovement.TrailParts.Count == 1) // this is the neck of the player
             {
+                //the connected body is the trailConnectPoint of the player
                 distanceJoint2D.connectedBody = trailMovement.TrailConnectPoint.GetComponent<Rigidbody2D>();
+                //the distance is closer than normal
                 distanceJoint2D.distance = trailMovement.NeckDistance;
             }
-            else
+            else // a normal trail part
             {
+                //the connected body is the last piece of the trial
                 distanceJoint2D.connectedBody = trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].GetComponent<Rigidbody2D>();
+                //the distance is the normal distance between trails
                 distanceJoint2D.distance = trailMovement.DistanceBetweenTrails;
             }
             distanceJoint2D.enabled = true;
@@ -100,6 +104,7 @@ public class TrailLengthHandler : MonoBehaviour {
         //do damage to the players healthbar when the trail is being cut off
         if (_doDamage)
         {
+            //if the trail part that is being cut off is too close to the player, cut off another trail that is further away
             if (_numberInList <= trailMinCutLength)
                 _numberInList = trailMinCutLength;
             healthBar.addValue((_numberInList - trailMovement.TrailParts.Count) * healthPerTrail);
@@ -117,7 +122,7 @@ public class TrailLengthHandler : MonoBehaviour {
             trailToRemove.GetComponent<DistanceJoint2D>().enabled = false;
             trailToRemove.GetComponent<DistanceJoint2D>().connectedBody = null;
             trailToRemove.GetComponent<MoveDown>().enabled = trailToRemove.GetComponent<TrailTriggerDetection>().Removed = true;
-            trailToRemove.GetComponent<InteractableObject>().isEnabled = true;
+            trailToRemove.GetComponent<InteractableObject>().IsEnabled = true;
             trailMovement.TrailParts.Remove(trailToRemove);
         }
     }

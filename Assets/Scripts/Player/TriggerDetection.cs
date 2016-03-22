@@ -35,7 +35,7 @@ public class TriggerDetection : MonoBehaviour {
 		{
             //save the script of _other, in the variable
             interactableObject = _other.gameObject.GetComponent<InteractableObject>();
-			if (interactableObject.isEnabled) {
+			if (interactableObject.IsEnabled) {
 				if (interactableObject.gameObject.tag == Tags.shieldPowerUp) {
 					powerUpHandler.addShield ();
 					audioSource.PlayOneShot (audioClip);

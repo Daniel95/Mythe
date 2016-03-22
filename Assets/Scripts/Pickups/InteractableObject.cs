@@ -23,10 +23,9 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField]
 	private bool playAnimOnDeath = true;
 
-	private Animator anim;
+    private Animator anim;
 
-
-	public bool isEnabled = true;
+	private bool isEnabled = true;
 
 	void Start() {
 		anim = GetComponent<Animator>();
@@ -36,6 +35,7 @@ public class InteractableObject : MonoBehaviour {
 	public virtual void Touched() 
 	{
 		if (isEnabled) {
+            print("coll");
 			if (playAnimOnDeath) {
 				//play the animation
 				anim.SetTrigger (animToPlayName);
@@ -73,5 +73,10 @@ public class InteractableObject : MonoBehaviour {
         transform.localScale = new Vector2(startScale, startScale);
 
         ObjectPool.instance.PoolObject(gameObject);
+    }
+
+    public bool IsEnabled {
+        set { isEnabled = value; }
+        get { return isEnabled; }
     }
 }

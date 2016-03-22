@@ -23,19 +23,30 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField]
 	private bool playAnimOnDeath = true;
 
+    private Collider2D myCollider;
+
     private Animator anim;
 
 	private bool isEnabled = true;
 
 	void Start() {
 		anim = GetComponent<Animator>();
+        
         startScale = transform.localScale.x;
 	}
+
+    void Awake()
+    {
+        myCollider = GetComponent<Collider2D>();
+    }
+
+    void OnEnable() {
+        myCollider.enabled = true;
+    }
 
 	public virtual void Touched() 
 	{
 		if (isEnabled) {
-            print("coll");
 			if (playAnimOnDeath) {
 				//play the animation
 				anim.SetTrigger (animToPlayName);
@@ -56,9 +67,11 @@ public class InteractableObject : MonoBehaviour {
 
 	IEnumerator PoolAfterAnimation()
 	{
-		//coll.enabled = false;
-		//wait for the animation to start
-		while (!anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName)) {
+        //collider disabled so it cant collide while playing the animation
+        myCollider.enabled = true;
+
+        //wait for the animation to start
+        while (!anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName)) {
 			yield return new WaitForFixedUpdate();
 		}
 

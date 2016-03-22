@@ -18,6 +18,9 @@ public class TrailLengthHandler : MonoBehaviour {
     [SerializeField]
     private int trailMinCutLength = 3;
 
+    [SerializeField]
+    private float trailStartScale = 0.5f;
+
     private float healthPerTrail = 0;
 
     private int trailsAmount = 0;
@@ -85,6 +88,7 @@ public class TrailLengthHandler : MonoBehaviour {
             {
                 //the connected body is the trailConnectPoint of the player
                 distanceJoint2D.connectedBody = trailMovement.TrailConnectPoint.GetComponent<Rigidbody2D>();
+
                 //the distance is closer than normal
                 distanceJoint2D.distance = trailMovement.NeckDistance;
             }
@@ -92,6 +96,14 @@ public class TrailLengthHandler : MonoBehaviour {
             {
                 //the connected body is the last piece of the trial
                 distanceJoint2D.connectedBody = trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].GetComponent<Rigidbody2D>();
+
+                //float newScale = trailStartScale / trailMovement.TrailParts.Count;
+
+                //spawnedObject.transform.localScale = new Vector2(newScale, newScale);
+
+
+                //distanceJoint2D.distance = trailMovement.DistanceBetweenTrails / trailMovement.TrailParts.Count;
+
                 //the distance is the normal distance between trails
                 distanceJoint2D.distance = trailMovement.DistanceBetweenTrails;
             }

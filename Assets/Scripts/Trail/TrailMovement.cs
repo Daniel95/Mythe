@@ -27,9 +27,6 @@ public class TrailMovement : MonoBehaviour {
     [SerializeField]
     private float neckDistance = 0.2f;
 
-    //[SerializeField]
-    //private float trailScale = 0.5f;
-
     private List<Transform> trailParts = new List<Transform>();
 
     // Use this for initialization
@@ -112,100 +109,4 @@ public class TrailMovement : MonoBehaviour {
     public float NeckDistance {
         get { return neckDistance; }
     }
-
-    /*
-    public void StartTrailLengthHandler() {
-        StartCoroutine(TrailLengthHandler());
-    }
-
-    
-    IEnumerator TrailLengthHandler()
-    {
-        while (healthBar.CurrentHealth != 0)
-        {
-            //calculate the amount of trails the player must have
-            trailsAmount = Mathf.RoundToInt(healthBar.CurrentHealth / healthPerTrail);
-
-            //spawn trails
-            if (trailsAmount > trailParts.Count)
-            {
-                int difference = trailsAmount - trailParts.Count;
-                for (int i = difference; i > 0; i--)
-                {
-                    SpawnTrail();
-                }
-            } else if (trailsAmount < trailParts.Count && trailsAmount >= 0)//remove trails
-            {
-                RemoveTrailParts(trailsAmount, false);
-            }
-
-            yield return new WaitForFixedUpdate();
-        }
-    }
-
-    public void SpawnTrail() {
-        if (trailParts.Count < trailMaxLength)
-        {
-            //get the object out of the pool
-            GameObject spawnedObject = ObjectPool.instance.GetObjectForType(trailPoolName, true);
-
-            spawnedObject.transform.parent = transform;
-
-            //add the object to the trail list
-            trailParts.Add(spawnedObject.transform);
-
-            //set the position of the trail
-            if (trailParts.Count == 1) spawnedObject.transform.position = trailConnectPoint.position;
-            else spawnedObject.transform.position = trailParts[trailParts.Count - 2].position;
-
-            spawnedObject.GetComponent<MoveDown>().enabled = false;
-			spawnedObject.GetComponent<InteractableObject> ().isEnabled = false;
-
-            //give the trailpart its number in the list, we use this when we remove the trail part later.
-            TrailTriggerDetection trailTriggerDetection = spawnedObject.GetComponent<TrailTriggerDetection>();
-
-            trailTriggerDetection.Reset();
-            trailTriggerDetection.NumberInList = trailParts.Count;
-
-            DistanceJoint2D distanceJoint2D = spawnedObject.GetComponent<DistanceJoint2D>();
-
-            if (trailParts.Count == 1)
-            {
-                distanceJoint2D.connectedBody = trailConnectPoint.GetComponent<Rigidbody2D>();
-                distanceJoint2D.distance = neckDistance;
-            }
-            else {
-                distanceJoint2D.connectedBody = trailParts[trailParts.Count - 2].GetComponent<Rigidbody2D>();
-                distanceJoint2D.distance = distanceBetweenTrails;
-            }
-            distanceJoint2D.enabled = true;
-        }
-    }
-
-    public void RemoveTrailParts(int _numberInList, bool _doDamage) {
-        //do damage to the players healthbar when the trail is being cut off
-        if (_doDamage)
-        {
-            if (_numberInList <= trailMinCutLength)
-                _numberInList = trailMinCutLength;
-            healthBar.addValue((_numberInList - trailParts.Count) * healthPerTrail);
-        }
-
-        //save the list length, because we dont want it to change while we are looping the for loop
-        int listLenght = trailParts.Count;
-        
-        //look at the numberInList of the trail part, destroy this trail and every trail that is higher in the list than us.
-        for (int i = trailParts.Count - 1; i >= _numberInList; i--)
-        {
-            Transform trailToRemove = trailParts[i];
-
-            trailToRemove.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            trailToRemove.GetComponent<DistanceJoint2D>().enabled = false;
-            trailToRemove.GetComponent<DistanceJoint2D>().connectedBody = null;
-            trailToRemove.GetComponent<MoveDown>().enabled = trailToRemove.GetComponent<TrailTriggerDetection>().Removed = true;
-			trailParts[_numberInList].GetComponent<InteractableObject> ().isEnabled = true;
-            trailParts.Remove(trailToRemove);
-        }
-    }
-    */
 }

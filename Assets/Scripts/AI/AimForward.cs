@@ -20,8 +20,6 @@ public class AimForward : MonoBehaviour {
             target = player.transform;
         }
         moves = false;
-        while(target != null)
-        {
             while (Vector2.Distance(target.position, transform.position) > distanceDetection)
             {
                 direction = new Vector2((target.position.x - transform.position.x), (target.position.y - transform.position.y));
@@ -30,7 +28,6 @@ public class AimForward : MonoBehaviour {
                 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 yield return new WaitForFixedUpdate();
             }
-        }
         
         if (GetComponent<MoveDown>() != null)
         {

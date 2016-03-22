@@ -1709,6 +1709,10 @@ Prefab:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bf6ab8570c396417bb452245e554afab, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -3187,4 +3191,4 @@ MonoBehaviour:
   - {fileID: 1449604271}
   - {fileID: 1981823744}
   audioSource: {fileID: 193224767}
-  audioClip: {fileID: 8300000, guid: f24af892ae4eaf94fbaf0e712822e05e, type: 3}
+  audioClip: {fileID: 8300000, guid: 0f1153822ffd2472cbca6d85fd0ca381, type: 3}

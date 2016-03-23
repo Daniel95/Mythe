@@ -5,7 +5,8 @@ public class MouseInput : MonoBehaviour {
 
 	PlayerMovement playerMovement;
 	GameObject targetIcon;
-
+    [SerializeField]
+    private float offset = 1f;
 	// Use this for initialization
 	void Start () {
 
@@ -17,7 +18,7 @@ public class MouseInput : MonoBehaviour {
 	void Update () {
 		
 			Vector2 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			targetPosition.y += 1f;
+			targetPosition.y += offset;
 			playerMovement.setTarget(targetPosition);
 			targetIcon.transform.position = targetPosition;
 

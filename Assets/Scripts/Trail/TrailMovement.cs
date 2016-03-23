@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class TrailMovement : MonoBehaviour {
+public class TrailMovement : MonoBehaviour
+{
 
     [SerializeField]
     private TrailLengthHandler trailLengthHandler;
@@ -27,16 +28,27 @@ public class TrailMovement : MonoBehaviour {
     [SerializeField]
     private float neckDistance = 0.2f;
 
+    [SerializeField]
+    private float startTrailSize = 0.4f;
+
+    [SerializeField]
+    private int trailEndAmount = 3;
+
+    [SerializeField]
+    private float trailSizeDecrement = 0.05f;
+
     private List<Transform> trailParts = new List<Transform>();
 
     // Use this for initialization
     void Start()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
+
         StartTrail();
     }
 
-    public void StartTrail() {
+    public void StartTrail()
+    {
         StartCoroutine(WaitForObjectPool());
     }
 
@@ -46,16 +58,17 @@ public class TrailMovement : MonoBehaviour {
         yield return new WaitForFixedUpdate();
 
         trailLengthHandler.StartTrailLengthUpdater();
-        //StartCoroutine(TrailLengthHandler());
     }
 
-    
-    void FixedUpdate () {
+
+    void FixedUpdate()
+    {
         Vector2 lastPosition = trailConnectPoint.position;
 
         // Update the movement of the Trails
-        for (int i = 0; i < trailParts.Count; i++) {
-            
+        for (int i = 0; i < trailParts.Count; i++)
+        {
+
             //so i dont have to wirte trailsParts[i] all the time
             Transform currentTrail = trailParts[i];
 
@@ -90,14 +103,27 @@ public class TrailMovement : MonoBehaviour {
 
             //set lastPosition on our new position. we use this so we know where the next trail parts needs to rotate to.
             lastPosition = currentTrail.transform.position;
+
+            if (i >= trailParts.Count - trailEndAmount)
+            {
+                //calculate which trail this is in the endAmount
+                int numberInEnd = i - trailParts.Count + trailEndAmount + 1;
+
+                //the higher the numberInEnd, the lower the scale
+                currentTrail.localScale = new Vector2(startTrailSize, startTrailSize) - new Vector2(numberInEnd * trailSizeDecrement, numberInEnd * trailSizeDecrement);
+            }
+            else
+                currentTrail.localScale = new Vector2(startTrailSize, startTrailSize);
         }
     }
 
-    public List<Transform> TrailParts {
+    public List<Transform> TrailParts
+    {
         get { return trailParts; }
     }
 
-    public Transform TrailConnectPoint {
+    public Transform TrailConnectPoint
+    {
         get { return trailConnectPoint; }
     }
 
@@ -106,7 +132,8 @@ public class TrailMovement : MonoBehaviour {
         get { return distanceBetweenTrails; }
     }
 
-    public float NeckDistance {
+    public float NeckDistance
+    {
         get { return neckDistance; }
     }
 }

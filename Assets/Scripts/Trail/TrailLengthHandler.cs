@@ -4,7 +4,7 @@ using System.Collections;
 public class TrailLengthHandler : MonoBehaviour {
 
     [SerializeField]
-    private string trailPoolName = "TrailTest";
+    private string trailPoolName = "Trail";
 
     [SerializeField]
     private TrailMovement trailMovement;
@@ -17,9 +17,6 @@ public class TrailLengthHandler : MonoBehaviour {
 
     [SerializeField]
     private int trailMinCutLength = 3;
-
-    [SerializeField]
-    private float trailStartScale = 0.5f;
 
     private float healthPerTrail = 0;
 
@@ -97,13 +94,6 @@ public class TrailLengthHandler : MonoBehaviour {
                 //the connected body is the last piece of the trial
                 distanceJoint2D.connectedBody = trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].GetComponent<Rigidbody2D>();
 
-                //float newScale = trailStartScale / trailMovement.TrailParts.Count;
-
-                //spawnedObject.transform.localScale = new Vector2(newScale, newScale);
-
-
-                //distanceJoint2D.distance = trailMovement.DistanceBetweenTrails / trailMovement.TrailParts.Count;
-
                 //the distance is the normal distance between trails
                 distanceJoint2D.distance = trailMovement.DistanceBetweenTrails;
             }
@@ -132,7 +122,7 @@ public class TrailLengthHandler : MonoBehaviour {
 
             trailToRemove.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             trailToRemove.GetComponent<DistanceJoint2D>().enabled = false;
-            trailToRemove.GetComponent<DistanceJoint2D>().connectedBody = null;
+            //trailToRemove.GetComponent<DistanceJoint2D>().connectedBody = null;
             trailToRemove.GetComponent<MoveDown>().enabled = trailToRemove.GetComponent<TrailTriggerDetection>().Removed = true;
             trailToRemove.GetComponent<InteractableObject>().IsEnabled = true;
             trailMovement.TrailParts.Remove(trailToRemove);

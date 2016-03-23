@@ -1198,6 +1198,9 @@ MonoBehaviour:
   superModeSpeedMultiplier: 20
   distanceBetweenTrails: 0.5
   neckDistance: 0.2
+  startTrailSize: 0.35
+  trailEndAmount: 4
+  trailSizeDecrement: 0.025
 --- !u!4 &752591567
 Transform:
   m_ObjectHideFlags: 0
@@ -1221,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92c8cff1a21d6b4f83bb1037cd755dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailPoolName: TrailTest
+  trailPoolName: Trail
   trailMovement: {fileID: 752591566}
   healthBar: {fileID: 2094346090}
   trailMaxLength: 20
@@ -2973,12 +2976,8 @@ MonoBehaviour:
     Count: 30
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 101702, guid: 530514e073bb2455289698d379a1a16f, type: 2}
-    Count: 30
-    pool: []
-    objectsInPool: 0
   - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
-    Count: 30
+    Count: 50
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 153716, guid: 55cefc05158f86a44ad43daa3f52cbed, type: 2}

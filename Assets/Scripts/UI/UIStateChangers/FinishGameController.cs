@@ -31,7 +31,7 @@ public class FinishGameController : MonoBehaviour {
             _score.Counting = false;
         }
 
-        //Handheld.Vibrate();
+        Handheld.Vibrate();
 
         gameoverScreen.SetActive(true);
 

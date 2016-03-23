@@ -117,6 +117,10 @@ public class HealthBar : MonoBehaviour
             waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
             yield return new WaitForFixedUpdate();
         }
+        while(health < maxHealth/2)
+        {
+            yield return new WaitForFixedUpdate();
+        }
         StartCoroutine(SuperMode());
     }
 

@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24f521fe48aa47c4b192db1029e3d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canBeAttracted: 1
 --- !u!114 &11409022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: 0.31
+  healthValue: 0.2
   poolOnTouch: 1
   animToPlayName: Water Splash
   animScale: 1.5
@@ -195,7 +196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: healthValue
-      value: 0.31
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: poolOnTouch

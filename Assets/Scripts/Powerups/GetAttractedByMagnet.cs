@@ -4,7 +4,8 @@ using System.Collections;
 public class GetAttractedByMagnet : MonoBehaviour {
 	private GameObject playerObject; 
 	private MoveDown moveDown;
-
+    [SerializeField]
+    private bool canBeAttracted = true;
 	private bool haveIBeenAttracted;
 
 	void Start()
@@ -20,14 +21,14 @@ public class GetAttractedByMagnet : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D _other)
 	{
-		if (_other.gameObject.tag == Tags.magnetEffect) 
+		if (_other.gameObject.tag == Tags.magnetEffect && canBeAttracted) 
 		{
             moveDown.Move = false;
 			haveIBeenAttracted = true;
 		}
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
 		if (haveIBeenAttracted && playerObject != null) 
 		{

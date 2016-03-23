@@ -65,11 +65,15 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator SuperMode()
     {
+        GameObject[] obstacles = GameObject.FindGameObjectsWithTag(Tags.obstacle);
+        foreach(GameObject obstacle in obstacles)
+        {
+            obstacle.GetComponent<BoxCollider2D>().enabled = false;
+        }
         superGenerator.SetActive(true);
         generateOneObject.SpawnObject();
         generateChunk.ShouldSpawn = false;
         waterRenderer.color = Color.green;
-        yield return new WaitForSeconds(1.5f);
         cameraZoom.ZoomCameraOut();
         gameSpeed.SuperMode();
         for (int i = 0; i < skiesMovingDown.Length; i++)

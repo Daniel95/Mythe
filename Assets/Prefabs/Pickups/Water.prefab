@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4236763, y: -1.5835557, z: 0}
+  m_LocalPosition: {x: -1.4236763, y: -1.5835557, z: 2}
   m_LocalScale: {x: 1.0507013, y: 1.0507015, z: 1.0507015}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,12 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: 0.11
+  healthValue: 0.31
   poolOnTouch: 1
   animToPlayName: Water Splash
   animScale: 1.5
   playAnimOnDeath: 1
-  isEnabled: 1
 --- !u!114 &11465416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,7 +195,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: healthValue
-      value: 0.11
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: poolOnTouch
@@ -209,6 +208,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: animScale
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -3,6 +3,18 @@ using UnityEngine.UI;
 using System.Collections;
 public class HealthBar : MonoBehaviour
 {
+    //delegate type
+    public delegate void HealthStateMethods();
+
+    //delegate instance
+    public HealthStateMethods EnterSuperMode;
+
+    //delegate instance
+    public HealthStateMethods EnterNormalMode;
+
+    //delegate instance
+    public HealthStateMethods PlayerDied;
+
     private float health;
     private float currentHealth;
     private float maxHealth;
@@ -65,6 +77,9 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator SuperMode()
     {
+        if(EnterSuperMode != null)
+            EnterSuperMode();
+
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag(Tags.obstacle);
         foreach(GameObject obstacle in obstacles)
         {
@@ -99,6 +114,9 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator NormalMode()
     {
+        if (EnterNormalMode != null)
+            EnterNormalMode();
+
         gameSpeed.NormalMode();
         superGenerator.SetActive(false);
         cameraZoom.ZoomCameraIn();
@@ -148,6 +166,8 @@ public class HealthBar : MonoBehaviour
 
     public void Die()
     {
+        if(PlayerDied != null) PlayerDied();
+
         StopCoroutine(UpdateHealthbar());
         health = currentHealth = 0;
         audioSource.PlayOneShot(audioClip);

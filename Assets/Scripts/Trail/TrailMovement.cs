@@ -37,6 +37,20 @@ public class TrailMovement : MonoBehaviour
     [SerializeField]
     private float trailSizeDecrement = 0.05f;
 
+    [SerializeField]
+    private HealthBar healthbar;
+
+    [SerializeField]
+    private int wingTrailNumber = 4;
+
+    [SerializeField]
+    private Sprite normalSprite;
+
+    [SerializeField]
+    private Sprite wingSprite;
+
+    private bool superMode;
+
     private List<Transform> trailParts = new List<Transform>();
 
     // Use this for initialization
@@ -46,6 +60,19 @@ public class TrailMovement : MonoBehaviour
 
         StartTrail();
     }
+
+    void OnEnable()
+    {
+        healthbar.EnterSuperMode += EnteredSuperMode;
+        healthbar.EnterNormalMode += EnteredNormalMode;
+    }
+
+    void OnDisable()
+    {
+        healthbar.EnterSuperMode -= EnteredSuperMode;
+        healthbar.EnterNormalMode -= EnteredNormalMode;
+    }
+
 
     public void StartTrail()
     {
@@ -111,10 +138,18 @@ public class TrailMovement : MonoBehaviour
 
                 //the higher the numberInEnd, the lower the scale
                 currentTrail.localScale = new Vector2(startTrailSize, startTrailSize) - new Vector2(numberInEnd * trailSizeDecrement, numberInEnd * trailSizeDecrement);
-            }
-            else
+            } else
                 currentTrail.localScale = new Vector2(startTrailSize, startTrailSize);
         }
+    }
+
+    void EnteredSuperMode()
+    {
+        if(trailParts.Count > wingTrailNumber) trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = wingSprite;
+    }
+
+    void EnteredNormalMode() {
+        if(trailParts.Count > wingTrailNumber) trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = normalSprite;
     }
 
     public List<Transform> TrailParts

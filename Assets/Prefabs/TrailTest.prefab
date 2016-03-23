@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 11458594}
   - 114: {fileID: 11492262}
   m_Layer: 0
-  m_Name: trail
+  m_Name: TrailTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,10 +238,6 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: poolOnTouch
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Name
-      value: Trail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

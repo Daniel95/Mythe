@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11481624}
   - 114: {fileID: 11482974}
   - 58: {fileID: 5897054}
-  - 50: {fileID: 5039818}
   - 114: {fileID: 11451174}
   m_Layer: 0
   m_Name: MagnetPowerUp
@@ -33,23 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5039818
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189310}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &5897054
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -103,6 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
 --- !u!212 &21244760
 SpriteRenderer:
   m_ObjectHideFlags: 1

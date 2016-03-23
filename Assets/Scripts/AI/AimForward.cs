@@ -8,19 +8,23 @@ public class AimForward : MonoBehaviour {
     public bool moves;
     [SerializeField]
     private float distanceDetection;
+    private float distance;
+    private GameObject player;
     public void Start()
     {
-        StartCoroutine(Aim());
-    }
-    IEnumerator Aim()
-    {
-        GameObject player = GameObject.Find("player");
+        player = GameObject.Find("player");
         if (player != null)
         {
             target = player.transform;
+            StartCoroutine(Aim());
         }
+        
+    }
+    IEnumerator Aim()
+    {
         moves = false;
-            while (Vector2.Distance(target.position, transform.position) > distanceDetection)
+        distance = Vector2.Distance(target.position, transform.position);
+        while ( distance > distanceDetection)
             {
                 direction = new Vector2((target.position.x - transform.position.x), (target.position.y - transform.position.y));
                 direction.Normalize();
@@ -40,6 +44,10 @@ public class AimForward : MonoBehaviour {
         if(moves)
         {
             transform.Translate(Vector2.right / 100 * speed);
+        }
+        else if(player != null)
+        {
+            distance = Vector2.Distance(target.position, transform.position);
         }
         
     }

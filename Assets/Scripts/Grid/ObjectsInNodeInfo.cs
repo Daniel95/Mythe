@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class ObjectsInNode : MonoBehaviour {
+public class ObjectsInNodeInfo : MonoBehaviour {
 
     [SerializeField]
     private List<Sprite> assignSprites;
@@ -12,7 +12,7 @@ public class ObjectsInNode : MonoBehaviour {
         get { return sprites; }
     }
 
-    void Start()
+    void Awake()
     {
         sprites = assignSprites;
     }

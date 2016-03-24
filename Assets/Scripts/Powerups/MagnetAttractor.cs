@@ -13,7 +13,6 @@ public class MagnetAttractor : MonoBehaviour {
 	void OnEnable()
 	{
 		StartCoroutine (WaitAndDestroy (duration));
-
 	}
 
 	void Update () 
@@ -25,6 +24,7 @@ public class MagnetAttractor : MonoBehaviour {
     {
         print("reset");
         StopCoroutine(WaitAndDestroy(duration));
+        print(gameObject.activeSelf);
         StartCoroutine(WaitAndDestroy(duration));
     }
 

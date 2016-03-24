@@ -15,9 +15,24 @@ public class Node : MonoBehaviour {
 
     private Sprite sprite;
 
+    private ObjectSelection objectSelection;
+
     void Start() {
+        image.sprite = ObjectsInNodeInfo.Sprites[objNumber];
+    }
+
+    void Awake() {
         image = GetComponent<Image>();
-        image.sprite = ObjectsInNode.Sprites[objNumber];
+
+        objectSelection = GameObject.Find("ObjectSelectionMenu").GetComponent<ObjectSelection>();
+    }
+
+    void OnEnable() {
+       // objectSelection.DoneSelecting += SetNewObject;
+    }
+
+    void OnDisable() {
+        //objectSelection.DoneSelecting -= SetNewObject;
     }
 
     public void Init(int _x, int _y, int _objectValue, int _maxObjNumber) {
@@ -28,16 +43,29 @@ public class Node : MonoBehaviour {
     }
 
     public void ChangeObject() {
+        objectSelection.DoneSelecting += SetNewObject;
+        objectSelection.StartMenu(x, y);
+        
+            /*
         objNumber++;
         if (objNumber >= maxObjNumber) objNumber = 0;
         image.sprite = ObjectsInNode.Sprites[objNumber];
 
+        GameObject.FindObjectOfType<ChunkEditor>();
+
         transform.parent.GetComponent<ChunkEditor>().EditChunk(x, y, objNumber);
+        */
+    }
+
+    public void SetNewObject(int _newObjNumber) {
+        objNumber = _newObjNumber;
+        image.sprite = ObjectsInNodeInfo.Sprites[objNumber];
+        objectSelection.DoneSelecting -= SetNewObject;
     }
 
     public void Reset() {
         objNumber = 0;
-        image.sprite = ObjectsInNode.Sprites[objNumber];
+        image.sprite = ObjectsInNodeInfo.Sprites[objNumber];
     }
 
     public int X {

@@ -18,7 +18,8 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField]
     private float animScale = 1;
 
-    private float startScale;
+    [SerializeField]
+    private Vector2 startScale;
 
     [SerializeField]
 	private bool playAnimOnDeath = true;
@@ -27,36 +28,43 @@ public class InteractableObject : MonoBehaviour {
 
     private Animator anim;
 
-	private bool isEnabled = true;
-
-	void Start() {
-		anim = GetComponent<Animator>();
-        
-        startScale = transform.localScale.x;
-	}
+    private bool isEnabled = true;
 
     void Awake()
     {
+        anim = GetComponent<Animator>();
+
         myCollider = GetComponent<Collider2D>();
+
+        startScale = transform.localScale;
     }
 
     void OnEnable() {
+        //enable the collision
+        isEnabled = true;
+
         myCollider.enabled = true;
+
+        //reset itself to its starting scale, in case it was scaled up or down during an animation
+        transform.localScale = startScale;
     }
 
 	public virtual void Touched() 
 	{
 		if (isEnabled) {
-			if (playAnimOnDeath) {
-				//play the animation
-				anim.SetTrigger (animToPlayName);
+            if (playAnimOnDeath)
+            {
+                //play the animation
+                anim.SetTrigger(animToPlayName);
 
-				//destroy this object after the animation if boolean is true
-				if (poolOnTouch) {
-					StartCoroutine (PoolAfterAnimation ());
-				}
-			} else if (poolOnTouch)
-				ObjectPool.instance.PoolObject (gameObject);
+                //destroy this object after the animation if boolean is true
+                if (poolOnTouch)
+                {
+                    StartCoroutine(PoolAfterAnimation());
+                }
+            }
+            else if (poolOnTouch)
+                ObjectPool.instance.PoolObject(gameObject);
 		}
 	}
 
@@ -67,8 +75,8 @@ public class InteractableObject : MonoBehaviour {
 
 	IEnumerator PoolAfterAnimation()
 	{
-        //collider disabled so it cant collide while playing the animation
-        myCollider.enabled = true;
+        //disable the collision
+        isEnabled = false;
 
         //wait for the animation to start
         while (!anim.GetCurrentAnimatorStateInfo(0).IsName(animToPlayName)) {
@@ -82,8 +90,6 @@ public class InteractableObject : MonoBehaviour {
 		{
 			yield return new WaitForFixedUpdate();
 		}
-
-        transform.localScale = new Vector2(startScale, startScale);
 
         ObjectPool.instance.PoolObject(gameObject);
     }

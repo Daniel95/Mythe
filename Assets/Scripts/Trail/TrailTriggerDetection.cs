@@ -3,14 +3,13 @@ using System.Collections;
 
 public class TrailTriggerDetection : MonoBehaviour {
 
-    [SerializeField]
-    private string destroyTag = "Obstacle";
-
     private TrailLengthHandler trailLengthHandler;
 
     private int numberInList;
 
-    public bool removed;
+    private bool removed;
+
+    private bool shielded;
 
     void Start() {
         trailLengthHandler = GetComponentInParent<TrailLengthHandler>();
@@ -21,18 +20,18 @@ public class TrailTriggerDetection : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D _other) {
-        if (_other.CompareTag(destroyTag))
+        if (_other.CompareTag(Tags.obstacle))
             Destroy();
     }
     
     void OnTriggerCollision2D(Collision2D _other)
     {
-        if (_other.transform.CompareTag(destroyTag))
+        if (_other.transform.CompareTag(Tags.obstacle))
             Destroy();
     }
 
     public void Destroy() {
-        if(!removed) trailLengthHandler.RemoveTrailParts(numberInList, true);
+        if(!removed && !shielded) trailLengthHandler.RemoveTrailParts(numberInList, true);
     }
 
     public int NumberInList {
@@ -41,5 +40,10 @@ public class TrailTriggerDetection : MonoBehaviour {
 
     public bool Removed {
         set { removed = value; }
+    }
+
+    public bool Shielded
+    {
+        set { shielded = value; }
     }
 }

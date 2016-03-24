@@ -16,11 +16,16 @@ public class TrailMovement : MonoBehaviour
 
     private PlayerMovement playerMovement;
 
+    private PowerupHandler powerupHandler;
+
     [SerializeField]
     private float trailAutoSpeedMultiplier = 4;
 
     [SerializeField]
     private float superModeSpeedMultiplier = 20;
+
+    [SerializeField]
+    private float trailGravityMultiplier = 50;
 
     [SerializeField]
     private float distanceBetweenTrails = 0.5f;
@@ -54,10 +59,10 @@ public class TrailMovement : MonoBehaviour
     private List<Transform> trailParts = new List<Transform>();
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
-
+        powerupHandler = player.GetComponent<PowerupHandler>();
         StartTrail();
     }
 
@@ -65,14 +70,17 @@ public class TrailMovement : MonoBehaviour
     {
         healthbar.EnterSuperMode += EnteredSuperMode;
         healthbar.EnterNormalMode += EnteredNormalMode;
+        powerupHandler.AddedShield += AddedShieldPowerup;
+        powerupHandler.RemovedShield += RemovedShieldPowerup;
     }
 
     void OnDisable()
     {
         healthbar.EnterSuperMode -= EnteredSuperMode;
         healthbar.EnterNormalMode -= EnteredNormalMode;
+        powerupHandler.AddedShield -= AddedShieldPowerup;
+        powerupHandler.RemovedShield -= RemovedShieldPowerup;
     }
-
 
     public void StartTrail()
     {
@@ -109,7 +117,7 @@ public class TrailMovement : MonoBehaviour
             currentTrail.rotation = Quaternion.Euler(0, 0, angle);
 
             //give the trail gravity
-            Vector3 velocity = new Vector3(0, -GameSpeed.MoveSpeed * 50, 0);
+            Vector3 velocity = new Vector3(0, -GameSpeed.MoveSpeed * trailGravityMultiplier, 0);
 
             float minDistance = distanceBetweenTrails;
 
@@ -150,6 +158,19 @@ public class TrailMovement : MonoBehaviour
 
     void EnteredNormalMode() {
         if(trailParts.Count > wingTrailNumber) trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = normalSprite;
+    }
+
+    void AddedShieldPowerup() {
+        for (int i = 0; i < trailParts.Count; i++) {
+            trailParts[i].GetComponent<TrailTriggerDetection>().Shielded = true;
+        }
+    }
+
+    void RemovedShieldPowerup() {
+        for (int i = 0; i < trailParts.Count; i++)
+        {
+            trailParts[i].GetComponent<TrailTriggerDetection>().Shielded = false;
+        }
     }
 
     public List<Transform> TrailParts

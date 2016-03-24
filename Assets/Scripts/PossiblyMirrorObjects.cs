@@ -7,7 +7,6 @@ public class PossiblyMirrorObjects : MonoBehaviour {
 
 	void OnEnable()
 	{
-        GetComponent<BoxCollider2D>().enabled = true;
 		if (Random.value < 0.5)
 		{
 			Vector3 theScale = transform.localScale;

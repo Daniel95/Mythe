@@ -35,15 +35,15 @@ public class TriggerDetection : MonoBehaviour {
 		{
             //save the script of _other, in the variable
             interactableObject = _other.gameObject.GetComponent<InteractableObject>();
+
 			if (interactableObject.IsEnabled) {
-				if (interactableObject.gameObject.tag == Tags.shieldPowerUp) {
-					powerUpHandler.addShield ();
+				if (interactableObject.transform.CompareTag(Tags.shieldPowerUp)) {
+					powerUpHandler.AddShield ();
 					audioSource.PlayOneShot (audioClip);
-				} else if (interactableObject.gameObject.tag == Tags.magnetPowerUp) {
-					powerUpHandler.addMagnet ();
+				} else if (interactableObject.transform.CompareTag(Tags.magnetPowerUp)) {
+					powerUpHandler.AddMagnet ();
 					audioSource.PlayOneShot (audioClip);
 				}
-               
 
 				//save the healthvalue of other
 				float healthValue = interactableObject.HealthValue;

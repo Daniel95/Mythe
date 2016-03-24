@@ -3,27 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class MagnetAttractor : MonoBehaviour {
-	private GameObject playerObject; 
 
-	void Start()
-	{
-		playerObject = GameObject.FindGameObjectWithTag (Tags.player);
-	}
+    [SerializeField]
+	private Transform playerObject;
+
+    [SerializeField]
+    private int duration = 8;
 
 	void OnEnable()
 	{
-		StartCoroutine (WaitAndDestroy (8));
+		StartCoroutine (WaitAndDestroy (duration));
 
 	}
 
 	void Update () 
 	{
-		this.transform.position = playerObject.transform.position;
+		transform.position = playerObject.position;
 	}
 
 	IEnumerator WaitAndDestroy(float waitTime) {
 		yield return new WaitForSeconds(waitTime);
-		ObjectPool.instance.PoolObject (gameObject);
+
+        gameObject.SetActive(false);
 	}
 
 }

@@ -35,8 +35,8 @@ GameObject:
   - 82: {fileID: 8273928}
   - 114: {fileID: 11422806}
   m_Layer: 0
-  m_Name: player 1
-  m_TagString: player
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7515177
+  m_Radius: 0.9673926
 --- !u!82 &8273928
 AudioSource:
   m_ObjectHideFlags: 1
@@ -224,7 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ba98ac73e914c3a925f7a1f98d3f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShieldActive: 0
+  shieldBubble: {fileID: 0}
+  magnetEffect: {fileID: 0}
 --- !u!114 &11466708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8273928}
-  audioClip: {fileID: 8300000, guid: f24af892ae4eaf94fbaf0e712822e05e, type: 3}
+  audioClip: {fileID: 8300000, guid: bf6ab8570c396417bb452245e554afab, type: 3}
   healthBar: {fileID: 0}
   pickups: {fileID: 0}
   shake: {fileID: 0}
@@ -269,6 +270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d8d087adc254085a182e5920153716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetIcon: {fileID: 0}
+  offset: 0.35
 --- !u!212 &21267848
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -305,7 +308,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 196514}

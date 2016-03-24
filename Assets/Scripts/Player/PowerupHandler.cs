@@ -4,32 +4,76 @@ using System.Collections.Generic;
 
 public class PowerupHandler : MonoBehaviour {
 
-	private GameObject shieldBubble;
-	private GameObject magnetEffect;
+    //delegate type
+    public delegate void PowerupMethods();
 
-	public bool isShieldActive = false;
+    //delegate instance
+    public PowerupMethods AddedShield;
+
+    //delegate instance
+    public PowerupMethods RemovedShield;
+
+    [SerializeField]
+    private ShieldBubbleScript shieldBubble;
+
+    [SerializeField]
+    private MagnetAttractor magnetEffect;
+
+	private bool isShieldActive = false;
 
 	public bool IsShieldActive
 	{
-		get { return isShieldActive; }
+        set { isShieldActive = value; }
+        get { return isShieldActive; }
 	}
 
-	public void addShield()
+    void OnEnable()
+    {
+        shieldBubble.EndedShieldEffect += ShieldEffectRemoved;
+    }
+
+    void OnDisable()
+    {
+        shieldBubble.EndedShieldEffect -= ShieldEffectRemoved;
+    }
+
+    public void AddShield()
 	{
+        /*
 		shieldBubble = GameObject.Find ("Shield_Bubble");
 		if (shieldBubble != null) 
 		{
 			ObjectPool.instance.PoolObject (shieldBubble);		
 		}
-		ObjectPool.instance.GetObjectForType ("Shield_Bubble", true);	}
+		ObjectPool.instance.GetObjectForType ("Shield_Bubble", true);
+        */
+        shieldBubble.gameObject.SetActive(true);
 
-	public void addMagnet()
+        //let all subscribed scripts know we just added the shield effect
+        if(AddedShield != null)
+            AddedShield();
+    }
+
+    private void ShieldEffectRemoved() {
+        isShieldActive = false;
+
+        //let all subscribed scripts know we just removed the shield effect
+        if(RemovedShield != null)
+            RemovedShield();
+    }
+
+	public void AddMagnet()
 	{
+        /*
 		magnetEffect = GameObject.Find ("Magnet_Effect");
 		if (magnetEffect != null) 
 		{
 			ObjectPool.instance.PoolObject (magnetEffect);		
 		}
-		ObjectPool.instance.GetObjectForType ("Magnet_Effect", true);	}
-	
+		ObjectPool.instance.GetObjectForType ("Magnet_Effect", true);
+        */
+        magnetEffect.gameObject.SetActive(true);
+    }
+
+
 }

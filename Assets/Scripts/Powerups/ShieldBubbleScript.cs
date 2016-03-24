@@ -3,13 +3,20 @@ using System.Collections;
 
 public class ShieldBubbleScript : MonoBehaviour {
 
-	private bool canIBeDestroyed = false;
+    //delegate type
+    public delegate void ShieldBubbleState();
 
+    //delegate instance
+    public ShieldBubbleState EndedShieldEffect;
+
+    private bool canIBeDestroyed = false;
+
+    [SerializeField]
 	private CameraShake shake;
 
-	private GameObject playerObject;
+    [SerializeField]
+	private Transform playerObject;
 
-	private PowerupHandler powerupHandler;
 	private SpriteRenderer spriteRender;
 
 	[SerializeField]
@@ -19,32 +26,35 @@ public class ShieldBubbleScript : MonoBehaviour {
 
 	private bool shouldIShrink;
 
-
 	void Start () {
 		startVector = transform.localScale;
-		playerObject = GameObject.FindGameObjectWithTag (Tags.player);
-		powerupHandler = playerObject.GetComponent<PowerupHandler> ();
-		shake = GameObject.Find ("MainCamera").GetComponent<CameraShake> ();
 	}
 
 	void OnEnable()
 	{
 		StartCoroutine (WaitAndMakeDestroyable (3));
-
 	}
 
-	void Update () {
-		this.transform.position = playerObject.transform.position;
-		if (transform.localScale.x <= 0) {
-			shouldIShrink = false;
-			powerupHandler.isShieldActive = false;
-			transform.localScale = startVector;
-			ObjectPool.instance.PoolObject (gameObject);
-		}
+	void FixedUpdate () {
+		transform.position = playerObject.position;
+
 		if (shouldIShrink) 
 		{
 			transform.localScale -= new Vector3(shrinkRate, shrinkRate, 0);
-		}
+
+            if (transform.localScale.x <= 0)
+            {
+                shouldIShrink = false;
+
+                transform.localScale = startVector;
+
+                //let all the poweruphandler know the shield effect has just ended
+                if(EndedShieldEffect != null)
+                    EndedShieldEffect();
+
+                gameObject.SetActive(false);
+            }
+        }
 	}
 
 	void StartDestroying()

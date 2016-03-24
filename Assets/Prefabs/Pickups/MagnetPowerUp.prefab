@@ -73,6 +73,7 @@ MonoBehaviour:
   poolOnTouch: 1
   animToPlayName: 
   animScale: 1
+  startScale: {x: 0, y: 0}
   playAnimOnDeath: 0
 --- !u!114 &11482974
 MonoBehaviour:

@@ -9,6 +9,7 @@ public class ChunkRetriever : MonoBehaviour {
     private ChunkUnlocker chunkUnlocker;
 
     void Start() {
+        /*
         chunkHolder.LoadChunk("000000000000020000000020000000");
         chunkHolder.LoadChunk("0000000100000000010000200000000");
         chunkHolder.LoadChunk("000000000020001000000010000000");
@@ -39,8 +40,10 @@ public class ChunkRetriever : MonoBehaviour {
         chunkHolder.LoadChunk("000000020020010010000000");
         chunkHolder.LoadChunk("000000020000000100001000000020020000000000");
         chunkHolder.LoadChunk("000000000200000050060000002000020000000000");
+        */
 
 
+        chunkHolder.LoadChunk("000000132241000000000000000000001100000000");
 
         /*
         chunkUnlocker.notUnlockedChunks.Add("000000000000020000000020000000");

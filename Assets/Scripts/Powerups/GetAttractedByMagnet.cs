@@ -21,7 +21,7 @@ public class GetAttractedByMagnet : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D _other)
 	{
-		if (_other.gameObject.tag == Tags.magnetEffect && canBeAttracted) 
+		if (_other.transform.CompareTag(Tags.magnetEffect) && canBeAttracted) 
 		{
             moveDown.Move = false;
 			haveIBeenAttracted = true;

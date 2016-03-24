@@ -124,26 +124,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 473226, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 473226, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 473226, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-      propertyPath: m_TagString
-      value: MagnetEffect
-      objectReference: {fileID: 0}
     - target: {fileID: 11444796, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
       propertyPath: playerObject
       value: 
@@ -1091,22 +1071,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 174978, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 422544, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 422544, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 422544, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 11480576, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
       propertyPath: shake
       value: 
@@ -1115,10 +1079,6 @@ Prefab:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 1871364907}
-    - target: {fileID: 174978, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
   m_IsPrefabParent: 0
@@ -1551,6 +1511,7 @@ MonoBehaviour:
   trailConnectPoint: {fileID: 754954601}
   trailAutoSpeedMultiplier: 4
   superModeSpeedMultiplier: 20
+  trailGravityMultiplier: 50
   distanceBetweenTrails: 0.5
   neckDistance: 0.2
   startTrailSize: 0.35
@@ -2345,6 +2306,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11447412, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: shieldBubble
+      value: 
+      objectReference: {fileID: 265474586}
+    - target: {fileID: 11447412, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: magnetEffect
+      value: 
+      objectReference: {fileID: 1062716684}
+    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: targetIcon
+      value: 
+      objectReference: {fileID: 1266503882}
     - target: {fileID: 11419598, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: healthBar
       value: 
@@ -2361,30 +2334,6 @@ Prefab:
       propertyPath: shake
       value: 
       objectReference: {fileID: 1712116973}
-    - target: {fileID: 196514, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5843568, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_Radius
-      value: 0.9673926
-      objectReference: {fileID: 0}
-    - target: {fileID: 11447412, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: shieldBubble
-      value: 
-      objectReference: {fileID: 265474586}
-    - target: {fileID: 11447412, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: magnetEffect
-      value: 
-      objectReference: {fileID: 1062716684}
-    - target: {fileID: 196514, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: targetIcon
-      value: 
-      objectReference: {fileID: 1266503882}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0

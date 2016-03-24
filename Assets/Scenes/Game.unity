@@ -2334,6 +2334,10 @@ Prefab:
       propertyPath: shake
       value: 
       objectReference: {fileID: 1712116973}
+    - target: {fileID: 11447412, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 2094346090}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0

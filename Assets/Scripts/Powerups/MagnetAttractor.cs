@@ -21,7 +21,14 @@ public class MagnetAttractor : MonoBehaviour {
 		transform.position = playerObject.position;
 	}
 
-	IEnumerator WaitAndDestroy(float waitTime) {
+    public void ResetPowerup()
+    {
+        print("reset");
+        StopCoroutine(WaitAndDestroy(duration));
+        StartCoroutine(WaitAndDestroy(duration));
+    }
+
+    IEnumerator WaitAndDestroy(float waitTime) {
 		yield return new WaitForSeconds(waitTime);
 
         gameObject.SetActive(false);

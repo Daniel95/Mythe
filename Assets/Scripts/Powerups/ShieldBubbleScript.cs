@@ -48,7 +48,7 @@ public class ShieldBubbleScript : MonoBehaviour {
 
                 transform.localScale = startVector;
 
-                //let all the poweruphandler know the shield effect has just ended
+                //let the poweruphandler know the shield effect has just ended
                 if(EndedShieldEffect != null)
                     EndedShieldEffect();
 
@@ -57,10 +57,11 @@ public class ShieldBubbleScript : MonoBehaviour {
         }
 	}
 
-	void StartDestroying()
-	{
-		shouldIShrink = true;
-	}
+    public void ResetPowerup() {
+        print("reset");
+        shouldIShrink = false;
+        transform.localScale = startVector;
+    }
 
 	IEnumerator WaitAndMakeDestroyable(float waitTime) {
 		yield return new WaitForSeconds(waitTime);
@@ -70,15 +71,20 @@ public class ShieldBubbleScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D _other)
 	{
 		if (_other.gameObject.GetComponent<InteractableObject> ()) {
+
 			InteractableObject interactableObject = _other.gameObject.GetComponent<InteractableObject> ();
+
 			float _value = interactableObject.HealthValue;
+
 			if (_value < 0) 
 			{
 				shake.StartShake();
+
 				ObjectPool.instance.PoolObject(_other.gameObject);
+
 				if(canIBeDestroyed)
-				StartDestroying ();
-			}
+                    shouldIShrink = true;
+            }
 		}
 	}
 }

@@ -19,6 +19,9 @@ public class PowerupHandler : MonoBehaviour {
     [SerializeField]
     private MagnetAttractor magnetEffect;
 
+    [SerializeField]
+    private HealthBar healthBar;
+
 	private bool isShieldActive = false;
 
 	public bool IsShieldActive
@@ -30,24 +33,20 @@ public class PowerupHandler : MonoBehaviour {
     void OnEnable()
     {
         shieldBubble.EndedShieldEffect += ShieldEffectRemoved;
+        healthBar.EnterSuperMode += StopMagnetOnSuperMode;
     }
 
     void OnDisable()
     {
         shieldBubble.EndedShieldEffect -= ShieldEffectRemoved;
+        healthBar.EnterSuperMode -= StopMagnetOnSuperMode;
     }
 
     public void AddShield()
 	{
-        /*
-		shieldBubble = GameObject.Find ("Shield_Bubble");
-		if (shieldBubble != null) 
-		{
-			ObjectPool.instance.PoolObject (shieldBubble);		
-		}
-		ObjectPool.instance.GetObjectForType ("Shield_Bubble", true);
-        */
-        shieldBubble.gameObject.SetActive(true);
+        if (!shieldBubble.gameObject.activeSelf)
+            shieldBubble.gameObject.SetActive(true);
+        else shieldBubble.ResetPowerup();
 
         //let all subscribed scripts know we just added the shield effect
         if(AddedShield != null)
@@ -64,16 +63,13 @@ public class PowerupHandler : MonoBehaviour {
 
 	public void AddMagnet()
 	{
-        /*
-		magnetEffect = GameObject.Find ("Magnet_Effect");
-		if (magnetEffect != null) 
-		{
-			ObjectPool.instance.PoolObject (magnetEffect);		
-		}
-		ObjectPool.instance.GetObjectForType ("Magnet_Effect", true);
-        */
-        magnetEffect.gameObject.SetActive(true);
+        if (!magnetEffect.gameObject.activeSelf)
+            magnetEffect.gameObject.SetActive(true);
+        else
+            magnetEffect.ResetPowerup();
     }
 
-
+    void StopMagnetOnSuperMode() {
+        magnetEffect.gameObject.SetActive(false);
+    }
 }

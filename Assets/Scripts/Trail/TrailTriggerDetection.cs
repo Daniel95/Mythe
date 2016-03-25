@@ -11,8 +11,11 @@ public class TrailTriggerDetection : MonoBehaviour {
 
     private bool shielded;
 
+	private TriggerDetection triggerDetection; 
+
     void Start() {
         trailLengthHandler = GetComponentInParent<TrailLengthHandler>();
+		triggerDetection = GameObject.FindGameObjectWithTag (Tags.player).GetComponent<TriggerDetection> ();
     }
 
     public void Reset() {
@@ -26,8 +29,14 @@ public class TrailTriggerDetection : MonoBehaviour {
     
     void OnTriggerCollision2D(Collision2D _other)
     {
-        if (_other.transform.CompareTag(Tags.obstacle))
-            Destroy();
+		if (_other.transform.CompareTag (Tags.obstacle)) 
+		{
+			if (triggerDetection.Hurtable) 
+			{
+				Destroy ();
+				triggerDetection.makeUnHurtable ();
+			}
+		}
     }
 
     public void Destroy() {

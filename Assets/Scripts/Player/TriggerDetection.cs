@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class TriggerDetection : MonoBehaviour {
 
@@ -22,6 +23,11 @@ public class TriggerDetection : MonoBehaviour {
 
     private InteractableObject interactableObject;
 
+	private bool hurtable = true;
+
+	[SerializeField]
+	private float hurtableCooldown = 1;
+
     void OnCollisionEnter2D(Collision2D _other) {
         HandleCollisionEnter(_other.gameObject);
     }
@@ -33,6 +39,7 @@ public class TriggerDetection : MonoBehaviour {
     private void HandleCollisionEnter(GameObject _other) {
         if (_other.gameObject.GetComponent<InteractableObject>())
 		{
+			Debug.Log (hurtable);
             //save the script of _other, in the variable
             interactableObject = _other.gameObject.GetComponent<InteractableObject>();
 
@@ -49,15 +56,23 @@ public class TriggerDetection : MonoBehaviour {
 				float healthValue = interactableObject.HealthValue;
 
 				//add the value to the healthbar
-				healthBar.addValue (healthValue);
 
-				if (healthValue < 0) {
+
+				if (healthValue < 0) 
+				{
+					if(hurtable)
+					{
+					healthBar.addValue (healthValue);
 					audioSource.PlayOneShot (audioClip);
 					//if the value is negative, shake the screen
 					shake.StartShake ();
 					//Handheld.Vibrate ();
+					makeUnHurtable();
+					
+					}
 				} else if (healthValue > 0) { //if the value is positive, increment score
 					pickups.IncrementScore ();
+					healthBar.addValue (healthValue);
 					audioSource.pitch = Random.Range (0.75F, 1.25F);
 					audioSource.PlayOneShot (audioClip);
 				}
@@ -65,5 +80,21 @@ public class TriggerDetection : MonoBehaviour {
 				interactableObject.Touched ();
 			}
         }
+
     }
+
+	public void makeUnHurtable()
+	{
+		hurtable = false;
+		StartCoroutine (HurtableCoolDownTimer (hurtableCooldown));
+	}
+	IEnumerator HurtableCoolDownTimer(float cooldown)
+	{
+		yield return new WaitForSeconds (cooldown);
+		hurtable = true;
+	}
+
+	public bool Hurtable {
+		get { return hurtable; }
+	}
 }

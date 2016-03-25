@@ -30,6 +30,8 @@ public class InteractableObject : MonoBehaviour {
 
     private bool isEnabled = true;
 
+	private MoveDown moveDown;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -37,6 +39,8 @@ public class InteractableObject : MonoBehaviour {
         myCollider = GetComponent<Collider2D>();
 
         startScale = transform.localScale;
+
+		moveDown = GetComponent<MoveDown> ();
     }
 
     void OnEnable() {
@@ -47,6 +51,7 @@ public class InteractableObject : MonoBehaviour {
 
         //reset itself to its starting scale, in case it was scaled up or down during an animation
         transform.localScale = startScale;
+		moveDown.Move = true;
     }
 
 	public virtual void Touched() 

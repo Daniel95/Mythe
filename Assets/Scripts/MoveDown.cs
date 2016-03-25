@@ -2,6 +2,7 @@
 
 public class MoveDown : MonoBehaviour
 {
+    [SerializeField]
     private bool move = true;
     [SerializeField]
     private float speed = 1;

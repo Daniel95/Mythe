@@ -11,6 +11,9 @@ public class ShieldBubbleScript : MonoBehaviour {
 
     private bool canIBeDestroyed = false;
 
+	[SerializeField]
+	private float duration = 3;
+
     [SerializeField]
 	private CameraShake shake;
 
@@ -32,15 +35,17 @@ public class ShieldBubbleScript : MonoBehaviour {
 
 	void OnEnable()
 	{
-		StartCoroutine (WaitAndMakeDestroyable (3));
+		StartCoroutine ("WaitAndMakeDestroyable",duration);
 	}
 
 	void FixedUpdate () {
+		Debug.Log (canIBeDestroyed);
 		transform.position = playerObject.position;
 
 		if (shouldIShrink) 
 		{
 			transform.localScale -= new Vector3(shrinkRate, shrinkRate, 0);
+			canIBeDestroyed = false;
 
             if (transform.localScale.x <= 0)
             {
@@ -58,9 +63,14 @@ public class ShieldBubbleScript : MonoBehaviour {
 	}
 
     public void ResetPowerup() {
+		StopCoroutine("WaitAndMakeDestroyable");
+		StartCoroutine ("WaitAndMakeDestroyable",duration);
         print("reset");
         shouldIShrink = false;
         transform.localScale = startVector;
+		gameObject.SetActive(false);
+		gameObject.SetActive(true);
+
     }
 
 	IEnumerator WaitAndMakeDestroyable(float waitTime) {

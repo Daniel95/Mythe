@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class Node : MonoBehaviour {
 
+
+
     private int x;
 
     private int y;
@@ -17,8 +19,14 @@ public class Node : MonoBehaviour {
 
     private ObjectSelection objectSelection;
 
+    private Color startColor;
+
+    [SerializeField]
+    private Color selectedColor;
+
     void Start() {
         image.sprite = ObjectsInNodeInfo.Sprites[objNumber];
+        startColor = image.color;
     }
 
     void Awake() {
@@ -27,12 +35,8 @@ public class Node : MonoBehaviour {
         objectSelection = GameObject.Find("ObjectSelectionMenu").GetComponent<ObjectSelection>();
     }
 
-    void OnEnable() {
-       // objectSelection.DoneSelecting += SetNewObject;
-    }
-
     void OnDisable() {
-        //objectSelection.DoneSelecting -= SetNewObject;
+        objectSelection.DoneSelecting -= SetNewObject;
     }
 
     public void Init(int _x, int _y, int _objectValue, int _maxObjNumber) {
@@ -43,23 +47,24 @@ public class Node : MonoBehaviour {
     }
 
     public void ChangeObject() {
+        //set the color to selectedColor
+        image.color = selectedColor;
+
         objectSelection.DoneSelecting += SetNewObject;
-        objectSelection.StartMenu(x, y);
-        
-            /*
-        objNumber++;
-        if (objNumber >= maxObjNumber) objNumber = 0;
-        image.sprite = ObjectsInNode.Sprites[objNumber];
 
-        GameObject.FindObjectOfType<ChunkEditor>();
 
-        transform.parent.GetComponent<ChunkEditor>().EditChunk(x, y, objNumber);
-        */
+        //objectSelection.StartMenu(x, y);
+        objectSelection.StartMenu(GetComponent<Node>());
     }
 
     public void SetNewObject(int _newObjNumber) {
+        //reset the color of the object
+        image.color = startColor;
+
         objNumber = _newObjNumber;
         image.sprite = ObjectsInNodeInfo.Sprites[objNumber];
+
+        //unsubscribe itself to the setnewobject method, because it is done editing
         objectSelection.DoneSelecting -= SetNewObject;
     }
 

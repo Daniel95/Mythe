@@ -2340,6 +2340,10 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2094346090}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: hurtableCooldown
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -3962,7 +3966,7 @@ MonoBehaviour:
     Count: 30
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
+  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0

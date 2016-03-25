@@ -12,7 +12,7 @@ public class AimForward : MonoBehaviour {
     private GameObject player;
     public void Start()
     {
-        player = GameObject.Find("player");
+        player = GameObject.Find("Player");
         if (player != null)
         {
             target = player.transform;

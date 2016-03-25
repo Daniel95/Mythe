@@ -55,7 +55,7 @@ public class TriggerDetection : MonoBehaviour {
 					audioSource.PlayOneShot (audioClip);
 					//if the value is negative, shake the screen
 					shake.StartShake ();
-					Handheld.Vibrate ();
+					//Handheld.Vibrate ();
 				} else if (healthValue > 0) { //if the value is positive, increment score
 					pickups.IncrementScore ();
 					audioSource.pitch = Random.Range (0.75F, 1.25F);

@@ -85,7 +85,8 @@ public class HealthBar : MonoBehaviour
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag(Tags.obstacle);
         foreach(GameObject obstacle in obstacles)
         {
-            obstacle.GetComponent<BoxCollider2D>().enabled = false;
+            if(obstacle.GetComponent<BoxCollider2D>() != null) obstacle.GetComponent<BoxCollider2D>().enabled = false;
+            else if(obstacle.GetComponent<CircleCollider2D>() != null) obstacle.GetComponent<CircleCollider2D>().enabled = false;
         }
         circleObject.GetComponent<RainbowEffect>().enabled = true;
         superGenerator.SetActive(true);

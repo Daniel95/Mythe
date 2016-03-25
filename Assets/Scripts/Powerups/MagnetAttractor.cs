@@ -12,7 +12,7 @@ public class MagnetAttractor : MonoBehaviour {
 
 	void OnEnable()
 	{
-		StartCoroutine (WaitAndDestroy (duration));
+		StartCoroutine ("WaitAndDestroy",duration);
 	}
 
 	void Update () 
@@ -23,9 +23,9 @@ public class MagnetAttractor : MonoBehaviour {
     public void ResetPowerup()
     {
         print("reset");
-        StopCoroutine(WaitAndDestroy(duration));
+		StopCoroutine("WaitAndDestroy");
         print(gameObject.activeSelf);
-        StartCoroutine(WaitAndDestroy(duration));
+        StartCoroutine("WaitAndDestroy",duration);
     }
 
     IEnumerator WaitAndDestroy(float waitTime) {

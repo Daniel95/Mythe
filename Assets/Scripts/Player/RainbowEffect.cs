@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class RainbowEffect : MonoBehaviour {
 
 	private float red = 1;
@@ -9,12 +9,18 @@ public class RainbowEffect : MonoBehaviour {
 
 	[SerializeField]
 	private float fading = 0.02f;
-	
-	// Update is called once per frame
-	void Update () {
+
+	void FixedUpdate () {
 		getColor ();
-		this.GetComponent<SpriteRenderer> ().color = new Color(red,green,blue);
-	}
+        if(this.GetComponent<SpriteRenderer>() != null)
+        {
+            this.GetComponent<SpriteRenderer>().color = new Color(red, green, blue);
+        }
+        else
+        {
+            this.GetComponent<Image>().color = new Color(red, green, blue);
+        }
+    }
 
 	private void getColor () {
 		if(red >= 1 && green < 1 && blue <= 0){

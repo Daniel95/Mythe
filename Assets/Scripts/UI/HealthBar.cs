@@ -22,7 +22,8 @@ public class HealthBar : MonoBehaviour
     private float loseHealthSpeed = 0.0012f;
     [SerializeField]
     private Image waterRenderer;
-
+    [SerializeField]
+    private GameObject circleObject;
     [SerializeField]
     private GameObject generator;
     [SerializeField]
@@ -80,11 +81,13 @@ public class HealthBar : MonoBehaviour
         if(EnterSuperMode != null)
             EnterSuperMode();
 
+        
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag(Tags.obstacle);
         foreach(GameObject obstacle in obstacles)
         {
             obstacle.GetComponent<BoxCollider2D>().enabled = false;
         }
+        circleObject.GetComponent<RainbowEffect>().enabled = true;
         superGenerator.SetActive(true);
         generateOneObject.SpawnObject();
         generateChunk.ShouldSpawn = false;
@@ -120,7 +123,8 @@ public class HealthBar : MonoBehaviour
         gameSpeed.NormalMode();
         superGenerator.SetActive(false);
         cameraZoom.ZoomCameraIn();
-
+        circleObject.GetComponent<RainbowEffect>().enabled = false;
+        circleObject.GetComponent<Image>().color = new Color(0, 255, 255, 255);
         for (int i = 0; i < skiesMovingDown.Length; i++)
         {
             skiesMovingDown[i].FormingGround();
@@ -132,7 +136,15 @@ public class HealthBar : MonoBehaviour
             currentHealth -= loseHealthSpeed;
 
             //the color is based of the vaule, when it goes to zero, it becomes more red, when towards maxhealth, it becomes more blue.
-            waterRenderer.color = new Color(1 - currentHealth / maxHealth, 0, currentHealth / maxHealth);
+            if(currentHealth < 0.5)
+            {
+                waterRenderer.color = new Color(1 - currentHealth / maxHealth *2, 0, currentHealth / maxHealth *2);
+            }
+            else
+            {
+                waterRenderer.color = new Color(0, 0, 1);
+            }
+            
             yield return new WaitForFixedUpdate();
         }
         while(health < maxHealth/2)

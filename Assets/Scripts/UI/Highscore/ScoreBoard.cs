@@ -4,8 +4,24 @@ using System.Collections.Generic;
 
 public class ScoreBoard : MonoBehaviour
 {
+    //delegate type
+    public delegate void PageMethods();
+
+    //delegate instance
+    public PageMethods ChangedPageNumber;
+
     [SerializeField]
     private GameObject gameOverScreen;
+
+    [SerializeField]
+    private Text pageNumberText;
+
+    [SerializeField]
+    private int scoresPerPage = 10;
+
+    private int pageNumber = 1;
+
+    private int maxPageNumber;
 
     //private Text totalDeathsTextField;
     //private Text myDeathsTextField;
@@ -37,12 +53,12 @@ public class ScoreBoard : MonoBehaviour
         namesFieldTextField.text = "";
         scoresTextField.text = "";
 
-        string[] myStr = _score.Trim().Split('\n');
+        string[] lines = _score.Trim().Split('\n');
 
-        foreach (string text in myStr) {
-            string[] myStr2 = text.Split('_');
-            namesFieldTextField.text += myStr2[0] + "\n";
-            scoresTextField.text += myStr2[1] + "\n";
+        foreach (string text in lines) {
+            string[] seperate = text.Split('_');
+            namesFieldTextField.text += seperate[0] + "\n";
+            scoresTextField.text += seperate[1] + "\n";
         }
     }
     
@@ -87,5 +103,47 @@ public class ScoreBoard : MonoBehaviour
             scoresTextField.text += time + "\n";
         }
     }
+
+    public void GetPlayerRanking(string _score) {
+
+    }
+
+    public string CutLines(string _score)
+    {
+        //split all the lines in a array
+        string[] lines = _score.Trim().Split('\n');
+
+        //calculate the max page number
+        maxPageNumber = Mathf.CeilToInt(lines.Length / (float)scoresPerPage);
+
+        //make a new list where we will store the selected scores in
+        List<string> cuttedLines = new List<string>();
+
+        for (int i = (pageNumber * scoresPerPage) - scoresPerPage; i < (pageNumber * scoresPerPage); i++) {
+            //if the index (i) isnt higher then the total lines, and not lower then zero
+            if (i < lines.Length && i >= 0)
+                cuttedLines.Add(lines[i]);
+        }
+        //return the results
+        return string.Join("\n", cuttedLines.ToArray());
+    }
     
+
+    public void ChangePageNumber(int _change)
+    {
+        //change the page number
+        pageNumber += _change;
+
+        //check if it isnt out of range
+        if (pageNumber > maxPageNumber)
+            pageNumber = 1;
+        else if (pageNumber < 1)
+            pageNumber = maxPageNumber;
+
+        //update the ui
+        pageNumberText.text = pageNumber.ToString();
+
+        if (ChangedPageNumber != null)
+            ChangedPageNumber();
+    }
 }

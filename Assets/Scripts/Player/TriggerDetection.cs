@@ -39,7 +39,6 @@ public class TriggerDetection : MonoBehaviour {
     private void HandleCollisionEnter(GameObject _other) {
         if (_other.gameObject.GetComponent<InteractableObject>())
 		{
-			Debug.Log (hurtable);
             //save the script of _other, in the variable
             interactableObject = _other.gameObject.GetComponent<InteractableObject>();
 

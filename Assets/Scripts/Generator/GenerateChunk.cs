@@ -4,7 +4,7 @@ using System.Collections;
 public class GenerateChunk : MonoBehaviour {
 
     [SerializeField]
-    private float divideGridHeightWaitTime = 3.8f;
+    private float divideGridHeightWaitTime = 2f;
 
     [SerializeField]
     private ChunkHolder chunkLibary;

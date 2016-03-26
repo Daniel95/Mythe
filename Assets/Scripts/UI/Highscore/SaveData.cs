@@ -61,7 +61,6 @@ public class SaveData : MonoBehaviour {
     {
         yield return www;
 
-        //chooseScoreToLoad.LoadNewScores(0);
         FinishedSaving();
     }
 }

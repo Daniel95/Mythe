@@ -1473,7 +1473,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 731716820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.81, y: 8.5, z: 0}
+  m_LocalPosition: {x: -2.66, y: 8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2342,7 +2342,7 @@ Prefab:
       objectReference: {fileID: 2094346090}
     - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: hurtableCooldown
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
@@ -3366,6 +3366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 602601228}
+  scoresPerPage: 10
 --- !u!1 &1680472200
 GameObject:
   m_ObjectHideFlags: 0
@@ -3454,7 +3455,6 @@ GameObject:
   - 81: {fileID: 1712116974}
   - 114: {fileID: 1712116973}
   - 114: {fileID: 1712116979}
-  - 114: {fileID: 1712116980}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -3555,19 +3555,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomSpeed: 0.02
---- !u!114 &1712116980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1712116972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ece1c6d27c5942c4fb3dee1048a297d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  generateChunk: {fileID: 2015117534}
-  chunkHolder: {fileID: 2015117536}
 --- !u!1 &1765784674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,7 +3967,7 @@ MonoBehaviour:
     Count: 30
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
+  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0
@@ -4019,7 +4006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c37eb8cfd378d4fb8cddb088d18c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  divideGridHeightWaitTime: 2.6
+  divideGridHeightWaitTime: 2
   chunkLibary: {fileID: 2015117536}
   objectToSpawnNames:
   - 

@@ -14,13 +14,13 @@ if ($conn->connect_error) {
 }
 
 //Read table in sql and order
-$sql="SELECT * FROM Scores ORDER BY $scoreType DESC LIMIT 10";
+$sql="SELECT * FROM Scores ORDER BY $scoreType DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo $row["name"]. "_" .$row[$scoreType]. "\r\n";
+        echo $row["name"]. "_" .$row[$scoreType]. "\n";
     }
 } else {
     echo "0 results";

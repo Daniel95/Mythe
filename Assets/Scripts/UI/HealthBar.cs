@@ -54,7 +54,8 @@ public class HealthBar : MonoBehaviour
     private AudioClip audioClip;
 
     private bool restarted;
-
+    [SerializeField]
+    private ParticleSystem groundParticles;
     void Start()
     {
         //maxhealth is a scale value and currenthealth and speed are based from maxhealth.
@@ -62,11 +63,17 @@ public class HealthBar : MonoBehaviour
         maxHealth = transform.localScale.x;
         currentHealth = maxHealth / 2;
         health = currentHealth;
+
+        //begins with the coroutine normal mode.
         StartCoroutine(NormalMode());
 
+        //declares the generator for supermode.
         generateOneObject = superGenerator.GetComponent<GenerateOneObject>();
 
+        //begins updating the update healthbar.
         StartCoroutine(UpdateHealthbar());
+
+        //begins with generating chunks.
         generateChunk.MakeRandomChunk();
     }
 
@@ -78,16 +85,21 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator SuperMode()
     {
+        
         if(EnterSuperMode != null)
             EnterSuperMode();
 
-        
+        //get every hurtable obstacle
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag(Tags.obstacle);
         foreach(GameObject obstacle in obstacles)
         {
+            //deactivates the colliders of the object making it for the player safer to og in supermode.
             if(obstacle.GetComponent<BoxCollider2D>() != null) obstacle.GetComponent<BoxCollider2D>().enabled = false;
             else if(obstacle.GetComponent<CircleCollider2D>() != null) obstacle.GetComponent<CircleCollider2D>().enabled = false;
         }
+        //deactivates the ground particles.
+        groundParticles.enableEmission = false;
+
         circleObject.GetComponent<RainbowEffect>().enabled = true;
         superGenerator.SetActive(true);
         generateOneObject.SpawnObject();
@@ -130,6 +142,8 @@ public class HealthBar : MonoBehaviour
         {
             skiesMovingDown[i].FormingGround();
         }
+        yield return new WaitForSeconds(1.5f);
+        groundParticles.enableEmission = true;
 
         while (currentHealth < maxHealth)
         {
@@ -181,6 +195,7 @@ public class HealthBar : MonoBehaviour
     {
         if(PlayerDied != null) PlayerDied();
 
+        groundParticles.enableEmission = false;
         StopCoroutine(UpdateHealthbar());
         health = currentHealth = 0;
         audioSource.PlayOneShot(audioClip);

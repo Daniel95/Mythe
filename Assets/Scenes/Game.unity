@@ -342,12 +342,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c9f8b7a3cab7074a9a53b3b9c38ee18, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &688431329 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11426374, guid: e304b102b495fc3419b82b7e0271c15a,
-    type: 2}
-  m_PrefabInternal: {fileID: 2087770321}
-  m_Script: {fileID: 11500000, guid: b432467123a34a348ae8996466e09e67, type: 3}
 --- !u!114 &702655280 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11475604, guid: e304b102b495fc3419b82b7e0271c15a,
@@ -616,6 +610,10 @@ Prefab:
     - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: hurtableCooldown
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: offset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
@@ -1185,10 +1183,10 @@ Prefab:
     - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 688431329}
+      objectReference: {fileID: 2015117535}
     - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Restart
+      value: Reset
       objectReference: {fileID: 0}
     - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName

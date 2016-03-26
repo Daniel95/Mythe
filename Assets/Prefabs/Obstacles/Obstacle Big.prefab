@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: -0.1
+  healthValue: -0.08
   poolOnTouch: 0
   animToPlayName: 
   animScale: 1
@@ -155,7 +155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: healthValue
-      value: -0.1
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z

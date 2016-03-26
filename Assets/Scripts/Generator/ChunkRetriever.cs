@@ -14,7 +14,8 @@ public class ChunkRetriever : MonoBehaviour {
         chunkHolder.LoadChunk("000000000300000010020000000000");
 
         //nathan new chunks
-        chunkHolder.LoadChunk("000300000000600000000006600000000006600000003006000000000000");
+        //too hard on mobile for beginners, add later again, when chunkunlocker works
+        //chunkHolder.LoadChunk("000300000000600000000006600000000006600000003006000000000000");
         chunkHolder.LoadChunk("000000011100100003100000000110000001005000000000");
         chunkHolder.LoadChunk("000000111103000000");
         chunkHolder.LoadChunk("000000301111000000");

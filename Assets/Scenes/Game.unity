@@ -342,6 +342,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c9f8b7a3cab7074a9a53b3b9c38ee18, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &688431329 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11426374, guid: e304b102b495fc3419b82b7e0271c15a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2087770321}
+  m_Script: {fileID: 11500000, guid: b432467123a34a348ae8996466e09e67, type: 3}
 --- !u!114 &702655280 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11475604, guid: e304b102b495fc3419b82b7e0271c15a,
@@ -609,7 +615,7 @@ Prefab:
       objectReference: {fileID: 2094346090}
     - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: hurtableCooldown
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
@@ -973,8 +979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d6c0d07aa4f342b374407a0d007a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeedIncrement: 0.00018
-  startSpeed: 0.045
+  gameSpeedIncrement: 0.000185
+  startSpeed: 0.05
 --- !u!114 &2015117536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,6 +1034,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 22440706, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1160,6 +1170,30 @@ Prefab:
       propertyPath: skiesMovingDown.Array.data[6]
       value: 
       objectReference: {fileID: 1981823744}
+    - target: {fileID: 22450872, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -707
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 688431329}
+    - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475964, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e304b102b495fc3419b82b7e0271c15a, type: 2}
   m_IsPrefabParent: 0

@@ -16,6 +16,10 @@ public class ChunkHolder : MonoBehaviour {
     //load the chunk in and creates a 2 dimenional grid from it.
     public void LoadChunk(string _chunkData) {
 
+        allChunks.Add(UncompressChunk(_chunkData));
+    }
+
+    public int[,] UncompressChunk(string _chunkData) {
         int yLength = _chunkData.Length / xLength;
 
         //make a new 2 dimensional array, this is the chunk we are later going to push into allChunks
@@ -34,11 +38,11 @@ public class ChunkHolder : MonoBehaviour {
             }
         }
 
-        allChunks.Add(chunk);
+        return chunk;
     }
 
     //compresses the chunk to a string so it can be stored.
-    public void CompresChunk(int[,] _chunk)
+    public void CompressChunk(int[,] _chunk)
     {
         List<string> chunkData = new List<string>();
 

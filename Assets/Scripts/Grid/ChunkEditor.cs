@@ -45,7 +45,7 @@ public class ChunkEditor : MonoBehaviour
 
         lastYLength = ChunkHolder.CurrentYLength;
 
-        chunkLibary.CompresChunk(editableChunk);
+        chunkLibary.CompressChunk(editableChunk);
     }
 
     public void AddNodesToChunk()
@@ -102,7 +102,7 @@ public class ChunkEditor : MonoBehaviour
     public void EditChunk(int _xPos, int _yPos, int _value)
     {
         editableChunk[_xPos, _yPos] = _value;
-        chunkLibary.CompresChunk(editableChunk);
+        chunkLibary.CompressChunk(editableChunk);
     }
 
     public void SaveChunk()

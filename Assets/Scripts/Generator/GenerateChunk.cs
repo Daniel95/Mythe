@@ -18,42 +18,53 @@ public class GenerateChunk : MonoBehaviour {
     private bool shouldSpawn = true;
     private bool alreadySpawning;
 
+    private int[,] chunkToSpawnNext;
+
+    private bool forceSpawn;
+
     public void StartSpawning() {
         if (!alreadySpawning)
         {
-            MakeChunk();
+            MakeRandomChunk();
             alreadySpawning = true;
         }
     }
 
-    public void MakeChunk()
-    {
-        //get a random chunk
-        int[,] chunkToSpawn = chunkLibary.GetRandomChunk();
+    public void MakeRandomChunk() {
+        //make a random chunks
+        MakeChunk(chunkLibary.GetRandomChunk());
+    }
 
+    public void MakeChosenChunk(int[,] _chunkToSpawn) {
+        forceSpawn = true;
+        chunkToSpawnNext = _chunkToSpawn;
+    }
+
+    private void MakeChunk(int[,] _chunkToSpawn)
+    {
         //calculate the y Length of this chunk, take its total length and divide it by its width.
-        int yLength = chunkToSpawn.Length / ChunkHolder.xLength;
+        int yLength = _chunkToSpawn.Length / ChunkHolder.xLength;
 
         for (int y = 0; y < yLength; y++)
         {
             for (int x = 0; x < ChunkHolder.xLength; x++)
             {
-                if (objectToSpawnNames[chunkToSpawn[x, y]] != "")
+                if (objectToSpawnNames[_chunkToSpawn[x, y]] != "")
                 {
                     //put the number of the grid into the objectToSpawnName array to check the right name for that object, then send it to object pool
-                    GameObject spawnedObject = ObjectPool.instance.GetObjectForType(objectToSpawnNames[chunkToSpawn[x, y]], true);
+                    GameObject spawnedObject = ObjectPool.instance.GetObjectForType(objectToSpawnNames[_chunkToSpawn[x, y]], true);
 
                     if (spawnedObject == null)
-                        print(objectToSpawnNames[chunkToSpawn[x, y]] + " does not exist in objectpool");
+                        print(objectToSpawnNames[_chunkToSpawn[x, y]] + " does not exist in objectpool");
                     else
                         spawnedObject.transform.position = new Vector3(x, -y + yLength,spawnedObject.transform.position.z) + spawnPos.transform.position;
                 }
             }
         }
 
-        if (shouldSpawn)
-            //start counting down again before spawning a new one
-            StartCoroutine(WaitBeforeNextSpawn(yLength));
+            if (shouldSpawn)
+                //start counting down again before spawning a new one
+                StartCoroutine(WaitBeforeNextSpawn(yLength));
     }
 
     IEnumerator WaitBeforeNextSpawn(int _ylenth)
@@ -67,8 +78,17 @@ public class GenerateChunk : MonoBehaviour {
         yield return new WaitForSeconds(timeToWait);
 
         //Since the IENumerator and function call on each other objects will spawn in intervals.
-        if(shouldSpawn)
-            MakeChunk();
+        if (shouldSpawn)
+        {
+            //checks if we should make a random chunk, or make a chunk that needs to be force spawned
+            if (forceSpawn)
+            {
+                MakeChunk(chunkToSpawnNext);
+                forceSpawn = false;
+                chunkToSpawnNext = null;
+            } else
+                MakeRandomChunk();
+        }
     }
 
     public void PauzeSpawning(float _pauzeTime) {
@@ -86,7 +106,7 @@ public class GenerateChunk : MonoBehaviour {
         //we are now able to spawn chunks
         shouldSpawn = true;
         //start the spawning again
-        MakeChunk();
+        MakeRandomChunk();
     }
 
     public int objToSpawnNameLength()

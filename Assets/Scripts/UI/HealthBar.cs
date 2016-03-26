@@ -67,7 +67,7 @@ public class HealthBar : MonoBehaviour
         generateOneObject = superGenerator.GetComponent<GenerateOneObject>();
 
         StartCoroutine(UpdateHealthbar());
-        generateChunk.MakeChunk();
+        generateChunk.MakeRandomChunk();
     }
 
     public void addValue(float _value)

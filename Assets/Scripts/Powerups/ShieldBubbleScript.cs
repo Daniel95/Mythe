@@ -39,7 +39,6 @@ public class ShieldBubbleScript : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		Debug.Log (canIBeDestroyed);
 		transform.position = playerObject.position;
 
 		if (shouldIShrink) 

@@ -56,9 +56,9 @@ public class ScoreBoard : MonoBehaviour
         string[] lines = _score.Trim().Split('\n');
 
         foreach (string text in lines) {
-            string[] seperate = text.Split('_');
-            namesFieldTextField.text += seperate[0] + "\n";
-            scoresTextField.text += seperate[1] + "\n";
+            string[] myStr2 = text.Split('_');
+            namesFieldTextField.text += myStr2[0] + "\n";
+            scoresTextField.text += myStr2[1] + "\n";
         }
     }
     
@@ -104,7 +104,8 @@ public class ScoreBoard : MonoBehaviour
         }
     }
 
-    public void GetPlayerRanking(string _score) {
+    public void GetPlayerRanking(string _score)
+    {
 
     }
 
@@ -119,7 +120,8 @@ public class ScoreBoard : MonoBehaviour
         //make a new list where we will store the selected scores in
         List<string> cuttedLines = new List<string>();
 
-        for (int i = (pageNumber * scoresPerPage) - scoresPerPage; i < (pageNumber * scoresPerPage); i++) {
+        for (int i = (pageNumber * scoresPerPage) - scoresPerPage; i < (pageNumber * scoresPerPage); i++)
+        {
             //if the index (i) isnt higher then the total lines, and not lower then zero
             if (i < lines.Length && i >= 0)
                 cuttedLines.Add(lines[i]);
@@ -127,7 +129,7 @@ public class ScoreBoard : MonoBehaviour
         //return the results
         return string.Join("\n", cuttedLines.ToArray());
     }
-    
+
 
     public void ChangePageNumber(int _change)
     {

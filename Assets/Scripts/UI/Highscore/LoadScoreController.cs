@@ -36,6 +36,7 @@ public class LoadScoreController : MonoBehaviour {
     void OnDisable()
     {
         loadData.FinishedLoading -= DoneLoading;
+        scoreBoard.ChangedPageNumber -= loadCurrentData;
     }
 
     public void LoadScoreType(int _change) {
@@ -50,11 +51,13 @@ public class LoadScoreController : MonoBehaviour {
         //edit the text value to the new score we are going to load
         textField.text = (scoreNames[scoresNamesIndex]);
 
+        //load the new score
         //we changed the score type, now load it
         loadCurrentData();
     }
 
-    private void loadCurrentData() {
+    private void loadCurrentData()
+    {
         loadData.Load(scoreNames[scoresNamesIndex]);
     }
 

@@ -19,24 +19,26 @@ public class LoadScoreController : MonoBehaviour {
     [SerializeField]
     private bool loadScoresOnStart;
 
+    [SerializeField]
+    private GameObject loadingIcon;
+
     private Text textField;
 
     void Start() {
         textField = transform.Find("Text").GetComponent<Text>();
         if(loadScoresOnStart) LoadScoreType(0);
         loadScoresOnStart = false;
+        loadingIcon.SetActive(false);
     }
 
     void OnEnable()
     {
         loadData.FinishedLoading += DoneLoading;
-        scoreBoard.ChangedPageNumber += loadCurrentData;
     }
 
     void OnDisable()
     {
         loadData.FinishedLoading -= DoneLoading;
-        scoreBoard.ChangedPageNumber -= loadCurrentData;
     }
 
     public void LoadScoreType(int _change) {
@@ -51,18 +53,19 @@ public class LoadScoreController : MonoBehaviour {
         //edit the text value to the new score we are going to load
         textField.text = (scoreNames[scoresNamesIndex]);
 
+        loadingIcon.SetActive(true);
+
         //load the new score
         //we changed the score type, now load it
-        loadCurrentData();
-    }
-
-    private void loadCurrentData()
-    {
         loadData.Load(scoreNames[scoresNamesIndex]);
     }
 
     void DoneLoading(string _data, string _dataType) {
+        loadingIcon.SetActive(false);
+
+        scoreBoard.NewScoreBoard(_data, _dataType);
+
+        //get the players ranking
         scoreBoard.GetPlayerRanking(_data);
-        scoreBoard.MakeABoard(scoreBoard.CutLines(_data), _dataType);
     }
 }

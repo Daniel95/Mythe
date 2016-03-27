@@ -4,12 +4,6 @@ using System.Collections.Generic;
 
 public class ScoreBoard : MonoBehaviour
 {
-    //delegate type
-    public delegate void PageMethods();
-
-    //delegate instance
-    public PageMethods ChangedPageNumber;
-
     [SerializeField]
     private GameObject gameOverScreen;
 
@@ -22,6 +16,10 @@ public class ScoreBoard : MonoBehaviour
     private int pageNumber = 1;
 
     private int maxPageNumber;
+
+    private bool isTimeData;
+
+    private string savedScores;
 
     //private Text totalDeathsTextField;
     //private Text myDeathsTextField;
@@ -37,12 +35,14 @@ public class ScoreBoard : MonoBehaviour
         scoresTextField = gameOverScreen.transform.Find("ScoresField").GetComponent<Text>();
     }
 
-    public void MakeABoard(string _score, string _scoreType) {
+    public void MakeABoard(string _score, bool _isTimeData) {
         //make the textfield clear so we can put a new score in them
         namesFieldTextField.text = "";
         scoresTextField.text = "";
 
-        if (_scoreType == "time")
+        isTimeData = _isTimeData;
+
+        if (_isTimeData)
             MakeTimeBoard(_score);
         else
             MakeScoreBoard(_score);
@@ -142,10 +142,26 @@ public class ScoreBoard : MonoBehaviour
         else if (pageNumber < 1)
             pageNumber = maxPageNumber;
 
+        pageNumberText.text = pageNumber.ToString();
+
+        //make the new page, with the same string only differently cut.
+        MakeABoard(CutLines(savedScores), isTimeData);
+    }
+
+    public void NewScoreBoard(string _score, string _scoreType)
+    {
+        //reset the page
+        pageNumber = 1;
+
         //update the ui
         pageNumberText.text = pageNumber.ToString();
 
-        if (ChangedPageNumber != null)
-            ChangedPageNumber();
+        savedScores = _score;
+
+        //if the dataType is Time, make a special board.
+        if (_scoreType == "Time")
+            MakeABoard(CutLines(_score), true);
+        else //else make a normal board
+            MakeABoard(CutLines(_score), false);
     }
 }

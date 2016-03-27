@@ -41,10 +41,9 @@ public class LoadData : MonoBehaviour {
         } else {
             NoConnectionImage.SetActive(false);
 
-            if (FinishedLoading == null) print("is null");
-
-            //sends the score results to scoreBoard script
-            FinishedLoading(_www.text, _scoreType);
+            //sends the score results to loadScoreController script
+            if (FinishedLoading != null) 
+                FinishedLoading(_www.text, _scoreType);
         }
     }
 }

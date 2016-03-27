@@ -44,8 +44,10 @@ public class PowerupHandler : MonoBehaviour {
 
     public void AddShield()
 	{
+        //set the shield powerup active.
         if (!shieldBubble.gameObject.activeSelf)
             shieldBubble.gameObject.SetActive(true);
+        //if it is already active, reset it, so it starts again
         else shieldBubble.ResetPowerup();
 
         //let all subscribed scripts know we just added the shield effect
@@ -63,8 +65,10 @@ public class PowerupHandler : MonoBehaviour {
 
 	public void AddMagnet()
 	{
+        //set the magnet powerup active.
         if (!magnetEffect.gameObject.activeSelf)
             magnetEffect.gameObject.SetActive(true);
+        //if it is already active, reset it, so it starts again
         else
             magnetEffect.ResetPowerup();
     }

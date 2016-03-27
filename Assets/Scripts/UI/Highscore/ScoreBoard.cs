@@ -136,7 +136,7 @@ public class ScoreBoard : MonoBehaviour
                 //compare every score, until we get our own. 
                 if (plrScore == dataLines[m])
                 {
-                    playerRankText.text = m.ToString();
+                    playerRankText.text = (m + 1).ToString();
                     break;
                 }
             }

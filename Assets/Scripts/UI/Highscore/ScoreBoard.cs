@@ -5,7 +5,13 @@ using System.Collections.Generic;
 public class ScoreBoard : MonoBehaviour
 {
     [SerializeField]
+    private SaveData saveData;
+
+    [SerializeField]
     private GameObject gameOverScreen;
+
+    [SerializeField]
+    private Text playerRankText;
 
     [SerializeField]
     private Text pageNumberText;
@@ -21,6 +27,8 @@ public class ScoreBoard : MonoBehaviour
 
     private string savedScores;
 
+    private string[] dataLines;
+
     //private Text totalDeathsTextField;
     //private Text myDeathsTextField;
     private Text namesFieldTextField;
@@ -35,45 +43,46 @@ public class ScoreBoard : MonoBehaviour
         scoresTextField = gameOverScreen.transform.Find("ScoresField").GetComponent<Text>();
     }
 
-    public void MakeABoard(string _score, bool _isTimeData) {
+    private void MakeABoard(List<string> _score, bool _isTimeData) {
         //make the textfield clear so we can put a new score in them
         namesFieldTextField.text = "";
         scoresTextField.text = "";
 
         isTimeData = _isTimeData;
 
+        int startRank = (pageNumber * scoresPerPage) - scoresPerPage + 1;
+
         if (_isTimeData)
-            MakeTimeBoard(_score);
+            MakeTimeBoard(_score, startRank);
         else
-            MakeScoreBoard(_score);
+            MakeScoreBoard(_score, startRank);
     }
 
-    private void MakeScoreBoard(string _score) {
-        //make the textfield clear so we can put a new score in them
-        namesFieldTextField.text = "";
-        scoresTextField.text = "";
+    private void MakeScoreBoard(List<string> _score, int _startRank) {
+        //the rank where i show at which place this score is in de leaderboards
+        int rank = _startRank;
 
-        string[] lines = _score.Trim().Split('\n');
-
-        foreach (string text in lines) {
+        foreach (string text in _score) {
             string[] myStr2 = text.Split('_');
-            namesFieldTextField.text += myStr2[0] + "\n";
+            namesFieldTextField.text += rank.ToString() + ". " + myStr2[0] + "\n";
             scoresTextField.text += myStr2[1] + "\n";
+
+            rank++;
         }
     }
     
-    private void MakeTimeBoard(string _score)
+    private void MakeTimeBoard(List<string> _score, int _startRank)
     {
-        //split each line into a string array
-        string[] lines = _score.Trim().Split('\n');
-        
-        foreach (string text in lines)
+        //the rank where i show at which place this score is in de leaderboard
+        int rank = _startRank;
+
+        foreach (string text in _score)
         {
             //split the names and time in a string array
             string[] namesAndTimes = text.Split('_');
 
             //add all the names to the scoreboard
-            namesFieldTextField.text += namesAndTimes[0] + "\n";
+            namesFieldTextField.text += rank.ToString() + ". " + namesAndTimes[0] + "\n";
 
             //make lists for each time type
             List<char> min = new List<char>();
@@ -101,21 +110,46 @@ public class ScoreBoard : MonoBehaviour
 
             var time = string.Format("{0:00}:{1:00}:{2:00}", new string(min.ToArray()), new string(sec.ToArray()), new string(frac.ToArray()));
             scoresTextField.text += time + "\n";
+
+            rank++;
         }
     }
 
-    public void GetPlayerRanking(string _score)
+    public void GetPlayerRanking(string _scoreType)
     {
+        if (saveData != null)
+        {
+            int scoreReached = 0;
 
+            for (int i = 0; i < saveData.DataTypeNames.Count; i++)
+            {
+                if (_scoreType == saveData.DataTypeNames[i])
+                {
+                    scoreReached = saveData.DataTypeValues[i];
+                }
+            }
+
+            //this is the score we are looking for
+            string plrScore = saveData.PlayerName + "_" + scoreReached.ToString();
+
+            for (int m = 0; m < dataLines.Length; m++) {
+                //compare every score, until we get our own. 
+                if (plrScore == dataLines[m])
+                {
+                    playerRankText.text = m.ToString();
+                    break;
+                }
+            }
+        }
     }
 
-    public string CutLines(string _score)
+    public List<string> CutLines(string _uncutScore)
     {
         //split all the lines in a array
-        string[] lines = _score.Trim().Split('\n');
+        dataLines = _uncutScore.Trim().Split('\n');
 
         //calculate the max page number
-        maxPageNumber = Mathf.CeilToInt(lines.Length / (float)scoresPerPage);
+        maxPageNumber = Mathf.CeilToInt(dataLines.Length / (float)scoresPerPage);
 
         //make a new list where we will store the selected scores in
         List<string> cuttedLines = new List<string>();
@@ -123,13 +157,12 @@ public class ScoreBoard : MonoBehaviour
         for (int i = (pageNumber * scoresPerPage) - scoresPerPage; i < (pageNumber * scoresPerPage); i++)
         {
             //if the index (i) isnt higher then the total lines, and not lower then zero
-            if (i < lines.Length && i >= 0)
-                cuttedLines.Add(lines[i]);
+            if (i < dataLines.Length && i >= 0)
+                cuttedLines.Add(dataLines[i]);
         }
         //return the results
-        return string.Join("\n", cuttedLines.ToArray());
+        return cuttedLines;
     }
-
 
     public void ChangePageNumber(int _change)
     {
@@ -156,10 +189,11 @@ public class ScoreBoard : MonoBehaviour
         //update the ui
         pageNumberText.text = pageNumber.ToString();
 
+        //save the current loaded scores in savedScores
         savedScores = _score;
 
         //if the dataType is Time, make a special board.
-        if (_scoreType == "Time")
+        if (_scoreType == "time")
             MakeABoard(CutLines(_score), true);
         else //else make a normal board
             MakeABoard(CutLines(_score), false);

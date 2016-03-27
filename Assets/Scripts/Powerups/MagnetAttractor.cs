@@ -22,9 +22,7 @@ public class MagnetAttractor : MonoBehaviour {
 
     public void ResetPowerup()
     {
-        print("reset");
 		StopCoroutine("WaitAndDestroy");
-        print(gameObject.activeSelf);
         StartCoroutine("WaitAndDestroy",duration);
     }
 

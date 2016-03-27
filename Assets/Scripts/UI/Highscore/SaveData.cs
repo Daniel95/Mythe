@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SaveData : MonoBehaviour {
 
@@ -11,6 +12,12 @@ public class SaveData : MonoBehaviour {
 
     [SerializeField]
     private string saveURL = "http://14411.hosts.ma-cloud.nl/mythen/savescores.php";
+
+    [SerializeField]
+    private List<string> dataTypeNames = new List<string>();
+
+    [SerializeField]
+    private List<int> dataTypeValues = new List<int>(); 
 
     [SerializeField]
     private PlayerDistance plrDistance;
@@ -43,14 +50,27 @@ public class SaveData : MonoBehaviour {
     {
         string url = saveURL;
 
-        //maak dictionary ~~~~
-        WWWForm form = new WWWForm();
-        form.AddField("name", plrName);
-        form.AddField("pickups", _pickups);
-        form.AddField("distance", _distance);
-        form.AddField("time", _time);
-        form.AddField("deaths", 10);
+        //add all scores to dataTypeValues
+        dataTypeValues.Clear();
+        dataTypeValues.Add(_distance);
+        dataTypeValues.Add(_pickups);
+        dataTypeValues.Add(_time);
+        dataTypeValues.Add(10);
 
+        WWWForm form = new WWWForm();
+
+        form.AddField("name", plrName);
+
+        //send every dataTypeValue with a dataTypeName to the php file
+        for (int i = 0; i < dataTypeNames.Count; i++) {
+            form.AddField(dataTypeNames[i], dataTypeValues[i]);
+        }
+
+        
+        //form.AddField("distance", _distance);
+        //form.AddField("time", _time);
+        //form.AddField("deaths", 10);
+        
         WWW www = new WWW(url, form);
 
         //if done loading, send text from file to Scoreboard
@@ -62,5 +82,38 @@ public class SaveData : MonoBehaviour {
         yield return www;
 
         FinishedSaving();
+    }
+
+    public string PlayerName
+    {
+        get { return plrName; }
+    }
+    /*
+    public int Distance {
+        get { return plrDistance.Distance; }
+    }
+
+    public int Pickups
+    {
+        get { return plrPickups.Pickups; }
+    }
+
+    public int Time
+    {
+        get { return timePlaying.TimeInt(); }
+    }
+
+    public int Deaths
+    {
+        get { return plrDeaths.Deaths; }
+    }*/
+
+    public List<string> DataTypeNames {
+        get { return dataTypeNames; }
+    }
+
+    public List<int> DataTypeValues
+    {
+        get { return dataTypeValues; }
     }
 }

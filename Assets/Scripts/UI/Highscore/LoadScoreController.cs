@@ -66,6 +66,6 @@ public class LoadScoreController : MonoBehaviour {
         scoreBoard.NewScoreBoard(_data, _dataType);
 
         //get the players ranking
-        scoreBoard.GetPlayerRanking(_data);
+        scoreBoard.GetPlayerRanking(_dataType);
     }
 }

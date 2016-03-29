@@ -8,41 +8,36 @@ public class ChunkUnlocker : MonoBehaviour {
 
 	[SerializeField]
 	private PlayerDistance playerDistance;
-
 	public List<string> notUnlockedChunks;
-
-    private List<string> alreadyUnlockedChunks;
-
-    private List<int> alreadyUnlockedValues;
 
 	[SerializeField]
 	private List<int> unlockValues;
 
-	public void UnlockChunks()
+	[SerializeField]
+	private List<int> ExtraChunks;
+
+
+	public void UnlockChunk(string chunkToUnlock)
 	{
+		//Use this to force unlock new chunks.
+		chunkHolder.LoadChunk (chunkToUnlock);
+	}
+
+	public void UnlockChunksWithDistance()
+	{
+		//This function is called constantly and will unlock new chunks based on score.
 		int distance = playerDistance.Distance;
 		for(int i = 0; i<unlockValues.Count; i++) 
 		{
 			if (distance >= unlockValues[i]) 
 			{
+				//Removes the unlock values based on distance.
 				unlockValues.Remove (unlockValues[i]);
-                alreadyUnlockedValues.Add(unlockValues[i]);
-				chunkHolder.LoadChunk (notUnlockedChunks [i]);
 				notUnlockedChunks.Remove (notUnlockedChunks [i]);
-                alreadyUnlockedValues.Add(alreadyUnlockedValues[i]);
+				//Then unlocks 
+				UnlockChunk (notUnlockedChunks[i]);
+
 			}
 		}
 	}
-
-    public void RelockChunks()
-    {
-        for (int i = 0; i < this.alreadyUnlockedChunks.Count; i++)
-        {
-            unlockValues.Add(alreadyUnlockedValues[i]);
-            notUnlockedChunks.Add(alreadyUnlockedChunks[i]);
-            alreadyUnlockedChunks.Remove(alreadyUnlockedChunks[i]);
-            alreadyUnlockedValues.Remove(alreadyUnlockedValues[i]);
-        }
-    }
-
 }

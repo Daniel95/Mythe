@@ -1190,6 +1190,48 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1089832475}
+--- !u!1001 &1138005346
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 419032, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 150.86105
+      objectReference: {fileID: 0}
+    - target: {fileID: 419032, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 268.1396
+      objectReference: {fileID: 0}
+    - target: {fileID: 419032, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 419032, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 419032, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 419032, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 419032, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 419032, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ff01179c7abcd400d9060b02cc59e095, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1178288856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,6 +2150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveData: {fileID: 0}
   gameOverScreen: {fileID: 1353611502}
+  playerRankText: {fileID: 0}
   pageNumberText: {fileID: 1552038280}
   scoresPerPage: 25
 --- !u!114 &1939241499

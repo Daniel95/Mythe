@@ -266,12 +266,12 @@ Prefab:
     - target: {fileID: 21223480, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eb64a55ccd9dd4aff9295639ea808f83,
+      objectReference: {fileID: 21300000, guid: e0dab3132c3b449dc82aa9cd87b9127f,
         type: 3}
     - target: {fileID: 21281564, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eb64a55ccd9dd4aff9295639ea808f83,
+      objectReference: {fileID: 21300000, guid: e0dab3132c3b449dc82aa9cd87b9127f,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
@@ -3762,7 +3762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4811,7 +4811,7 @@ MonoBehaviour:
     Count: 30
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
+  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0

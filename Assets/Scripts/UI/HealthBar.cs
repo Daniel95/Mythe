@@ -48,6 +48,9 @@ public class HealthBar : MonoBehaviour
     private SkyMovingDown[] skiesMovingDown;
 
     [SerializeField]
+    private SpriteRenderer[] shadows;
+
+    [SerializeField]
     private AudioSource audioSource;
 
     [SerializeField]
@@ -159,7 +162,11 @@ public class HealthBar : MonoBehaviour
             {
                 waterRenderer.color = new Color(0, 0, 1);
             }
-            
+
+            for (int i = 0; i < shadows.Length; i++)
+            {
+                shadows[i].color = new Color(0, 0, 0,health/4 -0.06f);
+            }
             yield return new WaitForFixedUpdate();
         }
         while(health < maxHealth/2)

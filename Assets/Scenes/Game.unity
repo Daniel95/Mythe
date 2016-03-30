@@ -1282,9 +1282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca7242c74159c040894b7ff61cbdd4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkHolder: {fileID: 2015117536}
-  generateChunk: {fileID: 2015117534}
-  playerDistance: {fileID: 702655280}
 --- !u!4 &349085132
 Transform:
   m_ObjectHideFlags: 0
@@ -2543,7 +2540,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 731716820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.81, y: 8.5, z: 0}
+  m_LocalPosition: {x: -2.5, y: 8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

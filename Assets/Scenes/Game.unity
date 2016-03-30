@@ -5234,7 +5234,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015117531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32b090a3d916ded46b1242f0284b281b, type: 3}
   m_Name: 
@@ -5254,9 +5254,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunkHolder: {fileID: 2015117536}
   playerDistance: {fileID: 702655280}
-  notUnlockedChunks: []
   unlockValues: 00000000000000000000000000000000000000000000000050000000b4000000180100007c010000e001000044020000a80200000c03000070030000d4030000380400009c04000000050000
-  ExtraChunks: 
+  introChunks:
+  - 100001100001110301100001100001100001100001100001103011100001100001100001
+  easyChunks: []
+  mediumChunks: []
+  hardChunks: []
+  superHardChunks: []
+  extremeChunks: []
 --- !u!114 &2015937163 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11471618, guid: 1c9f8b7a3cab7074a9a53b3b9c38ee18,

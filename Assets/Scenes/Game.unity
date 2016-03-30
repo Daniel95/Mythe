@@ -263,16 +263,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 21223480, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e0dab3132c3b449dc82aa9cd87b9127f,
-        type: 3}
-    - target: {fileID: 21281564, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e0dab3132c3b449dc82aa9cd87b9127f,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
   m_IsPrefabParent: 0
@@ -1580,6 +1570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca7242c74159c040894b7ff61cbdd4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chunkHolder: {fileID: 2015117536}
+  generateChunk: {fileID: 2015117534}
+  playerDistance: {fileID: 702655280}
 --- !u!4 &349085132
 Transform:
   m_ObjectHideFlags: 0
@@ -3038,7 +3031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92c8cff1a21d6b4f83bb1037cd755dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailPoolName: Trail
+  trailPoolName: trail
   trailMovement: {fileID: 752591566}
   healthBar: {fileID: 2094346090}
   trailMaxLength: 20
@@ -4387,7 +4380,7 @@ Prefab:
       objectReference: {fileID: 2094346090}
     - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: hurtableCooldown
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: offset

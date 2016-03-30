@@ -14,7 +14,7 @@ public class GameSpeed : MonoBehaviour
 
     private static float speedMultiplier = 1;
     [SerializeField]
-    private float maxMultiplier = 2;
+    private float maxMultiplier = 3;
     void Start()
     {
         speed = startSpeed;

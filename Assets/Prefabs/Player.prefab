@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shieldBubble: {fileID: 0}
   magnetEffect: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &11466708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,6 +244,7 @@ MonoBehaviour:
   pickups: {fileID: 0}
   shake: {fileID: 0}
   powerUpHandler: {fileID: 11447412}
+  hurtableCooldown: 0.1
 --- !u!114 &11477792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetIcon: {fileID: 0}
-  offset: 0.35
+  offset: 0
 --- !u!212 &21267848
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11420702}
   - 114: {fileID: 11497268}
   - 58: {fileID: 5898378}
-  - 114: {fileID: 11459648}
+  - 114: {fileID: 11476674}
   m_Layer: 0
   m_Name: Obstacle Small
   m_TagString: Obstacle
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: 1
   speed: 1
---- !u!114 &11459648
+--- !u!114 &11476674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -98,12 +98,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 140748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22cc24baab44b4c0eb3b02dc5fa264e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bf49cdee9b2a36418d48491201ba683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteArray:
-  - {fileID: 21300000, guid: 19b1f1645691d43c09a8f27ad2e12b01, type: 3}
   - {fileID: 21300000, guid: 8585ab2b715e060429534053dfc82b9b, type: 3}
+  - {fileID: 21300000, guid: db9b9a1cb604bab4aa303b5c9dc79b16, type: 3}
 --- !u!114 &11497268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,12 +163,12 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: spriteArray.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 19b1f1645691d43c09a8f27ad2e12b01,
+      objectReference: {fileID: 21300000, guid: 8585ab2b715e060429534053dfc82b9b,
         type: 3}
     - target: {fileID: 0}
       propertyPath: spriteArray.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 8585ab2b715e060429534053dfc82b9b,
+      objectReference: {fileID: 21300000, guid: db9b9a1cb604bab4aa303b5c9dc79b16,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

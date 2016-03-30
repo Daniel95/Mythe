@@ -26,7 +26,7 @@ public class TutorialUnlocker : MonoBehaviour {
         {
             yield return new WaitForFixedUpdate();
         }
-        generateChunk.MakeChosenChunk(chunkHolder.UncompressChunk("111111111111111111113311133331333333333333333333333333333333000000000000"));
+        generateChunk.MakeChosenChunk(chunkHolder.UncompressChunk("111111111111111111111111111121111111111111121111111121111111111111113311113311133331133331333333333333333333000000"));
 
 
         //intro chunk for shield pick up.

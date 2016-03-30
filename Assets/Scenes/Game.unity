@@ -4872,7 +4872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Entries:
   - Prefab: {fileID: 140748, guid: 68efb57eece8d4342b703a07125b3d24, type: 2}
-    Count: 30
+    Count: 100
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 166584, guid: 0881819bc111e334c87719a35b5a616b, type: 2}

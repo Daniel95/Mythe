@@ -14,12 +14,15 @@ $deaths = $_POST['deaths'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if($conn->query("SELECT * FROM Scores WHERE deviceid = '$deviceId'")->num_rows > 0) {
+$sql = "SELECT * FROM Scores WHERE deviceid = '$deviceId'";
+
+if($conn->query($sql)->num_rows > 0) {
     
     echo "Score Updated <br>";
     
@@ -33,7 +36,7 @@ if($conn->query("SELECT * FROM Scores WHERE deviceid = '$deviceId'")->num_rows >
 }
 
 
-if ($conn->query($sql2) === TRUE) {
+if ($conn->query($sql2)) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql2 . "<br>" . $conn->error;

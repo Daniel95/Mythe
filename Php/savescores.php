@@ -10,7 +10,7 @@ $score = $_POST['score'];
 $pickups = $_POST['pickups'];
 $distance = $_POST['distance'];
 $time = $_POST['time'];
-$deaths = $_POST['deaths'];
+$deaths = 0;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -24,7 +24,27 @@ $sql = "SELECT * FROM Scores WHERE deviceid = '$deviceId'";
 
 if($conn->query($sql)->num_rows > 0) {
     
-    echo "Score Updated <br>";
+    echo "Update Score <br>";
+    
+    $oldScore = $conn->query($sql)->fetch_assoc();
+    
+    echo "old pickups score =  " . $oldScore["pickups"] . " <br> ";
+    
+    
+    if($oldScore["distance"] > $distance) {
+        $distance = intval($oldScore["distance"]);
+    }
+    
+    if($oldScore["pickups"] > $pickups) {
+        $pickups = intval($oldScore["pickups"]);
+    }
+    
+    if($oldScore["time"] > $time) {
+        $pickups = intval($oldScore["pickups"]);
+    }
+    
+    $deaths = $oldScore["deaths"] + 1;
+    
     
     $sql2 = "UPDATE Scores SET pickups = '$pickups', distance = '$distance', time = '$time', deaths = '$deaths' WHERE deviceId = '$deviceId'";
         

@@ -7,6 +7,5 @@ public class DataTypes : MonoBehaviour {
         "distance",
         "pickups",
         "time",
-        "deaths",
     };
 }

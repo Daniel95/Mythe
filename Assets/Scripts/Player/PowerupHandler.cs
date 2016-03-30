@@ -33,13 +33,15 @@ public class PowerupHandler : MonoBehaviour {
     void OnEnable()
     {
         shieldBubble.EndedShieldEffect += ShieldEffectRemoved;
-        healthBar.EnterSuperMode += StopMagnetOnSuperMode;
+        healthBar.EnterSuperMode += StopMagnet;
+        healthBar.PlayerDied += StopMagnet;
     }
 
     void OnDisable()
     {
         shieldBubble.EndedShieldEffect -= ShieldEffectRemoved;
-        healthBar.EnterSuperMode -= StopMagnetOnSuperMode;
+        healthBar.EnterSuperMode -= StopMagnet;
+        healthBar.PlayerDied -= StopMagnet;
     }
 
     public void AddShield()
@@ -73,7 +75,7 @@ public class PowerupHandler : MonoBehaviour {
             magnetEffect.ResetPowerup();
     }
 
-    void StopMagnetOnSuperMode() {
+    void StopMagnet() {
         magnetEffect.gameObject.SetActive(false);
     }
 }

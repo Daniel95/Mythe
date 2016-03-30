@@ -14,7 +14,6 @@ GameObject:
   - 114: {fileID: 11420702}
   - 114: {fileID: 11497268}
   - 58: {fileID: 5898378}
-  - 114: {fileID: 11476674}
   m_Layer: 0
   m_Name: Obstacle Small
   m_TagString: Obstacle
@@ -90,20 +89,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: 1
   speed: 1
---- !u!114 &11476674
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bf49cdee9b2a36418d48491201ba683, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteArray:
-  - {fileID: 21300000, guid: 8585ab2b715e060429534053dfc82b9b, type: 3}
-  - {fileID: 21300000, guid: db9b9a1cb604bab4aa303b5c9dc79b16, type: 3}
 --- !u!114 &11497268
 MonoBehaviour:
   m_ObjectHideFlags: 1

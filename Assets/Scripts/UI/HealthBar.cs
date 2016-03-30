@@ -214,21 +214,6 @@ public class HealthBar : MonoBehaviour
         playerObject.SetActive(false);
     }
 
-    /*
-    public void Restart()
-    {
-        generateChunk.PauzeSpawning(3);
-        currentHealth = maxHealth / 2;
-
-        //start the updatehealth after reseting player health, otherwise it will trigger die() & try to get highscores
-        StartCoroutine(UpdateHealthbar());
-
-        trailMovement.StartTrail();
-
-        playerObject.SetActive(true);
-        playerObject.transform.position = new Vector2(0, 0);
-    }*/
-
     public float CurrentHealth
     {
         get { return currentHealth; }

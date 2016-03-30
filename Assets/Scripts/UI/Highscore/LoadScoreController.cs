@@ -11,9 +11,6 @@ public class LoadScoreController : MonoBehaviour {
     private ScoreBoard scoreBoard;
 
     [SerializeField]
-    private List<string> scoreNames;
-
-    [SerializeField]
     private int scoresNamesIndex;
 
     [SerializeField]
@@ -47,17 +44,17 @@ public class LoadScoreController : MonoBehaviour {
         scoresNamesIndex += _change;
 
         //if the index is now higher then the list count or lower then zero, change it
-        if (scoresNamesIndex < 0) scoresNamesIndex = scoreNames.Count - 1;
-        else if (scoresNamesIndex >= scoreNames.Count) scoresNamesIndex = 0;
+        if (scoresNamesIndex < 0) scoresNamesIndex = DataTypes.dataTypeNames.Length - 1;
+        else if (scoresNamesIndex >= DataTypes.dataTypeNames.Length) scoresNamesIndex = 0;
 
         //edit the text value to the new score we are going to load
-        textField.text = (scoreNames[scoresNamesIndex]);
+        textField.text = (DataTypes.dataTypeNames[scoresNamesIndex]);
 
         loadingIcon.SetActive(true);
 
         //load the new score
         //we changed the score type, now load it
-        loadData.Load(scoreNames[scoresNamesIndex]);
+        loadData.Load((DataTypes.dataTypeNames[scoresNamesIndex]));
     }
 
     void DoneLoading(string _data, string _dataType) {

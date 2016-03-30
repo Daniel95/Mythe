@@ -452,8 +452,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184.50003, y: -915}
-  m_SizeDelta: {x: 369, y: 1031}
+  m_AnchoredPosition: {x: -88, y: -915}
+  m_SizeDelta: {x: 467, y: 1031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344976618
 MonoBehaviour:
@@ -2108,6 +2108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveData: {fileID: 0}
   gameOverScreen: {fileID: 1353611502}
+  playerRankText: {fileID: 0}
   pageNumberText: {fileID: 1552038280}
   scoresPerPage: 25
 --- !u!114 &1939241499
@@ -2224,8 +2225,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 185.74991, y: -913}
-  m_SizeDelta: {x: 372, y: 1026}
+  m_AnchoredPosition: {x: 357, y: -913}
+  m_SizeDelta: {x: 423, y: 1026}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974821395
 MonoBehaviour:

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SavePlayerName : MonoBehaviour
 {
     [SerializeField]
-    private PlayerName _plrName;
+    private PlayerData _plrName;
 
     [SerializeField]
     private SceneLoader sceneLoader;

@@ -22,13 +22,6 @@ public class PlayerMovement : MonoBehaviour {
 
     private Quaternion targetRotation;
 
-	private float red = 1f;
-	private float green = 0f;
-	private float blue = 0f;
-
-	private float fading = 0.2f;
-	private float spawnSpeed = 0.1f;
-
 	[SerializeField]
 	private float movingSpawnSpeed = 0.1f;
 
@@ -57,8 +50,6 @@ public class PlayerMovement : MonoBehaviour {
 
         //the speed of the player, the x speed + y speed (made absulute) = total speed.
         totalSpeed = Mathf.Abs(vectorToTarget.x + vectorToTarget.y) * speedMultiplier;
-
-        spawnSpeed = movingSpawnSpeed - (totalSpeed / 30) * GameSpeed.SpeedMultiplier;
     }
 
     

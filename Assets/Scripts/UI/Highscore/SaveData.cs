@@ -14,9 +14,6 @@ public class SaveData : MonoBehaviour {
     private string saveURL = "http://14411.hosts.ma-cloud.nl/mythen/savescores.php";
 
     [SerializeField]
-    private List<string> dataTypeNames = new List<string>();
-
-    [SerializeField]
     private List<int> dataTypeValues = new List<int>(); 
 
     [SerializeField]
@@ -36,9 +33,16 @@ public class SaveData : MonoBehaviour {
 
     private string plrName = "Anonymous";
 
+    private string plrId = "TestId";
+
     void Awake()
     {
-        if (GameObject.Find("plrName") != null) plrName = GameObject.Find("plrName").GetComponent<PlayerName>().Name;
+        if (GameObject.Find("plrName") != null)
+        {
+            PlayerData playerData = GameObject.Find("plrName").GetComponent<PlayerData>();
+            plrName = playerData.Name;
+            plrId = playerData.Id;
+        }
     }
 
     public void SavePlayerScores()
@@ -60,16 +64,12 @@ public class SaveData : MonoBehaviour {
         WWWForm form = new WWWForm();
 
         form.AddField("name", plrName);
+        form.AddField("deviceId", plrId);
 
         //send every dataTypeValue with a dataTypeName to the php file
-        for (int i = 0; i < dataTypeNames.Count; i++) {
-            form.AddField(dataTypeNames[i], dataTypeValues[i]);
+        for (int i = 0; i < DataTypes.dataTypeNames.Length; i++) {
+            form.AddField(DataTypes.dataTypeNames[i], dataTypeValues[i]);
         }
-
-        
-        //form.AddField("distance", _distance);
-        //form.AddField("time", _time);
-        //form.AddField("deaths", 10);
         
         WWW www = new WWW(url, form);
 
@@ -87,29 +87,6 @@ public class SaveData : MonoBehaviour {
     public string PlayerName
     {
         get { return plrName; }
-    }
-    /*
-    public int Distance {
-        get { return plrDistance.Distance; }
-    }
-
-    public int Pickups
-    {
-        get { return plrPickups.Pickups; }
-    }
-
-    public int Time
-    {
-        get { return timePlaying.TimeInt(); }
-    }
-
-    public int Deaths
-    {
-        get { return plrDeaths.Deaths; }
-    }*/
-
-    public List<string> DataTypeNames {
-        get { return dataTypeNames; }
     }
 
     public List<int> DataTypeValues

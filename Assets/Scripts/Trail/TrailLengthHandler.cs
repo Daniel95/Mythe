@@ -44,8 +44,8 @@ public class TrailLengthHandler : MonoBehaviour {
                 {
                     SpawnTrail();
                 }
-            }
-            else if (trailsAmount < trailMovement.TrailParts.Count && trailsAmount >= 0)//remove trails
+            }//remove trails
+            else if (trailsAmount < trailMovement.TrailParts.Count && trailsAmount >= 0)
             {
                 RemoveTrailParts(trailsAmount, false);
             }
@@ -72,6 +72,7 @@ public class TrailLengthHandler : MonoBehaviour {
 
             spawnedObject.GetComponent<MoveDown>().enabled = false;
             spawnedObject.GetComponent<InteractableObject>().IsEnabled = false;
+            spawnedObject.GetComponent<OutOfBoundsPool>().enabled = false;
 
             //give the trailpart its number in the list, we use this when we remove the trail part later.
             TrailTriggerDetection trailTriggerDetection = spawnedObject.GetComponent<TrailTriggerDetection>();
@@ -120,11 +121,17 @@ public class TrailLengthHandler : MonoBehaviour {
         {
             Transform trailToRemove = trailMovement.TrailParts[i];
 
+            //reset the velocity
             trailToRemove.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            //disable the distancejoint
             trailToRemove.GetComponent<DistanceJoint2D>().enabled = false;
-            //trailToRemove.GetComponent<DistanceJoint2D>().connectedBody = null;
+            //set movedown on true, so it moves with the enviroment
             trailToRemove.GetComponent<MoveDown>().enabled = trailToRemove.GetComponent<TrailTriggerDetection>().Removed = true;
+            //set interactive object on, so the player can eats its own trail
             trailToRemove.GetComponent<InteractableObject>().IsEnabled = true;
+            //set outofboundspool on, so it gets deleted once its out of the screen
+            trailToRemove.GetComponent<OutOfBoundsPool>().enabled = true;
+            //remove the trail out of the list
             trailMovement.TrailParts.Remove(trailToRemove);
         }
     }

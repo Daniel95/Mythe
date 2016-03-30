@@ -153,19 +153,25 @@ public class TrailMovement : MonoBehaviour
 
     void EnteredSuperMode()
     {
-        if(trailParts.Count > wingTrailNumber) trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = wingSprite;
+        //add a different sprite to a selected trail
+        if(trailParts.Count > wingTrailNumber)
+            trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = wingSprite;
     }
 
     void EnteredNormalMode() {
-        if(trailParts.Count > wingTrailNumber) trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = normalSprite;
+        //reset the sprite of the selected trial
+        if (trailParts.Count > wingTrailNumber)
+            trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = normalSprite;
     }
 
+    //disable the collision of the trails when the shield effect starts
     void AddedShieldPowerup() {
         for (int i = 0; i < trailParts.Count; i++) {
             trailParts[i].GetComponent<TrailTriggerDetection>().Shielded = true;
         }
     }
 
+    //enable the collision of the trails when the shield effect is over
     void RemovedShieldPowerup() {
         for (int i = 0; i < trailParts.Count; i++)
         {

@@ -3,15 +3,11 @@ using UnityEngine.UI;
 
 public class Node : MonoBehaviour {
 
-
-
     private int x;
 
     private int y;
 
     private int objNumber;
-
-    private int maxObjNumber;
 
     private Image image;
 
@@ -43,7 +39,6 @@ public class Node : MonoBehaviour {
         x = _x;
         y = _y;
         objNumber = _objectValue;
-        maxObjNumber = _maxObjNumber;
     }
 
     public void ChangeObject() {

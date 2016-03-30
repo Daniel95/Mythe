@@ -121,9 +121,9 @@ public class ScoreBoard : MonoBehaviour
         {
             int scoreReached = 0;
 
-            for (int i = 0; i < saveData.DataTypeNames.Count; i++)
+            for (int i = 0; i < DataTypes.dataTypeNames.Length; i++)
             {
-                if (_scoreType == saveData.DataTypeNames[i])
+                if (_scoreType == DataTypes.dataTypeNames[i])
                 {
                     scoreReached = saveData.DataTypeValues[i];
                 }

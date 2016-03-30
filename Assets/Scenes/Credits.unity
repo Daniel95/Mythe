@@ -117,8 +117,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.000023, y: -513}
-  m_SizeDelta: {x: 924, y: 601}
+  m_AnchoredPosition: {x: 231, y: 52}
+  m_SizeDelta: {x: 305.83, y: 932.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016873
 MonoBehaviour:
@@ -155,7 +155,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b56b8b71224e94dd296a9fc445358f9c, type: 3}
-    m_FontSize: 60
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -166,8 +166,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Artists\n\nJaime van Dijk\r\nYessie Weber\r\nTiemen Savonije\r\nJacky Schoen\r\nNathalie
-    Verduin\nYanniek Klijn"
+  m_Text: "Artists\n\n\nJaime van Dijk\r\n\nYessie Weber\r\n\nTiemen Savonije\r\n\nJacky
+    Schoen\r\n\nNathalie Verduin\n\nYanniek Klijn"
 --- !u!222 &2016875
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b56b8b71224e94dd296a9fc445358f9c, type: 3}
-    m_FontSize: 60
+    m_FontSize: 47
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -323,6 +323,73 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 5, y: 10}
   m_UseGraphicAlpha: 1
+--- !u!1 &248181474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 248181475}
+  - 222: {fileID: 248181477}
+  - 114: {fileID: 248181476}
+  m_Layer: 5
+  m_Name: credits bg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &248181475
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248181474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 801341333}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.49773407, y: 100}
+  m_SizeDelta: {x: 6.199951, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &248181476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248181474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: c8fe60ac758994f40a3f47c3ddd84fdd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &248181477
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248181474}
 --- !u!1 &524659953
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +461,7 @@ RectTransform:
   - {fileID: 873795075}
   - {fileID: 2016872}
   m_Father: {fileID: 801341333}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 34.6}
@@ -464,7 +531,7 @@ RectTransform:
   m_Children:
   - {fileID: 820039116}
   m_Father: {fileID: 801341333}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.5, y: 880}
@@ -650,6 +717,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1395687865}
+  - {fileID: 248181475}
   - {fileID: 595009414}
   - {fileID: 612417402}
   m_Father: {fileID: 0}
@@ -779,8 +847,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 123}
-  m_SizeDelta: {x: 924, y: 543}
+  m_AnchoredPosition: {x: -238, y: 191}
+  m_SizeDelta: {x: 305.83, y: 664.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873795076
 MonoBehaviour:
@@ -803,7 +871,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b56b8b71224e94dd296a9fc445358f9c, type: 3}
-    m_FontSize: 60
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -817,11 +885,15 @@ MonoBehaviour:
   m_Text: 'Developers
 
 
+
     Nathan Nieuwenhuizen
+
 
     Daniel Brand
 
+
     River van der Meulen
+
 
     Sebastiaan Buwalda'
 --- !u!222 &873795077

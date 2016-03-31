@@ -34,7 +34,7 @@ public class TrailTriggerDetection : MonoBehaviour {
 			if (triggerDetection.Hurtable) 
 			{
 				Destroy ();
-				triggerDetection.makeUnHurtable ();
+				triggerDetection.MakeUnhurtable();
 			}
 		}
     }

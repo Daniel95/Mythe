@@ -28,6 +28,8 @@ public class TriggerDetection : MonoBehaviour {
 	[SerializeField]
 	private float hurtableCooldown = 1;
 
+    private bool playWaterSound;
+
     void OnCollisionEnter2D(Collision2D _other) {
         HandleCollisionEnter(_other.gameObject);
     }
@@ -55,25 +57,28 @@ public class TriggerDetection : MonoBehaviour {
 				float healthValue = interactableObject.HealthValue;
 
 				//add the value to the healthbar
-
-
 				if (healthValue < 0) 
 				{
 					if(hurtable)
 					{
-					healthBar.addValue (healthValue);
-					audioSource.PlayOneShot (audioClip);
-					//if the value is negative, shake the screen
-					shake.StartShake ();
-					//Handheld.Vibrate ();
-					makeUnHurtable();
+					    healthBar.addValue (healthValue);
+					    audioSource.PlayOneShot (audioClip);
+					    //if the value is negative, shake the screen
+					    shake.StartShake ();
+                        //Handheld.Vibrate ();
+                        MakeUnhurtable();
 					
 					}
 				} else if (healthValue > 0) { //if the value is positive, increment score
 					pickups.IncrementScore ();
 					healthBar.addValue (healthValue);
-					audioSource.pitch = Random.Range (0.75F, 1.25F);
-					audioSource.PlayOneShot (audioClip);
+
+                    //only play water pickup sound when supermodeIsOn is false
+                    if (!healthBar.SuperModeIsOn)
+                    {
+                        audioSource.pitch = Random.Range(0.75F, 1.25F);
+                        audioSource.PlayOneShot(audioClip);
+                    }
 				}
 				//let the _other object know that it has been touched so it can play its animation
 				interactableObject.Touched ();
@@ -82,11 +87,12 @@ public class TriggerDetection : MonoBehaviour {
 
     }
 
-	public void makeUnHurtable()
+	public void MakeUnhurtable()
 	{
 		hurtable = false;
 		StartCoroutine (HurtableCoolDownTimer (hurtableCooldown));
 	}
+
 	IEnumerator HurtableCoolDownTimer(float cooldown)
 	{
 		yield return new WaitForSeconds (cooldown);

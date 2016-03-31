@@ -18,7 +18,6 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField]
     private float animScale = 1;
 
-    [SerializeField]
     private Vector2 startScale;
 
     [SerializeField]

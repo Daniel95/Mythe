@@ -54,11 +54,21 @@ public class HealthBar : MonoBehaviour
     private AudioSource audioSource;
 
     [SerializeField]
-    private AudioClip audioClip;
+    private AudioClip gameOverAudioClip;
 
-    private bool restarted;
+    [SerializeField]
+    private AudioClip superModeAudioClip;
+
+    [SerializeField]
+    private float supermodeSoundFadeSpeed = 0.01f;
+
+    private bool superModeIsOn;
+
+    private float startVolume;
+
     [SerializeField]
     private ParticleSystem groundParticles;
+
     void Start()
     {
         //maxhealth is a scale value and currenthealth and speed are based from maxhealth.
@@ -78,6 +88,8 @@ public class HealthBar : MonoBehaviour
 
         //begins with generating chunks.
         generateChunk.MakeRandomChunk();
+
+        startVolume = audioSource.volume;
     }
 
     public void addValue(float _value)
@@ -88,9 +100,13 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator SuperMode()
     {
-        
-        if(EnterSuperMode != null)
+        if (EnterSuperMode != null)
             EnterSuperMode();
+
+        audioSource.clip = superModeAudioClip;
+        audioSource.Play();
+
+        superModeIsOn = true;
 
         //get every hurtable obstacle
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag(Tags.obstacle);
@@ -115,7 +131,6 @@ public class HealthBar : MonoBehaviour
             skiesMovingDown[i].FormingSky();
         }
 
-        audioSource.PlayOneShot(audioClip);
         //while you're in super sayen mode.
         while (health > maxHealth / 2)
         {
@@ -135,6 +150,9 @@ public class HealthBar : MonoBehaviour
     {
         if (EnterNormalMode != null)
             EnterNormalMode();
+
+        //stops the supermode music with a fade
+        StartCoroutine(SoundFade());
 
         gameSpeed.NormalMode();
         superGenerator.SetActive(false);
@@ -200,18 +218,31 @@ public class HealthBar : MonoBehaviour
 
     public void Die()
     {
-        if(PlayerDied != null) PlayerDied();
+        if(PlayerDied != null)
+            PlayerDied();
 
         groundParticles.enableEmission = false;
         StopCoroutine(UpdateHealthbar());
         health = currentHealth = 0;
-        audioSource.PlayOneShot(audioClip);
+        audioSource.PlayOneShot(gameOverAudioClip);
         Vector3 temp = transform.localScale;
         temp.x = health;
         transform.localScale = temp;
 
         finishGame.Finish();
         playerObject.SetActive(false);
+    }
+
+    private IEnumerator SoundFade()
+    {
+        while (audioSource.volume > 0) {
+            audioSource.volume -= supermodeSoundFadeSpeed;
+            yield return new WaitForFixedUpdate();
+        }
+        audioSource.Stop();
+        audioSource.volume = 1;
+
+        superModeIsOn = false;
     }
 
     public float CurrentHealth
@@ -222,6 +253,10 @@ public class HealthBar : MonoBehaviour
     public float MaxHealth
     {
         get { return maxHealth; }
+    }
+
+    public bool SuperModeIsOn {
+        get { return superModeIsOn; }
     }
 }
 

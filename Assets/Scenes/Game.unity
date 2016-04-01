@@ -5089,7 +5089,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 65
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -5603,9 +5603,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2015117531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741637ce12cd51e4fa0da4d92d33f00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bc98ae81e5e6624fa7397436267d369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chunkHolder: {fileID: 2015117536}
+  generateChunk: {fileID: 2015117534}
+  playerDistance: {fileID: 702655280}
 --- !u!114 &2015117538
 MonoBehaviour:
   m_ObjectHideFlags: 0

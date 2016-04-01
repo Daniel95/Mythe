@@ -181,10 +181,6 @@ public class HealthBar : MonoBehaviour
                 waterRenderer.color = new Color(0, 0, 1);
             }
 
-            for (int i = 0; i < shadows.Length; i++)
-            {
-                shadows[i].color = new Color(0, 0, 0,health/4 -0.06f);
-            }
             yield return new WaitForFixedUpdate();
         }
         while(health < maxHealth/2)
@@ -210,6 +206,10 @@ public class HealthBar : MonoBehaviour
             Vector3 temp = transform.localScale;
             temp.x = health;
             transform.localScale = temp;
+            for (int i = 0; i < shadows.Length; i++)
+            {
+                shadows[i].color = new Color(0, 0, 0, health / 4 - 0.06f);
+            }
 
             yield return new WaitForFixedUpdate();
         }

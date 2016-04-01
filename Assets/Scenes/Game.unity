@@ -266,12 +266,12 @@ Prefab:
     - target: {fileID: 21223480, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eb64a55ccd9dd4aff9295639ea808f83,
+      objectReference: {fileID: 21300000, guid: faa27e0bafbec89468a4aea9ed5f2c70,
         type: 3}
     - target: {fileID: 21281564, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eb64a55ccd9dd4aff9295639ea808f83,
+      objectReference: {fileID: 21300000, guid: faa27e0bafbec89468a4aea9ed5f2c70,
         type: 3}
     - target: {fileID: 21281564, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
       propertyPath: m_SortingOrder
@@ -3003,7 +3003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92c8cff1a21d6b4f83bb1037cd755dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailPoolName: Trail
+  trailPoolName: trail
   trailMovement: {fileID: 752591566}
   healthBar: {fileID: 2094346090}
   trailMaxLength: 20
@@ -3885,52 +3885,6 @@ RectTransform:
   m_AnchoredPosition: {x: -6, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1092400328
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 468850, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 468850, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 468850, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.1888032
-      objectReference: {fileID: 0}
-    - target: {fileID: 468850, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.0035009743
-      objectReference: {fileID: 0}
-    - target: {fileID: 468850, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.7070981
-      objectReference: {fileID: 0}
-    - target: {fileID: 468850, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.7070981
-      objectReference: {fileID: 0}
-    - target: {fileID: 468850, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.0035009733
-      objectReference: {fileID: 0}
-    - target: {fileID: 468850, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 11493986, guid: b014e5801767725478bd6807fc923b50, type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1871364907}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b014e5801767725478bd6807fc923b50, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1164408481
 GameObject:
   m_ObjectHideFlags: 0
@@ -6433,6 +6387,7 @@ GameObject:
   - 114: {fileID: 2015117536}
   - 114: {fileID: 2015117534}
   - 114: {fileID: 2015117538}
+  - 114: {fileID: 2015117537}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -6557,6 +6512,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seedDisplay: {fileID: 0}
+--- !u!114 &2015117537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015117531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741637ce12cd51e4fa0da4d92d33f00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunkHolder: {fileID: 2015117536}
+  generateChunk: {fileID: 2015117534}
+  playerDistance: {fileID: 702655280}
 --- !u!114 &2015117538
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,8 +4,21 @@ using System.Collections;
 public class SavePlayerPrefs : MonoBehaviour {
 
 	private int showTutorial = 1;
-	private string playerName = "PussyDestoyer420";
+	private string playerName = "nAn";
+	private PlayerData playerData;
 
+	void Awake()
+	{
+		if (GameObject.Find("plrName") != null)
+		{
+			PlayerData playerData = GameObject.Find("plrName").GetComponent<PlayerData>();
+			playerName = playerData.Name;
+			SavePlayerName ();
+			PlayerPrefs.Save ();
+			Debug.Log ("PLAYERPREFS SAVED!");
+			Debug.Log (PlayerPrefs.HasKey(playerName));
+		}
+	}
 
 	public void SaveTutorialSettings()
 	{

@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 11458594}
   - 114: {fileID: 11492262}
   m_Layer: 0
-  m_Name: trail
+  m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,6 @@ MonoBehaviour:
   poolOnTouch: 1
   animToPlayName: 
   animScale: 1
-  startScale: {x: 0, y: 0}
   playAnimOnDeath: 0
 --- !u!212 &21222508
 SpriteRenderer:

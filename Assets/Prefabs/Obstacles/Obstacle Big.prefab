@@ -62,7 +62,6 @@ MonoBehaviour:
   poolOnTouch: 0
   animToPlayName: 
   animScale: 1
-  startScale: {x: 0, y: 0}
   playAnimOnDeath: 0
 --- !u!114 &11467068
 MonoBehaviour:
@@ -171,6 +170,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

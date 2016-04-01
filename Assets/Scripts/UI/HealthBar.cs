@@ -74,7 +74,7 @@ public class HealthBar : MonoBehaviour
         //maxhealth is a scale value and currenthealth and speed are based from maxhealth.
         //this makes it possible to scale the bar without editing the script.
         maxHealth = transform.localScale.x;
-        currentHealth = maxHealth / 2;
+        currentHealth =  maxHealth / 2;
         health = currentHealth;
 
         //begins with the coroutine normal mode.

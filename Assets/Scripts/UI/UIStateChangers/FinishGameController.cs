@@ -7,6 +7,9 @@ public class FinishGameController : MonoBehaviour {
     private List<ScoreBase> scores;
 
     [SerializeField]
+    private GameObject healthBar;
+
+    [SerializeField]
     private SaveData saveScores;
 
     [SerializeField]
@@ -34,7 +37,7 @@ public class FinishGameController : MonoBehaviour {
         //Handheld.Vibrate();
 
         gameoverScreen.SetActive(true);
-
+        healthBar.SetActive(false);
         saveScores.SavePlayerScores();
     }
 

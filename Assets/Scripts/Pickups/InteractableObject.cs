@@ -51,7 +51,7 @@ public class InteractableObject : MonoBehaviour {
         //reset itself to its starting scale, in case it was scaled up or down during an animation
         transform.localScale = startScale;
 		moveDown.Move = true;
-        if(healthValue > 0.05)
+        if(healthValue > 0.05 && healthValue - HealthDecreement > 0.1f)
         {
             HealthDecreement = (GameSpeed.SpeedMultiplier - 1f) / 10f;
             Debug.Log(HealthValue);

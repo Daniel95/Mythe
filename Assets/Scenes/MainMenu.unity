@@ -398,7 +398,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4d2b04e8f4da5487e8e1a4897e9daa07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: befd6a7ad00c642848dea9f2d21d2722, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1021,7 +1021,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4d2b04e8f4da5487e8e1a4897e9daa07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0b6fd301a5f74715ae4b52ba973a434, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1389,7 +1389,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4d2b04e8f4da5487e8e1a4897e9daa07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e489666848b74f6ebfbf400434d72af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1537,7 +1537,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Show Highscore
+  m_Text: HIGHSCORE
 --- !u!222 &1641687088
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1713,7 +1713,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Show Credits
+  m_Text: CREDITS
 --- !u!222 &1818816463
 CanvasRenderer:
   m_ObjectHideFlags: 0

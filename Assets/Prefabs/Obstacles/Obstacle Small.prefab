@@ -97,12 +97,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 140748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b84819e3b272244ab5557078ffa4d2f, type: 3}
+  m_Script: {fileID: 11500000, guid: ee4d5449460500847a9d9cec61d02348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteArray:
-  - {fileID: 21300000, guid: 1250468465cf8944aba257af3b4f92f9, type: 3}
-  - {fileID: 21300000, guid: 29e5f385f3c58524a896f409fbd76c20, type: 3}
+  - {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a, type: 3}
+  - {fileID: 21300000, guid: 65519c96205860247813e751d8b22300, type: 3}
 --- !u!114 &11497268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +140,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1250468465cf8944aba257af3b4f92f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -162,12 +162,12 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: spriteArray.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 1250468465cf8944aba257af3b4f92f9,
+      objectReference: {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a,
         type: 3}
     - target: {fileID: 0}
       propertyPath: spriteArray.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 29e5f385f3c58524a896f409fbd76c20,
+      objectReference: {fileID: 21300000, guid: 65519c96205860247813e751d8b22300,
         type: 3}
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
@@ -176,7 +176,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1250468465cf8944aba257af3b4f92f9,
+      objectReference: {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

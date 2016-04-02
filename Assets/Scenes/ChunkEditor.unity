@@ -302,7 +302,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -229.8, y: 150.7}
+  m_AnchoredPosition: {x: -229.8, y: 139.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &95852842 stripped
@@ -903,7 +903,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.8, y: -30.9}
+  m_AnchoredPosition: {x: 75.8, y: -52.8}
   m_SizeDelta: {x: 134.8, y: 25.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411975786
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 852390082}
   m_Direction: 0
   m_MinValue: 3
-  m_MaxValue: 19
+  m_MaxValue: 18
   m_WholeNumbers: 1
   m_Value: 3
   m_OnValueChanged:
@@ -1457,7 +1457,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.8, y: -64.4}
+  m_AnchoredPosition: {x: 75.8, y: -86.3}
   m_SizeDelta: {x: 139.7, y: 36.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &730824017
@@ -1598,7 +1598,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127.4, y: -103.6}
+  m_AnchoredPosition: {x: 127.4, y: -125.5}
   m_SizeDelta: {x: 265.8, y: 43.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803313332
@@ -1715,7 +1715,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77.4, y: -4.2}
+  m_AnchoredPosition: {x: 77.4, y: -26.1}
   m_SizeDelta: {x: 134.8, y: 25.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842366433
@@ -2034,7 +2034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assignSprites:
   - {fileID: 21300000, guid: 590975deeb6182b4b868de2d0c715098, type: 3}
-  - {fileID: 21300000, guid: 8585ab2b715e060429534053dfc82b9b, type: 3}
+  - {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a, type: 3}
   - {fileID: 21300000, guid: 465f17e3624a14745b939328a0eb0c4f, type: 3}
   - {fileID: 21300000, guid: f822989b5bf1a62438dd9eb122ad8f67, type: 3}
   - {fileID: 21300000, guid: 2755d0b6f0b6d49b08c0f7741225770f, type: 3}
@@ -2173,7 +2173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSpeedIncrement: 0.00015
   startSpeed: 0.05
-  maxMultiplier: 3
 --- !u!1 &1142491295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,7 +2207,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204.4, y: -24.9}
+  m_AnchoredPosition: {x: 204.4, y: -46.8}
   m_SizeDelta: {x: 96.15, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142491297
@@ -2744,7 +2743,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204.4, y: -61.2}
+  m_AnchoredPosition: {x: 204.4, y: -83.1}
   m_SizeDelta: {x: 98, y: 36.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106262271

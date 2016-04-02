@@ -25,6 +25,10 @@ public class PlayerNameSceneController : MonoBehaviour {
 
     void Awake() {
         welcomeText = welcomeTextObj.GetComponent<DynamicText>();
+
+        if (GameObject.FindGameObjectWithTag("Data")) {
+            playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>(); 
+        }
     }
 
     void OnEnable()

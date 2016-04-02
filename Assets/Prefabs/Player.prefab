@@ -256,11 +256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc2230882b4c446cbe8f910c74464da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 5
+  speedMultiplier: 5.5
   rotateSpeed: 0.35
   trailName: Trail
   spawnPoint: {fileID: 489012}
-  movingSpawnSpeed: 0.1
 --- !u!114 &11478424
 MonoBehaviour:
   m_ObjectHideFlags: 1

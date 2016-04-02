@@ -28,31 +28,28 @@ if($conn->query($sql)->num_rows > 0) {
     
     $oldScore = $conn->query($sql)->fetch_assoc();
     
-    echo "old pickups score =  " . $oldScore["pickups"] . " <br> ";
-    
-    
     if($oldScore["distance"] > $distance) {
-        $distance = intval($oldScore["distance"]);
+        $distance = $oldScore["distance"];
     }
     
     if($oldScore["pickups"] > $pickups) {
-        $pickups = intval($oldScore["pickups"]);
+        $pickups = $oldScore["pickups"];
     }
     
     if($oldScore["time"] > $time) {
-        $pickups = intval($oldScore["pickups"]);
+        $pickups = $oldScore["pickups"];
     }
     
     $plays = $oldScore["plays"] + 1;
     
     
-    $sql2 = "UPDATE Scores SET pickups = '$pickups', distance = '$distance', time = '$time', plays = '$plays' WHERE deviceId = '$deviceId'";
+    $sql2 = "UPDATE Scores SET name = '$name', pickups = '$pickups', distance = '$distance', time = '$time', plays = '$plays' WHERE deviceId = '$deviceId'";
         
 } else {
     
     echo "TEST Make new Score: " . $result . "<br>" . $conn->error . "<br>";
     
-    $sql2 = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, deaths, deviceId) VALUES ('$name', '$score', '$pickups', '$distance', '$time,', '$deaths', '$deviceId')";
+    $sql2 = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, plays, deviceId) VALUES ('$name', '$score', '$pickups', '$distance', '$time,', '$plays', '$deviceId')";
 }
 
 

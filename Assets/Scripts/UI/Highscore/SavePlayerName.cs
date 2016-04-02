@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class SavePlayerName : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerData _plrName;
+    private PlayerData playerData;
 
     [SerializeField]
     private SceneLoader sceneLoader;
@@ -27,6 +26,11 @@ public class SavePlayerName : MonoBehaviour
     private List<char> notAllowedCharacters;
 
     private string playerName;
+
+    void Awake() {
+        if (GameObject.FindGameObjectWithTag("Data") != null)
+            playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>();
+    }
 
     public void SubmitName(string _input)
     {
@@ -67,7 +71,7 @@ public class SavePlayerName : MonoBehaviour
         //save the player name in player prefs
         playerPrefs.SavePlayerName(playerName);
         //save the name in playerName script
-        _plrName.Name = playerName;
+        playerData.Name = playerName;
     }
 
     private bool CharactersCheck(string _input) {

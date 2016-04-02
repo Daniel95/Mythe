@@ -145,7 +145,7 @@ MonoBehaviour:
   welcomeTextObj: {fileID: 651181323}
   submitButton: {fileID: 1169934468}
   continueButton: {fileID: 880986418}
-  playerData: {fileID: 303561830}
+  playerData: {fileID: 0}
   playerPrefs: {fileID: 33426449}
 --- !u!1 &303561829
 GameObject:
@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e069a9ea342b7a48b2ecf135ddb37e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
 --- !u!4 &303561831
 Transform:
   m_ObjectHideFlags: 0
@@ -801,17 +802,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1169934473}
-        m_MethodName: LoadNewScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: MainMenu
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1539685725}
         m_MethodName: SaveCurrentName
         m_Mode: 1
@@ -821,6 +811,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1169934473}
+        m_MethodName: LoadNewScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -992,7 +993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732deae6ce8ad504eba75101ab9a7683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plrName: {fileID: 303561830}
   sceneLoader: {fileID: 1539685729}
   playerPrefs: {fileID: 33426449}
   submitButton: {fileID: 1169934470}

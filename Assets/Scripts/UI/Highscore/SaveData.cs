@@ -30,9 +30,9 @@ public class SaveData : MonoBehaviour {
     [SerializeField]
     private LoadScoreController chooseScoreToLoad;
 
-    private string plrName = "Anonymous";
+    private string plrName = "Harry";
 
-    private string plrId = "TestId";
+    private string plrId = "TestId2";
 
     void Awake()
     {

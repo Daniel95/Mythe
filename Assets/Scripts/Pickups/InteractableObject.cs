@@ -54,7 +54,6 @@ public class InteractableObject : MonoBehaviour {
         if(healthValue > 0.05 && healthValue - HealthDecreement > 0.1f)
         {
             HealthDecreement = (GameSpeed.SpeedMultiplier - 1f) / 10f;
-            Debug.Log(HealthValue);
         }
     }
 

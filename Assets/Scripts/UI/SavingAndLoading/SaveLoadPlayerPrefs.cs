@@ -45,7 +45,6 @@ public class SaveLoadPlayerPrefs : MonoBehaviour {
 
     public void SavePlayerName(string _playerName)
     {
-        print("save");
         PlayerPrefs.SetString("PlayerName", _playerName);
         PlayerPrefs.Save();
     }

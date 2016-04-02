@@ -74,7 +74,7 @@ public class HealthBar : MonoBehaviour
         //maxhealth is a scale value and currenthealth and speed are based from maxhealth.
         //this makes it possible to scale the bar without editing the script.
         maxHealth = transform.localScale.x;
-        currentHealth = maxHealth / 2;
+        currentHealth =  maxHealth / 2;
         health = currentHealth;
 
         //begins with the coroutine normal mode.
@@ -181,10 +181,6 @@ public class HealthBar : MonoBehaviour
                 waterRenderer.color = new Color(0, 0, 1);
             }
 
-            for (int i = 0; i < shadows.Length; i++)
-            {
-                shadows[i].color = new Color(0, 0, 0,health/4 -0.06f);
-            }
             yield return new WaitForFixedUpdate();
         }
         while(health < maxHealth/2)
@@ -210,6 +206,10 @@ public class HealthBar : MonoBehaviour
             Vector3 temp = transform.localScale;
             temp.x = health;
             transform.localScale = temp;
+            for (int i = 0; i < shadows.Length; i++)
+            {
+                shadows[i].color = new Color(0, 0, 0, health / 4 - 0.06f);
+            }
 
             yield return new WaitForFixedUpdate();
         }

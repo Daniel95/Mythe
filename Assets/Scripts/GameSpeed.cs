@@ -4,7 +4,7 @@ public class GameSpeed : MonoBehaviour
 {
 
     [SerializeField]
-    private float gameSpeedIncrement = 0.00015f;
+    private float gameSpeedIncrement = 0.00010f;
 
     [SerializeField]
     private float startSpeed = 0.04f;
@@ -13,8 +13,6 @@ public class GameSpeed : MonoBehaviour
     private static float speed;
 
     private static float speedMultiplier = 1;
-    [SerializeField]
-    private float maxMultiplier = 3;
     void Start()
     {
         speed = startSpeed;
@@ -22,10 +20,7 @@ public class GameSpeed : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(speedMultiplier < maxMultiplier)
-        {
-            speedMultiplier += gameSpeedIncrement;
-        }
+        speedMultiplier += gameSpeedIncrement;
     }
 
     public void SuperMode()

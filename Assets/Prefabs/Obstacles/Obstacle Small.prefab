@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11420702}
   - 114: {fileID: 11497268}
   - 58: {fileID: 5898378}
+  - 114: {fileID: 11443198}
   m_Layer: 0
   m_Name: Obstacle Small
   m_TagString: Obstacle
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.747787, y: 220.12979, z: 2}
+  m_LocalPosition: {x: -2.57, y: 0, z: 2}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,7 +45,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.21, y: -0.41}
   serializedVersion: 2
   m_Radius: 1.4772383
 --- !u!114 &11420702
@@ -74,7 +75,6 @@ MonoBehaviour:
   poolOnTouch: 0
   animToPlayName: 
   animScale: 1
-  startScale: {x: 0, y: 0}
   playAnimOnDeath: 0
 --- !u!114 &11435606
 MonoBehaviour:
@@ -89,6 +89,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: 1
   speed: 1
+--- !u!114 &11443198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4d5449460500847a9d9cec61d02348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteArray:
+  - {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a, type: 3}
+  - {fileID: 21300000, guid: 65519c96205860247813e751d8b22300, type: 3}
 --- !u!114 &11497268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +140,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8585ab2b715e060429534053dfc82b9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,12 +162,21 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: spriteArray.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 8585ab2b715e060429534053dfc82b9b,
+      objectReference: {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a,
         type: 3}
     - target: {fileID: 0}
       propertyPath: spriteArray.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 19b1f1645691d43c09a8f27ad2e12b01,
+      objectReference: {fileID: 21300000, guid: 65519c96205860247813e751d8b22300,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

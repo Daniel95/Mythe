@@ -60,7 +60,6 @@ public class GameSpeed : MonoBehaviour
     {
         speedMultiplier = 1;
         startSpeed = speed;
-
     }
 
     public static float ExtraSpeed {

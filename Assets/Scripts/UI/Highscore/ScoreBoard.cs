@@ -29,16 +29,11 @@ public class ScoreBoard : MonoBehaviour
 
     private string[] dataLines;
 
-    //private Text totalDeathsTextField;
-    //private Text myDeathsTextField;
     private Text namesFieldTextField;
     private Text scoresTextField;
 
     void Awake()
     {
-        //highScore = GetComponent<Highscore>();
-        //totalDeathsTextField = transform.Find("TotalDeathCounter").GetComponent<Text>();
-        //myDeathsTextField = transform.Find("MyDeaths").GetComponent<Text>();
         namesFieldTextField = gameOverScreen.transform.Find("NamesField").GetComponent<Text>();
         scoresTextField = gameOverScreen.transform.Find("ScoresField").GetComponent<Text>();
     }
@@ -114,13 +109,15 @@ public class ScoreBoard : MonoBehaviour
             rank++;
         }
     }
-
+    /*
     public void GetPlayerRanking(string _scoreType)
     {
+        //only do this if saveData is not null,
+        //if it is null, it means we are in the highscore scene and not the game scene
         if (saveData != null)
         {
             int scoreReached = 0;
-
+            print(_scoreType);
             for (int i = 0; i < DataTypes.dataTypeNames.Length; i++)
             {
                 if (_scoreType == DataTypes.dataTypeNames[i])
@@ -132,11 +129,29 @@ public class ScoreBoard : MonoBehaviour
             //this is the score we are looking for
             string plrScore = saveData.PlayerName + "_" + scoreReached.ToString();
 
+            print(plrScore);
+
             for (int m = 0; m < dataLines.Length; m++) {
                 //compare every score, until we get our own. 
                 if (plrScore == dataLines[m])
                 {
                     playerRankText.text = (m + 1).ToString();
+                    break;
+                }
+            }
+        }
+    }*/
+
+    public void GetPlayerRanking(string _scoreType)
+    {
+        //only do this if saveData is not null,
+        //if it is null, it means we are in the highscore scene and not the game scene
+        if (saveData != null)
+        {
+            for (int i = 0; i < dataLines.Length; i++) {
+                string[] splitLines = dataLines[i].Split('_');
+                if (splitLines[0] == saveData.PlayerName) {
+                    playerRankText.text = (i + 1).ToString();
                     break;
                 }
             }

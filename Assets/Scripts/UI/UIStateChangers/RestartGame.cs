@@ -13,6 +13,6 @@ public class RestartGame : MonoBehaviour {
     {
         gameSpeed.Reset();
 
-        sceneLoader.loadNewScene("Game");
+        sceneLoader.LoadNewScene("Game");
     }
 }

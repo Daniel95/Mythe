@@ -22,9 +22,6 @@ public class PlayerMovement : MonoBehaviour {
 
     private Quaternion targetRotation;
 
-	[SerializeField]
-	private float movingSpawnSpeed = 0.1f;
-
     private Rigidbody2D rb;
 
 	void Start () {

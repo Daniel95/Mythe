@@ -7,12 +7,12 @@ public class CameraZoom : MonoBehaviour {
     private float superSize = 8f;
     [SerializeField]
     private float zoomSpeed = 0.1f;
-    private Camera camera;
+    private Camera userCamera;
     private bool superForm;
 
     void Start()
     {
-        camera = GetComponent<Camera>();
+        userCamera = GetComponent<Camera>();
     }
 
     public void ZoomCameraOut() {
@@ -25,18 +25,18 @@ public class CameraZoom : MonoBehaviour {
 
     IEnumerator ZoomOutProcess()
     {
-        while (camera.orthographicSize <= superSize)
+        while (userCamera.orthographicSize <= superSize)
         {
-            camera.orthographicSize += zoomSpeed;
+            userCamera.orthographicSize += zoomSpeed;
             yield return new WaitForFixedUpdate();
         }
     }
 
     IEnumerator ZoomInProcess()
     {
-        while (camera.orthographicSize >= normalSize)
+        while (userCamera.orthographicSize >= normalSize)
         {
-            camera.orthographicSize -= zoomSpeed;
+            userCamera.orthographicSize -= zoomSpeed;
             yield return new WaitForFixedUpdate();
         }
     }

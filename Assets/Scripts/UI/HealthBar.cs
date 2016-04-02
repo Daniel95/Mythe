@@ -240,7 +240,7 @@ public class HealthBar : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         audioSource.Stop();
-        audioSource.volume = 1;
+        audioSource.volume = startVolume;
 
         superModeIsOn = false;
     }

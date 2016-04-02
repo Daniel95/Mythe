@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class BackgroundRepeater : MonoBehaviour {
+
     private float heigth;
     
     // Use this for initialization

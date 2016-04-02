@@ -12,6 +12,9 @@ public class SavePlayerName : MonoBehaviour
     private SceneLoader sceneLoader;
 
     [SerializeField]
+    private SaveLoadPlayerPrefs playerPrefs;
+
+    [SerializeField]
     private Button submitButton;
 
     [SerializeField]
@@ -23,20 +26,19 @@ public class SavePlayerName : MonoBehaviour
     [SerializeField]
     private List<char> notAllowedCharacters;
 
-    void Start()
-    {
-        //we cannot click on the submit button until be entered our name
-        submitButton.interactable = false;
-    }
+    private string playerName;
 
     public void SubmitName(string _input)
     {
         if (_input.Length > minNameLength && _input.Length < maxNameLength && CharactersCheck(_input))
         {
+            playerName = _input;
+
             //save the name in playerName script
-            _plrName.Name = _input;
+            //_plrName.Name = _input;
             //the player can click the button to continue
             submitButton.interactable = true;
+
             //the player can hit enter to continue
             StartCoroutine(WaitForEnter());
         }
@@ -56,7 +58,16 @@ public class SavePlayerName : MonoBehaviour
         {
             yield return null;
         }
-        sceneLoader.loadNextScene();
+        SaveCurrentName();
+        sceneLoader.LoadNewScene("MainMenu");
+    }
+
+    public void SaveCurrentName()
+    {
+        //save the player name in player prefs
+        playerPrefs.SavePlayerName(playerName);
+        //save the name in playerName script
+        _plrName.Name = playerName;
     }
 
     private bool CharactersCheck(string _input) {

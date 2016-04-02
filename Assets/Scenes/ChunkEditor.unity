@@ -2173,6 +2173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSpeedIncrement: 0.00015
   startSpeed: 0.05
+  maxMultiplier: 3
 --- !u!1 &1142491295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,7 +2262,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1142491297}
-        m_MethodName: loadNewScene
+        m_MethodName: LoadNewScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

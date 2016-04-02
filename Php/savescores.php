@@ -10,7 +10,7 @@ $score = $_POST['score'];
 $pickups = $_POST['pickups'];
 $distance = $_POST['distance'];
 $time = $_POST['time'];
-$deaths = 0;
+$plays = 0;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -43,10 +43,10 @@ if($conn->query($sql)->num_rows > 0) {
         $pickups = intval($oldScore["pickups"]);
     }
     
-    $deaths = $oldScore["deaths"] + 1;
+    $plays = $oldScore["plays"] + 1;
     
     
-    $sql2 = "UPDATE Scores SET pickups = '$pickups', distance = '$distance', time = '$time', deaths = '$deaths' WHERE deviceId = '$deviceId'";
+    $sql2 = "UPDATE Scores SET pickups = '$pickups', distance = '$distance', time = '$time', plays = '$plays' WHERE deviceId = '$deviceId'";
         
 } else {
     

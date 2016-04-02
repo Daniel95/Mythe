@@ -13,7 +13,6 @@ public class SaveData : MonoBehaviour {
     [SerializeField]
     private string saveURL = "http://14411.hosts.ma-cloud.nl/mythen/savescores.php";
 
-    [SerializeField]
     private List<int> dataTypeValues = new List<int>(); 
 
     [SerializeField]
@@ -37,9 +36,9 @@ public class SaveData : MonoBehaviour {
 
     void Awake()
     {
-        if (GameObject.Find("plrName") != null)
+        if (GameObject.FindGameObjectWithTag("Data") != null)
         {
-            PlayerData playerData = GameObject.Find("plrName").GetComponent<PlayerData>();
+            PlayerData playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>();
             plrName = playerData.Name;
             plrId = playerData.Id;
         }
@@ -59,7 +58,6 @@ public class SaveData : MonoBehaviour {
         dataTypeValues.Add(_distance);
         dataTypeValues.Add(_pickups);
         dataTypeValues.Add(_time);
-        dataTypeValues.Add(10);
 
         WWWForm form = new WWWForm();
 
@@ -67,7 +65,7 @@ public class SaveData : MonoBehaviour {
         form.AddField("deviceId", plrId);
 
         //send every dataTypeValue with a dataTypeName to the php file
-        for (int i = 0; i < DataTypes.dataTypeNames.Length; i++) {
+        for (int i = 0; i < dataTypeValues.Count; i++) {
             form.AddField(DataTypes.dataTypeNames[i], dataTypeValues[i]);
         }
         

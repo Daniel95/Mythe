@@ -113,9 +113,6 @@ public class TrailLengthHandler : MonoBehaviour {
             healthBar.addValue((_numberInList - trailMovement.TrailParts.Count) * healthPerTrail);
         }
 
-        //save the list length, because we dont want it to change while we are looping the for loop
-        int listLenght = trailMovement.TrailParts.Count;
-
         //look at the numberInList of the trail part, destroy this trail and every trail that is higher in the list than us.
         for (int i = trailMovement.TrailParts.Count - 1; i >= _numberInList; i--)
         {

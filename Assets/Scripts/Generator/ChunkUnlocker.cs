@@ -92,18 +92,28 @@ public class ChunkUnlocker : MonoBehaviour {
 
     IEnumerator Unlocking()
     {
-        if (counter < chunksToUnlock.Count) {
-            yield return new WaitForSeconds(unlockSeconds[counter]);
+        //the cooldown before adding
+        yield return new WaitForSeconds(unlockSeconds[counter]);
 
-            List<string> currentChunkList = chunksToUnlock[counter];
+        //the list we are currently adding
+        List<string> currentChunkList = chunksToUnlock[counter];
 
-            for (int i = 0; i < currentChunkList.Count; i++)
-            {
-                chunkHolder.LoadChunk(currentChunkList[i]);
-            }
-            counter++;
-
-            StartCoroutine(Unlocking());
+        //add every chunk
+        for (int i = 0; i < currentChunkList.Count; i++)
+        {
+            chunkHolder.LoadChunk(currentChunkList[i]);
         }
+
+        counter++;
+
+        CheckLeftoverChunks();
     }
+
+    void CheckLeftoverChunks()
+    {
+        //if our counter is above our list with chunks length, we added all chunks that exist and we exit the loop
+        if (counter < chunksToUnlock.Count)
+            StartCoroutine(Unlocking());
+    }
+
 }

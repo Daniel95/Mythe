@@ -10,7 +10,7 @@ $score = $_POST['score'];
 $pickups = $_POST['pickups'];
 $distance = $_POST['distance'];
 $time = $_POST['time'];
-$plays = 0;
+$plays = 1;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

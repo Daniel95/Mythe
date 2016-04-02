@@ -10,7 +10,11 @@ public class ChunkUnlocker : MonoBehaviour {
 	private PlayerDistance playerDistance;
 
 	[SerializeField]
-	private List<int> unlockValues;
+	private int[] unlockSeconds;
+
+    private List<List<string>> chunksToUnlock = new List<List<string>>();
+
+    private int counter;
 
     //beginning of game.
     private List<string> introChunks 
@@ -71,75 +75,35 @@ public class ChunkUnlocker : MonoBehaviour {
 
     void Start()
     {
+        for (int i = 0; i < introChunks.Count; i++)
+        {
+            chunkHolder.LoadChunk(introChunks[i]);
+        }
+
+        chunksToUnlock.Add(easyChunks);
+        chunksToUnlock.Add(mediumChunks);
+        chunksToUnlock.Add(hardChunks);
+        chunksToUnlock.Add(superHardChunks);
+        chunksToUnlock.Add(extremeChunks);
+        chunksToUnlock.Add(almostImpossibleChunks);
+
         StartCoroutine(Unlocking());
     }
-	public void UnlockChunk(string chunkToUnlock)
-	{
-		//Use this to force unlock new chunks.
-		chunkHolder.LoadChunk (chunkToUnlock);
-	}
+
     IEnumerator Unlocking()
     {
-        for(int i = 0; i<introChunks.Count; i++)
-        {
-            UnlockChunk(introChunks[i]);
-        }
+        if (counter < chunksToUnlock.Count) {
+            yield return new WaitForSeconds(unlockSeconds[counter]);
 
-        while (playerDistance.Distance < 1000f)
-        {
-            yield return new WaitForFixedUpdate();
-        }
-        for (int i = 0; i < easyChunks.Count; i++)
-        {
-            UnlockChunk(easyChunks[i]);
-        }
+            List<string> currentChunkList = chunksToUnlock[counter];
 
-        while (playerDistance.Distance < 2000f)
-        {
-            yield return new WaitForFixedUpdate();
-        }
-        for (int i = 0; i < mediumChunks.Count; i++)
-        {
-            UnlockChunk(mediumChunks[i]);
-        }
+            for (int i = 0; i < currentChunkList.Count; i++)
+            {
+                chunkHolder.LoadChunk(currentChunkList[i]);
+            }
+            counter++;
 
-        while (playerDistance.Distance < 3000f)
-        {
-            yield return new WaitForFixedUpdate();
+            StartCoroutine(Unlocking());
         }
-        for (int i = 0; i < hardChunks.Count; i++)
-        {
-            UnlockChunk(hardChunks[i]);
-        }
-
-        while (playerDistance.Distance < 4000f)
-        {
-            yield return new WaitForFixedUpdate();
-        }
-        for (int i = 0; i < superHardChunks.Count; i++)
-        {
-            UnlockChunk(superHardChunks[i]);
-        }
-
-        while (playerDistance.Distance < 5000f)
-        {
-            yield return new WaitForFixedUpdate();
-        }
-        for (int i = 0; i < extremeChunks.Count; i++)
-        {
-            UnlockChunk(extremeChunks[i]);
-        }
-
-        while (playerDistance.Distance < 10000f)
-        {
-            yield return new WaitForFixedUpdate();
-        }
-        for (int i = 0; i < almostImpossibleChunks.Count; i++)
-        {
-            UnlockChunk(almostImpossibleChunks[i]);
-        }
-
-
-
     }
 }

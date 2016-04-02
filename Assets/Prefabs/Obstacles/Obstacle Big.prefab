@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11486202}
   - 114: {fileID: 11484152}
   - 58: {fileID: 5883486}
+  - 114: {fileID: 11431784}
   m_Layer: 0
   m_Name: Obstacle Big
   m_TagString: Obstacle
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.16, y: 10.48, z: 2}
+  m_LocalPosition: {x: -4.3063307, y: -7.860745, z: 2}
   m_LocalScale: {x: 0.51962095, y: 0.51962095, z: 0.51962095}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,6 +48,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.4772383
+--- !u!114 &11431784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4d5449460500847a9d9cec61d02348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteArray:
+  - {fileID: 21300000, guid: cdf8e930469d3cf45959194d109ca95a, type: 3}
+  - {fileID: 21300000, guid: 465f17e3624a14745b939328a0eb0c4f, type: 3}
 --- !u!114 &11445540
 MonoBehaviour:
   m_ObjectHideFlags: 1

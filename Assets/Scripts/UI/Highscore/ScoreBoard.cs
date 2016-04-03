@@ -109,39 +109,7 @@ public class ScoreBoard : MonoBehaviour
             rank++;
         }
     }
-    /*
-    public void GetPlayerRanking(string _scoreType)
-    {
-        //only do this if saveData is not null,
-        //if it is null, it means we are in the highscore scene and not the game scene
-        if (saveData != null)
-        {
-            int scoreReached = 0;
-            print(_scoreType);
-            for (int i = 0; i < DataTypes.dataTypeNames.Length; i++)
-            {
-                if (_scoreType == DataTypes.dataTypeNames[i])
-                {
-                    scoreReached = saveData.DataTypeValues[i];
-                }
-            }
-
-            //this is the score we are looking for
-            string plrScore = saveData.PlayerName + "_" + scoreReached.ToString();
-
-            print(plrScore);
-
-            for (int m = 0; m < dataLines.Length; m++) {
-                //compare every score, until we get our own. 
-                if (plrScore == dataLines[m])
-                {
-                    playerRankText.text = (m + 1).ToString();
-                    break;
-                }
-            }
-        }
-    }*/
-
+    
     public void GetPlayerRanking(string _scoreType)
     {
         //only do this if saveData is not null,

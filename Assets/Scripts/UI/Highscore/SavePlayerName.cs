@@ -14,6 +14,9 @@ public class SavePlayerName : MonoBehaviour
     private SaveLoadPlayerPrefs playerPrefs;
 
     [SerializeField]
+    private LoadData loadData;
+
+    [SerializeField]
     private Button submitButton;
 
     [SerializeField]
@@ -25,11 +28,26 @@ public class SavePlayerName : MonoBehaviour
     [SerializeField]
     private List<char> notAllowedCharacters;
 
+    [SerializeField]
+    private GameObject NameNotUnique;
+
     private string playerName;
 
     void Awake() {
+        NameNotUnique.SetActive(false);
+
         if (GameObject.FindGameObjectWithTag("Data") != null)
             playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>();
+    }
+
+    void OnEnable()
+    {
+        loadData.FinishedLoading += CheckNameUnique;
+    }
+
+    void OnDisable()
+    {
+        loadData.FinishedLoading -= CheckNameUnique;
     }
 
     public void SubmitName(string _input)
@@ -62,16 +80,43 @@ public class SavePlayerName : MonoBehaviour
         {
             yield return null;
         }
-        SaveCurrentName();
-        sceneLoader.LoadNewScene("MainMenu");
+        AskForNames();
     }
 
-    public void SaveCurrentName()
+    public void AskForNames() {
+        loadData.Load("distance");
+    }
+
+    private void CheckNameUnique(string _values, string _dataType)
     {
+        bool nameIsUnique = true;
+
+        string[] lines = _values.Trim().Split('\n');
+
+        foreach (string text in lines)
+        {
+            //split the names and scores in a string array
+            string[] seperatedLines = text.Split('_');
+
+            //check each name and see if ours is the same
+            if (seperatedLines[0] == playerName)
+                nameIsUnique = false;
+        }
+
+        if (nameIsUnique)
+            SaveName();
+        else
+            NameNotUnique.SetActive(true);
+    }
+
+    private void SaveName() {
         //save the player name in player prefs
         playerPrefs.SavePlayerName(playerName);
+
         //save the name in playerName script
         playerData.Name = playerName;
+
+        sceneLoader.LoadNewScene("MainMenu");
     }
 
     private bool CharactersCheck(string _input) {

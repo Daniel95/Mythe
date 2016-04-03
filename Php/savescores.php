@@ -20,7 +20,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM Scores WHERE deviceid = '$deviceId'";
+$sql = "SELECT * FROM Scores WHERE name = '$name'";
 
 if($conn->query($sql)->num_rows > 0) {
     
@@ -43,13 +43,13 @@ if($conn->query($sql)->num_rows > 0) {
     $plays = $oldScore["plays"] + 1;
     
     
-    $sql2 = "UPDATE Scores SET name = '$name', pickups = '$pickups', distance = '$distance', time = '$time', plays = '$plays' WHERE deviceId = '$deviceId'";
+    $sql2 = "UPDATE Scores SET name = '$name', pickups = '$pickups', distance = '$distance', time = '$time', plays = '$plays' WHERE name = '$name'";
         
 } else {
     
     echo "TEST Make new Score: " . $result . "<br>" . $conn->error . "<br>";
     
-    $sql2 = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, plays, deviceId) VALUES ('$name', '$score', '$pickups', '$distance', '$time,', '$plays', '$deviceId')";
+    $sql2 = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, plays) VALUES ('$name', '$score', '$pickups', '$distance', '$time,', '$plays')";
 }
 
 

@@ -3995,11 +3995,11 @@ Prefab:
       objectReference: {fileID: 2094346090}
     - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: gravitySpeedEffect
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: speedMultiplier
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}

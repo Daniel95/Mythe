@@ -10,16 +10,4 @@ public class PlayerData : MonoBehaviour
         get { return playerName; }
         set { playerName = value; }
     }
-
-    private string playerId;
-
-    public string Id
-    {
-        get { return playerId; }
-        set { playerId = value; }
-    }
-
-    void Start() {
-        playerId = SystemInfo.deviceUniqueIdentifier;
-    }
 }

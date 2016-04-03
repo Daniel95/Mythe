@@ -32,15 +32,12 @@ public class SaveData : MonoBehaviour {
 
     private string plrName = "Dev Team";
 
-    private string plrId = "TestId";
-
     void Awake()
     {
         if (GameObject.FindGameObjectWithTag("Data") != null)
         {
             PlayerData playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>();
             plrName = playerData.Name;
-            plrId = playerData.Id;
         }
     }
 
@@ -62,7 +59,6 @@ public class SaveData : MonoBehaviour {
         WWWForm form = new WWWForm();
 
         form.AddField("name", plrName);
-        form.AddField("deviceId", plrId);
 
         //send every dataTypeValue with a dataTypeName to the php file
         for (int i = 0; i < dataTypeValues.Count; i++) {

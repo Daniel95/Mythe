@@ -18,10 +18,9 @@ public class PlayerNameSceneController : MonoBehaviour {
     private GameObject continueButton;
 
     [SerializeField]
-    private PlayerData playerData;
-
-    [SerializeField]
     private SaveLoadPlayerPrefs playerPrefs;
+
+    private PlayerData playerData;
 
     void Awake() {
         welcomeText = welcomeTextObj.GetComponent<DynamicText>();

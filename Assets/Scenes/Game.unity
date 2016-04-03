@@ -4014,26 +4014,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 2094346090}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: pickups
-      value: 
-      objectReference: {fileID: 146991383}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: shake
-      value: 
-      objectReference: {fileID: 1712116973}
-    - target: {fileID: 0}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 2094346090}
-    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: targetIcon
-      value: 
-      objectReference: {fileID: 1266503882}
     - target: {fileID: 11447412, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: shieldBubble
       value: 
@@ -4046,18 +4026,22 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2094346090}
-    - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: gravitySpeedEffect
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: speedMultiplier
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: targetIcon
+      value: 
+      objectReference: {fileID: 1266503882}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 2094346090}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 146991383}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: shake
+      value: 
+      objectReference: {fileID: 1712116973}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -5653,7 +5637,7 @@ MonoBehaviour:
     Count: 30
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
+  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0
@@ -5735,7 +5719,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015117531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bc98ae81e5e6624fa7397436267d369, type: 3}
   m_Name: 
@@ -6284,5 +6268,5 @@ MonoBehaviour:
   audioSource: {fileID: 1164408483}
   gameOverAudioClip: {fileID: 8300000, guid: 0f1153822ffd2472cbca6d85fd0ca381, type: 3}
   superModeAudioClip: {fileID: 8300000, guid: d5758a2915862d5419b44a4f0682dd0f, type: 3}
-  supermodeSoundFadeSpeed: 0.004
+  supermodeSoundFadeSpeed: 0.0006
   groundParticles: {fileID: 19813306, guid: f3fd78a8b379e5446a14568ce39a87d9, type: 2}

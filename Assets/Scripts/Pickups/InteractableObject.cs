@@ -8,8 +8,17 @@ public class InteractableObject : MonoBehaviour {
     */
 	[SerializeField]
 	private float healthValue = 0.1f;
+
     private float minimumHealthValue = 0.05f;
-    private float HealthDecreement = 0;
+
+    [SerializeField]
+    private bool decrementHealthOnGameSpeed = false;
+
+    [SerializeField]
+    private float healthDecrementDivider = 10;
+
+    private float HealthDecrement = 0;
+
 	[SerializeField]
 	private bool poolOnTouch;
 
@@ -53,15 +62,15 @@ public class InteractableObject : MonoBehaviour {
         //reset itself to its starting scale, in case it was scaled up or down during an animation
         transform.localScale = startScale;
         moveDown.Move = true;
-        if (healthValue > 0.05)
+        if (decrementHealthOnGameSpeed)
         {
-            if (healthValue - HealthDecreement > minimumHealthValue)
+            if (healthValue - HealthDecrement > minimumHealthValue)
             {
-                HealthDecreement = (GameSpeed.SpeedMultiplier - 1f) / 10f;
+                HealthDecrement = (GameSpeed.SpeedMultiplier - 1f) / 10f;
             }
             else
             {
-                HealthDecreement = 0f;
+                HealthDecrement = 0f;
                 healthValue = minimumHealthValue;
             }
         }
@@ -88,7 +97,7 @@ public class InteractableObject : MonoBehaviour {
 
 	public float HealthValue
 	{
-		get { return healthValue - HealthDecreement; }
+		get { return healthValue - HealthDecrement; }
 	}
 
 	IEnumerator PoolAfterAnimation()

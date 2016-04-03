@@ -230,7 +230,7 @@ MonoBehaviour:
   pickups: {fileID: 0}
   shake: {fileID: 0}
   powerUpHandler: {fileID: 11447412}
-  hurtableCooldown: 0.1
+  hurtableCooldown: 0.15
 --- !u!114 &11477792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc2230882b4c446cbe8f910c74464da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 5.5
-  gravitySpeedEffect: 25
+  speedMultiplier: 3
+  gravitySpeedEffect: 20
   rotateSpeed: 0.35
   trailName: Trail
   spawnPoint: {fileID: 489012}

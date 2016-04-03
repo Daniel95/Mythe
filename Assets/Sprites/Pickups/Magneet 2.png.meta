@@ -1,0 +1,3018 @@
+fileFormatVersion: 2
+guid: 03b2711a895f04a4d89e170f0a2bbf58
+timeCreated: 1459691003
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Magneet 2_0
+    21300002: Magneet 2_1
+    21300004: Magneet 2_2
+    21300006: Magneet 2_3
+    21300008: Magneet 2_4
+    21300010: Magneet 2_5
+    21300012: Magneet 2_6
+    21300014: Magneet 2_7
+    21300016: Magneet 2_8
+    21300018: Magneet 2_9
+    21300020: Magneet 2_10
+    21300022: Magneet 2_11
+    21300024: Magneet 2_12
+    21300026: Magneet 2_13
+    21300028: Magneet 2_14
+    21300030: Magneet 2_15
+    21300032: Magneet 2_16
+    21300034: Magneet 2_17
+    21300036: Magneet 2_18
+    21300038: Magneet 2_19
+    21300040: Magneet 2_20
+    21300042: Magneet 2_21
+    21300044: Magneet 2_22
+    21300046: Magneet 2_23
+    21300048: Magneet 2_24
+    21300050: Magneet 2_25
+    21300052: Magneet 2_26
+    21300054: Magneet 2_27
+    21300056: Magneet 2_28
+    21300058: Magneet 2_29
+    21300060: Magneet 2_30
+    21300062: Magneet 2_31
+    21300064: Magneet 2_32
+    21300066: Magneet 2_33
+    21300068: Magneet 2_34
+    21300070: Magneet 2_35
+    21300072: Magneet 2_36
+    21300074: Magneet 2_37
+    21300076: Magneet 2_38
+    21300078: Magneet 2_39
+    21300080: Magneet 2_40
+    21300082: Magneet 2_41
+    21300084: Magneet 2_42
+    21300086: Magneet 2_43
+    21300088: Magneet 2_44
+    21300090: Magneet 2_45
+    21300092: Magneet 2_46
+    21300094: Magneet 2_47
+    21300096: Magneet 2_48
+    21300098: Magneet 2_49
+    21300100: Magneet 2_50
+    21300102: Magneet 2_51
+    21300104: Magneet 2_52
+    21300106: Magneet 2_53
+    21300108: Magneet 2_54
+    21300110: Magneet 2_55
+    21300112: Magneet 2_56
+    21300114: Magneet 2_57
+    21300116: Magneet 2_58
+    21300118: Magneet 2_59
+    21300120: Magneet 2_60
+    21300122: Magneet 2_61
+    21300124: Magneet 2_62
+    21300126: Magneet 2_63
+    21300128: Magneet 2_64
+    21300130: Magneet 2_65
+    21300132: Magneet 2_66
+    21300134: Magneet 2_67
+    21300136: Magneet 2_68
+    21300138: Magneet 2_69
+    21300140: Magneet 2_70
+    21300142: Magneet 2_71
+    21300144: Magneet 2_72
+    21300146: Magneet 2_73
+    21300148: Magneet 2_74
+    21300150: Magneet 2_75
+    21300152: Magneet 2_76
+    21300154: Magneet 2_77
+    21300156: Magneet 2_78
+    21300158: Magneet 2_79
+    21300160: Magneet 2_80
+    21300162: Magneet 2_81
+    21300164: Magneet 2_82
+    21300166: Magneet 2_83
+    21300168: Magneet 2_84
+    21300170: Magneet 2_85
+    21300172: Magneet 2_86
+    21300174: Magneet 2_87
+    21300176: Magneet 2_88
+    21300178: Magneet 2_89
+    21300180: Magneet 2_90
+    21300182: Magneet 2_91
+    21300184: Magneet 2_92
+    21300186: Magneet 2_93
+    21300188: Magneet 2_94
+    21300190: Magneet 2_95
+    21300192: Magneet 2_96
+    21300194: Magneet 2_97
+    21300196: Magneet 2_98
+    21300198: Magneet 2_99
+    21300200: Magneet 2_100
+    21300202: Magneet 2_101
+    21300204: Magneet 2_102
+    21300206: Magneet 2_103
+    21300208: Magneet 2_104
+    21300210: Magneet 2_105
+    21300212: Magneet 2_106
+    21300214: Magneet 2_107
+    21300216: Magneet 2_108
+    21300218: Magneet 2_109
+    21300220: Magneet 2_110
+    21300222: Magneet 2_111
+    21300224: Magneet 2_112
+    21300226: Magneet 2_113
+    21300228: Magneet 2_114
+    21300230: Magneet 2_115
+    21300232: Magneet 2_116
+    21300234: Magneet 2_117
+    21300236: Magneet 2_118
+    21300238: Magneet 2_119
+    21300240: Magneet 2_120
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Magneet 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3885
+        width: 211
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 52.5}
+        - {x: -53, y: 46.5}
+        - {x: -53, y: -51.5}
+        - {x: 45, y: -51.5}
+        - {x: 53, y: -34.5}
+        - {x: 53, y: 47.5}
+        - {x: 46, y: 52.5}
+      - - {x: -12, y: -36.5}
+        - {x: -31, y: 22.5}
+        - {x: 18, y: 37.5}
+        - {x: 40, y: -14.5}
+    - name: Magneet 2_1
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 3885
+        width: 215
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 52.5}
+        - {x: -53.5, y: 37.5}
+        - {x: -53.5, y: -32.5}
+        - {x: -46.5, y: -51.5}
+        - {x: 37.5, y: -51.5}
+        - {x: 54.5, y: -38.5}
+        - {x: 54.5, y: 33.5}
+        - {x: 43.5, y: 52.5}
+      - - {x: -16.5, y: 34.5}
+        - {x: 23.5, y: 34.5}
+        - {x: 34.5, y: -22.5}
+        - {x: -4.5, y: -37.5}
+    - name: Magneet 2_2
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 3885
+        width: 214
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.5, y: 52.5}
+        - {x: -37.5, y: 52.5}
+        - {x: -53.5, y: 44.5}
+        - {x: -53.5, y: -39.5}
+        - {x: -27.5, y: -51.5}
+        - {x: 33.5, y: -51.5}
+        - {x: 54.5, y: -28.5}
+        - {x: 54.5, y: 37.5}
+      - - {x: -17.5, y: 34.5}
+        - {x: 11.5, y: 38.5}
+        - {x: 37.5, y: -20.5}
+        - {x: -5.5, y: -37.5}
+    - name: Magneet 2_3
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 3885
+        width: 216
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 52.5}
+        - {x: -54, y: 25.5}
+        - {x: -54, y: -22.5}
+        - {x: -52, y: -32.5}
+        - {x: -27, y: -51.5}
+        - {x: 27, y: -51.5}
+        - {x: 53, y: -40.5}
+        - {x: 55, y: -38.5}
+        - {x: 55, y: 29.5}
+        - {x: 46, y: 52.5}
+      - - {x: -35, y: -12.5}
+        - {x: -6, y: 38.5}
+        - {x: 41, y: -12.5}
+        - {x: 10, y: -37.5}
+    - name: Magneet 2_4
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 3885
+        width: 216
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 52}
+        - {x: -42, y: 49}
+        - {x: -54, y: 22}
+        - {x: -54, y: -31}
+        - {x: -29, y: -51}
+        - {x: 25, y: -51}
+        - {x: 44, y: -47}
+        - {x: 55, y: -23}
+        - {x: 55, y: 44}
+        - {x: 31, y: 52}
+      - - {x: -37, y: 10}
+        - {x: -18, y: 35}
+        - {x: 43, y: 2}
+        - {x: 26, y: -31}
+    - name: Magneet 2_5
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 3885
+        width: 216
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 52}
+        - {x: -28, y: 52}
+        - {x: -54, y: 29}
+        - {x: -54, y: -25}
+        - {x: -26, y: -51}
+        - {x: 38, y: -51}
+        - {x: 55, y: -45}
+        - {x: 55, y: 29}
+        - {x: 36, y: 49}
+      - - {x: -35, y: -12}
+        - {x: -32, y: 23}
+        - {x: 43, y: 7}
+        - {x: 24, y: -31}
+    - name: Magneet 2_6
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 3885
+        width: 216
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: 52}
+        - {x: -27, y: 52}
+        - {x: -54, y: 41}
+        - {x: -54, y: -29}
+        - {x: -30, y: -51}
+        - {x: 31, y: -51}
+        - {x: 55, y: -26}
+        - {x: 55, y: 32}
+      - - {x: -33, y: -20}
+        - {x: -13, y: 36}
+        - {x: 38, y: 18}
+        - {x: 8, y: -37}
+    - name: Magneet 2_7
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 3885
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 52}
+        - {x: -19.5, y: 52}
+        - {x: -39.5, y: 45}
+        - {x: -54.5, y: 26}
+        - {x: -54.5, y: -19}
+        - {x: -50.5, y: -35}
+        - {x: -42.5, y: -51}
+        - {x: 41.5, y: -51}
+        - {x: 55.5, y: -47}
+        - {x: 55.5, y: 19}
+        - {x: 40.5, y: 45}
+      - - {x: -35.5, y: -12}
+        - {x: 7.5, y: 39}
+        - {x: 42.5, y: 4}
+        - {x: 17.5, y: -34}
+    - name: Magneet 2_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3655
+        width: 216
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 52}
+        - {x: -54, y: 34}
+        - {x: -54, y: -48}
+        - {x: -51, y: -51}
+        - {x: 45, y: -51}
+        - {x: 55, y: -34}
+        - {x: 55, y: 27}
+        - {x: 37, y: 52}
+      - - {x: -37, y: 9}
+        - {x: 8, y: 38}
+        - {x: 35, y: 22}
+        - {x: 11, y: -37}
+    - name: Magneet 2_9
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 3655
+        width: 216
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 52}
+        - {x: -54, y: 33}
+        - {x: -54, y: -30}
+        - {x: -48, y: -51}
+        - {x: 50, y: -51}
+        - {x: 55, y: -33}
+        - {x: 55, y: 33}
+        - {x: 29, y: 52}
+      - - {x: -15, y: -36}
+        - {x: -22, y: 33}
+        - {x: 43, y: 3}
+        - {x: 26, y: -31}
+    - name: Magneet 2_10
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 3655
+        width: 216
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: 52}
+        - {x: -50, y: 52}
+        - {x: -54, y: 40}
+        - {x: -54, y: -51}
+        - {x: 48, y: -51}
+        - {x: 55, y: -42}
+        - {x: 55, y: 40}
+      - - {x: -23, y: -32}
+        - {x: -39, y: 9}
+        - {x: 13, y: 36}
+        - {x: 30, y: -28}
+    - name: Magneet 2_11
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 3655
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 52}
+        - {x: -54.5, y: 46}
+        - {x: -54.5, y: -35}
+        - {x: -37.5, y: -51}
+        - {x: 55.5, y: -51}
+        - {x: 55.5, y: 41}
+        - {x: 38.5, y: 52}
+      - - {x: -39.5, y: 8}
+        - {x: -21.5, y: 34}
+        - {x: 42.5, y: 2}
+        - {x: 2.5, y: -38}
+    - name: Magneet 2_12
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 3655
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 52}
+        - {x: -54.5, y: 32}
+        - {x: -54.5, y: -30}
+        - {x: -27.5, y: -51}
+        - {x: 49.5, y: -51}
+        - {x: 55.5, y: -32}
+        - {x: 55.5, y: 29}
+        - {x: 35.5, y: 52}
+      - - {x: -29.5, y: -25}
+        - {x: -23.5, y: 33}
+        - {x: 20.5, y: 32}
+        - {x: 38.5, y: -18}
+    - name: Magneet 2_13
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 3655
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48.5, y: 52}
+        - {x: -54.5, y: 40}
+        - {x: -54.5, y: -23}
+        - {x: -51.5, y: -31}
+        - {x: -30.5, y: -45}
+        - {x: -25.5, y: -51}
+        - {x: 28.5, y: -51}
+        - {x: 55.5, y: -41}
+        - {x: 55.5, y: 39}
+        - {x: 30.5, y: 52}
+      - - {x: -40.5, y: -4}
+        - {x: -24.5, y: 33}
+        - {x: 39.5, y: 9}
+        - {x: -7.5, y: -38}
+    - name: Magneet 2_14
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 3655
+        width: 218
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.5, y: 51.5}
+        - {x: -23.5, y: 51.5}
+        - {x: -54.5, y: 37.5}
+        - {x: -54.5, y: -32.5}
+        - {x: -38.5, y: -50.5}
+        - {x: 24.5, y: -50.5}
+        - {x: 40.5, y: -41.5}
+        - {x: 55.5, y: -29.5}
+        - {x: 55.5, y: 32.5}
+        - {x: 54.5, y: 38.5}
+      - - {x: -17.5, y: -35.5}
+        - {x: -35.5, y: -19.5}
+        - {x: -11.5, y: 38.5}
+        - {x: 41.5, y: -8.5}
+    - name: Magneet 2_15
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 3655
+        width: 218
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38.5, y: 48.5}
+        - {x: 21.5, y: 51.5}
+        - {x: -28.5, y: 51.5}
+        - {x: -51.5, y: 30.5}
+        - {x: -54.5, y: 20.5}
+        - {x: -54.5, y: -13.5}
+        - {x: -53.5, y: -18.5}
+        - {x: -37.5, y: -48.5}
+        - {x: -27.5, y: -50.5}
+        - {x: 24.5, y: -50.5}
+        - {x: 55.5, y: -31.5}
+        - {x: 55.5, y: 22.5}
+      - - {x: -37.5, y: -12.5}
+        - {x: -27.5, y: 31.5}
+        - {x: 12.5, y: 35.5}
+        - {x: 39.5, y: -16.5}
+    - name: Magneet 2_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3423
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 52}
+        - {x: -53.5, y: 40}
+        - {x: -54.5, y: 36}
+        - {x: -54.5, y: -41}
+        - {x: -49.5, y: -51}
+        - {x: 55.5, y: -51}
+        - {x: 55.5, y: 42}
+        - {x: 26.5, y: 52}
+      - - {x: -33.5, y: -23}
+        - {x: -13.5, y: 38}
+        - {x: 33.5, y: 21}
+        - {x: 5.5, y: -36}
+    - name: Magneet 2_17
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 3423
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.5, y: 52}
+        - {x: -30.5, y: 52}
+        - {x: -54.5, y: 30}
+        - {x: -54.5, y: -27}
+        - {x: -53.5, y: -33}
+        - {x: -31.5, y: -51}
+        - {x: 23.5, y: -51}
+        - {x: 55.5, y: -37}
+        - {x: 55.5, y: 18}
+        - {x: 35.5, y: 49}
+      - - {x: -23.5, y: -32}
+        - {x: -14.5, y: 38}
+        - {x: 42.5, y: 3}
+        - {x: 5.5, y: -37}
+    - name: Magneet 2_18
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 3423
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 52}
+        - {x: -54.5, y: 30}
+        - {x: -54.5, y: -33}
+        - {x: -37.5, y: -51}
+        - {x: 47.5, y: -51}
+        - {x: 55.5, y: -34}
+        - {x: 55.5, y: 43}
+        - {x: 48.5, y: 52}
+      - - {x: -25.5, y: -32}
+        - {x: -14.5, y: 38}
+        - {x: 32.5, y: 21}
+        - {x: 36.5, y: -19}
+    - name: Magneet 2_19
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 3423
+        width: 220
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 52}
+        - {x: -55, y: 43}
+        - {x: -55, y: -39}
+        - {x: -34, y: -51}
+        - {x: 35, y: -51}
+        - {x: 56, y: -35}
+        - {x: 56, y: 24}
+        - {x: 45, y: 52}
+      - - {x: -37, y: -19}
+        - {x: -42, y: 11}
+        - {x: 12, y: 36}
+        - {x: 42, y: 0}
+    - name: Magneet 2_20
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 3423
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 52}
+        - {x: -39.5, y: 51}
+        - {x: -54.5, y: 39}
+        - {x: -54.5, y: -31}
+        - {x: -41.5, y: -51}
+        - {x: 50.5, y: -51}
+        - {x: 52.5, y: -50}
+        - {x: 55.5, y: -39}
+        - {x: 55.5, y: 25}
+        - {x: 24.5, y: 52}
+      - - {x: -39.5, y: -12}
+        - {x: -13.5, y: 38}
+        - {x: 41.5, y: -10}
+        - {x: -11.5, y: -37}
+    - name: Magneet 2_21
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 3423
+        width: 218
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 52}
+        - {x: -54.5, y: 32}
+        - {x: -54.5, y: -40}
+        - {x: -24.5, y: -51}
+        - {x: 33.5, y: -51}
+        - {x: 55.5, y: -39}
+        - {x: 55.5, y: 32}
+        - {x: 22.5, y: 52}
+      - - {x: -41.5, y: -4}
+        - {x: 11.5, y: 37}
+        - {x: 20.5, y: 31}
+        - {x: 17.5, y: -33}
+    - name: Magneet 2_22
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 3421
+        width: 218
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 52.5}
+        - {x: -53.5, y: 22.5}
+        - {x: -54.5, y: 13.5}
+        - {x: -54.5, y: -27.5}
+        - {x: -44.5, y: -51.5}
+        - {x: 45.5, y: -51.5}
+        - {x: 55.5, y: -48.5}
+        - {x: 55.5, y: 38.5}
+        - {x: 50.5, y: 52.5}
+      - - {x: -40.5, y: 10.5}
+        - {x: -17.5, y: 37.5}
+        - {x: 19.5, y: 33.5}
+        - {x: 25.5, y: -29.5}
+    - name: Magneet 2_23
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 3421
+        width: 218
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 52.5}
+        - {x: -54.5, y: 27.5}
+        - {x: -54.5, y: -32.5}
+        - {x: -36.5, y: -51.5}
+        - {x: 32.5, y: -51.5}
+        - {x: 45.5, y: -46.5}
+        - {x: 55.5, y: -38.5}
+        - {x: 55.5, y: 27.5}
+        - {x: 40.5, y: 52.5}
+      - - {x: -19.5, y: 36.5}
+        - {x: 22.5, y: 31.5}
+        - {x: 30.5, y: -25.5}
+        - {x: -11.5, y: -37.5}
+    - name: Magneet 2_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 3189
+        width: 216
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 52.5}
+        - {x: -54, y: 39.5}
+        - {x: -54, y: -23.5}
+        - {x: -35, y: -51.5}
+        - {x: 29, y: -51.5}
+        - {x: 55, y: -39.5}
+        - {x: 55, y: 29.5}
+        - {x: 34, y: 52.5}
+      - - {x: -41, y: -5.5}
+        - {x: -26, y: 34.5}
+        - {x: 19, y: 33.5}
+        - {x: 41, y: -7.5}
+    - name: Magneet 2_25
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 3189
+        width: 216
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 53}
+        - {x: -48, y: 42}
+        - {x: -54, y: 25}
+        - {x: -54, y: -29}
+        - {x: -38, y: -52}
+        - {x: 27, y: -52}
+        - {x: 49, y: -47}
+        - {x: 55, y: -37}
+        - {x: 55, y: 31}
+        - {x: 32, y: 53}
+      - - {x: -41, y: 9}
+        - {x: -19, y: 38}
+        - {x: 41, y: 4}
+        - {x: 0, y: -38}
+    - name: Magneet 2_26
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 3189
+        width: 214
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 53}
+        - {x: -37.5, y: 49}
+        - {x: -53.5, y: 22}
+        - {x: -53.5, y: -39}
+        - {x: -27.5, y: -52}
+        - {x: 32.5, y: -52}
+        - {x: 54.5, y: -37}
+        - {x: 54.5, y: 35}
+        - {x: 27.5, y: 53}
+      - - {x: -23.5, y: -34}
+        - {x: -39.5, y: 11}
+        - {x: 38.5, y: 12}
+        - {x: 22.5, y: -31}
+    - name: Magneet 2_27
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 3189
+        width: 214
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 53}
+        - {x: -53.5, y: 40}
+        - {x: -53.5, y: -44}
+        - {x: -31.5, y: -52}
+        - {x: 38.5, y: -52}
+        - {x: 54.5, y: -39}
+        - {x: 54.5, y: 33}
+        - {x: 33.5, y: 53}
+      - - {x: -16.5, y: -37}
+        - {x: -38.5, y: 16}
+        - {x: 29.5, y: 27}
+        - {x: 37.5, y: -18}
+    - name: Magneet 2_28
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 3187
+        width: 214
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49.5, y: 53.5}
+        - {x: -53.5, y: 48.5}
+        - {x: -53.5, y: -36.5}
+        - {x: -46.5, y: -52.5}
+        - {x: 30.5, y: -52.5}
+        - {x: 54.5, y: -28.5}
+        - {x: 54.5, y: 40.5}
+        - {x: 29.5, y: 53.5}
+      - - {x: -24.5, y: 34.5}
+        - {x: 24.5, y: 32.5}
+        - {x: 41.5, y: 3.5}
+        - {x: -12.5, y: -36.5}
+    - name: Magneet 2_29
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 3187
+        width: 212
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 53.5}
+        - {x: -53, y: 41.5}
+        - {x: -53, y: -31.5}
+        - {x: -29, y: -52.5}
+        - {x: 29, y: -52.5}
+        - {x: 54, y: -30.5}
+        - {x: 54, y: 44.5}
+        - {x: 35, y: 53.5}
+      - - {x: -34, y: -21.5}
+        - {x: 13, y: 39.5}
+        - {x: 41, y: 5.5}
+        - {x: 23, y: -29.5}
+    - name: Magneet 2_30
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 3187
+        width: 214
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35.5, y: 42.5}
+        - {x: 18.5, y: 53.5}
+        - {x: -13.5, y: 53.5}
+        - {x: -20.5, y: 52.5}
+        - {x: -53.5, y: 34.5}
+        - {x: -53.5, y: -41.5}
+        - {x: -41.5, y: -52.5}
+        - {x: 41.5, y: -52.5}
+        - {x: 54.5, y: -23.5}
+        - {x: 54.5, y: 15.5}
+        - {x: 43.5, y: 35.5}
+      - - {x: -36.5, y: -14.5}
+        - {x: 3.5, y: 40.5}
+        - {x: 40.5, y: 6.5}
+        - {x: -8.5, y: -38.5}
+    - name: Magneet 2_31
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 3187
+        width: 212
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 53.5}
+        - {x: -28, y: 53.5}
+        - {x: -53, y: 42.5}
+        - {x: -53, y: -44.5}
+        - {x: -30, y: -52.5}
+        - {x: 45, y: -52.5}
+        - {x: 54, y: -27.5}
+        - {x: 54, y: 32.5}
+      - - {x: -14, y: -37.5}
+        - {x: -36, y: 21.5}
+        - {x: 25, y: 32.5}
+        - {x: 40, y: -7.5}
+    - name: Magneet 2_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2955
+        width: 212
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 53.5}
+        - {x: -53, y: 42.5}
+        - {x: -53, y: -31.5}
+        - {x: -43, y: -52.5}
+        - {x: 41, y: -52.5}
+        - {x: 54, y: -32.5}
+        - {x: 54, y: 50.5}
+        - {x: 51, y: 53.5}
+      - - {x: -22, y: -33.5}
+        - {x: -16, y: 37.5}
+        - {x: 40, y: 1.5}
+        - {x: 11, y: -34.5}
+    - name: Magneet 2_33
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2952
+        width: 210
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 53.5}
+        - {x: -52.5, y: 27.5}
+        - {x: -52.5, y: -53.5}
+        - {x: 53.5, y: -53.5}
+        - {x: 53.5, y: 39.5}
+        - {x: 33.5, y: 53.5}
+      - - {x: -22.5, y: -33.5}
+        - {x: -38.5, y: 1.5}
+        - {x: 21.5, y: 35.5}
+        - {x: 39.5, y: -9.5}
+    - name: Magneet 2_34
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 2953
+        width: 210
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29.5, y: 54}
+        - {x: -32.5, y: 54}
+        - {x: -52.5, y: 39}
+        - {x: -52.5, y: -43}
+        - {x: -33.5, y: -53}
+        - {x: 45.5, y: -53}
+        - {x: 53.5, y: -48}
+        - {x: 53.5, y: 45}
+        - {x: 37.5, y: 52}
+      - - {x: -35.5, y: -16}
+        - {x: -6.5, y: 42}
+        - {x: 33.5, y: 26}
+        - {x: -2.5, y: -38}
+    - name: Magneet 2_35
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2952
+        width: 208
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 53.5}
+        - {x: -52, y: 31.5}
+        - {x: -52, y: -27.5}
+        - {x: -39, y: -53.5}
+        - {x: 36, y: -53.5}
+        - {x: 53, y: -25.5}
+        - {x: 53, y: 44.5}
+        - {x: 27, y: 53.5}
+      - - {x: -22, y: -34.5}
+        - {x: -6, y: 41.5}
+        - {x: 31, y: 26.5}
+        - {x: 40, y: -5.5}
+    - name: Magneet 2_36
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 2953
+        width: 210
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 54.5}
+        - {x: -37.5, y: 48.5}
+        - {x: -52.5, y: 28.5}
+        - {x: -52.5, y: -53.5}
+        - {x: 40.5, y: -53.5}
+        - {x: 53.5, y: -50.5}
+        - {x: 53.5, y: 29.5}
+        - {x: 28.5, y: 54.5}
+      - - {x: -16.5, y: 38.5}
+        - {x: 34.5, y: 22.5}
+        - {x: 32.5, y: -21.5}
+        - {x: -11.5, y: -39.5}
+    - name: Magneet 2_37
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 2951
+        width: 208
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 55}
+        - {x: -52, y: 46}
+        - {x: -52, y: -34}
+        - {x: -38, y: -54}
+        - {x: 28, y: -54}
+        - {x: 53, y: -46}
+        - {x: 53, y: 49}
+        - {x: 46, y: 55}
+      - - {x: -35, y: -14}
+        - {x: 34, y: 25}
+        - {x: 33, y: -20}
+        - {x: 1, y: -38}
+    - name: Magneet 2_38
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 2951
+        width: 208
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: -54}
+        - {x: 23, y: -54}
+        - {x: 53, y: -36}
+        - {x: 53, y: 43}
+        - {x: 44, y: 55}
+        - {x: -47, y: 55}
+        - {x: -52, y: 37}
+      - - {x: -31, y: 27}
+        - {x: 12, y: 42}
+        - {x: 34, y: -19}
+        - {x: -9, y: -39}
+    - name: Magneet 2_39
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 2951
+        width: 208
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: -54}
+        - {x: 36, y: -54}
+        - {x: 53, y: -44}
+        - {x: 53, y: 36}
+        - {x: 35, y: 55}
+        - {x: -43, y: 55}
+        - {x: -52, y: 27}
+      - - {x: -37, y: -4}
+        - {x: -28, y: 30}
+        - {x: 8, y: 43}
+        - {x: 36, y: -16}
+    - name: Magneet 2_40
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2721
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: 54.5}
+        - {x: -26.5, y: 54.5}
+        - {x: -44.5, y: 39.5}
+        - {x: -51.5, y: 27.5}
+        - {x: -51.5, y: -43.5}
+        - {x: -32.5, y: -53.5}
+        - {x: 45.5, y: -53.5}
+        - {x: 52.5, y: -29.5}
+        - {x: 52.5, y: 37.5}
+        - {x: 41.5, y: 49.5}
+      - - {x: -36.5, y: 16.5}
+        - {x: 33.5, y: 24.5}
+        - {x: 34.5, y: -18.5}
+        - {x: -11.5, y: -38.5}
+    - name: Magneet 2_41
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2721
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 55}
+        - {x: -51.5, y: 44}
+        - {x: -51.5, y: -36}
+        - {x: -40.5, y: -54}
+        - {x: 30.5, y: -54}
+        - {x: 52.5, y: -47}
+        - {x: 52.5, y: 50}
+        - {x: 44.5, y: 55}
+      - - {x: -27.5, y: -29}
+        - {x: -5.5, y: 42}
+        - {x: 39.5, y: 7}
+        - {x: 23.5, y: -30}
+    - name: Magneet 2_42
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 2720
+        width: 206
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 54.5}
+        - {x: -50.5, y: 35.5}
+        - {x: -51.5, y: 29.5}
+        - {x: -51.5, y: -40.5}
+        - {x: -39.5, y: -54.5}
+        - {x: 25.5, y: -54.5}
+        - {x: 52.5, y: -37.5}
+        - {x: 52.5, y: 46.5}
+        - {x: 31.5, y: 54.5}
+      - - {x: -28.5, y: -27.5}
+        - {x: -29.5, y: 27.5}
+        - {x: 32.5, y: 26.5}
+        - {x: 37.5, y: -11.5}
+    - name: Magneet 2_43
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2721
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34.5, y: 55}
+        - {x: -51.5, y: 47}
+        - {x: -51.5, y: -49}
+        - {x: -40.5, y: -54}
+        - {x: 18.5, y: -54}
+        - {x: 52.5, y: -40}
+        - {x: 52.5, y: 34}
+        - {x: 34.5, y: 55}
+      - - {x: -37.5, y: 10}
+        - {x: 32.5, y: 27}
+        - {x: 38.5, y: -9}
+        - {x: 4.5, y: -38}
+    - name: Magneet 2_44
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 2723
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.5, y: 54.5}
+        - {x: -51.5, y: 47.5}
+        - {x: -51.5, y: -48.5}
+        - {x: -39.5, y: -53.5}
+        - {x: 47.5, y: -53.5}
+        - {x: 52.5, y: -36.5}
+        - {x: 52.5, y: 49.5}
+        - {x: 43.5, y: 54.5}
+      - - {x: -18.5, y: -35.5}
+        - {x: -35.5, y: 18.5}
+        - {x: 35.5, y: 22.5}
+        - {x: 21.5, y: -32.5}
+    - name: Magneet 2_45
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 2723
+        width: 211
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 54.5}
+        - {x: -52, y: -50.5}
+        - {x: -46, y: -53.5}
+        - {x: 21, y: -53.5}
+        - {x: 53, y: -39.5}
+        - {x: 53, y: 33.5}
+        - {x: 39, y: 54.5}
+      - - {x: -32, y: -21.5}
+        - {x: -8, y: 41.5}
+        - {x: 35, y: 23.5}
+        - {x: -9, y: -38.5}
+    - name: Magneet 2_46
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 2723
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.5, y: 55}
+        - {x: -51.5, y: 24}
+        - {x: -51.5, y: -43}
+        - {x: -32.5, y: -54}
+        - {x: 26.5, y: -54}
+        - {x: 52.5, y: -31}
+        - {x: 52.5, y: 33}
+        - {x: 23.5, y: 55}
+      - - {x: -35.5, y: 18}
+        - {x: 9.5, y: 41}
+        - {x: 35.5, y: 22}
+        - {x: 20.5, y: -34}
+    - name: Magneet 2_47
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 2725
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.5, y: 54.5}
+        - {x: -51.5, y: 33.5}
+        - {x: -51.5, y: -41.5}
+        - {x: -41.5, y: -53.5}
+        - {x: 26.5, y: -53.5}
+        - {x: 50.5, y: -41.5}
+        - {x: 52.5, y: -32.5}
+        - {x: 52.5, y: 42.5}
+        - {x: 32.5, y: 54.5}
+      - - {x: -29.5, y: -25.5}
+        - {x: -21.5, y: 34.5}
+        - {x: 14.5, y: 39.5}
+        - {x: 30.5, y: -24.5}
+    - name: Magneet 2_48
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2493
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.5, y: 55}
+        - {x: -27.5, y: 55}
+        - {x: -51.5, y: 42}
+        - {x: -51.5, y: -33}
+        - {x: -40.5, y: -54}
+        - {x: 28.5, y: -54}
+        - {x: 52.5, y: -26}
+        - {x: 52.5, y: 35}
+        - {x: 51.5, y: 41}
+      - - {x: -37.5, y: -9}
+        - {x: -20.5, y: 36}
+        - {x: 22.5, y: 35}
+        - {x: 31.5, y: -25}
+    - name: Magneet 2_49
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2495
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 54.5}
+        - {x: -51.5, y: 39.5}
+        - {x: -51.5, y: -31.5}
+        - {x: -43.5, y: -53.5}
+        - {x: 34.5, y: -53.5}
+        - {x: 52.5, y: -24.5}
+        - {x: 52.5, y: 21.5}
+        - {x: 33.5, y: 54.5}
+      - - {x: -36.5, y: -14.5}
+        - {x: 4.5, y: 40.5}
+        - {x: 39.5, y: -6.5}
+        - {x: 5.5, y: -40.5}
+    - name: Magneet 2_50
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 2495
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38.5, y: 54.5}
+        - {x: -51.5, y: 23.5}
+        - {x: -51.5, y: -39.5}
+        - {x: -50.5, y: -43.5}
+        - {x: -32.5, y: -53.5}
+        - {x: 38.5, y: -53.5}
+        - {x: 52.5, y: -43.5}
+        - {x: 52.5, y: 32.5}
+        - {x: 39.5, y: 54.5}
+      - - {x: -26.5, y: -29.5}
+        - {x: -34.5, y: 15.5}
+        - {x: 23.5, y: 33.5}
+        - {x: 24.5, y: -32.5}
+    - name: Magneet 2_51
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2495
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40.5, y: 54.5}
+        - {x: -51.5, y: 26.5}
+        - {x: -51.5, y: -24.5}
+        - {x: -31.5, y: -51.5}
+        - {x: -28.5, y: -53.5}
+        - {x: 34.5, y: -53.5}
+        - {x: 52.5, y: -38.5}
+        - {x: 52.5, y: 27.5}
+        - {x: 37.5, y: 54.5}
+      - - {x: -30.5, y: -23.5}
+        - {x: -35.5, y: 14.5}
+        - {x: 13.5, y: 37.5}
+        - {x: 7.5, y: -39.5}
+    - name: Magneet 2_52
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 2495
+        width: 205
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 54.5}
+        - {x: -51, y: 32.5}
+        - {x: -51, y: -41.5}
+        - {x: -40, y: -53.5}
+        - {x: 22, y: -53.5}
+        - {x: 52, y: -44.5}
+        - {x: 52, y: 34.5}
+        - {x: 24, y: 54.5}
+      - - {x: -35, y: -14.5}
+        - {x: -17, y: 37.5}
+        - {x: 38, y: 15.5}
+        - {x: -5, y: -39.5}
+    - name: Magneet 2_53
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 2496
+        width: 206
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.5, y: 53.5}
+        - {x: -51.5, y: 50.5}
+        - {x: -51.5, y: -41.5}
+        - {x: -30.5, y: -53.5}
+        - {x: 40.5, y: -53.5}
+        - {x: 52.5, y: -36.5}
+        - {x: 52.5, y: 50.5}
+        - {x: 44.5, y: 53.5}
+      - - {x: -30.5, y: -25.5}
+        - {x: -37.5, y: 6.5}
+        - {x: -23.5, y: 33.5}
+        - {x: 39.5, y: 6.5}
+    - name: Magneet 2_54
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 2497
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 53.5}
+        - {x: 37.5, y: 54.5}
+        - {x: -39.5, y: 54.5}
+        - {x: -51.5, y: 43.5}
+        - {x: -51.5, y: -45.5}
+        - {x: -25.5, y: -53.5}
+        - {x: 17.5, y: -53.5}
+        - {x: 44.5, y: -40.5}
+        - {x: 52.5, y: -32.5}
+        - {x: 52.5, y: 24.5}
+      - - {x: -36.5, y: -9.5}
+        - {x: -9.5, y: 40.5}
+        - {x: 37.5, y: 14.5}
+        - {x: -2.5, y: -40.5}
+    - name: Magneet 2_55
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 2497
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: 54.5}
+        - {x: -49.5, y: 49.5}
+        - {x: -51.5, y: 42.5}
+        - {x: -51.5, y: -44.5}
+        - {x: -29.5, y: -53.5}
+        - {x: 40.5, y: -53.5}
+        - {x: 52.5, y: -38.5}
+        - {x: 52.5, y: 42.5}
+        - {x: 30.5, y: 54.5}
+      - - {x: -13.5, y: -38.5}
+        - {x: -37.5, y: 7.5}
+        - {x: -11.5, y: 39.5}
+        - {x: 38.5, y: -14.5}
+    - name: Magneet 2_56
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2267
+        width: 204
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 54.5}
+        - {x: -33, y: 54.5}
+        - {x: -51, y: 30.5}
+        - {x: -51, y: -42.5}
+        - {x: -28, y: -53.5}
+        - {x: 31, y: -53.5}
+        - {x: 34, y: -51.5}
+        - {x: 52, y: -33.5}
+        - {x: 52, y: 26.5}
+      - - {x: -24, y: -32.5}
+        - {x: -35, y: 14.5}
+        - {x: 12, y: 37.5}
+        - {x: 31, y: -27.5}
+    - name: Magneet 2_57
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2267
+        width: 207
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.5, y: 54.5}
+        - {x: -51.5, y: -52.5}
+        - {x: -46.5, y: -53.5}
+        - {x: 35.5, y: -53.5}
+        - {x: 52.5, y: -43.5}
+        - {x: 52.5, y: 37.5}
+        - {x: 49.5, y: 54.5}
+      - - {x: -13.5, y: -37.5}
+        - {x: -37.5, y: 4.5}
+        - {x: -9.5, y: 39.5}
+        - {x: 24.5, y: -34.5}
+    - name: Magneet 2_58
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 2267
+        width: 204
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 54.5}
+        - {x: -30, y: 54.5}
+        - {x: -51, y: 43.5}
+        - {x: -51, y: -37.5}
+        - {x: -40, y: -53.5}
+        - {x: 25, y: -53.5}
+        - {x: 52, y: -42.5}
+        - {x: 52, y: 25.5}
+        - {x: 35, y: 44.5}
+      - - {x: -22, y: -33.5}
+        - {x: -37, y: 9.5}
+        - {x: -21, y: 35.5}
+        - {x: 38, y: 10.5}
+    - name: Magneet 2_59
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2269
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: 54}
+        - {x: -51.5, y: 54}
+        - {x: -51.5, y: -53}
+        - {x: 41.5, y: -53}
+        - {x: 52.5, y: -34}
+        - {x: 52.5, y: 36}
+      - - {x: -28.5, y: -28}
+        - {x: -36.5, y: 6}
+        - {x: -11.5, y: 39}
+        - {x: 39.5, y: -10}
+    - name: Magneet 2_60
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 2269
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.5, y: 54}
+        - {x: -51.5, y: 42}
+        - {x: -51.5, y: -32}
+        - {x: -48.5, y: -36}
+        - {x: -30.5, y: -53}
+        - {x: 38.5, y: -53}
+        - {x: 52.5, y: -29}
+        - {x: 52.5, y: 39}
+        - {x: 36.5, y: 54}
+      - - {x: -37.5, y: -10}
+        - {x: -29.5, y: 27}
+        - {x: 39.5, y: 4}
+        - {x: -0.5, y: -41}
+    - name: Magneet 2_61
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 2269
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 54}
+        - {x: -48.5, y: 45}
+        - {x: -51.5, y: 27}
+        - {x: -51.5, y: -50}
+        - {x: -37.5, y: -53}
+        - {x: 40.5, y: -53}
+        - {x: 52.5, y: -32}
+        - {x: 52.5, y: 41}
+        - {x: 22.5, y: 54}
+      - - {x: -13.5, y: -39}
+        - {x: -37.5, y: -8}
+        - {x: 40.5, y: 6}
+        - {x: 23.5, y: -36}
+    - name: Magneet 2_62
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 2269
+        width: 208
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 54}
+        - {x: -52, y: 38}
+        - {x: -52, y: -22}
+        - {x: -49, y: -37}
+        - {x: -20, y: -53}
+        - {x: 40, y: -53}
+        - {x: 53, y: -32}
+        - {x: 53, y: 42}
+        - {x: 18, y: 54}
+      - - {x: -13, y: -39}
+        - {x: -36, y: 13}
+        - {x: 1, y: 39}
+        - {x: 40, y: -7}
+    - name: Magneet 2_63
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 2269
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 54}
+        - {x: -51.5, y: 38}
+        - {x: -51.5, y: -39}
+        - {x: -32.5, y: -53}
+        - {x: 38.5, y: -53}
+        - {x: 52.5, y: -38}
+        - {x: 52.5, y: 27}
+        - {x: 40.5, y: 54}
+      - - {x: -31.5, y: -24}
+        - {x: 11.5, y: 37}
+        - {x: 38.5, y: -17}
+        - {x: -0.5, y: -41}
+    - name: Magneet 2_64
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2037
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 54}
+        - {x: -51.5, y: 19}
+        - {x: -51.5, y: -20}
+        - {x: -48.5, y: -34}
+        - {x: -20.5, y: -53}
+        - {x: 39.5, y: -53}
+        - {x: 52.5, y: -26}
+        - {x: 52.5, y: 38}
+        - {x: 44.5, y: 54}
+      - - {x: -12.5, y: -39}
+        - {x: -33.5, y: -21}
+        - {x: -15.5, y: 38}
+        - {x: 37.5, y: -16}
+    - name: Magneet 2_65
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 2037
+        width: 209
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.5, y: 50}
+        - {x: 22.5, y: 54}
+        - {x: -28.5, y: 54}
+        - {x: -37.5, y: 52}
+        - {x: -52.5, y: 25}
+        - {x: -52.5, y: -38}
+        - {x: -23.5, y: -53}
+        - {x: 35.5, y: -53}
+        - {x: 50.5, y: -39}
+        - {x: 52.5, y: -29}
+        - {x: 52.5, y: 23}
+      - - {x: -24.5, y: -31}
+        - {x: -11.5, y: 40}
+        - {x: 32.5, y: 20}
+        - {x: 16.5, y: -39}
+    - name: Magneet 2_66
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 2037
+        width: 206
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27.5, y: 53.5}
+        - {x: -42.5, y: 53.5}
+        - {x: -51.5, y: 32.5}
+        - {x: -51.5, y: -32.5}
+        - {x: -32.5, y: -52.5}
+        - {x: 35.5, y: -52.5}
+        - {x: 52.5, y: -38.5}
+        - {x: 52.5, y: 22.5}
+        - {x: 42.5, y: 50.5}
+      - - {x: -31.5, y: -23.5}
+        - {x: -11.5, y: 39.5}
+        - {x: 19.5, y: 32.5}
+        - {x: 34.5, y: -21.5}
+    - name: Magneet 2_67
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2037
+        width: 208
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 53.5}
+        - {x: -30, y: 53.5}
+        - {x: -36, y: 51.5}
+        - {x: -52, y: 38.5}
+        - {x: -52, y: -29.5}
+        - {x: -46, y: -52.5}
+        - {x: 44, y: -52.5}
+        - {x: 53, y: -30.5}
+        - {x: 53, y: 28.5}
+        - {x: 52, y: 30.5}
+      - - {x: -38, y: -7.5}
+        - {x: -17, y: 38.5}
+        - {x: 33, y: 20.5}
+        - {x: -3, y: -39.5}
+    - name: Magneet 2_68
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 2037
+        width: 206
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.5, y: 53.5}
+        - {x: -51.5, y: -38.5}
+        - {x: -45.5, y: -52.5}
+        - {x: 35.5, y: -52.5}
+        - {x: 52.5, y: -32.5}
+        - {x: 52.5, y: 44.5}
+        - {x: 26.5, y: 53.5}
+      - - {x: -22.5, y: -32.5}
+        - {x: 0.5, y: 39.5}
+        - {x: 35.5, y: 16.5}
+        - {x: 17.5, y: -37.5}
+    - name: Magneet 2_69
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 2037
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.5, y: 53.5}
+        - {x: -34.5, y: 53.5}
+        - {x: -52.5, y: 44.5}
+        - {x: -52.5, y: -24.5}
+        - {x: -51.5, y: -28.5}
+        - {x: -43.5, y: -52.5}
+        - {x: 50.5, y: -52.5}
+        - {x: 53.5, y: -45.5}
+        - {x: 53.5, y: 19.5}
+        - {x: 51.5, y: 30.5}
+      - - {x: -38.5, y: -7.5}
+        - {x: 1.5, y: 39.5}
+        - {x: 34.5, y: 17.5}
+        - {x: 9.5, y: -39.5}
+    - name: Magneet 2_70
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 2037
+        width: 208
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 53.5}
+        - {x: -52, y: 33.5}
+        - {x: -52, y: -35.5}
+        - {x: -35, y: -52.5}
+        - {x: 45, y: -52.5}
+        - {x: 53, y: -37.5}
+        - {x: 53, y: 46.5}
+        - {x: 35, y: 53.5}
+      - - {x: -22, y: -32.5}
+        - {x: -39, y: -4.5}
+        - {x: 1, y: 39.5}
+        - {x: 38, y: 9.5}
+    - name: Magneet 2_71
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 2037
+        width: 208
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 53.5}
+        - {x: -52, y: 45.5}
+        - {x: -52, y: -48.5}
+        - {x: -51, y: -52.5}
+        - {x: 53, y: -52.5}
+        - {x: 53, y: 39.5}
+        - {x: 21, y: 53.5}
+      - - {x: -34, y: -19.5}
+        - {x: -21, y: 35.5}
+        - {x: 33, y: -26.5}
+        - {x: -1, y: -39.5}
+    - name: Magneet 2_72
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1807
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 53}
+        - {x: -52, y: 44}
+        - {x: -52, y: -44}
+        - {x: -37, y: -52}
+        - {x: 38, y: -52}
+        - {x: 53, y: -48}
+        - {x: 53, y: 43}
+        - {x: 27, y: 53}
+      - - {x: -25, y: -31}
+        - {x: -25, y: 33}
+        - {x: 35, y: 17}
+        - {x: 39, y: -16}
+    - name: Magneet 2_73
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1805
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: 53}
+        - {x: -52, y: 32}
+        - {x: -52, y: -22}
+        - {x: -37, y: -41}
+        - {x: -22, y: -52}
+        - {x: 35, y: -52}
+        - {x: 53, y: -44}
+        - {x: 53, y: 48}
+        - {x: 32, y: 53}
+      - - {x: -23, y: -31}
+        - {x: -11, y: 40}
+        - {x: 40, y: 4}
+        - {x: 35, y: -23}
+    - name: Magneet 2_74
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1805
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 53}
+        - {x: -52, y: 32}
+        - {x: -52, y: -34}
+        - {x: -25, y: -52}
+        - {x: 53, y: -52}
+        - {x: 53, y: 49}
+        - {x: 24, y: 53}
+      - - {x: -39, y: 8}
+        - {x: 24, y: 31}
+        - {x: 40, y: 3}
+        - {x: 11, y: -38}
+    - name: Magneet 2_75
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1805
+        width: 210
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.5, y: 53}
+        - {x: -52.5, y: 49}
+        - {x: -52.5, y: -41}
+        - {x: -24.5, y: -52}
+        - {x: 46.5, y: -52}
+        - {x: 53.5, y: -45}
+        - {x: 53.5, y: 32}
+        - {x: 35.5, y: 53}
+      - - {x: -23.5, y: -31}
+        - {x: -13.5, y: 40}
+        - {x: 37.5, y: 12}
+        - {x: 27.5, y: -31}
+    - name: Magneet 2_76
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1805
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 53}
+        - {x: -52, y: 33}
+        - {x: -52, y: -34}
+        - {x: -33, y: -52}
+        - {x: 53, y: -52}
+        - {x: 53, y: 45}
+        - {x: 36, y: 53}
+      - - {x: -39, y: -4}
+        - {x: -36, y: 21}
+        - {x: 23, y: 32}
+        - {x: 23, y: -34}
+    - name: Magneet 2_77
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 1805
+        width: 210
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.5, y: 33}
+        - {x: 29.5, y: 48}
+        - {x: 18.5, y: 53}
+        - {x: -42.5, y: 53}
+        - {x: -52.5, y: 23}
+        - {x: -52.5, y: -26}
+        - {x: -33.5, y: -47}
+        - {x: -16.5, y: -52}
+        - {x: 37.5, y: -52}
+        - {x: 53.5, y: -39}
+        - {x: 53.5, y: 24}
+      - - {x: -38.5, y: -10}
+        - {x: -24.5, y: 34}
+        - {x: 39.5, y: 5}
+        - {x: -3.5, y: -37}
+    - name: Magneet 2_78
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1805
+        width: 210
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 52.5}
+        - {x: -52.5, y: 36.5}
+        - {x: -52.5, y: -50.5}
+        - {x: -51.5, y: -51.5}
+        - {x: 45.5, y: -51.5}
+        - {x: 53.5, y: -48.5}
+        - {x: 53.5, y: 18.5}
+        - {x: 44.5, y: 52.5}
+      - - {x: -22.5, y: -31.5}
+        - {x: -37.5, y: 13.5}
+        - {x: -10.5, y: 40.5}
+        - {x: 38.5, y: -10.5}
+    - name: Magneet 2_79
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1805
+        width: 210
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.5, y: 52.5}
+        - {x: -52.5, y: 36.5}
+        - {x: -52.5, y: -28.5}
+        - {x: -32.5, y: -44.5}
+        - {x: -22.5, y: -51.5}
+        - {x: 53.5, y: -51.5}
+        - {x: 53.5, y: 50.5}
+        - {x: 45.5, y: 52.5}
+      - - {x: -31.5, y: -22.5}
+        - {x: -31.5, y: 27.5}
+        - {x: 20.5, y: 34.5}
+        - {x: 38.5, y: -12.5}
+    - name: Magneet 2_80
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1575
+        width: 210
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 52.5}
+        - {x: -52.5, y: 36.5}
+        - {x: -52.5, y: -48.5}
+        - {x: -37.5, y: -51.5}
+        - {x: 42.5, y: -51.5}
+        - {x: 53.5, y: -38.5}
+        - {x: 53.5, y: 37.5}
+        - {x: 22.5, y: 52.5}
+      - - {x: -24.5, y: -30.5}
+        - {x: -20.5, y: 36.5}
+        - {x: 39.5, y: 3.5}
+        - {x: 33.5, y: -24.5}
+    - name: Magneet 2_81
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1573
+        width: 210
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.5, y: 53}
+        - {x: -26.5, y: 53}
+        - {x: -52.5, y: 40}
+        - {x: -52.5, y: -27}
+        - {x: -23.5, y: -52}
+        - {x: 49.5, y: -52}
+        - {x: 53.5, y: -37}
+        - {x: 53.5, y: 28}
+        - {x: 44.5, y: 39}
+      - - {x: -37.5, y: -9}
+        - {x: 22.5, y: 33}
+        - {x: 40.5, y: 0}
+        - {x: 16.5, y: -36}
+    - name: Magneet 2_82
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1573
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: -52}
+        - {x: 46, y: -52}
+        - {x: 53, y: -48}
+        - {x: 53, y: 30}
+        - {x: 41, y: 53}
+        - {x: -43, y: 53}
+        - {x: -52, y: 50}
+        - {x: -52, y: -28}
+      - - {x: -14, y: -35}
+        - {x: -11, y: 40}
+        - {x: 33, y: 20}
+        - {x: 38, y: -15}
+    - name: Magneet 2_83
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1573
+        width: 210
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: 53}
+        - {x: -52.5, y: 22}
+        - {x: -52.5, y: -22}
+        - {x: -49.5, y: -28}
+        - {x: -23.5, y: -52}
+        - {x: 52.5, y: -52}
+        - {x: 53.5, y: -46}
+        - {x: 53.5, y: 37}
+        - {x: 29.5, y: 53}
+      - - {x: -36.5, y: -12}
+        - {x: 21.5, y: 34}
+        - {x: 34.5, y: -23}
+        - {x: -3.5, y: -38}
+    - name: Magneet 2_84
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1573
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 53}
+        - {x: -52, y: 43}
+        - {x: -52, y: -52}
+        - {x: 53, y: -52}
+        - {x: 53, y: 48}
+        - {x: 37, y: 53}
+      - - {x: -34, y: -19}
+        - {x: -35, y: 22}
+        - {x: 38, y: 11}
+        - {x: 26, y: -31}
+    - name: Magneet 2_85
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 1571
+        width: 211
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52.5, y: 53.5}
+        - {x: -52.5, y: -36.5}
+        - {x: -31.5, y: -52.5}
+        - {x: 44.5, y: -52.5}
+        - {x: 53.5, y: -43.5}
+        - {x: 53.5, y: 31.5}
+        - {x: 48.5, y: 53.5}
+      - - {x: -38.5, y: 12.5}
+        - {x: -23.5, y: 34.5}
+        - {x: 33.5, y: 21.5}
+        - {x: 21.5, y: -33.5}
+    - name: Magneet 2_86
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1571
+        width: 208
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 53.5}
+        - {x: -34, y: 52.5}
+        - {x: -52, y: 24.5}
+        - {x: -52, y: -52.5}
+        - {x: 53, y: -52.5}
+        - {x: 53, y: 31.5}
+        - {x: 28, y: 53.5}
+      - - {x: -33, y: -20.5}
+        - {x: -33, y: 25.5}
+        - {x: 40, y: -3.5}
+        - {x: 15, y: -34.5}
+    - name: Magneet 2_87
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1571
+        width: 208
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 53.5}
+        - {x: -39, y: 53.5}
+        - {x: -52, y: 45.5}
+        - {x: -52, y: -44.5}
+        - {x: -50, y: -52.5}
+        - {x: 50, y: -52.5}
+        - {x: 53, y: -46.5}
+        - {x: 53, y: 42.5}
+        - {x: 42, y: 50.5}
+      - - {x: -39, y: 2.5}
+        - {x: -10, y: 40.5}
+        - {x: 21, y: 35.5}
+        - {x: 10, y: -37.5}
+    - name: Magneet 2_88
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1336
+        width: 208
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 53.5}
+        - {x: -52, y: 42.5}
+        - {x: -52, y: -50.5}
+        - {x: -36, y: -53.5}
+        - {x: 42, y: -53.5}
+        - {x: 53, y: -31.5}
+        - {x: 53, y: 32.5}
+        - {x: 38, y: 53.5}
+      - - {x: -39, y: 10.5}
+        - {x: 34, y: 21.5}
+        - {x: 39, y: -12.5}
+        - {x: -7, y: -37.5}
+    - name: Magneet 2_89
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1339
+        width: 208
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 53.5}
+        - {x: -52, y: 47.5}
+        - {x: -52, y: -28.5}
+        - {x: -38, y: -52.5}
+        - {x: 43, y: -52.5}
+        - {x: 53, y: -32.5}
+        - {x: 53, y: 48.5}
+        - {x: 43, y: 53.5}
+      - - {x: -38, y: 2.5}
+        - {x: -7, y: 41.5}
+        - {x: 40, y: 3.5}
+        - {x: -8, y: -36.5}
+    - name: Magneet 2_90
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1337
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: 54}
+        - {x: -51.5, y: 27}
+        - {x: -51.5, y: -23}
+        - {x: -45.5, y: -44}
+        - {x: -31.5, y: -53}
+        - {x: 24.5, y: -53}
+        - {x: 52.5, y: -41}
+        - {x: 52.5, y: 28}
+        - {x: 38.5, y: 54}
+      - - {x: -38.5, y: 10}
+        - {x: -19.5, y: 38}
+        - {x: 13.5, y: 41}
+        - {x: 31.5, y: -24}
+    - name: Magneet 2_91
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1337
+        width: 208
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 54}
+        - {x: -52, y: 36}
+        - {x: -52, y: -37}
+        - {x: -33, y: -53}
+        - {x: 26, y: -53}
+        - {x: 53, y: -38}
+        - {x: 53, y: 39}
+        - {x: 27, y: 54}
+      - - {x: -17, y: -34}
+        - {x: -38, y: 13}
+        - {x: 27, y: 32}
+        - {x: 25, y: -30}
+    - name: Magneet 2_92
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1336
+        width: 206
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.5, y: 53.5}
+        - {x: -51.5, y: 32.5}
+        - {x: -51.5, y: -15.5}
+        - {x: -45.5, y: -30.5}
+        - {x: -31.5, y: -53.5}
+        - {x: 32.5, y: -53.5}
+        - {x: 52.5, y: -31.5}
+        - {x: 52.5, y: 48.5}
+        - {x: 36.5, y: 53.5}
+      - - {x: -33.5, y: -18.5}
+        - {x: -36.5, y: 19.5}
+        - {x: 34.5, y: 21.5}
+        - {x: 38.5, y: -13.5}
+    - name: Magneet 2_93
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 1337
+        width: 208
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 54}
+        - {x: -41, y: 54}
+        - {x: -52, y: 45}
+        - {x: -52, y: -33}
+        - {x: -41, y: -53}
+        - {x: 34, y: -53}
+        - {x: 53, y: -30}
+        - {x: 53, y: 31}
+        - {x: 49, y: 39}
+      - - {x: -38, y: -4}
+        - {x: -24, y: 35}
+        - {x: 12, y: 41}
+        - {x: 20, y: -33}
+    - name: Magneet 2_94
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1335
+        width: 207
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34.5, y: 54.5}
+        - {x: -51.5, y: 28.5}
+        - {x: -51.5, y: -41.5}
+        - {x: -27.5, y: -53.5}
+        - {x: 34.5, y: -53.5}
+        - {x: 52.5, y: -35.5}
+        - {x: 52.5, y: 32.5}
+        - {x: 37.5, y: 54.5}
+      - - {x: -19.5, y: -33.5}
+        - {x: -36.5, y: 19.5}
+        - {x: 13.5, y: 41.5}
+        - {x: 38.5, y: -9.5}
+    - name: Magneet 2_95
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1335
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.5, y: 54.5}
+        - {x: -25.5, y: 54.5}
+        - {x: -39.5, y: 51.5}
+        - {x: -51.5, y: 27.5}
+        - {x: -51.5, y: -20.5}
+        - {x: -50.5, y: -24.5}
+        - {x: -43.5, y: -40.5}
+        - {x: -21.5, y: -53.5}
+        - {x: 27.5, y: -53.5}
+        - {x: 52.5, y: -32.5}
+        - {x: 52.5, y: 31.5}
+      - - {x: -20.5, y: -32.5}
+        - {x: -30.5, y: 28.5}
+        - {x: 27.5, y: 32.5}
+        - {x: 33.5, y: -20.5}
+    - name: Magneet 2_96
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1103
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: 55}
+        - {x: -40.5, y: 55}
+        - {x: -51.5, y: 45}
+        - {x: -51.5, y: -35}
+        - {x: -44.5, y: -54}
+        - {x: 19.5, y: -54}
+        - {x: 46.5, y: -36}
+        - {x: 52.5, y: -30}
+        - {x: 52.5, y: 46}
+      - - {x: -28.5, y: -23}
+        - {x: 4.5, y: 43}
+        - {x: 39.5, y: 7}
+        - {x: 20.5, y: -32}
+    - name: Magneet 2_97
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1103
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.5, y: 55}
+        - {x: -51.5, y: -50}
+        - {x: -33.5, y: -53}
+        - {x: -28.5, y: -54}
+        - {x: 22.5, y: -54}
+        - {x: 52.5, y: -40}
+        - {x: 52.5, y: 45}
+        - {x: 30.5, y: 55}
+      - - {x: -37.5, y: 12}
+        - {x: 13.5, y: 42}
+        - {x: 39.5, y: -3}
+        - {x: 10.5, y: -35}
+    - name: Magneet 2_98
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1103
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38.5, y: 55}
+        - {x: -51.5, y: 33}
+        - {x: -51.5, y: -30}
+        - {x: -32.5, y: -54}
+        - {x: 22.5, y: -54}
+        - {x: 37.5, y: -49}
+        - {x: 52.5, y: -25}
+        - {x: 52.5, y: 38}
+        - {x: 47.5, y: 55}
+      - - {x: -21.5, y: 37}
+        - {x: 14.5, y: 41}
+        - {x: 38.5, y: 11}
+        - {x: 3.5, y: -38}
+    - name: Magneet 2_99
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1101
+        width: 206
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 55.5}
+        - {x: -51.5, y: 42.5}
+        - {x: -51.5, y: -47.5}
+        - {x: -44.5, y: -54.5}
+        - {x: 41.5, y: -54.5}
+        - {x: 52.5, y: -32.5}
+        - {x: 52.5, y: 34.5}
+        - {x: 45.5, y: 55.5}
+      - - {x: -28.5, y: -24.5}
+        - {x: -7.5, y: 41.5}
+        - {x: 39.5, y: 9.5}
+        - {x: 24.5, y: -28.5}
+    - name: Magneet 2_100
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1101
+        width: 204
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: 55.5}
+        - {x: -32, y: 55.5}
+        - {x: -51, y: 49.5}
+        - {x: -51, y: -38.5}
+        - {x: -35, y: -54.5}
+        - {x: 36, y: -54.5}
+        - {x: 52, y: -36.5}
+        - {x: 52, y: 32.5}
+        - {x: 49, y: 38.5}
+      - - {x: -21, y: -32.5}
+        - {x: -38, y: 9.5}
+        - {x: -21, y: 37.5}
+        - {x: 39, y: -4.5}
+    - name: Magneet 2_101
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 1101
+        width: 206
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49.5, y: 55.5}
+        - {x: -51.5, y: 46.5}
+        - {x: -51.5, y: -48.5}
+        - {x: -43.5, y: -54.5}
+        - {x: 17.5, y: -54.5}
+        - {x: 52.5, y: -44.5}
+        - {x: 52.5, y: 48.5}
+        - {x: 28.5, y: 55.5}
+      - - {x: -34.5, y: -12.5}
+        - {x: -11.5, y: 41.5}
+        - {x: 39.5, y: -2.5}
+        - {x: 7.5, y: -36.5}
+    - name: Magneet 2_102
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 1103
+        width: 209
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: -54}
+        - {x: 24, y: -54}
+        - {x: 53, y: -36}
+        - {x: 53, y: 45}
+        - {x: 47, y: 55}
+        - {x: -32, y: 55}
+        - {x: -52, y: 46}
+        - {x: -52, y: -38}
+      - - {x: -37, y: -5}
+        - {x: -13, y: 40}
+        - {x: 40, y: 1}
+        - {x: 23, y: -30}
+    - name: Magneet 2_103
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1103
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 55}
+        - {x: -49.5, y: 44}
+        - {x: -51.5, y: 38}
+        - {x: -51.5, y: -52}
+        - {x: -44.5, y: -54}
+        - {x: 40.5, y: -54}
+        - {x: 52.5, y: -40}
+        - {x: 52.5, y: 44}
+        - {x: 37.5, y: 55}
+      - - {x: -34.5, y: -14}
+        - {x: -7.5, y: 42}
+        - {x: 36.5, y: 18}
+        - {x: 18.5, y: -33}
+    - name: Magneet 2_104
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 873
+        width: 206
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 54.5}
+        - {x: -51.5, y: 49.5}
+        - {x: -51.5, y: -36.5}
+        - {x: -40.5, y: -53.5}
+        - {x: 21.5, y: -53.5}
+        - {x: 52.5, y: -40.5}
+        - {x: 52.5, y: 35.5}
+        - {x: 42.5, y: 54.5}
+      - - {x: -17.5, y: -33.5}
+        - {x: -37.5, y: 7.5}
+        - {x: 13.5, y: 41.5}
+        - {x: 34.5, y: -17.5}
+    - name: Magneet 2_105
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 873
+        width: 209
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 54.5}
+        - {x: -52, y: 36.5}
+        - {x: -52, y: -44.5}
+        - {x: -49, y: -53.5}
+        - {x: 41, y: -53.5}
+        - {x: 53, y: -23.5}
+        - {x: 53, y: 31.5}
+        - {x: 34, y: 54.5}
+      - - {x: -37, y: 12.5}
+        - {x: 30, y: 28.5}
+        - {x: 20, y: -31.5}
+        - {x: -7, y: -37.5}
+    - name: Magneet 2_106
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 875
+        width: 208
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 54}
+        - {x: -52, y: 30}
+        - {x: -52, y: -18}
+        - {x: -45, y: -42}
+        - {x: -36, y: -53}
+        - {x: 31, y: -53}
+        - {x: 53, y: -47}
+        - {x: 53, y: 33}
+        - {x: 36, y: 54}
+      - - {x: -36, y: 17}
+        - {x: 24, y: 36}
+        - {x: 34, y: -21}
+        - {x: 5, y: -38}
+    - name: Magneet 2_107
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 875
+        width: 211
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.5, y: 54}
+        - {x: -37.5, y: 54}
+        - {x: -52.5, y: 46}
+        - {x: -52.5, y: -52}
+        - {x: -50.5, y: -53}
+        - {x: 17.5, y: -53}
+        - {x: 53.5, y: -40}
+        - {x: 53.5, y: 32}
+        - {x: 37.5, y: 53}
+      - - {x: -11.5, y: -37}
+        - {x: -37.5, y: 12}
+        - {x: 21.5, y: 37}
+        - {x: 38.5, y: -12}
+    - name: Magneet 2_108
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 875
+        width: 208
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 54}
+        - {x: -52, y: 34}
+        - {x: -52, y: -27}
+        - {x: -47, y: -53}
+        - {x: 29, y: -53}
+        - {x: 53, y: -22}
+        - {x: 53, y: 31}
+        - {x: 36, y: 54}
+      - - {x: -12, y: -37}
+        - {x: -37, y: 9}
+        - {x: 6, y: 42}
+        - {x: 35, y: 23}
+    - name: Magneet 2_109
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 877
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.5, y: 53.5}
+        - {x: -52.5, y: 47.5}
+        - {x: -52.5, y: -30.5}
+        - {x: -37.5, y: -52.5}
+        - {x: 33.5, y: -52.5}
+        - {x: 53.5, y: -20.5}
+        - {x: 53.5, y: 46.5}
+        - {x: 32.5, y: 53.5}
+      - - {x: -31.5, y: -19.5}
+        - {x: -19.5, y: 35.5}
+        - {x: 35.5, y: 21.5}
+        - {x: -7.5, y: -37.5}
+    - name: Magneet 2_110
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 877
+        width: 208
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 53.5}
+        - {x: -46, y: 50.5}
+        - {x: -52, y: 37.5}
+        - {x: -52, y: -39.5}
+        - {x: -32, y: -52.5}
+        - {x: 41, y: -52.5}
+        - {x: 53, y: -42.5}
+        - {x: 53, y: 47.5}
+        - {x: 34, y: 53.5}
+      - - {x: -34, y: -12.5}
+        - {x: -21, y: 34.5}
+        - {x: 41, y: -4.5}
+        - {x: 16, y: -34.5}
+    - name: Magneet 2_111
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 877
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 53.5}
+        - {x: -22.5, y: 52.5}
+        - {x: -52.5, y: 44.5}
+        - {x: -52.5, y: -44.5}
+        - {x: -50.5, y: -52.5}
+        - {x: 25.5, y: -52.5}
+        - {x: 53.5, y: -40.5}
+        - {x: 53.5, y: 34.5}
+        - {x: 25.5, y: 53.5}
+      - - {x: -28.5, y: -21.5}
+        - {x: -23.5, y: 32.5}
+        - {x: 39.5, y: -13.5}
+        - {x: -7.5, y: -37.5}
+    - name: Magneet 2_112
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 647
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: 53.5}
+        - {x: -52.5, y: 27.5}
+        - {x: -52.5, y: -44.5}
+        - {x: -51.5, y: -46.5}
+        - {x: -29.5, y: -52.5}
+        - {x: 41.5, y: -52.5}
+        - {x: 53.5, y: -42.5}
+        - {x: 53.5, y: 27.5}
+        - {x: 42.5, y: 53.5}
+      - - {x: -19.5, y: -32.5}
+        - {x: -3.5, y: 40.5}
+        - {x: 38.5, y: 16.5}
+        - {x: 8.5, y: -37.5}
+    - name: Magneet 2_113
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 647
+        width: 212
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: 53.5}
+        - {x: -53, y: 51.5}
+        - {x: -53, y: -49.5}
+        - {x: -41, y: -52.5}
+        - {x: 47, y: -52.5}
+        - {x: 54, y: -43.5}
+        - {x: 54, y: 44.5}
+        - {x: 51, y: 53.5}
+      - - {x: -36, y: 10.5}
+        - {x: 25, y: 34.5}
+        - {x: 41, y: 10.5}
+        - {x: -5, y: -37.5}
+    - name: Magneet 2_114
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 649
+        width: 210
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: 53}
+        - {x: -43.5, y: 53}
+        - {x: -52.5, y: 49}
+        - {x: -52.5, y: -42}
+        - {x: -50.5, y: -52}
+        - {x: 47.5, y: -52}
+        - {x: 53.5, y: -32}
+        - {x: 53.5, y: 35}
+        - {x: 50.5, y: 37}
+      - - {x: -20.5, y: -32}
+        - {x: -36.5, y: 8}
+        - {x: -19.5, y: 34}
+        - {x: 42.5, y: -5}
+    - name: Magneet 2_115
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 649
+        width: 212
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 53}
+        - {x: -53, y: 37}
+        - {x: -53, y: -31}
+        - {x: -39, y: -52}
+        - {x: 40, y: -52}
+        - {x: 54, y: -26}
+        - {x: 54, y: 44}
+        - {x: 44, y: 53}
+      - - {x: -32, y: -19}
+        - {x: -22, y: 32}
+        - {x: 42, y: 6}
+        - {x: 23, y: -33}
+    - name: Magneet 2_116
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 649
+        width: 213
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 53}
+        - {x: -53, y: 43}
+        - {x: -53, y: -47}
+        - {x: -40, y: -52}
+        - {x: 33, y: -52}
+        - {x: 54, y: -28}
+        - {x: 54, y: 32}
+        - {x: 35, y: 53}
+      - - {x: -28, y: -24}
+        - {x: -32, y: 20}
+        - {x: 35, y: 24}
+        - {x: 28, y: -30}
+    - name: Magneet 2_117
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 648
+        width: 214
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53.5, y: 52.5}
+        - {x: -53.5, y: -29.5}
+        - {x: -30.5, y: -52.5}
+        - {x: 45.5, y: -52.5}
+        - {x: 54.5, y: -20.5}
+        - {x: 54.5, y: 45.5}
+        - {x: 51.5, y: 52.5}
+      - - {x: -29.5, y: -21.5}
+        - {x: -0.5, y: 39.5}
+        - {x: 40.5, y: -14.5}
+        - {x: 10.5, y: -38.5}
+    - name: Magneet 2_118
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 651
+        width: 214
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.5, y: 52.5}
+        - {x: -53.5, y: 46.5}
+        - {x: -53.5, y: -41.5}
+        - {x: -21.5, y: -51.5}
+        - {x: 32.5, y: -51.5}
+        - {x: 54.5, y: -28.5}
+        - {x: 54.5, y: 47.5}
+        - {x: 33.5, y: 52.5}
+      - - {x: -18.5, y: -32.5}
+        - {x: -0.5, y: 39.5}
+        - {x: 43.5, y: 7.5}
+        - {x: 12.5, y: -37.5}
+    - name: Magneet 2_119
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 651
+        width: 214
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 52.5}
+        - {x: -53.5, y: 29.5}
+        - {x: -53.5, y: -30.5}
+        - {x: -43.5, y: -50.5}
+        - {x: -36.5, y: -51.5}
+        - {x: 52.5, y: -51.5}
+        - {x: 54.5, y: -45.5}
+        - {x: 54.5, y: 37.5}
+        - {x: 37.5, y: 52.5}
+      - - {x: -36.5, y: -8.5}
+        - {x: 5.5, y: 39.5}
+        - {x: 42.5, y: 4.5}
+        - {x: -5.5, y: -37.5}
+    - name: Magneet 2_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 421
+        width: 211
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 52}
+        - {x: -53, y: 34}
+        - {x: -53, y: -25}
+        - {x: -42, y: -51}
+        - {x: 45, y: -51}
+        - {x: 53, y: -39}
+        - {x: 53, y: 26}
+        - {x: 41, y: 52}
+      - - {x: -23, y: -30}
+        - {x: -36, y: 14}
+        - {x: 22, y: 35}
+        - {x: 17, y: -35}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

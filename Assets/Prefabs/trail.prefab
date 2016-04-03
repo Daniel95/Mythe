@@ -109,7 +109,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112786}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 544125c2da3b10841b7cc64f7306188e, type: 3}
   m_Name: 
@@ -192,7 +192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_GravityScale
@@ -246,6 +246,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 196514, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+    - target: {fileID: 0}
+      propertyPath: yDestroyPosition
+      value: -6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 112786}

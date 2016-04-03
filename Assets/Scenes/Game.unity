@@ -128,7 +128,20 @@ Prefab:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 1871364907}
-    m_RemovedComponents: []
+    - target: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473226, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 473226, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6185740, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &20236477
@@ -2099,6 +2112,10 @@ Prefab:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 1871364907}
+    - target: {fileID: 174978, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
   m_IsPrefabParent: 0
@@ -2370,6 +2387,41 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590321643}
+--- !u!1 &595876849 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+  m_PrefabInternal: {fileID: 3160314}
+--- !u!95 &595876850
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595876849}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4131ef63785c76b4a971a7bc2c380ef9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!58 &595876851
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595876849}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.000000007450581}
+  serializedVersion: 2
+  m_Radius: 2.940792
 --- !u!1 &660921324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,7 +2830,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &752591568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3769,7 +3821,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3973,7 +4025,7 @@ Prefab:
       propertyPath: shake
       value: 
       objectReference: {fileID: 1712116973}
-    - target: {fileID: 11419598, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+    - target: {fileID: 0}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2094346090}
@@ -4000,6 +4052,10 @@ Prefab:
     - target: {fileID: 11477792, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: speedMultiplier
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
@@ -6160,5 +6216,5 @@ MonoBehaviour:
   audioSource: {fileID: 1164408483}
   gameOverAudioClip: {fileID: 8300000, guid: 0f1153822ffd2472cbca6d85fd0ca381, type: 3}
   superModeAudioClip: {fileID: 8300000, guid: d5758a2915862d5419b44a4f0682dd0f, type: 3}
-  supermodeSoundFadeSpeed: 0.01
+  supermodeSoundFadeSpeed: 0.004
   groundParticles: {fileID: 19813306, guid: f3fd78a8b379e5446a14568ce39a87d9, type: 2}

@@ -13,8 +13,8 @@ GameObject:
   - 114: {fileID: 11438120}
   - 114: {fileID: 11478904}
   - 95: {fileID: 9516094}
-  - 58: {fileID: 5801222}
   - 114: {fileID: 11484852}
+  - 58: {fileID: 5895778}
   m_Layer: 0
   m_Name: SkyWater
   m_TagString: Untagged
@@ -29,12 +29,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4236763, y: -1.5835557, z: 0}
-  m_LocalScale: {x: 1.0507013, y: 1.0507015, z: 1.0507015}
+  m_LocalPosition: {x: 0.6572386, y: -8.273503, z: 2}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.5732337}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &5801222
+--- !u!58 &5895778
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -45,9 +45,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.08, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.255662
+  m_Radius: 0.49999997
 --- !u!95 &9516094
 Animator:
   serializedVersion: 3
@@ -57,7 +57,7 @@ Animator:
   m_GameObject: {fileID: 138260}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 97bcdbdd7b1d2864b978dc3b7029ec39, type: 2}
+  m_Controller: {fileID: 9100000, guid: a3f48abe3dcdf3a43a9014e73d9924e0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: 0.0055
+  healthValue: 0.006
   poolOnTouch: 1
   animToPlayName: Water Splash
   animScale: 1.5
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544125c2da3b10841b7cc64f7306188e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yDestroyPosition: -6
+  yDestroyPosition: -8
 --- !u!212 &21226950
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,7 +144,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f822989b5bf1a62438dd9eb122ad8f67, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9dbbce82fdabd7940b36bdcd5b872a44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -174,6 +174,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: canBeAttracted
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -8,6 +8,7 @@ public class InteractableObject : MonoBehaviour {
     */
 	[SerializeField]
 	private float healthValue = 0.1f;
+    private float minimumHealthValue = 0.05f;
     private float HealthDecreement = 0;
 	[SerializeField]
 	private bool poolOnTouch;
@@ -42,7 +43,8 @@ public class InteractableObject : MonoBehaviour {
 		moveDown = GetComponent<MoveDown> ();
     }
 
-    void OnEnable() {
+    void OnEnable()
+    {
         //enable the collision
         isEnabled = true;
 
@@ -50,10 +52,18 @@ public class InteractableObject : MonoBehaviour {
 
         //reset itself to its starting scale, in case it was scaled up or down during an animation
         transform.localScale = startScale;
-		moveDown.Move = true;
-        if(healthValue > 0.05 && healthValue - HealthDecreement > 0.1f)
+        moveDown.Move = true;
+        if (healthValue > 0.05)
         {
-            HealthDecreement = (GameSpeed.SpeedMultiplier - 1f) / 10f;
+            if (healthValue - HealthDecreement > minimumHealthValue)
+            {
+                HealthDecreement = (GameSpeed.SpeedMultiplier - 1f) / 10f;
+            }
+            else
+            {
+                HealthDecreement = 0f;
+                healthValue = minimumHealthValue;
+            }
         }
     }
 

@@ -22,7 +22,7 @@ public class TutorialUnlocker : MonoBehaviour {
         generateChunk.MakeChosenChunk(chunkHolder.UncompressChunk("100001100001110301100001100001100001100001100001103011100001100001100001"));
 
         //intro chunk for super modus.
-        while (playerDistance.Distance < 1000)
+        while (playerDistance.Distance < 10)
         {
             yield return new WaitForFixedUpdate();
         }
@@ -30,7 +30,7 @@ public class TutorialUnlocker : MonoBehaviour {
 
 
         //intro chunk for shield pick up.
-        while (playerDistance.Distance < 2000)
+        while (playerDistance.Distance < 20)
         {
             yield return new WaitForFixedUpdate();
         }
@@ -38,7 +38,7 @@ public class TutorialUnlocker : MonoBehaviour {
 
 
         //intro chunk for magnet pick up up.
-        while (playerDistance.Distance < 3000)
+        while (playerDistance.Distance < 30)
         {
             yield return new WaitForFixedUpdate();
         }
@@ -46,7 +46,7 @@ public class TutorialUnlocker : MonoBehaviour {
 
 
         //intro chunk for side walk enemies.
-        while (playerDistance.Distance < 4000)
+        while (playerDistance.Distance < 40)
         {
             yield return new WaitForFixedUpdate();
         }
@@ -54,7 +54,7 @@ public class TutorialUnlocker : MonoBehaviour {
 
 
         //intro chunk for iaming enemies.
-        while (playerDistance.Distance < 5000)
+        while (playerDistance.Distance < 50)
         {
             yield return new WaitForFixedUpdate();
         }

@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField]
 	private float speedMultiplier = 5;
 
+    [SerializeField]
+    private int gravitySpeedEffect = 25;
+
     private float totalSpeed;
 
     [SerializeField]
@@ -32,12 +35,14 @@ public class PlayerMovement : MonoBehaviour {
         //the difference in vector to the target
         Vector2 vectorToTarget = currentTarget - new Vector2(transform.position.x, transform.position.y);
 
-        //the players speed it the vector to target multiplied by speedMultiplier
-        //so the farther away the target is, the faster the players speed
-        rb.velocity = vectorToTarget * speedMultiplier;
-
         //calculate the angle to our target
         float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - 90;
+
+        float moveDownSpeedEffect = speedMultiplier + Mathf.Abs(angle) / gravitySpeedEffect;
+
+        //the players speed it the vector to target multiplied by speedMultiplier
+        //so the farther away the target is, the faster the players speed
+        rb.velocity = vectorToTarget * moveDownSpeedEffect;
 
         //use the angle to get the rotation to our target
         targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -46,7 +51,7 @@ public class PlayerMovement : MonoBehaviour {
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed);
 
         //the speed of the player, the x speed + y speed (made absulute) = total speed.
-        totalSpeed = Mathf.Abs(vectorToTarget.x + vectorToTarget.y) * speedMultiplier;
+        totalSpeed = Mathf.Abs(vectorToTarget.x + vectorToTarget.y) * moveDownSpeedEffect;
     }
 
     

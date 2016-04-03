@@ -67,8 +67,16 @@ public class TrailLengthHandler : MonoBehaviour {
             trailMovement.TrailParts.Add(spawnedObject.transform);
 
             //set the position of the trail
-            if (trailMovement.TrailParts.Count == 1) spawnedObject.transform.position = trailMovement.TrailConnectPoint.position;
-            else spawnedObject.transform.position = trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].position;
+            if (trailMovement.TrailParts.Count == 1)
+            {
+                spawnedObject.transform.position = trailMovement.TrailConnectPoint.position;
+                spawnedObject.GetComponent<RainbowEffect>().StartColor(0);
+            }
+            else
+            {
+                spawnedObject.transform.position = trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].position;
+                spawnedObject.GetComponent<RainbowEffect>().StartColor(trailMovement.TrailParts[trailMovement.TrailParts.Count - 2].GetComponent<RainbowEffect>().ColorIndex);
+            }
 
             spawnedObject.GetComponent<MoveDown>().enabled = false;
             spawnedObject.GetComponent<InteractableObject>().IsEnabled = false;

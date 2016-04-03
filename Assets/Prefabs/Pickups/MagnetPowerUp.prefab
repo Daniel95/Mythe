@@ -69,11 +69,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115725c69681f9042b977df38809e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: 0
+  healthValue: 0.1
+  decrementHealthOnGameSpeed: 0
+  healthDecrementDivider: 10
   poolOnTouch: 1
   animToPlayName: 
   animScale: 1
-  startScale: {x: 0, y: 0}
   playAnimOnDeath: 0
 --- !u!114 &11482974
 MonoBehaviour:
@@ -86,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583cdee0750b5488bb7c80087c89d1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: 1
   speed: 1
 --- !u!212 &21244760
 SpriteRenderer:
@@ -131,6 +133,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: playAnimOnDeath
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: healthValue
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -1149,14 +1149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 0.02
-  colors:
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 1, g: 0.76551723, b: 0, a: 0}
-  - {r: 1, g: 0.9724138, b: 0, a: 0}
-  - {r: 0, g: 1, b: 0.13103461, a: 0}
-  - {r: 0, g: 0.37931037, b: 1, a: 0}
-  - {r: 0.3241377, g: 0, b: 1, a: 0}
-  - {r: 1, g: 0, b: 0.972414, a: 0}
 --- !u!114 &226399553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5645,7 +5637,7 @@ MonoBehaviour:
     Count: 30
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
+  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0
@@ -5727,7 +5719,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015117531}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bc98ae81e5e6624fa7397436267d369, type: 3}
   m_Name: 

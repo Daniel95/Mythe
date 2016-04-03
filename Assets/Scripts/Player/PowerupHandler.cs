@@ -46,6 +46,7 @@ public class PowerupHandler : MonoBehaviour {
 
     public void AddShield()
 	{
+        Debug.Log("shield");
         //set the shield powerup active.
         if (!shieldBubble.gameObject.activeSelf)
             shieldBubble.gameObject.SetActive(true);

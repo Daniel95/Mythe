@@ -62,13 +62,14 @@ public class ShieldBubbleScript : MonoBehaviour {
 	}
 
     public void ResetPowerup() {
+        
 		StopCoroutine("WaitAndMakeDestroyable");
 		StartCoroutine ("WaitAndMakeDestroyable",duration);
         shouldIShrink = false;
         transform.localScale = startVector;
 		gameObject.SetActive(false);
 		gameObject.SetActive(true);
-
+        Debug.Log("shield size: " + startVector);
     }
 
 	IEnumerator WaitAndMakeDestroyable(float waitTime) {

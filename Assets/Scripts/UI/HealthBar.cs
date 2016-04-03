@@ -163,7 +163,6 @@ public class HealthBar : MonoBehaviour
         {
             skiesMovingDown[i].FormingGround();
         }
-        yield return new WaitForSeconds(1.5f);
         groundParticles.enableEmission = true;
 
         while (currentHealth < maxHealth)
@@ -210,7 +209,6 @@ public class HealthBar : MonoBehaviour
             {
                 shadows[i].color = new Color(0, 0, 0, health / 4 - 0.06f);
             }
-
             yield return new WaitForFixedUpdate();
         }
         Die();

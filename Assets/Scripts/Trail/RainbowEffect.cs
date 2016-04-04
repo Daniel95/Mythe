@@ -9,9 +9,9 @@ public class RainbowEffect : MonoBehaviour {
 
     private List<Vector3> colors = new List<Vector3>() {
         new Vector3(1,0,0),
-        new Vector3(0.25f,0.25f,0),
-        new Vector3(0.5f,0.5f,0),
         new Vector3(0.75f,0.25f,0),
+        new Vector3(0.5f,0.5f,0),
+        new Vector3(0.25f,0.75f,0),
 
         new Vector3(0,1,0),
         new Vector3(0,1,0.25f),

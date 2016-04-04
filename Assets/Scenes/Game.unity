@@ -2808,6 +2808,8 @@ MonoBehaviour:
   trailLengthHandler: {fileID: 752591568}
   player: {fileID: 1871364907}
   trailConnectPoint: {fileID: 754954601}
+  wings: {fileID: 165046, guid: 561ff91a4f2c796448a95e972ff6cced, type: 2}
+  wingAnimators: []
   trailAutoSpeedMultiplier: 4
   superModeSpeedMultiplier: 25
   trailGravityMultiplier: 50

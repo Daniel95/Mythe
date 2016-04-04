@@ -5,33 +5,56 @@ using UnityEngine.UI;
 
 public class RainbowEffect : MonoBehaviour {
 
-    private float fadeTime = 0.475f;
+    [SerializeField]
+    private float fadeTime = 0.5f;
 
     private List<Vector3> colors = new List<Vector3>() {
         new Vector3(1,0,0),
+        new Vector3(0.875f,0.125f,0),
         new Vector3(0.75f,0.25f,0),
+        new Vector3(0.625f,0.425f,0),
         new Vector3(0.5f,0.5f,0),
+        new Vector3(0.425f, 0.875f,0),
         new Vector3(0.25f,0.75f,0),
+        new Vector3(0.125f,0.875f,0),
 
         new Vector3(0,1,0),
+        new Vector3(0,1,0.125f),
         new Vector3(0,1,0.25f),
+        new Vector3(0,1,0.425f),
         new Vector3(0,1,0.5f),
+        new Vector3(0,1,0.625f),
         new Vector3(0,1,0.75f),
+        new Vector3(0,1,0.875f),
 
         new Vector3(0,1,1),
+        new Vector3(0,0.875f,1),
         new Vector3(0,0.75f,1),
+        new Vector3(0,0.625f,1),
         new Vector3(0,0.5f,1),
+        new Vector3(0,0.425f,1),
         new Vector3(0,0.25f,1),
+        new Vector3(0,0.125f,1),
 
         new Vector3(0,0,1),
+        new Vector3(0.125f,0,1),
         new Vector3(0.25f,0,1),
+        new Vector3(0.425f,0,1),
         new Vector3(0.5f,0,1),
+        new Vector3(0.625f,0,1),
         new Vector3(0.75f,0,1),
+        new Vector3(0.875f,0,1),
+
 
         new Vector3(1,0,1),
+        new Vector3(1,0,0.875f),
         new Vector3(1,0,0.75f),
+        new Vector3(1,0,0.625f),
         new Vector3(1,0,0.5f),
+        new Vector3(1,0,0.425f),
         new Vector3(1,0,0.25f),
+        new Vector3(1,0,0.125f),
+
     };
 
     private Vector3 colorCodes;

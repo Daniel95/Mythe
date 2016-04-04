@@ -17,7 +17,7 @@ public class PlayerDistance : ScoreBase {
     protected override void UpdateTextField()
     {
         base.UpdateTextField();
-        textField.text = standardText + (int)distance;
+        textField.text = ""+(int)distance;
     }
 
     public override void ResetValue()

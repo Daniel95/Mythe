@@ -3,6 +3,7 @@ using System.Collections;
 
 public class AimForward : MonoBehaviour {
     private Transform target;
+    [SerializeField]
     private float speed = 10;
     private Vector2 direction;
     public bool moves;

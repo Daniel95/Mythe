@@ -130,7 +130,7 @@ Prefab:
       objectReference: {fileID: 1871364907}
     - target: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 473226, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
       propertyPath: m_LocalScale.x
@@ -142,7 +142,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21287172, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.509
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6185740, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}

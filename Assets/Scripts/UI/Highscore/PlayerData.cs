@@ -2,8 +2,7 @@
 
 public class PlayerData : MonoBehaviour
 {
-    [SerializeField]
-    private string playerName;
+    private string playerName = "name";
 
     public string Name
     {

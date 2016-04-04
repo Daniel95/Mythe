@@ -59,7 +59,11 @@ public class ScoreBoard : MonoBehaviour
 
         foreach (string text in _score) {
             string[] myStr2 = text.Split('_');
-            namesFieldTextField.text += rank.ToString() + ". " + myStr2[0] + "\n";
+
+            if (saveData != null && myStr2[0] == saveData.PlayerName)
+                namesFieldTextField.text += rank.ToString() + ". " + myStr2[0] + " ik \n";
+            else
+                namesFieldTextField.text += rank.ToString() + ". " + myStr2[0] + "\n";
             scoresTextField.text += myStr2[1] + "\n";
 
             rank++;
@@ -77,7 +81,10 @@ public class ScoreBoard : MonoBehaviour
             string[] namesAndTimes = text.Split('_');
 
             //add all the names to the scoreboard
-            namesFieldTextField.text += rank.ToString() + ". " + namesAndTimes[0] + "\n";
+            if(saveData != null && namesAndTimes[0] == saveData.PlayerName)
+                namesFieldTextField.text += rank.ToString() + ". " + namesAndTimes[0] + "ik \n";
+            else
+                namesFieldTextField.text += rank.ToString() + ". " + namesAndTimes[0] + "\n";
 
             //make lists for each time type
             List<char> min = new List<char>();
@@ -103,8 +110,13 @@ public class ScoreBoard : MonoBehaviour
             sec.Reverse();
             frac.Reverse();
 
-            print("minutes =" + min);
-            var time = string.Format("{0:00}:{1:00}:{2:00}", new string(min.ToArray()), new string(sec.ToArray()), new string(frac.ToArray()));
+            string time = "";
+
+            if (new string(min.ToArray()) == "")
+                time = string.Format("{0:00}:{1:00}:{2:00}", 0.ToString(), new string(sec.ToArray()), new string(frac.ToArray()));
+            else
+                time = string.Format("{0:00}:{1:00}:{2:00}", new string(min.ToArray()), new string(sec.ToArray()), new string(frac.ToArray()));
+
             scoresTextField.text += time + "\n";
 
             rank++;

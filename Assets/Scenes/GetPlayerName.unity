@@ -354,7 +354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e069a9ea342b7a48b2ecf135ddb37e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
 --- !u!4 &303561831
 Transform:
   m_ObjectHideFlags: 0
@@ -593,8 +592,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 976a94028b1fa4a19bf059adb677005b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1013,8 +1012,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 976a94028b1fa4a19bf059adb677005b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1208,6 +1207,7 @@ GameObject:
   - 114: {fileID: 1539685725}
   - 114: {fileID: 1539685729}
   - 114: {fileID: 1539685730}
+  - 114: {fileID: 1539685731}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -1231,8 +1231,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 433}
-  m_SizeDelta: {x: 740, y: 138}
+  m_AnchoredPosition: {x: 6, y: 432}
+  m_SizeDelta: {x: 1131, y: 211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539685725
 MonoBehaviour:
@@ -1248,10 +1248,11 @@ MonoBehaviour:
   sceneLoader: {fileID: 1539685729}
   playerPrefs: {fileID: 33426449}
   loadData: {fileID: 1539685730}
+  saveData: {fileID: 1539685731}
   submitButton: {fileID: 1169934470}
   minNameLength: 2
   maxNameLength: 12
-  notAllowedCharacters: 5f00
+  notAllowedCharacters: 5f002d00400023002400210025005e00260024002a00280029002b003d00
   NameNotUnique: {fileID: 166777340}
 --- !u!114 &1539685726
 MonoBehaviour:
@@ -1346,8 +1347,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 976a94028b1fa4a19bf059adb677005b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1384,6 +1385,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataFieldName: scoreType
   NoConnectionImage: {fileID: 2130046791}
+--- !u!114 &1539685731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539685723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6397568ca451ae446851bb418e5cbadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveURL: http://14411.hosts.ma-cloud.nl/mythen/replacename.php
 --- !u!1 &1567385675
 GameObject:
   m_ObjectHideFlags: 0

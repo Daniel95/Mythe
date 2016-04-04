@@ -24,6 +24,18 @@ public class FinishGameController : MonoBehaviour {
 	[SerializeField]
 	private GameObject distanceIcon;
 
+    [SerializeField]
+    private PlayerDistance plrDistance;
+
+    [SerializeField]
+    private PlayerDeaths plrDeaths;
+
+    [SerializeField]
+    private TimePlaying timePlaying;
+
+    [SerializeField]
+    private PlayerPickups plrPickups;
+
     void OnEnable()
     {
         saveScores.FinishedSaving += DoneSaving;
@@ -46,7 +58,8 @@ public class FinishGameController : MonoBehaviour {
         healthBar.SetActive(false);
 		pauseButton.SetActive (false);
 		distanceIcon.SetActive (false);
-        saveScores.SavePlayerScores();
+
+        saveScores.SavePlayerScores(plrPickups.Pickups, plrDistance.Distance, timePlaying.TimeInt());
     }
 
     void DoneSaving() {

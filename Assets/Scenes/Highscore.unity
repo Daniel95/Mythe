@@ -544,7 +544,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -189, y: -772}
+  m_AnchoredPosition: {x: -189, y: -699}
   m_SizeDelta: {x: 467, y: 1031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344976618
@@ -2078,7 +2078,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1353611502}
   playerRankText: {fileID: 0}
   pageNumberText: {fileID: 1552038280}
-  scoresPerPage: 25
+  scoresPerPage: 16
 --- !u!114 &1939241499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,7 +2193,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 229, y: -772}
+  m_AnchoredPosition: {x: 229, y: -699}
   m_SizeDelta: {x: 423, y: 1026}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974821395

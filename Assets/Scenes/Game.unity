@@ -1339,7 +1339,7 @@ RectTransform:
   m_RootOrder: 8
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273.48, y: -766.1399}
+  m_AnchoredPosition: {x: 263, y: -746}
   m_SizeDelta: {x: 399, y: 732.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &298849452
@@ -4657,7 +4657,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 130255665}
   playerRankText: {fileID: 1877576024}
   pageNumberText: {fileID: 368330550}
-  scoresPerPage: 15
+  scoresPerPage: 14
 --- !u!114 &1665491612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4693,8 +4693,12 @@ MonoBehaviour:
   saveScores: {fileID: 1708392594}
   gameoverScreen: {fileID: 130255665}
   loadScoreController: {fileID: 149014190}
-  pauseButton: {fileID: 0}
-  distanceIcon: {fileID: 0}
+  pauseButton: {fileID: 2084432637}
+  distanceIcon: {fileID: 2084432637}
+  plrDistance: {fileID: 702655280}
+  plrDeaths: {fileID: 370080330}
+  timePlaying: {fileID: 1067181420}
+  plrPickups: {fileID: 146991383}
 --- !u!114 &1665491614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4787,11 +4791,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveURL: http://14411.hosts.ma-cloud.nl/mythen/savescores.php
-  plrDistance: {fileID: 702655280}
-  plrDeaths: {fileID: 370080330}
-  timePlaying: {fileID: 1067181420}
-  plrPickups: {fileID: 146991383}
-  chooseScoreToLoad: {fileID: 149014190}
 --- !u!1 &1712116972
 GameObject:
   m_ObjectHideFlags: 0
@@ -6177,8 +6176,8 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: -766.28}
-  m_SizeDelta: {x: 488, y: 732}
+  m_AnchoredPosition: {x: -172, y: -746}
+  m_SizeDelta: {x: 545, y: 732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2093795138
 MonoBehaviour:

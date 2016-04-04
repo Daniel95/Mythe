@@ -15,21 +15,6 @@ public class SaveData : MonoBehaviour {
 
     private List<int> dataTypeValues = new List<int>(); 
 
-    [SerializeField]
-    private PlayerDistance plrDistance;
-
-    [SerializeField]
-    private PlayerDeaths plrDeaths;
-
-    [SerializeField]
-    private TimePlaying timePlaying;
-
-    [SerializeField]
-    private PlayerPickups plrPickups;
-
-    [SerializeField]
-    private LoadScoreController chooseScoreToLoad;
-
     private string plrName = "Dev Team";
 
     void Awake()
@@ -41,15 +26,7 @@ public class SaveData : MonoBehaviour {
         }
     }
 
-    public void SavePlayerScores()
-    {
-        Save(plrPickups.Pickups, plrDistance.Distance, timePlaying.TimeInt());
-    }
-
-    private void Save(int _pickups, int _distance, int _time)
-    {
-        string url = saveURL;
-
+    public void SavePlayerScores(int _pickups, int _distance, int _time) {
         //add all scores to dataTypeValues
         dataTypeValues.Clear();
         dataTypeValues.Add(_distance);
@@ -58,14 +35,34 @@ public class SaveData : MonoBehaviour {
 
         WWWForm form = new WWWForm();
 
-        form.AddField("name", plrName);
-
         //send every dataTypeValue with a dataTypeName to the php file
-        for (int i = 0; i < dataTypeValues.Count; i++) {
+        for (int i = 0; i < dataTypeValues.Count; i++)
+        {
             form.AddField(DataTypes.dataTypeNames[i], dataTypeValues[i]);
         }
+
+        form.AddField("name", plrName);
+
+        Save(form);
+    }
+
+    public void ReplaceName(string _oldName, string _newName)
+    {
+        //finds an existing score with the old name, and replace it with the new name, 
+        //or add an new score with zero values with the new name
+        WWWForm form = new WWWForm();
+
+        form.AddField("oldName", _oldName);
+        form.AddField("newName", _newName);
+
+        Save(form);
+    }
+
+    private void Save(WWWForm _form)
+    {
+        string url = saveURL;
         
-        WWW www = new WWW(url, form);
+        WWW www = new WWW(url, _form);
 
         //if done loading, send text from file to Scoreboard
         StartCoroutine(WaitForRequest(www, false));

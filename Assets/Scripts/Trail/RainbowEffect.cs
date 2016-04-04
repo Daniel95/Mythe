@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RainbowEffect : MonoBehaviour {
 
-    private float fadeTime = 0.4f;
+    private float fadeTime = 0.475f;
 
     private List<Vector3> colors = new List<Vector3>() {
         new Vector3(1,0,0),

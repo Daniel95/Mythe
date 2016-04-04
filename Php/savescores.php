@@ -4,7 +4,6 @@ $username = "regenboogslang";
 $password = "mythenw8woord";
 $dbname = "mythen";
 
-$deviceId = $_POST['deviceId'];
 $name = $_POST['name'];
 $score = $_POST['score'];
 $pickups = $_POST['pickups'];
@@ -37,11 +36,10 @@ if($conn->query($sql)->num_rows > 0) {
     }
     
     if($oldScore["time"] > $time) {
-        $pickups = $oldScore["pickups"];
+        $time = $oldScore["time"];
     }
     
     $plays = $oldScore["plays"] + 1;
-    
     
     $sql2 = "UPDATE Scores SET name = '$name', pickups = '$pickups', distance = '$distance', time = '$time', plays = '$plays' WHERE name = '$name'";
         
@@ -49,7 +47,7 @@ if($conn->query($sql)->num_rows > 0) {
     
     echo "TEST Make new Score: " . $result . "<br>" . $conn->error . "<br>";
     
-    $sql2 = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, plays) VALUES ('$name', '$score', '$pickups', '$distance', '$time,', '$plays')";
+    $sql2 = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, plays) VALUES ('$name', '$score', '$pickups', '$distance', '$time', '$plays')";
 }
 
 

@@ -17,6 +17,9 @@ public class SavePlayerName : MonoBehaviour
     private LoadData loadData;
 
     [SerializeField]
+    private SaveData saveData;
+
+    [SerializeField]
     private Button submitButton;
 
     [SerializeField]
@@ -54,8 +57,13 @@ public class SavePlayerName : MonoBehaviour
 
     public void SubmitName(string _input)
     {
+        //make sure there are no caps
+        _input = _input.ToLower();
+
         if (_input.Length > minNameLength && _input.Length < maxNameLength && CharactersCheck(_input))
         {
+            NameNotUnique.SetActive(false);
+
             //save the input
             playerName = _input;
 
@@ -111,6 +119,8 @@ public class SavePlayerName : MonoBehaviour
     }
 
     private void SaveName() {
+        saveData.ReplaceName(playerData.Name, playerName);
+
         //save the player name in player prefs
         playerPrefs.SavePlayerName(playerName);
 

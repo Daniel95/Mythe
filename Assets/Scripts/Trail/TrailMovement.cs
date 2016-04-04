@@ -14,6 +14,11 @@ public class TrailMovement : MonoBehaviour
     [SerializeField]
     private Transform trailConnectPoint;
 
+    [SerializeField]
+    private GameObject wings;
+    [SerializeField]
+    private Animator[] wingAnimators;
+
     private PlayerMovement playerMovement;
 
     private PowerupHandler powerupHandler;
@@ -154,15 +159,30 @@ public class TrailMovement : MonoBehaviour
     void EnteredSuperMode()
     {
         //add a different sprite to a selected trail
-        if(trailParts.Count > wingTrailNumber)
-            trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = wingSprite;
+        if (trailParts.Count > wingTrailNumber)
+        {
+            foreach (Animator temp in wingAnimators)
+            {
+                temp.SetBool("superMode", true);
+                temp.gameObject.GetComponent<Fade>().StartFade();
+            }
+            wings.GetComponent<HaveSamePositionAsTarget>().Target = trailParts[wingTrailNumber-1].transform;
+        }
     }
 
     void EnteredNormalMode() {
         //reset the sprite of the selected trial
         if (trailParts.Count > wingTrailNumber)
-            trailParts[wingTrailNumber].GetComponent<SpriteRenderer>().sprite = normalSprite;
+        {
+            foreach (Animator temp in wingAnimators)
+            {
+                temp.SetBool("superMode", false);
+                temp.gameObject.GetComponent<Fade>().EndFade();
+            }
+        }
     }
+
+
 
     //disable the collision of the trails when the shield effect starts
     void AddedShieldPowerup() {
@@ -178,7 +198,6 @@ public class TrailMovement : MonoBehaviour
             trailParts[i].GetComponent<TrailTriggerDetection>().Shielded = false;
         }
     }
-
     public List<Transform> TrailParts
     {
         get { return trailParts; }

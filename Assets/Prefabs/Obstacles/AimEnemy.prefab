@@ -71,8 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9996332654fb72d4abeec0028fe2e0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 6
   moves: 0
-  distanceDetection: 5
+  distanceDetection: 4
 --- !u!114 &11442764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: -0.1
+  decrementHealthOnGameSpeed: 0
+  healthDecrementDivider: 10
   poolOnTouch: 1
   animToPlayName: 
   animScale: 1
@@ -170,6 +173,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: move
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: distanceDetection
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

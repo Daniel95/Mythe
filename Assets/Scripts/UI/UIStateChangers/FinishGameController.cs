@@ -18,6 +18,12 @@ public class FinishGameController : MonoBehaviour {
     [SerializeField]
     private LoadScoreController loadScoreController;
 
+	[SerializeField]
+	private GameObject pauseButton;
+
+	[SerializeField]
+	private GameObject distanceIcon;
+
     void OnEnable()
     {
         saveScores.FinishedSaving += DoneSaving;
@@ -38,6 +44,8 @@ public class FinishGameController : MonoBehaviour {
 
         gameoverScreen.SetActive(true);
         healthBar.SetActive(false);
+		pauseButton.SetActive (false);
+		distanceIcon.SetActive (false);
         saveScores.SavePlayerScores();
     }
 

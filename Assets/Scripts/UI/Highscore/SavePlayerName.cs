@@ -38,6 +38,8 @@ public class SavePlayerName : MonoBehaviour
 
         if (GameObject.FindGameObjectWithTag("Data") != null)
             playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>();
+
+        submitButton.interactable = false;
     }
 
     void OnEnable()
@@ -54,10 +56,9 @@ public class SavePlayerName : MonoBehaviour
     {
         if (_input.Length > minNameLength && _input.Length < maxNameLength && CharactersCheck(_input))
         {
+            //save the input
             playerName = _input;
 
-            //save the name in playerName script
-            //_plrName.Name = _input;
             //the player can click the button to continue
             submitButton.interactable = true;
 

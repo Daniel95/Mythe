@@ -103,6 +103,7 @@ public class ScoreBoard : MonoBehaviour
             sec.Reverse();
             frac.Reverse();
 
+            print("minutes =" + min);
             var time = string.Format("{0:00}:{1:00}:{2:00}", new string(min.ToArray()), new string(sec.ToArray()), new string(frac.ToArray()));
             scoresTextField.text += time + "\n";
 

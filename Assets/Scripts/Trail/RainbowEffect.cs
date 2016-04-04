@@ -5,15 +5,33 @@ using UnityEngine.UI;
 
 public class RainbowEffect : MonoBehaviour {
 
-    private float fadeTime = 0.55f;
+    private float fadeTime = 0.4f;
 
     private List<Vector3> colors = new List<Vector3>() {
         new Vector3(1,0,0),
+        new Vector3(0.25f,0.25f,0),
+        new Vector3(0.5f,0.5f,0),
+        new Vector3(0.75f,0.25f,0),
+
         new Vector3(0,1,0),
+        new Vector3(0,1,0.25f),
+        new Vector3(0,1,0.5f),
+        new Vector3(0,1,0.75f),
+
         new Vector3(0,1,1),
+        new Vector3(0,0.75f,1),
+        new Vector3(0,0.5f,1),
+        new Vector3(0,0.25f,1),
+
         new Vector3(0,0,1),
+        new Vector3(0.25f,0,1),
+        new Vector3(0.5f,0,1),
+        new Vector3(0.75f,0,1),
+
         new Vector3(1,0,1),
-        new Vector3(1,0,0),
+        new Vector3(1,0,0.75f),
+        new Vector3(1,0,0.5f),
+        new Vector3(1,0,0.25f),
     };
 
     private Vector3 colorCodes;
@@ -50,6 +68,7 @@ public class RainbowEffect : MonoBehaviour {
     }
 
     public void StartColor(int _attachedTrailColorIndex) {
+        //set the start color right, so it fits in with the other colors
         colorIndex = _attachedTrailColorIndex - 1;
         if (colorIndex < 0)
             colorIndex = colors.Count - 1;
@@ -61,14 +80,10 @@ public class RainbowEffect : MonoBehaviour {
         if (nextColorIndex >= colors.Count)
             nextColorIndex = 0;
 
+        //our next color in vector3
         colorCodes = Vector3.SmoothDamp(colorCodes, colors[nextColorIndex], ref velocity, fadeTime / GameSpeed.SpeedMultiplier - GameSpeed.ExtraSpeed);
-        /*
-        Vector3 distanceV3 = colorCodes - colors[nextColorIndex];
-        float distanceF = Mathf.Abs(distanceV3.x) + Mathf.Abs(distanceV3.y) + Mathf.Abs(distanceV3.z);
-        if (distanceF < 100) {
-            colorIndex = nextColorIndex;
-        }*/
 
+        //when we should go to the next color
         if (Vector3.Distance(colorCodes, colors[nextColorIndex]) < 0.1f) {
             colorIndex = nextColorIndex;
         }

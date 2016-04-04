@@ -1148,7 +1148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e8b51152091419e9ab3a88da05ac9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 0.25
   colorIndex: 1
 --- !u!114 &226399553
 MonoBehaviour:
@@ -4694,6 +4693,8 @@ MonoBehaviour:
   saveScores: {fileID: 1708392594}
   gameoverScreen: {fileID: 130255665}
   loadScoreController: {fileID: 149014190}
+  pauseButton: {fileID: 0}
+  distanceIcon: {fileID: 0}
 --- !u!114 &1665491614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6273,5 +6274,6 @@ MonoBehaviour:
   audioSource: {fileID: 1164408483}
   gameOverAudioClip: {fileID: 8300000, guid: 0f1153822ffd2472cbca6d85fd0ca381, type: 3}
   superModeAudioClip: {fileID: 8300000, guid: d5758a2915862d5419b44a4f0682dd0f, type: 3}
+  normalMusic: {fileID: 8300000, guid: dbdab70c7fbb94877a0f1769d5945e66, type: 3}
   supermodeSoundFadeSpeed: 0.0006
   groundParticles: {fileID: 19813306, guid: f3fd78a8b379e5446a14568ce39a87d9, type: 2}

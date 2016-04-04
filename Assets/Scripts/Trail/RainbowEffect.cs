@@ -5,29 +5,22 @@ using UnityEngine.UI;
 
 public class RainbowEffect : MonoBehaviour {
 
-    [SerializeField]
-    private float fadeSpeed = 1;
+    private float fadeTime = 0.55f;
 
-    private float fading = 0.01f;
-
-    private float red = 1;
-    private float green = 0;
-    private float blue = 0;
-
-    private List<Color> colors = new List<Color>() {
-        Color.red,
-        Color.yellow,
-        Color.green,
-        Color.blue,
-        //new Color(255,0,0),
-        //new Color(255,188,0),
-        //new Color(255,255,0),
-        //new Color(77,255,0),
-        //new Color(0,73,255),
-        //new Color(149,0,255),
-        //new Color(255,0,255),
+    private List<Vector3> colors = new List<Vector3>() {
+        new Vector3(1,0,0),
+        new Vector3(0,1,0),
+        new Vector3(0,1,1),
+        new Vector3(0,0,1),
+        new Vector3(1,0,1),
+        new Vector3(1,0,0),
     };
 
+    private Vector3 colorCodes;
+
+    private Vector3 velocity;
+
+    [SerializeField]
     private int colorIndex = 1;
 
     private bool isUI;
@@ -46,7 +39,7 @@ public class RainbowEffect : MonoBehaviour {
             image = GetComponent<Image>();
         }
     }
-    /*
+    
     void Update () {
         
         if (!isUI)
@@ -55,14 +48,6 @@ public class RainbowEffect : MonoBehaviour {
             image.color = GetColor();
             
     }
-*/
-    void FixedUpdate() {
-        GetColor();
-        if (!isUI)
-            sprite.color = new Color(red, green, blue);
-        else
-            image.color = new Color(red, green, blue);
-    }
 
     public void StartColor(int _attachedTrailColorIndex) {
         colorIndex = _attachedTrailColorIndex - 1;
@@ -70,48 +55,25 @@ public class RainbowEffect : MonoBehaviour {
             colorIndex = colors.Count - 1;
     }
 
-    /*
     private Color GetColor() {
 
         int nextColorIndex = colorIndex + 1;
         if (nextColorIndex >= colors.Count)
             nextColorIndex = 0;
 
-        Color newColor = Color.Lerp(colors[colorIndex], colors[nextColorIndex], Mathf.PingPong(Time.time, 1));
+        colorCodes = Vector3.SmoothDamp(colorCodes, colors[nextColorIndex], ref velocity, fadeTime / GameSpeed.SpeedMultiplier - GameSpeed.ExtraSpeed);
+        /*
+        Vector3 distanceV3 = colorCodes - colors[nextColorIndex];
+        float distanceF = Mathf.Abs(distanceV3.x) + Mathf.Abs(distanceV3.y) + Mathf.Abs(distanceV3.z);
+        if (distanceF < 100) {
+            colorIndex = nextColorIndex;
+        }*/
 
-        if (newColor == colors[nextColorIndex]) {
+        if (Vector3.Distance(colorCodes, colors[nextColorIndex]) < 0.1f) {
             colorIndex = nextColorIndex;
         }
 
-        return newColor;
-    }*/
-
-    private void GetColor()
-    {
-        if (red >= 1 && green < 1 && blue <= 0)
-        {
-            green += fading;
-        }
-        else if (red >= 0 && green >= 1 && blue <= 0)
-        {
-            red -= fading;
-        }
-        else if (red <= 0 && green >= 1 && blue < 1)
-        {
-            blue += fading;
-        }
-        else if (red <= 0 && green >= 0 && blue >= 1)
-        {
-            green -= fading;
-        }
-        else if (red < 1 && green <= 0 && blue >= 1)
-        {
-            red += fading;
-        }
-        else if (red >= 1 && green <= 0 && blue >= 0)
-        {
-            blue -= fading;
-        }
+        return new Color(colorCodes.x,colorCodes.y,colorCodes.z, 1);
     }
 
     public int ColorIndex {

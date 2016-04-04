@@ -1148,15 +1148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e8b51152091419e9ab3a88da05ac9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 0.02
-  colors:
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 1, g: 0.76551723, b: 0, a: 0}
-  - {r: 1, g: 0.9724138, b: 0, a: 0}
-  - {r: 0, g: 1, b: 0.13103461, a: 0}
-  - {r: 0, g: 0.37931037, b: 1, a: 0}
-  - {r: 0.3241377, g: 0, b: 1, a: 0}
-  - {r: 1, g: 0, b: 0.972414, a: 0}
+  fadeTime: 0.25
+  colorIndex: 1
 --- !u!114 &226399553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4050,6 +4043,10 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2094346090}
+    - target: {fileID: 11422806, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: fadeTime
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0

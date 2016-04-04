@@ -70,7 +70,7 @@ public class TrailLengthHandler : MonoBehaviour {
             if (trailMovement.TrailParts.Count == 1)
             {
                 spawnedObject.transform.position = trailMovement.TrailConnectPoint.position;
-                spawnedObject.GetComponent<RainbowEffect>().StartColor(0);
+                spawnedObject.GetComponent<RainbowEffect>().StartColor(1);
             }
             else
             {

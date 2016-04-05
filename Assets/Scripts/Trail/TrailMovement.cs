@@ -53,12 +53,6 @@ public class TrailMovement : MonoBehaviour
     [SerializeField]
     private int wingTrailNumber = 4;
 
-    [SerializeField]
-    private Sprite normalSprite;
-
-    [SerializeField]
-    private Sprite wingSprite;
-
     private bool superMode;
 
     private List<Transform> trailParts = new List<Transform>();

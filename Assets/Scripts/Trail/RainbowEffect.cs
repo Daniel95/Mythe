@@ -8,6 +8,9 @@ public class RainbowEffect : MonoBehaviour {
     [SerializeField]
     private float fadeTime = 0.5f;
 
+    [SerializeField]
+    private int superModeExtraSpeedMultiplier = 10;
+
     private List<Vector3> colors = new List<Vector3>() {
         new Vector3(1,0,0),
         new Vector3(0.875f,0.125f,0),
@@ -104,7 +107,7 @@ public class RainbowEffect : MonoBehaviour {
             nextColorIndex = 0;
 
         //our next color in vector3
-        colorCodes = Vector3.SmoothDamp(colorCodes, colors[nextColorIndex], ref velocity, fadeTime / GameSpeed.SpeedMultiplier - GameSpeed.ExtraSpeed);
+        colorCodes = Vector3.SmoothDamp(colorCodes, colors[nextColorIndex], ref velocity, fadeTime / GameSpeed.SpeedMultiplier - (GameSpeed.ExtraSpeed * superModeExtraSpeedMultiplier));
 
         //when we should go to the next color
         if (Vector3.Distance(colorCodes, colors[nextColorIndex]) < 0.1f) {

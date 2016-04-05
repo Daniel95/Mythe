@@ -131,8 +131,10 @@ public class ScoreBoard : MonoBehaviour
         {
             for (int i = 0; i < dataLines.Length; i++) {
                 string[] splitLines = dataLines[i].Split('_');
+                //if the name (first part of the line array) is the same as the saved name, it is our score
                 if (splitLines[0] == saveData.PlayerName) {
                     playerRankText.text = (i + 1).ToString();
+                    SetPageNumber(Mathf.CeilToInt((float)i / scoresPerPage));
                     break;
                 }
             }
@@ -160,7 +162,7 @@ public class ScoreBoard : MonoBehaviour
         return cuttedLines;
     }
 
-    public void ChangePageNumber(int _change)
+    public void ScrollPageNumber(int _change)
     {
         //change the page number
         pageNumber += _change;
@@ -170,6 +172,17 @@ public class ScoreBoard : MonoBehaviour
             pageNumber = 1;
         else if (pageNumber < 1)
             pageNumber = maxPageNumber;
+
+        pageNumberText.text = pageNumber.ToString();
+
+        //make the new page, with the same string only differently cut.
+        MakeABoard(CutLines(savedScores), isTimeData);
+    }
+
+    public void SetPageNumber(int _newPageNumber)
+    {
+        //change the page number
+        pageNumber = _newPageNumber;
 
         pageNumberText.text = pageNumber.ToString();
 

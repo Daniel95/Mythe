@@ -1167,6 +1167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 0.5
+  superModeExtraSpeedMultiplier: 10
   colorIndex: 1
 --- !u!114 &226399553
 MonoBehaviour:
@@ -2881,8 +2882,6 @@ MonoBehaviour:
   trailSizeDecrement: 0.025
   healthbar: {fileID: 2094346090}
   wingTrailNumber: 3
-  normalSprite: {fileID: 21300000, guid: ae9e4725ea425dc40a9c55f4323ed0cd, type: 3}
-  wingSprite: {fileID: 21300000, guid: a6206c3ab449e4bafa7403aad005e7fc, type: 3}
 --- !u!4 &752591567
 Transform:
   m_ObjectHideFlags: 0
@@ -2909,7 +2908,7 @@ MonoBehaviour:
   trailPoolName: Trail
   trailMovement: {fileID: 752591566}
   healthBar: {fileID: 2094346090}
-  trailMaxLength: 20
+  trailMaxLength: 25
   trailMinCutLength: 3
 --- !u!4 &754954601 stripped
 Transform:
@@ -3004,7 +3003,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1665491611}
-        m_MethodName: ChangePageNumber
+        m_MethodName: ScrollPageNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4104,7 +4103,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 448578, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.099999905
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 448578, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4399,7 +4398,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1665491611}
-        m_MethodName: ChangePageNumber
+        m_MethodName: ScrollPageNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5755,7 +5754,7 @@ MonoBehaviour:
     Count: 30
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
+  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0

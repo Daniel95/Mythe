@@ -211,7 +211,7 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.050064, y: 240}
+  m_AnchoredPosition: {x: 2.050064, y: 92}
   m_SizeDelta: {x: 441, y: 184.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110061915
@@ -368,7 +368,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6499939, y: 81}
+  m_AnchoredPosition: {x: 1.6499939, y: 257}
   m_SizeDelta: {x: 441, y: 184.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287475043
@@ -544,8 +544,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -189, y: -699}
-  m_SizeDelta: {x: 467, y: 1031}
+  m_AnchoredPosition: {x: -131, y: -699}
+  m_SizeDelta: {x: 584, y: 1031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344976618
 MonoBehaviour:
@@ -783,7 +783,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0500603, y: 81}
+  m_AnchoredPosition: {x: 2.0500603, y: 257}
   m_SizeDelta: {x: 441, y: 184.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &690085051
@@ -1251,7 +1251,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 294.7, y: 81}
+  m_AnchoredPosition: {x: 294.7, y: 257}
   m_SizeDelta: {x: 145, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922656078
@@ -1375,7 +1375,7 @@ RectTransform:
   m_RootOrder: 11
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 297, y: 233}
+  m_AnchoredPosition: {x: 297, y: 85}
   m_SizeDelta: {x: 133.4, y: 142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1178288860
@@ -1419,7 +1419,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1939241498}
-        m_MethodName: ChangePageNumber
+        m_MethodName: ScrollPageNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1874,7 +1874,7 @@ RectTransform:
   m_RootOrder: 10
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -299, y: 229}
+  m_AnchoredPosition: {x: -299, y: 81}
   m_SizeDelta: {x: 133.4, y: 149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764313807
@@ -1918,7 +1918,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1939241498}
-        m_MethodName: ChangePageNumber
+        m_MethodName: ScrollPageNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2285,7 +2285,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -291.3, y: 81}
+  m_AnchoredPosition: {x: -291.3, y: 257}
   m_SizeDelta: {x: 145, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038159469

@@ -62,21 +62,13 @@ public class InteractableObject : MonoBehaviour {
         //reset itself to its starting scale, in case it was scaled up or down during an animation
         transform.localScale = startScale;
         moveDown.Move = true;
+
         if (decrementHealthOnGameSpeed)
         {
-            if (healthValue - HealthDecrement > minimumHealthValue)
-            {
-                HealthDecrement = (GameSpeed.SpeedMultiplier - 1f) / 10f;
-            }
-            else
-            {
-                HealthDecrement = 0f;
-                healthValue = minimumHealthValue;
-            }
         }
     }
 
-	public virtual void Touched() 
+	public void Touched() 
 	{
 		if (isEnabled) {
             if (playAnimOnDeath)
@@ -97,8 +89,9 @@ public class InteractableObject : MonoBehaviour {
 
 	public float HealthValue
 	{
-		get { return healthValue - HealthDecrement; }
-	}
+        //get { return healthValue - HealthDecrement; }
+        get { return healthValue; }
+    }
 
 	IEnumerator PoolAfterAnimation()
 	{

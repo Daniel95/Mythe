@@ -6,7 +6,8 @@ public class HaveSamePositionAsTarget : MonoBehaviour {
     private Transform target;
     [SerializeField]
     private bool rotatedAsTarget = false;
-	void FixedUpdate () {
+
+	void Update () {
         transform.position = target.position;
         if(rotatedAsTarget)
         {

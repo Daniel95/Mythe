@@ -65,7 +65,11 @@ public class InteractableObject : MonoBehaviour {
 
         if (decrementHealthOnGameSpeed)
         {
-            healthValue /= (GameSpeed.SpeedMultiplier / 2);
+            //reduce the health of water depeding on the speed of our game
+            healthValue /= (GameSpeed.SpeedMultiplier - 1) / 2 + 1;
+
+            if (healthValue < minimumHealthValue)
+                healthValue = minimumHealthValue;
         }
     }
 

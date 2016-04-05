@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 0.5
+  superModeExtraSpeedMultiplier: 10
   colorIndex: 1
 --- !u!114 &11467024
 MonoBehaviour:
@@ -128,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 0.08
+  minimumHealthValue: 0.05
   decrementHealthOnGameSpeed: 0
   healthDecrementDivider: 10
   poolOnTouch: 1

@@ -12,8 +12,8 @@ GameObject:
   - 114: {fileID: 11418156}
   - 114: {fileID: 11434388}
   - 114: {fileID: 11459722}
-  - 114: {fileID: 11442764}
   - 61: {fileID: 6193942}
+  - 114: {fileID: 11476376}
   m_Layer: 0
   m_Name: AimEnemy
   m_TagString: Obstacle
@@ -71,21 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9996332654fb72d4abeec0028fe2e0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 5
   moves: 0
   distanceDetection: 4
---- !u!114 &11442764
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 133724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ffabd11518b4658a474c6ac764ae93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yDestroyPosition: -6
 --- !u!114 &11459722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,6 +92,18 @@ MonoBehaviour:
   animToPlayName: 
   animScale: 1
   playAnimOnDeath: 0
+--- !u!114 &11476376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544125c2da3b10841b7cc64f7306188e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yDestroyPosition: -6
 --- !u!212 &21287668
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -176,7 +176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: move
@@ -185,6 +185,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: distanceDetection
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

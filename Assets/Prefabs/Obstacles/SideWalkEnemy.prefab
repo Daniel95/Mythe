@@ -11,9 +11,9 @@ GameObject:
   - 212: {fileID: 21249422}
   - 114: {fileID: 11494310}
   - 114: {fileID: 11466234}
-  - 114: {fileID: 11497726}
   - 61: {fileID: 6128968}
   - 114: {fileID: 11417062}
+  - 114: {fileID: 11409846}
   m_Layer: 0
   m_Name: SideWalkEnemy
   m_TagString: Obstacle
@@ -47,6 +47,18 @@ BoxCollider2D:
   m_Offset: {x: 0.062586546, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.42590144, y: 1.13}
+--- !u!114 &11409846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544125c2da3b10841b7cc64f7306188e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yDestroyPosition: -6
 --- !u!114 &11417062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,18 +105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: 1
   speed: 1
---- !u!114 &11497726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ffabd11518b4658a474c6ac764ae93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yDestroyPosition: -6
 --- !u!212 &21249422
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -130,7 +130,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 56c69d3382c2ad448837261120fe3bef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,10 +164,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: move
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

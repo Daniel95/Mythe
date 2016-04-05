@@ -11,7 +11,7 @@ public class AimForward : MonoBehaviour {
     private float distanceDetection;
     private float distance;
     private GameObject player;
-    public void Start()
+    public void OnEnable()
     {
         player = GameObject.Find("Player");
         if (player != null)
@@ -33,12 +33,10 @@ public class AimForward : MonoBehaviour {
                 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 yield return new WaitForFixedUpdate();
             }
-        
-        if (GetComponent<MoveDown>() != null)
-        {
-            GetComponent<MoveDown>().enabled = false;
-        }
         moves = true;
+        yield return new WaitForSeconds(10f);
+
+        transform.Translate(new Vector3(0f, -100f, 0f));
     }
     
     void FixedUpdate () {

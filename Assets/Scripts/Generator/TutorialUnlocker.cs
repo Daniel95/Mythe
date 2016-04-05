@@ -28,13 +28,12 @@ public class TutorialUnlocker : MonoBehaviour {
         }
         generateChunk.MakeChosenChunk(chunkHolder.UncompressChunk("111111111111111111111111111121111111111111121111111121111111111111113311113311133331133331333333333333333333000000"));
 
-
         //intro chunk for shield pick up.
         while (playerDistance.Distance < 20)
         {
             yield return new WaitForFixedUpdate();
         }
-        generateChunk.MakeChosenChunk(chunkHolder.UncompressChunk("000000000000111111111111000000005500000000010010100001"));
+        generateChunk.MakeChosenChunk(chunkHolder.UncompressChunk("000000000000111111111111000000000500000000010010100001"));
 
 
         //intro chunk for magnet pick up up.

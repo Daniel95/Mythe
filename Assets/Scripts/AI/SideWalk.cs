@@ -15,29 +15,31 @@ public class SideWalk : MonoBehaviour {
     [SerializeField]
     private bool randomPositions = false;
     void Start () {
+        Debug.Log("enemy: " + transform.position.z);
         //sets up the position and direction the object should go.
         direction = new Vector2(speed, 0f);
-
-        Vector2 temp = transform.position;
+        Vector3 temp = transform.position;
         temp.x = Xmin;
         transform.position = temp;
-	}
+        Debug.Log("enemy: " + transform.position.z);
+    }
 	
 	void FixedUpdate () {
 
         //change direction when it reaches its Xmin or Xmax.
         if(transform.position.x > Xmax)
         {
-            direction = new Vector2(-speed, 0f);
+            direction = new Vector3(-speed, 0f,0f);
             gameObject.transform.localScale *= -1;
             if(randomPositions)
             {
                 Xmin = Random.Range(-2.8f, Xmax);
             }
+            
         }
         else if (transform.position.x < Xmin)
         {
-            direction = new Vector2(speed, 0f);
+            direction = new Vector3(speed, 0f,0f);
             gameObject.transform.localScale *= -1;
             if (randomPositions)
             {

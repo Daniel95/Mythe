@@ -2141,7 +2141,7 @@ MonoBehaviour:
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 153716, guid: 55cefc05158f86a44ad43daa3f52cbed, type: 2}
-    Count: 10
+    Count: 30
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 154608, guid: 9ac6003efc820b746999f1b588f5a735, type: 2}

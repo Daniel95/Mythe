@@ -12,39 +12,38 @@ public class SideWalk : MonoBehaviour {
     [SerializeField]
     private float speed;
     private Vector2 direction;
-    [SerializeField]
-    private bool randomPositions = false;
-    void Start () {
-        //sets up the position and direction the object should go.
-        direction = new Vector2(speed, 0f);
-
-        Vector2 temp = transform.position;
-        temp.x = Xmin;
-        transform.position = temp;
-	}
-	
-	void FixedUpdate () {
-
-        //change direction when it reaches its Xmin or Xmax.
-        if(transform.position.x > Xmax)
+    private bool left = false;
+    private Vector3 scale;
+    void Start()
+    {
+        
+    }
+    void OnEnable () {
+        scale = new Vector3(0.6f, 0.6f, 0.6f);
+        StartCoroutine(MoveRight());
+    }
+    IEnumerator MoveLeft()
+    {
+        transform.localScale = -scale;
+        direction = new Vector3(-speed, 0f, 0f);
+        while (transform.position.x > Xmin)
         {
-            direction = new Vector2(-speed, 0f);
-            gameObject.transform.localScale *= -1;
-            if(randomPositions)
-            {
-                Xmin = Random.Range(-2.8f, Xmax);
-            }
+            yield return new WaitForFixedUpdate();
         }
-        else if (transform.position.x < Xmin)
+        StartCoroutine(MoveRight());
+    }
+    IEnumerator MoveRight()
+    {
+        transform.localScale = scale;
+        direction = new Vector3(speed, 0f, 0f);
+        while (transform.position.x < Xmax)
         {
-            direction = new Vector2(speed, 0f);
-            gameObject.transform.localScale *= -1;
-            if (randomPositions)
-            {
-                Xmax = Random.Range(Xmin,2.8f);
-            }
+            yield return new WaitForFixedUpdate();
         }
+        StartCoroutine(MoveLeft());
+    }
 
+    void FixedUpdate () {
         //moves the object with the assigned direction.
         transform.Translate(direction);
     }

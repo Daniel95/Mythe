@@ -8,7 +8,7 @@ public class InteractableObject : MonoBehaviour {
     */
 	[SerializeField]
 	private float healthValue = 0.1f;
-
+    [SerializeField]
     private float minimumHealthValue = 0.05f;
 
     [SerializeField]

@@ -4161,6 +4161,22 @@ Prefab:
       propertyPath: fadeTime
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 21267848, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21267848, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21267848, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21267848, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -5533,7 +5549,6 @@ MonoBehaviour:
   Xmin: -3
   Xmax: 3
   speed: 0.11
-  randomPositions: 1
 --- !u!212 &1927615737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5836,7 +5851,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015117531}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bc98ae81e5e6624fa7397436267d369, type: 3}
   m_Name: 

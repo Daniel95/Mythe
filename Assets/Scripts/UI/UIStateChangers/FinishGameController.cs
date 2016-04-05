@@ -21,8 +21,6 @@ public class FinishGameController : MonoBehaviour {
 	[SerializeField]
 	private GameObject pauseButton;
 
-	[SerializeField]
-	private GameObject distanceIcon;
 
     [SerializeField]
     private PlayerDistance plrDistance;
@@ -57,7 +55,6 @@ public class FinishGameController : MonoBehaviour {
         gameoverScreen.SetActive(true);
         healthBar.SetActive(false);
 		pauseButton.SetActive (false);
-		distanceIcon.SetActive (false);
 
         saveScores.SavePlayerScores(plrPickups.Pickups, plrDistance.Distance, timePlaying.TimeInt());
     }

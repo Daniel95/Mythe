@@ -8,7 +8,7 @@ public class InteractableObject : MonoBehaviour {
     */
 	[SerializeField]
 	private float healthValue = 0.1f;
-
+    [SerializeField]
     private float minimumHealthValue = 0.05f;
 
     [SerializeField]
@@ -66,12 +66,13 @@ public class InteractableObject : MonoBehaviour {
         {
             if (healthValue - HealthDecrement > minimumHealthValue)
             {
-                HealthDecrement = (GameSpeed.SpeedMultiplier - 1f) / 10f;
+                HealthDecrement = (GameSpeed.SpeedMultiplier - 1f) / 20f;
             }
             else
             {
                 HealthDecrement = 0f;
-                healthValue = minimumHealthValue;
+                healthValue = minimumHealthValue *0.99f;
+                Debug.Log("minimum water value reached");
             }
         }
     }

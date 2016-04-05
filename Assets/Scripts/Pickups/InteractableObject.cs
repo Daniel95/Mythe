@@ -65,6 +65,7 @@ public class InteractableObject : MonoBehaviour {
 
         if (decrementHealthOnGameSpeed)
         {
+            healthValue /= (GameSpeed.SpeedMultiplier / 2);
         }
     }
 

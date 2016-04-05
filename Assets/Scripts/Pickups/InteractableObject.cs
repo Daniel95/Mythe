@@ -14,11 +14,6 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField]
     private bool decrementHealthOnGameSpeed = false;
 
-    [SerializeField]
-    private float healthDecrementDivider = 10;
-
-    private float HealthDecrement = 0;
-
 	[SerializeField]
 	private bool poolOnTouch;
 

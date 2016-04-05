@@ -12,7 +12,6 @@ public class SideWalk : MonoBehaviour {
     [SerializeField]
     private float speed;
     private Vector2 direction;
-    private bool left = false;
     private Vector3 scale;
     void Start()
     {

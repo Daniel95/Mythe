@@ -61,7 +61,7 @@ public class ScoreBoard : MonoBehaviour
             string[] myStr2 = text.Split('_');
 
             if (saveData != null && myStr2[0] == saveData.PlayerName)
-                namesFieldTextField.text += rank.ToString() + ". " + myStr2[0] + " ik \n";
+                namesFieldTextField.text += rank.ToString() + ". " + myStr2[0] + " <--- \n";
             else
                 namesFieldTextField.text += rank.ToString() + ". " + myStr2[0] + "\n";
             scoresTextField.text += myStr2[1] + "\n";
@@ -82,7 +82,7 @@ public class ScoreBoard : MonoBehaviour
 
             //add all the names to the scoreboard
             if(saveData != null && namesAndTimes[0] == saveData.PlayerName)
-                namesFieldTextField.text += rank.ToString() + ". " + namesAndTimes[0] + "ik \n";
+                namesFieldTextField.text += rank.ToString() + ". " + namesAndTimes[0] + " <--- \n";
             else
                 namesFieldTextField.text += rank.ToString() + ". " + namesAndTimes[0] + "\n";
 

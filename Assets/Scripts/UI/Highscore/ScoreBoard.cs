@@ -134,7 +134,7 @@ public class ScoreBoard : MonoBehaviour
                 //if the name (first part of the line array) is the same as the saved name, it is our score
                 if (splitLines[0] == saveData.PlayerName) {
                     playerRankText.text = (i + 1).ToString();
-                    SetPageNumber(Mathf.CeilToInt((float)i / scoresPerPage));
+                    SetPageNumber(Mathf.CeilToInt(((float)i + 1) / scoresPerPage));
                     break;
                 }
             }

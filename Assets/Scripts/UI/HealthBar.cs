@@ -158,7 +158,7 @@ public class HealthBar : MonoBehaviour
             EnterNormalMode();
 
         //stops the supermode music with a fade
-        //StartCoroutine(SoundFade());
+        StartCoroutine(SoundFade());
 
 		audioSource.clip = normalMusic;
 		audioSource.Play ();

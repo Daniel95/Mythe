@@ -9,6 +9,7 @@ $score = $_POST['score'];
 $pickups = $_POST['pickups'];
 $distance = $_POST['distance'];
 $time = $_POST['time'];
+$unlockCode = $_POST['unlockCode'];
 $plays = 1;
 
 // Create connection
@@ -17,7 +18,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
+} else if($unlockCode == 124213124) {
 
 $sql = "SELECT * FROM Scores WHERE name = '$name'";
 
@@ -47,7 +48,7 @@ if($conn->query($sql)->num_rows > 0) {
     
     echo "TEST Make new Score: " . $result . "<br>" . $conn->error . "<br>";
     
-    $sql2 = "INSERT INTO `$dbname`.`Scores` (name, score, pickups, distance, time, plays) VALUES ('$name', '$score', '$pickups', '$distance', '$time', '$plays')";
+    $sql2 = "INSERT INTO `$dbname`.`Scores` (name, pickups, distance, time, plays) VALUES ('$name', '$pickups', '$distance', '$time', '$plays')";
 }
 
 
@@ -55,6 +56,8 @@ if ($conn->query($sql2)) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql2 . "<br>" . $conn->error;
+}
+    
 }
 
 $conn->close();

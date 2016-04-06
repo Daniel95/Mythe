@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class ScoreBase : MonoBehaviour {
 
     //if we are counting the score or not
+    [SerializeField]
     private bool counting = true;
 
     //the text field we show the player the text in

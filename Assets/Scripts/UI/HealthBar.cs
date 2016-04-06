@@ -80,22 +80,21 @@ public class HealthBar : MonoBehaviour
         currentHealth =  maxHealth / 2;
         health = currentHealth;
 
-        //begins with the coroutine normal mode.
-        StartCoroutine(NormalMode());
-
         //declares the generator for supermode.
         generateOneObject = superGenerator.GetComponent<GenerateOneObject>();
-
-        //begins updating the update healthbar.
-        StartCoroutine(UpdateHealthbar());
-
-        //begins with generating chunks.
-        generateChunk.MakeRandomChunk();
 
         startVolume = audioSource.volume;
 
 		audioSource.clip = normalMusic;
 		audioSource.Play ();
+    }
+
+    public void StartHealthbar() {
+        //begins updating the update healthbar.
+        StartCoroutine(UpdateHealthbar());
+
+        //begins with the coroutine normal mode.
+        StartCoroutine(NormalMode());
     }
 
     public void addValue(float _value)

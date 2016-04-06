@@ -62,7 +62,6 @@ public class TrailMovement : MonoBehaviour
     {
         playerMovement = player.GetComponent<PlayerMovement>();
         powerupHandler = player.GetComponent<PowerupHandler>();
-        StartTrail();
     }
 
     void OnEnable()
@@ -81,18 +80,19 @@ public class TrailMovement : MonoBehaviour
         powerupHandler.RemovedShield -= RemovedShieldPowerup;
     }
 
+    /*
     public void StartTrail()
     {
-        StartCoroutine(WaitForObjectPool());
+        trailLengthHandler.StartTrailLengthUpdater();
     }
-
+    
     private IEnumerator WaitForObjectPool()
     {
         //wait one frame, so the object pool is loaded
         yield return new WaitForFixedUpdate();
 
         trailLengthHandler.StartTrailLengthUpdater();
-    }
+    }*/
 
 
     void FixedUpdate()

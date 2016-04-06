@@ -10,7 +10,8 @@ public class InteractableObject : MonoBehaviour {
 	private float healthValue = 0.1f;
     [SerializeField]
     private float minimumHealthValue = 0.05f;
-
+    [SerializeField]
+    private float decrementScale = 3;
     [SerializeField]
     private bool decrementHealthOnGameSpeed = false;
 
@@ -61,7 +62,7 @@ public class InteractableObject : MonoBehaviour {
         if (decrementHealthOnGameSpeed)
         {
             //reduce the health of water depeding on the speed of our game
-            healthValue /= (GameSpeed.SpeedMultiplier - 1) / 2 + 1;
+            healthValue /= (GameSpeed.SpeedMultiplier - 1) / decrementScale + 1;
 
             if (healthValue < minimumHealthValue)
                 healthValue = minimumHealthValue;

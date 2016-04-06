@@ -796,6 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc04842a3fca3a4fb8dee5beabf9ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counting: 1
 --- !u!1 &147771825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,6 +1792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1629fdf44973f874c8e7d30ff5e7071a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counting: 1
 --- !u!114 &370080331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2610,6 +2612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624adebc1e28af344838c96905df8246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counting: 0
   speed: 0.05
 --- !u!1 &707167616
 GameObject:
@@ -3780,6 +3783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60d71de2623d4f49b5226d290041e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counting: 0
 --- !u!114 &1067181421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4100,11 +4104,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 448578, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: 448578, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.52
+      value: -2.84
       objectReference: {fileID: 0}
     - target: {fileID: 448578, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5267,9 +5271,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1806992171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8e94a9877518e41b367b68f06db4fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 682fc7139ba6342609c5195e73ea0212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startState: 1
 --- !u!114 &1806992174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5345,7 +5350,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1806992173}
-        m_MethodName: StartGame
+        m_MethodName: ChangeState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5354,6 +5359,83 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2084432643}
+        m_MethodName: ChangeState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2094346090}
+        m_MethodName: StartHealthbar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2015117534}
+        m_MethodName: StartSpawning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1871364898}
+        m_MethodName: ChangeState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 702655280}
+        m_MethodName: set_Counting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1067181420}
+        m_MethodName: set_Counting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 752591568}
+        m_MethodName: StartTrailLengthUpdater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -5487,6 +5569,12 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 196514, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_PrefabInternal: {fileID: 1309491408}
+--- !u!114 &1871364898 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11412970, guid: 51b958a45b8d0454b88b9129848b01be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1309491408}
+  m_Script: {fileID: 11500000, guid: 682fc7139ba6342609c5195e73ea0212, type: 3}
 --- !u!4 &1871364907 stripped
 Transform:
   m_PrefabParentObject: {fileID: 448578, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
@@ -6120,6 +6208,7 @@ GameObject:
   - 114: {fileID: 2084432641}
   - 114: {fileID: 2084432640}
   - 114: {fileID: 2084432639}
+  - 114: {fileID: 2084432643}
   m_Layer: 5
   m_Name: Pause button
   m_TagString: Untagged
@@ -6267,6 +6356,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084432637}
+--- !u!114 &2084432643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084432637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682fc7139ba6342609c5195e73ea0212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startState: 0
 --- !u!1 &2087817094
 GameObject:
   m_ObjectHideFlags: 0

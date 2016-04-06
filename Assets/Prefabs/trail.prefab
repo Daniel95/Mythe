@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthValue: 0.08
   minimumHealthValue: 0.05
+  decrementScale: 3
   decrementHealthOnGameSpeed: 0
   poolOnTouch: 1
   animToPlayName: 

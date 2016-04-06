@@ -4050,6 +4050,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1266503882}
   - 212: {fileID: 1266503881}
+  - 114: {fileID: 1266503883}
   m_Layer: 0
   m_Name: Target Icon
   m_TagString: target
@@ -4099,6 +4100,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1266503883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1266503880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872719378b89b49fe92ca34e0ff78442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1309491408
 Prefab:
   m_ObjectHideFlags: 0
@@ -6043,6 +6055,7 @@ GameObject:
   - 114: {fileID: 2015117534}
   - 114: {fileID: 2015117538}
   - 114: {fileID: 2015117537}
+  - 114: {fileID: 2015117539}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -6194,6 +6207,18 @@ MonoBehaviour:
   chunkHolder: {fileID: 2015117536}
   playerDistance: {fileID: 702655280}
   unlockSeconds: 080000000f0000001e000000230000002800000032000000
+--- !u!114 &2015117539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015117531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5bf57c33a6324507bafe09d0129d24d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialHolder: {fileID: 2015117531}
 --- !u!114 &2015937163 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11471618, guid: 1c9f8b7a3cab7074a9a53b3b9c38ee18,

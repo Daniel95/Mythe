@@ -63,7 +63,7 @@ public class HealthBar : MonoBehaviour
 	private AudioClip normalMusic;
 
     [SerializeField]
-    private float supermodeSoundFadeSpeed = 0.01f;
+    private float supermodeSoundFadeSpeed = 0.0006f;
 
     private bool superModeIsOn;
 
@@ -85,8 +85,8 @@ public class HealthBar : MonoBehaviour
 
         startVolume = audioSource.volume;
 
-		//audioSource.clip = normalMusic;
-		//audioSource.Play ();
+		audioSource.clip = normalMusic;
+	    audioSource.Play ();
     }
 
     public void StartHealthbar() {
@@ -154,10 +154,9 @@ public class HealthBar : MonoBehaviour
         if (EnterNormalMode != null)
             EnterNormalMode();
 
-       // audioSource.loop = false;
-
         //stops the supermode music with a fade
-        StartCoroutine(SoundFade());
+        if(superModeIsOn)
+            StartCoroutine(SoundFade());
 
         gameSpeed.NormalMode();
         superGenerator.SetActive(false);

@@ -84,7 +84,7 @@ public class RainbowEffect : MonoBehaviour {
         }
     }
     
-    void Update () {
+    void FixedUpdate () {
         
         if (!isUI)
             sprite.color = GetColor();

@@ -62,7 +62,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0.000000007450581}
   serializedVersion: 2
-  m_Radius: 6.0675735
+  m_Radius: 4.3135576
 --- !u!95 &9503560
 Animator:
   serializedVersion: 3
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
-  duration: 8
+  duration: 12
 --- !u!212 &21287172
 SpriteRenderer:
   m_ObjectHideFlags: 1

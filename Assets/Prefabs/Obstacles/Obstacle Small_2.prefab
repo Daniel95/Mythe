@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11497826}
   - 114: {fileID: 11481444}
   - 114: {fileID: 11417936}
-  - 58: {fileID: 5817720}
+  - 58: {fileID: 5832720}
   m_Layer: 0
   m_Name: Obstacle Small_2
   m_TagString: Obstacle
@@ -28,12 +28,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -306.83688, y: 12.886033, z: 2}
+  m_LocalPosition: {x: 0.7768563, y: -2.3263652, z: 2}
   m_LocalScale: {x: 0.26, y: 0.26, z: 0.28475833}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &5817720
+--- !u!58 &5832720
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -44,9 +44,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.06, y: 0.04}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.23681
+  m_Radius: 1.55625
 --- !u!114 &11417936
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -42,6 +42,7 @@ MonoBehaviour:
   objectToSpawnNames:
   - Obstacle Small
   - Obstacle Small_2
+  - Obstacle Small_3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -51,7 +52,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: objectToSpawnNames.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
@@ -68,6 +69,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: objectToSpawnNames.Array.data[2]
+      value: Obstacle Small_3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

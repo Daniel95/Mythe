@@ -6063,19 +6063,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Entries:
   - Prefab: {fileID: 140748, guid: 68efb57eece8d4342b703a07125b3d24, type: 2}
-    Count: 100
+    Count: 60
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 166584, guid: 0881819bc111e334c87719a35b5a616b, type: 2}
     Count: 50
-    pool: []
-    objectsInPool: 0
-  - Prefab: {fileID: 174978, guid: 9880f43ed2e1e4edca6307bfc683705c, type: 2}
-    Count: 0
-    pool: []
-    objectsInPool: 0
-  - Prefab: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-    Count: 0
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 189310, guid: 7d0b44e5ba7ff4db79a61ee1c7d5ad9f, type: 2}
@@ -6087,10 +6079,10 @@ MonoBehaviour:
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 138260, guid: 2eadcda924d49eb40bdf353a684f22db, type: 2}
-    Count: 30
+    Count: 40
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
+  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0
@@ -6111,7 +6103,11 @@ MonoBehaviour:
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 185132, guid: 181a7acd9c1604120adb1d4001a28fde, type: 2}
-    Count: 100
+    Count: 60
+    pool: []
+    objectsInPool: 0
+  - Prefab: {fileID: 183566, guid: b4def554394c8924ba2e8d0150bc9976, type: 2}
+    Count: 60
     pool: []
     objectsInPool: 0
 --- !u!4 &2015117533

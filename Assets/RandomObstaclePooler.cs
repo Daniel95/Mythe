@@ -9,7 +9,6 @@ public class RandomObstaclePooler : MonoBehaviour {
 	private bool trueActive = false;
 	void OnEnable()
 	{
-		
 		if (trueActive) {
 			GameObject spawnedObject = ObjectPool.instance.GetObjectForType (objectToSpawnNames [Random.Range (0, objectToSpawnNames.Length)], true);
 			spawnedObject.transform.position = this.transform.position;

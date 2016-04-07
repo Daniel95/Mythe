@@ -7,6 +7,7 @@ public class RandomObstaclePooler : MonoBehaviour {
 	private string[] objectToSpawnNames;
 
 	private bool trueActive = false;
+
 	void OnEnable()
 	{
 		if (trueActive) {

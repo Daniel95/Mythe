@@ -57,7 +57,7 @@ public class GenerateChunk : MonoBehaviour {
                     if (spawnedObject == null)
                         print(objectToSpawnNames[_chunkToSpawn[x, y]] + " does not exist in objectpool");
                     else
-                        spawnedObject.transform.position = new Vector3(x, -y + yLength,2f) + spawnPos.transform.position;
+                        spawnedObject.transform.position = new Vector3(x, -y + yLength, 2f) + spawnPos.transform.position;
                 }
             }
         }

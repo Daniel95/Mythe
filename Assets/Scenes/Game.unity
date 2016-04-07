@@ -128,24 +128,19 @@ Prefab:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 1871364907}
+    - target: {fileID: 5815354, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+      propertyPath: m_Radius
+      value: 3.2422261
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444796, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+      propertyPath: duration
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 473226, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 473226, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 21287172, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-      propertyPath: m_Color.a
-      value: 0.428
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6185740, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &20236477
@@ -2358,41 +2353,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590321643}
---- !u!1 &595876849 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
-  m_PrefabInternal: {fileID: 3160314}
---- !u!95 &595876850
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 595876849}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4131ef63785c76b4a971a7bc2c380ef9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!58 &595876851
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 595876849}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.000000007450581}
-  serializedVersion: 2
-  m_Radius: 2.940792
 --- !u!1001 &647214502
 Prefab:
   m_ObjectHideFlags: 0

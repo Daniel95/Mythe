@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthValue: 0.1725
   minimumHealthValue: 0.07
+  decrementScale: 2.5
   decrementHealthOnGameSpeed: 1
   poolOnTouch: 1
   animToPlayName: Water Splash
@@ -232,6 +233,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: minimumHealthValue
       value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: decrementScale
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

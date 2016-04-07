@@ -73,7 +73,7 @@ public class TriggerDetection : MonoBehaviour {
 					    audioSource.PlayOneShot (audioClip);
 					    //if the value is negative, shake the screen
 					    shake.StartShake ();
-						if (optionsData.GetVibration) 
+						if (optionsData != null && optionsData.GetVibration) 
 						{
 							Handheld.Vibrate ();
 						}

@@ -1537,6 +1537,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1871364904}
+        m_MethodName: StartUpdatingInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &358842251
@@ -4142,22 +4153,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 2094346090}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: pickups
-      value: 
-      objectReference: {fileID: 146991383}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: shake
-      value: 
-      objectReference: {fileID: 1712116973}
-    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: targetIcon
-      value: 
-      objectReference: {fileID: 1266503882}
     - target: {fileID: 11447412, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: shieldBubble
       value: 
@@ -4170,26 +4165,22 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2094346090}
-    - target: {fileID: 11422806, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: fadeTime
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 21267848, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21267848, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21267848, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21267848, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: targetIcon
+      value: 
+      objectReference: {fileID: 1266503882}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 2094346090}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: 146991383}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: shake
+      value: 
+      objectReference: {fileID: 1712116973}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -5583,6 +5574,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1309491408}
   m_Script: {fileID: 11500000, guid: 682fc7139ba6342609c5195e73ea0212, type: 3}
+--- !u!114 &1871364904 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1309491408}
+  m_Script: {fileID: 11500000, guid: 99d8d087adc254085a182e5920153716, type: 3}
 --- !u!4 &1871364907 stripped
 Transform:
   m_PrefabParentObject: {fileID: 448578, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
@@ -6323,6 +6320,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1228486596}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1871364904}
+        m_MethodName: StopUpdatingInput
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

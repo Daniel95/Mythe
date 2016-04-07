@@ -8,21 +8,48 @@ public class MouseInput : MonoBehaviour {
     [SerializeField]
 	Transform targetIcon;
 
-    [SerializeField]
-    private float offset = 1f;
+    private Vector2 targetStartPos;
+
+    private bool updating;
+
 	// Use this for initialization
-	void Start () {
-
+	void Awake () {
 		playerMovement = GetComponent<PlayerMovement>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-			Vector2 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			targetPosition.y += offset;
-			playerMovement.setTarget(targetPosition);
-			targetIcon.position = targetPosition;
+        targetStartPos = targetIcon.position;
+    }
 
-	}
+    void OnEnable() {
+        StartUpdatingInput();
+    }
+
+    void OnDisable()
+    {
+        StopUpdatingInput();
+        targetIcon.position = targetStartPos;
+    }
+
+    private IEnumerator UpdateInput()
+    {
+        while (updating)
+        {
+            Vector2 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            playerMovement.setTarget(targetPosition);
+            targetIcon.position = targetPosition;
+            yield return null;
+        }
+    }
+
+    public void StopUpdatingInput() {
+        targetIcon.position = targetStartPos;
+        updating = false;
+    }
+
+    public void StartUpdatingInput()
+    {
+        if (!updating)
+        {
+            updating = true;
+            StartCoroutine(UpdateInput());
+        }
+    }
 }

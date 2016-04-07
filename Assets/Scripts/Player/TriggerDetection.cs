@@ -30,6 +30,14 @@ public class TriggerDetection : MonoBehaviour {
 
     private bool playWaterSound;
 
+	private OptionsData optionsData;
+
+	void Start()
+	{
+		if (GameObject.FindGameObjectWithTag ("Data")) {
+			optionsData = GameObject.FindGameObjectWithTag ("Data").GetComponent<OptionsData> ();
+		}
+	}
     void OnCollisionEnter2D(Collision2D _other) {
         HandleCollisionEnter(_other.gameObject);
     }
@@ -65,7 +73,10 @@ public class TriggerDetection : MonoBehaviour {
 					    audioSource.PlayOneShot (audioClip);
 					    //if the value is negative, shake the screen
 					    shake.StartShake ();
-                        //Handheld.Vibrate ();
+						if (optionsData.GetVibration) 
+						{
+							Handheld.Vibrate ();
+						}
                         MakeUnhurtable();
 					
 					}

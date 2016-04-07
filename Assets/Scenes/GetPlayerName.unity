@@ -1327,7 +1327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1539685729}
-  saveLoadPlayerName: {fileID: 0}
+  saveLoadPlayerName: {fileID: 33426449}
   loadData: {fileID: 1539685730}
   saveData: {fileID: 1539685731}
   submitButton: {fileID: 1169934470}

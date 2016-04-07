@@ -3949,7 +3949,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4097,7 +4097,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1266503880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.62, y: 0.275, z: 0}
+  m_LocalPosition: {x: -8.54, y: 0.275, z: 0}
   m_LocalScale: {x: 3.888464, y: 3.746873, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4169,6 +4169,14 @@ Prefab:
       propertyPath: shake
       value: 
       objectReference: {fileID: 1712116973}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: collisionClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 54f7784bf537f634f864e36b4d3a62da, type: 3}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: pickupClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bf6ab8570c396417bb452245e554afab, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -5424,6 +5432,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2015117537}
+        m_MethodName: StartTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1826668708
@@ -6071,7 +6090,7 @@ MonoBehaviour:
     Count: 40
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
+  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0
@@ -6739,5 +6758,5 @@ MonoBehaviour:
   gameOverAudioClip: {fileID: 8300000, guid: 0f1153822ffd2472cbca6d85fd0ca381, type: 3}
   superModeAudioClip: {fileID: 8300000, guid: b19a3a0dc3464bc43bcc12ee2e398798, type: 3}
   normalMusic: {fileID: 8300000, guid: 1363a3652ed3e0840ab4f1f303241cda, type: 3}
-  supermodeSoundFadeSpeed: 0.0006
+  supermodeSoundFadeSpeed: 0.0045
   groundParticles: {fileID: 19813306, guid: f3fd78a8b379e5446a14568ce39a87d9, type: 2}

@@ -240,7 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8273928}
-  audioClip: {fileID: 8300000, guid: bf6ab8570c396417bb452245e554afab, type: 3}
+  pickupClip: {fileID: 8300000, guid: bf6ab8570c396417bb452245e554afab, type: 3}
+  collisionClip: {fileID: 8300000, guid: 54f7784bf537f634f864e36b4d3a62da, type: 3}
   healthBar: {fileID: 0}
   pickups: {fileID: 0}
   shake: {fileID: 0}
@@ -274,7 +275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetIcon: {fileID: 0}
-  offset: 0
 --- !u!212 &21267848
 SpriteRenderer:
   m_ObjectHideFlags: 1

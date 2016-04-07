@@ -12,10 +12,14 @@ public class MouseInput : MonoBehaviour {
 
     private bool updating;
 
+    private bool targetEnabled = true;
+
 	// Use this for initialization
 	void Awake () {
 		playerMovement = GetComponent<PlayerMovement>();
         targetStartPos = targetIcon.position;
+
+        targetEnabled = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetCursor;
     }
 
     void OnEnable() {
@@ -33,7 +37,8 @@ public class MouseInput : MonoBehaviour {
         {
             Vector2 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             playerMovement.setTarget(targetPosition);
-            targetIcon.position = targetPosition;
+            if(targetEnabled)
+                targetIcon.position = targetPosition;
             yield return null;
         }
     }

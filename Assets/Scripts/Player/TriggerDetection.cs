@@ -7,7 +7,10 @@ public class TriggerDetection : MonoBehaviour {
     private AudioSource audioSource;
 
     [SerializeField]
-    private AudioClip audioClip;
+    private AudioClip pickupClip;
+
+    [SerializeField]
+    private AudioClip collisionClip;
 
     [SerializeField]
     private HealthBar healthBar;
@@ -55,10 +58,10 @@ public class TriggerDetection : MonoBehaviour {
 			if (interactableObject.IsEnabled) {
 				if (interactableObject.transform.CompareTag(Tags.shieldPowerUp)) {
 					powerUpHandler.AddShield ();
-					audioSource.PlayOneShot (audioClip);
+					audioSource.PlayOneShot (pickupClip);
 				} else if (interactableObject.transform.CompareTag(Tags.magnetPowerUp)) {
 					powerUpHandler.AddMagnet ();
-					audioSource.PlayOneShot (audioClip);
+					audioSource.PlayOneShot (pickupClip);
 				}
 
 				//save the healthvalue of other
@@ -70,7 +73,7 @@ public class TriggerDetection : MonoBehaviour {
 					if(hurtable)
 					{
 					    healthBar.addValue (healthValue);
-					    audioSource.PlayOneShot (audioClip);
+					    audioSource.PlayOneShot (collisionClip);
 					    //if the value is negative, shake the screen
 					    shake.StartShake ();
 						if (optionsData != null && optionsData.GetVibration) 
@@ -78,7 +81,6 @@ public class TriggerDetection : MonoBehaviour {
 							Handheld.Vibrate ();
 						}
                         MakeUnhurtable();
-					
 					}
 				} else if (healthValue > 0) { //if the value is positive, increment score
 					pickups.IncrementScore ();
@@ -88,7 +90,7 @@ public class TriggerDetection : MonoBehaviour {
                     if (!healthBar.SuperModeIsOn)
                     {
                         audioSource.pitch = Random.Range(0.75F, 1.25F);
-                        audioSource.PlayOneShot(audioClip);
+                        audioSource.PlayOneShot(pickupClip);
                     }
 				}
 				//let the _other object know that it has been touched so it can play its animation

@@ -9,15 +9,18 @@ public class TutorialUnlocker : MonoBehaviour {
     private GenerateChunk generateChunk;
     [SerializeField]
     private PlayerDistance playerDistance;
-    void Awake()
+
+    public void StartTutorial()
     {
-        
+        if (GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetTutorial)
+        {
+            StartCoroutine(ForceIntroChunks());
+        }
     }
-    void Start () {
-        StartCoroutine(ForceIntroChunks());
-	}
+
 	IEnumerator ForceIntroChunks()
     {
+        print("ahppen");
         //intro game with two rows of obstacles and some water.
         generateChunk.MakeChosenChunk(chunkHolder.UncompressChunk("100001100001110301100001100001100001100001100001103011100001100001100001"));
 

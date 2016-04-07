@@ -18,7 +18,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} else if($unlockCode == 124213124) {
+} else if($unlockCode == 12421312) {
 
 $sql = "SELECT * FROM Scores WHERE name = '$name'";
 

@@ -108,6 +108,7 @@ public class HealthBar : MonoBehaviour
         if (EnterSuperMode != null)
             EnterSuperMode();
 
+        audioSource.Stop();
         audioSource.clip = superModeAudioClip;
         audioSource.Play();
         audioSource.loop = true;

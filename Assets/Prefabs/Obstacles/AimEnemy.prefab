@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11459722}
   - 61: {fileID: 6193942}
   - 114: {fileID: 11476376}
+  - 95: {fileID: 9537500}
   m_Layer: 0
   m_Name: AimEnemy
   m_TagString: Obstacle
@@ -44,9 +45,26 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.05655761, y: 0}
+  m_Offset: {x: 0.01648164, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.45130673, y: 1.13}
+  m_Size: {x: 0.62764084, y: 1.13}
+--- !u!95 &9537500
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133724}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa7c3a955d3ac9940b785efc896911d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11418156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthValue: -0.13
   minimumHealthValue: 0.05
+  decrementScale: 3
   decrementHealthOnGameSpeed: 0
   poolOnTouch: 1
   animToPlayName: 
@@ -130,7 +149,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 56c69d3382c2ad448837261120fe3bef, type: 3}
+  m_Sprite: {fileID: 21300032, guid: b5c3d8e859b87614d879881b530b1c24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

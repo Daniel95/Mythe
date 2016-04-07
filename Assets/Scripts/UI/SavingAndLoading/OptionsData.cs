@@ -5,7 +5,7 @@ public class OptionsData : MonoBehaviour {
 
 	private bool changeName;
 
-	private bool playTutorial = true;
+	private bool enableTutorial = true;
 	private bool enableVibration = true;
 	private bool enableCursor = true;
 
@@ -27,7 +27,7 @@ public class OptionsData : MonoBehaviour {
 	{
 		get
 		{
-			return playTutorial;
+			return enableTutorial;
 		}
 	}
 
@@ -48,8 +48,8 @@ public class OptionsData : MonoBehaviour {
 	}
 
 
-	public bool PlayTutorial {
-		set { playTutorial = value; }
+	public bool EnableTutorial {
+		set { enableTutorial = value; }
 	}
 
 	public bool EnableVibration {

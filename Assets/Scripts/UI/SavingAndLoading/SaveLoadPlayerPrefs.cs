@@ -17,11 +17,17 @@ public class SaveLoadPlayerPrefs : MonoBehaviour {
 
     private int showTutorial = 1;
 
+    private OptionsData optionsData;
+
     void Start()
 	{
         //check if we are changing our name from the option menu
-        if (GameObject.FindGameObjectWithTag("Data")) {
-            if (GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().CheckIfChangingName())
+        if (GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>()) {
+            optionsData = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>();
+
+            RetrieveSavedOptionsData();
+
+            if (optionsData.CheckIfChangingName())
                 NoPlayerNameFound();
             else
                 CheckPlayerName();
@@ -38,9 +44,9 @@ public class SaveLoadPlayerPrefs : MonoBehaviour {
 		showTutorial = PlayerPrefs.GetInt("ShowTutorial");
 	}
 
-	public void SavePref(string _dataName, string _dataValue)
+	public void SavePref(string _dataName, int _dataValue)
 	{
-		PlayerPrefs.SetString (_dataName, _dataValue);
+		PlayerPrefs.SetInt (_dataName, _dataValue);
         PlayerPrefs.Save();
     }
 
@@ -48,6 +54,15 @@ public class SaveLoadPlayerPrefs : MonoBehaviour {
     {
         PlayerPrefs.SetString("PlayerName", _playerName);
         PlayerPrefs.Save();
+    }
+
+    public void RetrieveSavedOptionsData() {
+        if (PlayerPrefs.HasKey("EnableCursor"))
+            optionsData.EnableCursor = System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableCursor"));
+        if (PlayerPrefs.HasKey("EnableVibration"))
+            optionsData.EnableVibration = System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableVibration"));
+        if (PlayerPrefs.HasKey("EnableTutorial"))
+            optionsData.EnableTutorial = System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableTutorial"));
     }
 
     private void CheckPlayerName() {

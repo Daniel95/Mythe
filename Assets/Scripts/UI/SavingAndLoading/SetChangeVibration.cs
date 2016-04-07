@@ -6,6 +6,10 @@ public class SetChangeVibration : MonoBehaviour {
 	public void ChangeVibrationSetting(bool _setting) 
 	{
 		if (GameObject.FindGameObjectWithTag ("Data"))
-			GameObject.FindGameObjectWithTag ("Data").GetComponent<OptionsData> ().EnableVibration = _setting;
+        {
+            GameObject dataObj = GameObject.FindGameObjectWithTag("Data");
+            dataObj.GetComponent<OptionsData>().EnableVibration = _setting;
+            dataObj.GetComponent<SaveLoadPlayerPrefs>().SavePref("EnableVibration", System.Convert.ToInt32(_setting));
+        }
 	}
 }

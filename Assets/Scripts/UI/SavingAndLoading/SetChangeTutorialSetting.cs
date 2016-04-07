@@ -6,6 +6,10 @@ public class SetChangeTutorialSetting : MonoBehaviour {
 	public void ChangeTutorialSetting(bool _setting) 
 	{
 		if (GameObject.FindGameObjectWithTag ("Data"))
-			GameObject.FindGameObjectWithTag ("Data").GetComponent<OptionsData> ().PlayTutorial = _setting;
+        {
+            GameObject dataObj = GameObject.FindGameObjectWithTag("Data");
+            dataObj.GetComponent<OptionsData>().EnableTutorial = _setting;
+            dataObj.GetComponent<SaveLoadPlayerPrefs>().SavePref("EnableTutorial", System.Convert.ToInt32(_setting));
+        }
 	}
 }

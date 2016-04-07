@@ -3404,6 +3404,42 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1871364907}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: -2.6623368
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: -2.6623368
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: ColorBySpeedModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: ColorModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873928, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.key1.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4104d3835eee070489caed9ef5589a1e, type: 2}
   m_IsPrefabParent: 0
@@ -6043,7 +6079,7 @@ MonoBehaviour:
     Count: 40
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
+  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0

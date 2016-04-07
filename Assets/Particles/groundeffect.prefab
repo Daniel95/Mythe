@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  rotatedAsTarget: 0
 --- !u!198 &19873928
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -513,10 +514,10 @@ ParticleSystem:
           inSlope: 0.61904556
           outSlope: 0.61904556
           tangentMode: 0
-        - time: 0.98536587
+        - time: 1
           value: 0
-          inSlope: -1.3015853
-          outSlope: -1.3015853
+          inSlope: -2.6623368
+          outSlope: -2.6623368
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -647,7 +648,7 @@ ParticleSystem:
       minMaxState: 0
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       maxGradient:
         key0:
@@ -655,7 +656,7 @@ ParticleSystem:
           rgba: 4294967295
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 16777215
         key2:
           serializedVersion: 2
           rgba: 0

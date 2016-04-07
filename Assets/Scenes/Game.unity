@@ -3948,7 +3948,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -6734,6 +6734,6 @@ MonoBehaviour:
   audioSource: {fileID: 1164408483}
   gameOverAudioClip: {fileID: 8300000, guid: 0f1153822ffd2472cbca6d85fd0ca381, type: 3}
   superModeAudioClip: {fileID: 8300000, guid: d5758a2915862d5419b44a4f0682dd0f, type: 3}
-  normalMusic: {fileID: 8300000, guid: dbdab70c7fbb94877a0f1769d5945e66, type: 3}
+  normalMusic: {fileID: 8300000, guid: f3107b842f36341bcaf2ba7b2af8b19e, type: 3}
   supermodeSoundFadeSpeed: 0.001
   groundParticles: {fileID: 19813306, guid: f3fd78a8b379e5446a14568ce39a87d9, type: 2}

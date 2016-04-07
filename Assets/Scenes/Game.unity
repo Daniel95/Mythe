@@ -6063,7 +6063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Entries:
   - Prefab: {fileID: 140748, guid: 68efb57eece8d4342b703a07125b3d24, type: 2}
-    Count: 150
+    Count: 100
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 166584, guid: 0881819bc111e334c87719a35b5a616b, type: 2}
@@ -6106,6 +6106,14 @@ MonoBehaviour:
     Count: 30
     pool: []
     objectsInPool: 0
+  - Prefab: {fileID: 186436, guid: b5209f77287fd40f2becf6703155e240, type: 2}
+    Count: 30
+    pool: []
+    objectsInPool: 0
+  - Prefab: {fileID: 185132, guid: 181a7acd9c1604120adb1d4001a28fde, type: 2}
+    Count: 100
+    pool: []
+    objectsInPool: 0
 --- !u!4 &2015117533
 Transform:
   m_ObjectHideFlags: 0
@@ -6133,7 +6141,7 @@ MonoBehaviour:
   chunkLibary: {fileID: 2015117536}
   objectToSpawnNames:
   - 
-  - Obstacle Small
+  - SmallObstacleSpawner
   - Obstacle Big
   - Water
   - MagnetPowerUp

@@ -25,7 +25,6 @@ public class MouseInput : MonoBehaviour {
     void OnDisable()
     {
         StopUpdatingInput();
-        targetIcon.position = targetStartPos;
     }
 
     private IEnumerator UpdateInput()
@@ -40,7 +39,8 @@ public class MouseInput : MonoBehaviour {
     }
 
     public void StopUpdatingInput() {
-        targetIcon.position = targetStartPos;
+        if (targetIcon != null)
+            targetIcon.position = targetStartPos;
         updating = false;
     }
 

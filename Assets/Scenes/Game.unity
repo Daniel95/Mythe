@@ -3948,7 +3948,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -5264,8 +5264,8 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -435.76}
-  m_SizeDelta: {x: 731, y: 370.51}
+  m_AnchoredPosition: {x: -3, y: -435.76}
+  m_SizeDelta: {x: 794, y: 371}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1806992173
 MonoBehaviour:
@@ -5510,8 +5510,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000015259211}
-  m_SizeDelta: {x: 526, y: 105}
+  m_AnchoredPosition: {x: -6, y: 1}
+  m_SizeDelta: {x: 641, y: 137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1851002638
 MonoBehaviour:
@@ -6735,5 +6735,5 @@ MonoBehaviour:
   gameOverAudioClip: {fileID: 8300000, guid: 0f1153822ffd2472cbca6d85fd0ca381, type: 3}
   superModeAudioClip: {fileID: 8300000, guid: d5758a2915862d5419b44a4f0682dd0f, type: 3}
   normalMusic: {fileID: 8300000, guid: dbdab70c7fbb94877a0f1769d5945e66, type: 3}
-  supermodeSoundFadeSpeed: 0.0006
+  supermodeSoundFadeSpeed: 0.001
   groundParticles: {fileID: 19813306, guid: f3fd78a8b379e5446a14568ce39a87d9, type: 2}

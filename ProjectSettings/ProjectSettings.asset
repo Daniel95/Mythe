@@ -166,7 +166,7 @@ PlayerSettings:
   m_AndroidBanners:
   - width: 320
     height: 180
-    banner: {fileID: 2800000, guid: 24a2467a62e07475c98d584a97cd1593, type: 3}
+    banner: {fileID: 2800000, guid: e4691715a5feb40348ca89f77f4988a2, type: 3}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
@@ -179,27 +179,27 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 24a2467a62e07475c98d584a97cd1593, type: 3}
+      m_Icon: {fileID: 2800000, guid: e4691715a5feb40348ca89f77f4988a2, type: 3}
       m_Width: 192
       m_Height: 192
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 24a2467a62e07475c98d584a97cd1593, type: 3}
+      m_Icon: {fileID: 2800000, guid: e4691715a5feb40348ca89f77f4988a2, type: 3}
       m_Width: 144
       m_Height: 144
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 24a2467a62e07475c98d584a97cd1593, type: 3}
+      m_Icon: {fileID: 2800000, guid: e4691715a5feb40348ca89f77f4988a2, type: 3}
       m_Width: 96
       m_Height: 96
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 24a2467a62e07475c98d584a97cd1593, type: 3}
+      m_Icon: {fileID: 2800000, guid: e4691715a5feb40348ca89f77f4988a2, type: 3}
       m_Width: 72
       m_Height: 72
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 24a2467a62e07475c98d584a97cd1593, type: 3}
+      m_Icon: {fileID: 2800000, guid: e4691715a5feb40348ca89f77f4988a2, type: 3}
       m_Width: 48
       m_Height: 48
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 24a2467a62e07475c98d584a97cd1593, type: 3}
+      m_Icon: {fileID: 2800000, guid: e4691715a5feb40348ca89f77f4988a2, type: 3}
       m_Width: 36
       m_Height: 36
   m_BuildTargetBatching: []

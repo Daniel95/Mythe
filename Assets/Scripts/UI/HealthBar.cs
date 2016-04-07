@@ -85,8 +85,8 @@ public class HealthBar : MonoBehaviour
 
         startVolume = audioSource.volume;
 
-		audioSource.clip = normalMusic;
-		audioSource.Play ();
+		//audioSource.clip = normalMusic;
+		//audioSource.Play ();
     }
 
     public void StartHealthbar() {
@@ -110,6 +110,7 @@ public class HealthBar : MonoBehaviour
 
         audioSource.clip = superModeAudioClip;
         audioSource.Play();
+        audioSource.loop = true;
 
         superModeIsOn = true;
 
@@ -142,9 +143,6 @@ public class HealthBar : MonoBehaviour
             //your bar drops twice as fast.
             currentHealth -= loseHealthSpeed * 2;
 
-            //color is green.
-
-
             yield return new WaitForFixedUpdate();
         }
         generateChunk.PauzeSpawning(2);
@@ -155,6 +153,8 @@ public class HealthBar : MonoBehaviour
     {
         if (EnterNormalMode != null)
             EnterNormalMode();
+
+        audioSource.loop = false;
 
         //stops the supermode music with a fade
         //StartCoroutine(SoundFade());

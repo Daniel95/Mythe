@@ -18,7 +18,7 @@ public class PlayerNameSceneController : MonoBehaviour {
     private GameObject continueButton;
 
     [SerializeField]
-    private SaveLoadPlayerPrefs playerPrefs;
+    private SaveLoadPlayerName saveLoadPlayerName;
 
     private PlayerData playerData;
 
@@ -26,30 +26,32 @@ public class PlayerNameSceneController : MonoBehaviour {
         welcomeText = welcomeTextObj.GetComponent<DynamicText>();
 
         if (GameObject.FindGameObjectWithTag("Data")) {
-            playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>(); 
+            playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>();
         }
     }
 
     void OnEnable()
     {
-        playerPrefs.LoadedPlayerName += SetPlayerName;
-        playerPrefs.NoPlayerNameFound += EnableNameInput;
+        saveLoadPlayerName.LoadedPlayerName += SetPlayerName;
+        saveLoadPlayerName.NoPlayerNameFound += EnableNameInput;
     }
 
     void OnDisable()
     {
-        playerPrefs.LoadedPlayerName -= SetPlayerName;
-        playerPrefs.NoPlayerNameFound -= EnableNameInput;
+        saveLoadPlayerName.LoadedPlayerName -= SetPlayerName;
+        saveLoadPlayerName.NoPlayerNameFound -= EnableNameInput;
     }
 
-    public void SetPlayerName(string _playerName) {
+    private void SetPlayerName(string _playerName) {
+        //assign the saved name, and allow the player to continue
         inputFieldObj.SetActive(false);
         submitButton.SetActive(false);
         playerData.Name = _playerName;
         welcomeText.AddString(_playerName);
     }
 
-    public void EnableNameInput() {
+    private void EnableNameInput() {
+        //make the player enter a new name
         welcomeTextObj.SetActive(false);
         continueButton.SetActive(false);
     }

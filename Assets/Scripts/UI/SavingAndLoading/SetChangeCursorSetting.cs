@@ -9,7 +9,7 @@ public class SetChangeCursorSetting : MonoBehaviour {
         {
             GameObject dataObj = GameObject.FindGameObjectWithTag("Data");
             dataObj.GetComponent<OptionsData>().EnableCursor = _setting;
-            dataObj.GetComponent<SaveLoadPlayerPrefs>().SavePref("EnableCursor", System.Convert.ToInt32(_setting));
+            dataObj.GetComponent<SaveLoadOptions>().SavePref("EnableCursor", System.Convert.ToInt32(_setting));
         }
     }
 }

@@ -9,7 +9,7 @@ public class SetChangeTutorialSetting : MonoBehaviour {
         {
             GameObject dataObj = GameObject.FindGameObjectWithTag("Data");
             dataObj.GetComponent<OptionsData>().EnableTutorial = _setting;
-            dataObj.GetComponent<SaveLoadPlayerPrefs>().SavePref("EnableTutorial", System.Convert.ToInt32(_setting));
+            dataObj.GetComponent<SaveLoadOptions>().SavePref("EnableTutorial", System.Convert.ToInt32(_setting));
         }
 	}
 }

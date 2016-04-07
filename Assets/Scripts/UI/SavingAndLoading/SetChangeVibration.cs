@@ -9,7 +9,7 @@ public class SetChangeVibration : MonoBehaviour {
         {
             GameObject dataObj = GameObject.FindGameObjectWithTag("Data");
             dataObj.GetComponent<OptionsData>().EnableVibration = _setting;
-            dataObj.GetComponent<SaveLoadPlayerPrefs>().SavePref("EnableVibration", System.Convert.ToInt32(_setting));
+            dataObj.GetComponent<SaveLoadOptions>().SavePref("EnableVibration", System.Convert.ToInt32(_setting));
         }
 	}
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class SavePlayerName : MonoBehaviour
+public class ControlNameInput : MonoBehaviour
 {
     private PlayerData playerData;
 
@@ -11,7 +11,7 @@ public class SavePlayerName : MonoBehaviour
     private SceneLoader sceneLoader;
 
     [SerializeField]
-    private SaveLoadPlayerPrefs playerPrefs;
+    private SaveLoadPlayerName saveLoadPlayerName;
 
     [SerializeField]
     private LoadData loadData;
@@ -122,7 +122,7 @@ public class SavePlayerName : MonoBehaviour
         saveData.ReplaceName(playerData.Name, playerName);
 
         //save the player name in player prefs
-        playerPrefs.SavePlayerName(playerName);
+        saveLoadPlayerName.SavePlayerName(playerName);
 
         //save the name in playerName script
         playerData.Name = playerName;

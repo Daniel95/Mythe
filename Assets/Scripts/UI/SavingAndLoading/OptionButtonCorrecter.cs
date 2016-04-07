@@ -28,7 +28,6 @@ public class OptionButtonCorrecter : MonoBehaviour {
 		{
 			Debug.LogError ("No options data found. Did you start from the correct scene?");
 		}
-		Debug.Log (optionsData.GetTutorial);
 		if (optionsData.GetCursor==false) 
 		{
 			objectToDisableCursor.SetActive (false);

@@ -296,7 +296,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410014, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 19.15
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 496972, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 153ca5daa724d914f90b93527d9fc005, type: 2}
@@ -6082,7 +6086,7 @@ MonoBehaviour:
     Count: 40
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
+  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0

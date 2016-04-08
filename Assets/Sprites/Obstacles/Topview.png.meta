@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: b5c3d8e859b87614d879881b530b1c24
+timeCreated: 1460035890
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Topview_0
+    21300002: Topview_1
+    21300004: Topview_2
+    21300006: Topview_3
+    21300008: Topview_4
+    21300010: Topview_5
+    21300012: Topview_6
+    21300014: Topview_7
+    21300016: Topview_8
+    21300018: Topview_9
+    21300020: Topview_10
+    21300022: Topview_11
+    21300024: Topview_12
+    21300026: Topview_13
+    21300028: Topview_14
+    21300030: Topview_15
+    21300032: Topview_16
+    21300034: Topview_17
+    21300036: Topview_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Topview_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 880
+        width: 182
+        height: 137
+      alignment: 9
+      pivot: {x: 0.35688317, y: 0.516275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.047264, y: 66.270325}
+        - {x: -33.952736, y: 66.270325}
+        - {x: -55.952736, y: 22.270325}
+        - {x: -64.952736, y: -8.729675}
+        - {x: -64.952736, y: -66.729675}
+        - {x: -35.952736, y: -70.729675}
+        - {x: 110.047264, y: -70.729675}
+        - {x: 117.047264, y: -63.729675}
+        - {x: 117.047264, y: 0.2703247}
+        - {x: 60.047264, y: 61.270325}
+    - name: Topview_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 879
+        width: 182
+        height: 137
+      alignment: 9
+      pivot: {x: 0.34855416, y: 0.5203639}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.56314, y: 65.710144}
+        - {x: -51.43686, y: 65.710144}
+        - {x: -53.43686, y: 20.710144}
+        - {x: -52.43686, y: -10.289856}
+        - {x: -52.43686, y: -23.289856}
+        - {x: -63.43686, y: -42.289856}
+        - {x: -63.43686, y: -59.289856}
+        - {x: -14.436859, y: -71.289856}
+        - {x: 15.563141, y: -71.289856}
+        - {x: 23.56314, y: -70.289856}
+        - {x: 35.56314, y: -66.289856}
+        - {x: 61.56314, y: -71.289856}
+        - {x: 95.56314, y: -71.289856}
+        - {x: 112.56314, y: -65.289856}
+        - {x: 118.56314, y: -56.289856}
+        - {x: 118.56314, y: -33.289856}
+    - name: Topview_2
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 880
+        width: 183
+        height: 137
+      alignment: 9
+      pivot: {x: 0.3481035, y: 0.52098984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.702942, y: 65.62439}
+        - {x: -52.70294, y: 46.62439}
+        - {x: -63.70294, y: -34.37561}
+        - {x: -63.70294, y: -60.37561}
+        - {x: -45.70294, y: -71.37561}
+        - {x: 119.29706, y: -71.37561}
+        - {x: 119.29706, y: 1.6243896}
+        - {x: 66.29706, y: 65.62439}
+    - name: Topview_3
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 879
+        width: 181
+        height: 137
+      alignment: 9
+      pivot: {x: 0.32700747, y: 0.53265023}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.188354, y: 64.02692}
+        - {x: -59.188354, y: 55.026917}
+        - {x: -59.188354, y: -70.97308}
+        - {x: -58.188354, y: -72.97308}
+        - {x: 121.811646, y: -72.97308}
+        - {x: 121.811646, y: -10.9730835}
+        - {x: 59.811646, y: 64.02692}
+    - name: Topview_4
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 719
+        width: 183
+        height: 137
+      alignment: 9
+      pivot: {x: 0.33064413, y: 0.5256539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.507874, y: 64.98541}
+        - {x: -56.507874, y: 17.985413}
+        - {x: -60.507874, y: -17.014587}
+        - {x: -60.507874, y: -61.014587}
+        - {x: -38.507874, y: -72.01459}
+        - {x: 121.49213, y: -72.01459}
+        - {x: 122.49213, y: -71.01459}
+        - {x: 122.49213, y: -18.014587}
+        - {x: 33.492126, y: 64.98541}
+    - name: Topview_5
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 719
+        width: 181
+        height: 137
+      alignment: 9
+      pivot: {x: 0.32171193, y: 0.5233217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58.22986, y: 65.30493}
+        - {x: -58.22986, y: -67.69507}
+        - {x: -56.22986, y: -71.69507}
+        - {x: 122.77014, y: -71.69507}
+        - {x: 122.77014, y: 22.304932}
+        - {x: 55.77014, y: 65.30493}
+    - name: Topview_6
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 719
+        width: 182
+        height: 137
+      alignment: 9
+      pivot: {x: 0.31287226, y: 0.52306503}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.94275, y: 65.34009}
+        - {x: -56.94275, y: 20.340088}
+        - {x: -56.94275, y: -71.65991}
+        - {x: 115.05725, y: -71.65991}
+        - {x: 125.05725, y: -60.659912}
+        - {x: 125.05725, y: -38.659912}
+        - {x: 33.05725, y: 65.34009}
+    - name: Topview_7
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 719
+        width: 181
+        height: 137
+      alignment: 9
+      pivot: {x: 0.3591983, y: 0.52374756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53.985107, y: 51.246582}
+        - {x: 25.985107, y: 65.24658}
+        - {x: -17.014893, y: 65.24658}
+        - {x: -43.014893, y: 47.246582}
+        - {x: -65.01489, y: -9.753418}
+        - {x: -65.01489, y: -71.75342}
+        - {x: 104.98511, y: -71.75342}
+        - {x: 115.98511, y: -59.753418}
+        - {x: 115.98511, y: -37.753418}
+        - {x: 65.98511, y: -22.753418}
+    - name: Topview_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 559
+        width: 181
+        height: 137
+      alignment: 9
+      pivot: {x: 0.36532745, y: 0.5254182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66.12427, y: -41.9823}
+        - {x: -66.12427, y: -59.9823}
+        - {x: -45.124268, y: -71.9823}
+        - {x: 114.87573, y: -71.9823}
+        - {x: 114.87573, y: -3.9822998}
+        - {x: 84.87573, y: 65.0177}
+        - {x: -23.124268, y: 65.0177}
+        - {x: -45.124268, y: 54.0177}
+        - {x: -59.124268, y: -7.9823}
+    - name: Topview_9
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 559
+        width: 182
+        height: 137
+      alignment: 9
+      pivot: {x: 0.37973392, y: 0.5272337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.111572, y: 64.76898}
+        - {x: -69.11157, y: -1.2310181}
+        - {x: -69.11157, y: -72.23102}
+        - {x: 108.88843, y: -72.23102}
+        - {x: 112.88843, y: -65.23102}
+        - {x: 112.88843, y: -24.231018}
+        - {x: 52.888428, y: 64.76898}
+    - name: Topview_10
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 559
+        width: 183
+        height: 137
+      alignment: 9
+      pivot: {x: 0.3912647, y: 0.5254182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.39856, y: 65.0177}
+        - {x: -12.60144, y: 65.0177}
+        - {x: -42.60144, y: 50.0177}
+        - {x: -71.60144, y: -16.9823}
+        - {x: -71.60144, y: -66.9823}
+        - {x: -45.60144, y: -71.9823}
+        - {x: 103.39856, y: -71.9823}
+        - {x: 111.39856, y: -63.9823}
+        - {x: 111.39856, y: 3.0177002}
+        - {x: 56.39856, y: 53.0177}
+    - name: Topview_11
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 559
+        width: 183
+        height: 137
+      alignment: 9
+      pivot: {x: 0.38990557, y: 0.52360237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68.35272, y: -17.73352}
+        - {x: -71.35272, y: -30.73352}
+        - {x: -71.35272, y: -64.73352}
+        - {x: -59.352722, y: -71.73352}
+        - {x: 111.64728, y: -71.73352}
+        - {x: 111.64728, y: -8.7335205}
+        - {x: 73.64728, y: 65.26648}
+        - {x: -22.352722, y: 65.26648}
+        - {x: -37.352722, y: 61.26648}
+    - name: Topview_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 399
+        width: 182
+        height: 137
+      alignment: 9
+      pivot: {x: 0.38656726, y: 0.52360237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.35524, y: 65.26648}
+        - {x: -57.35524, y: 36.26648}
+        - {x: -70.35524, y: -11.7335205}
+        - {x: -70.35524, y: -70.73352}
+        - {x: -67.35524, y: -71.73352}
+        - {x: 111.64476, y: -71.73352}
+        - {x: 111.64476, y: -8.7335205}
+        - {x: 47.64476, y: 65.26648}
+    - name: Topview_13
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 399
+        width: 182
+        height: 137
+      alignment: 9
+      pivot: {x: 0.3879339, y: 0.52178687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 111.39603, y: -71.4848}
+        - {x: 111.39603, y: 3.5151978}
+        - {x: 93.39603, y: 65.5152}
+        - {x: -29.603973, y: 65.5152}
+        - {x: -70.60397, y: 44.515198}
+        - {x: -70.60397, y: -71.4848}
+    - name: Topview_14
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 399
+        width: 182
+        height: 137
+      alignment: 9
+      pivot: {x: 0.37700075, y: 0.52541804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.385864, y: 65.01773}
+        - {x: -25.614136, y: 65.01773}
+        - {x: -54.614136, y: 25.01773}
+        - {x: -68.614136, y: -23.98227}
+        - {x: -68.614136, y: -68.98227}
+        - {x: -44.614136, y: -71.98227}
+        - {x: 104.385864, y: -71.98227}
+        - {x: 113.385864, y: -64.98227}
+        - {x: 113.385864, y: -3.9822693}
+        - {x: 69.385864, y: 61.01773}
+    - name: Topview_15
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 399
+        width: 181
+        height: 137
+      alignment: 9
+      pivot: {x: 0.3749467, y: 0.52360237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59.134644, y: 52.26648}
+        - {x: 34.134644, y: 65.26648}
+        - {x: -45.865356, y: 65.26648}
+        - {x: -67.86536, y: 28.26648}
+        - {x: -67.86536, y: -71.73352}
+        - {x: 113.13464, y: -71.73352}
+        - {x: 113.13464, y: -43.73352}
+        - {x: 81.13464, y: -30.73352}
+    - name: Topview_16
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 239
+        width: 183
+        height: 137
+      alignment: 9
+      pivot: {x: 0.37359524, y: 0.53268033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68.36793, y: -39.977203}
+        - {x: -68.36793, y: -60.977203}
+        - {x: -35.367928, y: -72.9772}
+        - {x: 104.63207, y: -72.9772}
+        - {x: 114.63207, y: -69.9772}
+        - {x: 114.63207, y: -25.977203}
+        - {x: 86.63207, y: 13.022797}
+        - {x: 51.632072, y: 64.0228}
+        - {x: -34.367928, y: 64.0228}
+        - {x: -52.367928, y: 39.022797}
+    - name: Topview_17
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 239
+        width: 181
+        height: 137
+      alignment: 9
+      pivot: {x: 0.36532745, y: 0.52904916}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66.12427, y: -69.47974}
+        - {x: -52.124268, y: -72.47974}
+        - {x: 101.87573, y: -72.47974}
+        - {x: 114.87573, y: -61.479736}
+        - {x: 114.87573, y: 6.5202637}
+        - {x: 72.87573, y: 64.52026}
+        - {x: -33.124268, y: 64.52026}
+        - {x: -42.124268, y: 62.520264}
+        - {x: -66.12427, y: -14.479736}
+    - name: Topview_18
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 239
+        width: 183
+        height: 137
+      alignment: 9
+      pivot: {x: 0.36679927, y: 0.53086466}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66.12427, y: 64.271545}
+        - {x: -67.12427, y: 59.271545}
+        - {x: -67.12427, y: -72.728455}
+        - {x: 103.87573, y: -72.728455}
+        - {x: 115.87573, y: -65.728455}
+        - {x: 115.87573, y: -43.728455}
+        - {x: 56.875732, y: 64.271545}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -32,12 +32,15 @@ public class ControlNameInput : MonoBehaviour
     private List<char> notAllowedCharacters;
 
     [SerializeField]
-    private GameObject NameNotUnique;
+    private GameObject nameNotUnique;
+
+    [SerializeField]
+    private GameObject nameNotAllowed;
 
     private string playerName;
 
     void Awake() {
-        NameNotUnique.SetActive(false);
+        nameNotUnique.SetActive(false);
 
         if (GameObject.FindGameObjectWithTag("Data") != null)
             playerData = GameObject.FindGameObjectWithTag("Data").GetComponent<PlayerData>();
@@ -62,7 +65,8 @@ public class ControlNameInput : MonoBehaviour
 
         if (_input.Length > minNameLength && _input.Length < maxNameLength && CharactersCheck(_input))
         {
-            NameNotUnique.SetActive(false);
+            nameNotUnique.SetActive(false);
+            nameNotAllowed.SetActive(false);
 
             //save the input
             playerName = _input;
@@ -75,11 +79,23 @@ public class ControlNameInput : MonoBehaviour
         }
         else
         {
+            nameNotAllowed.SetActive(true);
             //the player can no longer interact with submit button to continue
             submitButton.interactable = false;
             //the player can no longer hit enter to continue
             StopCoroutine(WaitForEnter());
         }
+    }
+
+    void NameInputIsCorrect(string _name) {
+        //save the input
+        playerName = _name;
+
+        //the player can click the button to continue
+        submitButton.interactable = true;
+
+        //the player can hit enter to continue
+        StartCoroutine(WaitForEnter());
     }
 
     private IEnumerator WaitForEnter()
@@ -115,7 +131,7 @@ public class ControlNameInput : MonoBehaviour
         if (nameIsUnique)
             SaveName();
         else
-            NameNotUnique.SetActive(true);
+            nameNotUnique.SetActive(true);
     }
 
     private void SaveName() {

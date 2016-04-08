@@ -25,7 +25,6 @@ public class SaveLoadOptions : MonoBehaviour {
         if (PlayerPrefs.HasKey("EnableMusic"))
         {
             optionsData.EnableTutorial = System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableMusic"));
-            Debug.Log(System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableMusic")));
         }
             
     }

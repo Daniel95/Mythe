@@ -114,11 +114,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22456948, guid: e6f7d31a0df2ac14ca89e379512a009b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.5145528
       objectReference: {fileID: 0}
     - target: {fileID: 22456948, guid: e6f7d31a0df2ac14ca89e379512a009b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.85745865
       objectReference: {fileID: 0}
     - target: {fileID: 22456948, guid: e6f7d31a0df2ac14ca89e379512a009b, type: 2}
       propertyPath: m_RootOrder
@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2828a3708bcb9ab4bab2682e5763b936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counting: 1
 --- !u!114 &7772038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4f2826b4ce7f94c9e44649ebac9cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counting: 1
 --- !u!1 &252138615 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 132416, guid: e6f7d31a0df2ac14ca89e379512a009b, type: 2}
@@ -2036,7 +2038,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 590975deeb6182b4b868de2d0c715098, type: 3}
   - {fileID: 21300000, guid: e6992b3082adceb4182b63d2e335e38a, type: 3}
   - {fileID: 21300000, guid: 465f17e3624a14745b939328a0eb0c4f, type: 3}
-  - {fileID: 21300000, guid: f822989b5bf1a62438dd9eb122ad8f67, type: 3}
+  - {fileID: 21300000, guid: 9dbbce82fdabd7940b36bdcd5b872a44, type: 3}
   - {fileID: 21300000, guid: 2755d0b6f0b6d49b08c0f7741225770f, type: 3}
   - {fileID: 21300000, guid: 0597e77965a1c4b51b2d4e098e32bc30, type: 3}
   - {fileID: 21300000, guid: 56c69d3382c2ad448837261120fe3bef, type: 3}
@@ -2412,11 +2414,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22456948, guid: e6f7d31a0df2ac14ca89e379512a009b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.35432872
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22456948, guid: e6f7d31a0df2ac14ca89e379512a009b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.93512094
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22456948, guid: e6f7d31a0df2ac14ca89e379512a009b, type: 2}
       propertyPath: m_RootOrder

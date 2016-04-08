@@ -202,7 +202,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Distance: '
+  m_Text: 000000000
 --- !u!222 &20236480
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -225,8 +225,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -213, y: -1837.5}
-  m_SizeDelta: {x: 281, y: 165}
+  m_AnchoredPosition: {x: 13, y: -1837.5}
+  m_SizeDelta: {x: 733, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &27326665
 Prefab:
@@ -6657,8 +6657,8 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172, y: -746}
-  m_SizeDelta: {x: 545, y: 732}
+  m_AnchoredPosition: {x: -99, y: -746}
+  m_SizeDelta: {x: 691, y: 732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2093795138
 MonoBehaviour:

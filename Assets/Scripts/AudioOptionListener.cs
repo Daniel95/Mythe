@@ -5,7 +5,8 @@ public class AudioOptionListener : MonoBehaviour {
     private bool optionMusic;
     void OnEnable()
     {
-        optionMusic = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetMusic;
+        if (GameObject.FindGameObjectWithTag("Data"))
+            optionMusic = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetMusic;
         if(optionMusic)
         {
             GetComponent<AudioSource>().volume = 1;

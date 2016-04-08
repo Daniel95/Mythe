@@ -19,7 +19,8 @@ public class MouseInput : MonoBehaviour {
 		playerMovement = GetComponent<PlayerMovement>();
         targetStartPos = targetIcon.position;
 
-        targetEnabled = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetCursor;
+        if(GameObject.FindGameObjectWithTag("Data"))
+            targetEnabled = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetCursor;
     }
 
     void OnEnable() {

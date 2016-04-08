@@ -12,7 +12,7 @@ public class TutorialUnlocker : MonoBehaviour {
 
     public void StartTutorial()
     {
-        if (GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetTutorial)
+        if (GameObject.FindGameObjectWithTag("Data") && GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetTutorial)
         {
             StartCoroutine(ForceIntroChunks());
         }

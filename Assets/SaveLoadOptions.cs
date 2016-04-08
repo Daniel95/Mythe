@@ -22,6 +22,12 @@ public class SaveLoadOptions : MonoBehaviour {
             optionsData.EnableVibration = System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableVibration"));
         if (PlayerPrefs.HasKey("EnableTutorial"))
             optionsData.EnableTutorial = System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableTutorial"));
+        if (PlayerPrefs.HasKey("EnableMusic"))
+        {
+            optionsData.EnableTutorial = System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableMusic"));
+            Debug.Log(System.Convert.ToBoolean(PlayerPrefs.GetInt("EnableMusic")));
+        }
+            
     }
 
     public void SavePref(string _dataName, int _dataValue)

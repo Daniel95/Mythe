@@ -3911,6 +3911,7 @@ GameObject:
   - 224: {fileID: 1164408482}
   - 114: {fileID: 2094346090}
   - 82: {fileID: 1164408483}
+  - 114: {fileID: 1164408484}
   m_Layer: 5
   m_Name: Bar
   m_TagString: Untagged
@@ -4012,6 +4013,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1164408484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164408481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750332f43f3dfff469e7c9f210594d17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1228486596
 GameObject:
   m_ObjectHideFlags: 0
@@ -5854,7 +5866,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1927615738}
   - 212: {fileID: 1927615737}
-  - 114: {fileID: 1927615736}
   - 114: {fileID: 1927615739}
   - 114: {fileID: 1927615740}
   m_Layer: 0
@@ -5864,20 +5875,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1927615736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1927615735}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bcdd7a7d1b60ce439fa22238f1a72cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Xmin: -3
-  Xmax: 3
-  speed: 0.11
 --- !u!212 &1927615737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6090,7 +6087,7 @@ MonoBehaviour:
     Count: 40
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 112786, guid: 6d650149614fe7747a68de194eef0a48, type: 2}
+  - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0

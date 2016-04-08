@@ -34,12 +34,13 @@ public class TriggerDetection : MonoBehaviour {
     private bool playWaterSound;
 
 	private OptionsData optionsData;
-
+    private bool optionMusic;
 	void Start()
 	{
 		if (GameObject.FindGameObjectWithTag ("Data")) {
 			optionsData = GameObject.FindGameObjectWithTag ("Data").GetComponent<OptionsData> ();
-		}
+            optionMusic = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetMusic;
+        }
 	}
     void OnCollisionEnter2D(Collision2D _other) {
         HandleCollisionEnter(_other.gameObject);
@@ -58,10 +59,17 @@ public class TriggerDetection : MonoBehaviour {
 			if (interactableObject.IsEnabled) {
 				if (interactableObject.transform.CompareTag(Tags.shieldPowerUp)) {
 					powerUpHandler.AddShield ();
-					audioSource.PlayOneShot (pickupClip);
+                    if(optionMusic)
+                    {
+                        audioSource.PlayOneShot(pickupClip);
+                    }
+					
 				} else if (interactableObject.transform.CompareTag(Tags.magnetPowerUp)) {
 					powerUpHandler.AddMagnet ();
-					audioSource.PlayOneShot (pickupClip);
+                    if (optionMusic)
+                    {
+                        audioSource.PlayOneShot(pickupClip);
+                    }
 				}
 
 				//save the healthvalue of other
@@ -73,7 +81,11 @@ public class TriggerDetection : MonoBehaviour {
 					if(hurtable)
 					{
 					    healthBar.addValue (healthValue);
-					    audioSource.PlayOneShot (collisionClip);
+                        if(optionMusic)
+                        {
+                            audioSource.PlayOneShot(collisionClip);
+                        }
+					    
 					    //if the value is negative, shake the screen
 					    shake.StartShake ();
 						if (optionsData != null && optionsData.GetVibration) 
@@ -87,7 +99,7 @@ public class TriggerDetection : MonoBehaviour {
 					healthBar.addValue (healthValue);
 
                     //only play water pickup sound when supermodeIsOn is false
-                    if (!healthBar.SuperModeIsOn)
+                    if (!healthBar.SuperModeIsOn && optionMusic)
                     {
                         audioSource.pitch = Random.Range(0.75F, 1.25F);
                         audioSource.PlayOneShot(pickupClip);

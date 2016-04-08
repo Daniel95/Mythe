@@ -7,9 +7,10 @@ public class OptionsData : MonoBehaviour {
 
 	private bool enableTutorial = true;
 	private bool enableVibration = true;
-	private bool enableCursor = true;
+    private bool enableCursor = true;
+    private bool enableMusic = true;
 
-	public bool CheckIfChangingName() {
+    public bool CheckIfChangingName() {
 		if (changeName)
 		{
 			changeName = false;
@@ -39,16 +40,24 @@ public class OptionsData : MonoBehaviour {
 		}
 	}
 
-	public bool GetCursor
-	{
-		get
-		{
-			return enableCursor;
-		}
-	}
+    public bool GetCursor
+    {
+        get
+        {
+            return enableCursor;
+        }
+    }
+
+    public bool GetMusic
+    {
+        get
+        {
+            return enableMusic;
+        }
+    }
 
 
-	public bool EnableTutorial {
+    public bool EnableTutorial {
 		set { enableTutorial = value; }
 	}
 
@@ -56,7 +65,12 @@ public class OptionsData : MonoBehaviour {
 		set { enableVibration = value; }
 	}
 
-	public bool EnableCursor {
-		set { enableCursor = value; }
-	}
+    public bool EnableCursor
+    {
+        set { enableCursor = value; }
+    }
+    public bool EnableMusic
+    {
+        set { enableMusic = value; }
+    }
 }

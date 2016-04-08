@@ -13,12 +13,17 @@ public class OptionButtonCorrecter : MonoBehaviour {
 	[SerializeField]
 	private GameObject objectToDisableVibration;
 
-	[SerializeField]
-	private GameObject objectToEnableTutorial;
-	[SerializeField]
-	private GameObject objectToDisableTutorial;
+    [SerializeField]
+    private GameObject objectToEnableTutorial;
+    [SerializeField]
+    private GameObject objectToDisableTutorial;
 
-	private OptionsData optionsData;
+    [SerializeField]
+    private GameObject objectToEnableMusic;
+    [SerializeField]
+    private GameObject objectToDisableMusic;
+
+    private OptionsData optionsData;
 
 	void Start()
 	{
@@ -38,13 +43,20 @@ public class OptionButtonCorrecter : MonoBehaviour {
 			objectToDisableVibration.SetActive (false);
 			objectToEnableVibration.SetActive (true);
 		}
-		if (optionsData.GetTutorial==false) 
-		{
-			objectToDisableTutorial.SetActive (false);
-			objectToEnableTutorial.SetActive (true);
-		}
-			
-	}
+        if (optionsData.GetTutorial == false)
+        {
+            objectToDisableTutorial.SetActive(false);
+            objectToEnableTutorial.SetActive(true);
+        }
+
+        if (optionsData.GetMusic == false)
+        {
+            print("music = "+optionsData.GetMusic);
+            objectToDisableMusic.SetActive(false);
+            objectToEnableMusic.SetActive(true);
+        }
+
+    }
 
 
 }

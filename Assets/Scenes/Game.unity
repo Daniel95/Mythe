@@ -6068,7 +6068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Entries:
   - Prefab: {fileID: 140748, guid: 68efb57eece8d4342b703a07125b3d24, type: 2}
-    Count: 60
+    Count: 70
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 166584, guid: 0881819bc111e334c87719a35b5a616b, type: 2}
@@ -6084,11 +6084,11 @@ MonoBehaviour:
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 138260, guid: 2eadcda924d49eb40bdf353a684f22db, type: 2}
-    Count: 40
+    Count: 60
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 112786, guid: 530514e073bb2455289698d379a1a16f, type: 2}
-    Count: 50
+    Count: 75
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 153716, guid: 55cefc05158f86a44ad43daa3f52cbed, type: 2}
@@ -6096,7 +6096,7 @@ MonoBehaviour:
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 133724, guid: c2f57775dcf935d4a83548b912b91ec1, type: 2}
-    Count: 40
+    Count: 50
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 154608, guid: 9ac6003efc820b746999f1b588f5a735, type: 2}
@@ -6104,15 +6104,15 @@ MonoBehaviour:
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 186436, guid: b5209f77287fd40f2becf6703155e240, type: 2}
-    Count: 75
+    Count: 100
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 185132, guid: 181a7acd9c1604120adb1d4001a28fde, type: 2}
-    Count: 60
+    Count: 70
     pool: []
     objectsInPool: 0
   - Prefab: {fileID: 183566, guid: b4def554394c8924ba2e8d0150bc9976, type: 2}
-    Count: 60
+    Count: 70
     pool: []
     objectsInPool: 0
 --- !u!4 &2015117533
@@ -6162,6 +6162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSpeedIncrement: 0.00019
+  gameSpeedIncrementMultiplier: 0.999999
   startSpeed: 0.05
 --- !u!114 &2015117536
 MonoBehaviour:

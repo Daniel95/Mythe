@@ -31,16 +31,20 @@ public class TrailTriggerDetection : MonoBehaviour {
     {
 		if (_other.transform.CompareTag (Tags.obstacle)) 
 		{
-			if (triggerDetection.Hurtable) 
-			{
-				Destroy ();
-				triggerDetection.MakeUnhurtable();
-			}
+			if (triggerDetection.Hurtable)
+                Destroy();	
 		}
     }
 
     public void Destroy() {
-        if(!removed && !shielded) trailLengthHandler.RemoveTrailParts(numberInList, true);
+        if (!removed && !shielded)
+        {
+            //play the collision sound, but only the first time we have collision
+            if (triggerDetection.Hurtable)
+                triggerDetection.GetHitEffect();
+
+            trailLengthHandler.RemoveTrailParts(numberInList, true);
+        }  
     }
 
     public int NumberInList {

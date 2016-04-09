@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class AudioOptionListener : MonoBehaviour {
-    private bool optionMusic;
+
+    private bool optionMusic = true;
     void OnEnable()
     {
         if (GameObject.FindGameObjectWithTag("Data"))

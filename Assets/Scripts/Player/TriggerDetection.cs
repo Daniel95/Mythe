@@ -33,15 +33,17 @@ public class TriggerDetection : MonoBehaviour {
 
     private bool playWaterSound;
 
-	private OptionsData optionsData;
-    private bool optionMusic;
-	void Start()
+    private bool optionMusic = true;
+    private bool optionVibration = true;
+
+    void Start()
 	{
 		if (GameObject.FindGameObjectWithTag ("Data")) {
-			optionsData = GameObject.FindGameObjectWithTag ("Data").GetComponent<OptionsData> ();
             optionMusic = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetMusic;
+            optionVibration = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetVibration;
         }
 	}
+
     void OnCollisionEnter2D(Collision2D _other) {
         HandleCollisionEnter(_other.gameObject);
     }
@@ -81,18 +83,7 @@ public class TriggerDetection : MonoBehaviour {
 					if(hurtable)
 					{
 					    healthBar.addValue (healthValue);
-                        if(optionMusic)
-                        {
-                            audioSource.PlayOneShot(collisionClip);
-                        }
-					    
-					    //if the value is negative, shake the screen
-					    shake.StartShake ();
-						if (optionsData != null && optionsData.GetVibration) 
-						{
-							Handheld.Vibrate ();
-						}
-                        MakeUnhurtable();
+                        GetHitEffect();
 					}
 				} else if (healthValue > 0) { //if the value is positive, increment score
 					pickups.IncrementScore ();
@@ -110,6 +101,23 @@ public class TriggerDetection : MonoBehaviour {
 			}
         }
 
+    }
+
+    public void GetHitEffect() {
+        MakeUnhurtable();
+
+        if (optionMusic)
+        {
+            audioSource.PlayOneShot(collisionClip);
+        }
+
+        if (optionVibration)
+        {
+            Handheld.Vibrate();
+        }
+
+        //shake the screen
+        shake.StartShake();
     }
 
 	public void MakeUnhurtable()

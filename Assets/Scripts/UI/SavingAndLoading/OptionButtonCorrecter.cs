@@ -51,7 +51,6 @@ public class OptionButtonCorrecter : MonoBehaviour {
 
         if (optionsData.GetMusic == false)
         {
-            print("music = "+optionsData.GetMusic);
             objectToDisableMusic.SetActive(false);
             objectToEnableMusic.SetActive(true);
         }

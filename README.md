@@ -46,11 +46,14 @@ https://github.com/Daniel95/Mythe/blob/master/Assets/Scripts/Fade.cs
 
 -//- River:
 
-Trail Colors Old// enter script here...
+Trail Colors Old
+https://github.com/Daniel95/Mythe/blob/Sprint-2/Assets/Scripts/Player/RainbowEffect.cs
 
-Trail Spawning Old// enter script here...
+Trail Spawning Old
+https://github.com/Daniel95/Mythe/blob/sprint1/Assets/Scripts/Player/PlayerTrail.cs
 
-Player Movement Old// enter script here...
+Player Movement Old
+https://github.com/Daniel95/Mythe/blob/sprint1/Assets/Scripts/Player/PlayerMovement.cs
 
 -//- Everyone:
 https://github.com/Daniel95/Mythe/blob/master/Assets/Scripts/Pickups/InteractableObject.cs

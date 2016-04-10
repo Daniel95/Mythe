@@ -46,11 +46,7 @@ public class ChunkUnlocker : MonoBehaviour {
 
         "000000333333000000",
 		
-
-		
 		"000000203302000000",
-
-		
         };
 
     //after shield introduce chunk.

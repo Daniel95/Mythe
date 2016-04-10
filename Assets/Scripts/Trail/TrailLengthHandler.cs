@@ -13,6 +13,9 @@ public class TrailLengthHandler : MonoBehaviour {
     private HealthBar healthBar;
 
     [SerializeField]
+    private PlayerColor playerColor;
+
+    [SerializeField]
     private int trailMaxLength = 20;
 
     [SerializeField]
@@ -71,6 +74,7 @@ public class TrailLengthHandler : MonoBehaviour {
             {
                 spawnedObject.transform.position = trailMovement.TrailConnectPoint.position;
                 spawnedObject.GetComponent<RainbowEffect>().StartColor(1);
+                playerColor.FirstTrailRainbowEffect = spawnedObject.GetComponent<RainbowEffect>();
             }
             else
             {

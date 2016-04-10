@@ -11,6 +11,9 @@ public class RainbowEffect : MonoBehaviour {
     [SerializeField]
     private float superModeExtraSpeedMultiplier = 10;
 
+    [SerializeField]
+    private bool autoUpdateColor = true;
+
     private List<Vector3> colors = new List<Vector3>() {
         new Vector3(1,0,0),
         new Vector3(0.875f,0.125f,0),
@@ -60,21 +63,17 @@ public class RainbowEffect : MonoBehaviour {
 
     };
 
+    private Color currentColor;
+
     private Vector3 colorCodes;
 
     private Vector3 velocity;
 
-    [SerializeField]
     private int colorIndex = 1;
 
     private SpriteRenderer sprite;
 
     private Image image;
-
-    void Awake()
-    {
-
-    }
 
     void OnEnable() {
         if (GetComponent<SpriteRenderer>() != null)
@@ -91,18 +90,18 @@ public class RainbowEffect : MonoBehaviour {
 
     IEnumerator UpdateColor()
     {
-        while (true)
+        while (autoUpdateColor)
         {
-            sprite.color = GetColor();
+            sprite.color = currentColor = GetColor();
             yield return new WaitForFixedUpdate();
         }
     }
 
     IEnumerator UpdateColorUI()
     {
-        while (true)
+        while (autoUpdateColor)
         {
-            image.color = GetColor();
+            image.color = currentColor = GetColor();
             yield return new WaitForFixedUpdate();
         }
     }
@@ -133,5 +132,9 @@ public class RainbowEffect : MonoBehaviour {
 
     public int ColorIndex {
         get { return colorIndex; }
+    }
+
+    public Color CurrentColor {
+        get { return currentColor; }
     }
 }

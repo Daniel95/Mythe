@@ -21,7 +21,6 @@ public class FinishGameController : MonoBehaviour {
 	[SerializeField]
 	private GameObject pauseButton;
 
-
     [SerializeField]
     private PlayerDistance plrDistance;
 
@@ -50,7 +49,11 @@ public class FinishGameController : MonoBehaviour {
             _score.Counting = false;
         }
 
-        //Handheld.Vibrate();
+        if (GameObject.FindGameObjectWithTag("Data"))
+        {
+            if (GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetVibration)
+                Handheld.Vibrate();
+        }
 
         gameoverScreen.SetActive(true);
         healthBar.SetActive(false);

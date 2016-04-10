@@ -246,7 +246,9 @@ MonoBehaviour:
   pickups: {fileID: 0}
   shake: {fileID: 0}
   powerUpHandler: {fileID: 11447412}
-  hurtableCooldown: 0.12
+  hurtableCooldown: 0.16
+  maxExtraColorMovement: 8
+  maxColorMovementDivider: 25
 --- !u!114 &11477792
 MonoBehaviour:
   m_ObjectHideFlags: 1

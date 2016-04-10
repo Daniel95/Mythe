@@ -35,7 +35,7 @@ public class ShieldBubbleScript : MonoBehaviour {
 
 	void OnEnable()
 	{
-		StartCoroutine ("WaitAndMakeDestroyable",duration);
+		StartCoroutine ("WaitAndMakeDestroyable", duration / GameSpeed.SpeedMultiplier);
 	}
 
 	void FixedUpdate () {
@@ -64,7 +64,7 @@ public class ShieldBubbleScript : MonoBehaviour {
     public void ResetPowerup() {
         
 		StopCoroutine("WaitAndMakeDestroyable");
-		StartCoroutine ("WaitAndMakeDestroyable",duration);
+		StartCoroutine ("WaitAndMakeDestroyable", duration / GameSpeed.SpeedMultiplier);
         shouldIShrink = false;
         transform.localScale = startVector;
 		gameObject.SetActive(false);

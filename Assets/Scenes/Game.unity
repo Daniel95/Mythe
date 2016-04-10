@@ -130,7 +130,11 @@ Prefab:
       objectReference: {fileID: 1871364907}
     - target: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815354, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
+      propertyPath: m_Radius
+      value: 4.7935066
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
@@ -2820,7 +2824,7 @@ GameObject:
   - 114: {fileID: 752591566}
   - 114: {fileID: 752591568}
   m_Layer: 0
-  m_Name: Trail
+  m_Name: TrailController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4189,6 +4193,10 @@ Prefab:
       propertyPath: pickupClip
       value: 
       objectReference: {fileID: 8300000, guid: bf6ab8570c396417bb452245e554afab, type: 3}
+    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: maxColorMovementDivider
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -6162,7 +6170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSpeedIncrement: 0.00019
-  gameSpeedIncrementMultiplier: 0.999999
+  gameSpeedIncrementMultiplier: 0.999985
   startSpeed: 0.05
 --- !u!114 &2015117536
 MonoBehaviour:
@@ -6756,5 +6764,5 @@ MonoBehaviour:
   gameOverAudioClip: {fileID: 8300000, guid: 0f1153822ffd2472cbca6d85fd0ca381, type: 3}
   superModeAudioClip: {fileID: 8300000, guid: b19a3a0dc3464bc43bcc12ee2e398798, type: 3}
   normalMusic: {fileID: 8300000, guid: 1363a3652ed3e0840ab4f1f303241cda, type: 3}
-  supermodeSoundFadeSpeed: 0.0045
+  supermodeSoundFadeSpeed: 0.005
   groundParticles: {fileID: 19813306, guid: f3fd78a8b379e5446a14568ce39a87d9, type: 2}

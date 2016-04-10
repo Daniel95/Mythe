@@ -36,13 +36,25 @@ public class TriggerDetection : MonoBehaviour {
     private bool optionMusic = true;
     private bool optionVibration = true;
 
+    [SerializeField]
+    private float maxExtraColorMovement = 10;
+
+    [SerializeField]
+    private float maxColorMovementDivider = 100;
+
+    private float extraColorMovementDecrement;
+
+    public static float extraColorMovement;
+
     void Start()
 	{
 		if (GameObject.FindGameObjectWithTag ("Data")) {
             optionMusic = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetMusic;
             optionVibration = GameObject.FindGameObjectWithTag("Data").GetComponent<OptionsData>().GetVibration;
         }
-	}
+
+        extraColorMovementDecrement = maxExtraColorMovement / maxColorMovementDivider;
+    }
 
     void OnCollisionEnter2D(Collision2D _other) {
         HandleCollisionEnter(_other.gameObject);
@@ -94,6 +106,7 @@ public class TriggerDetection : MonoBehaviour {
                     {
                         audioSource.pitch = Random.Range(0.75F, 1.25F);
                         audioSource.PlayOneShot(pickupClip);
+                        StartCoroutine(ExtraColorMovement());
                     }
 				}
 				//let the _other object know that it has been touched so it can play its animation
@@ -126,13 +139,23 @@ public class TriggerDetection : MonoBehaviour {
 		StartCoroutine (HurtableCoolDownTimer (hurtableCooldown));
 	}
 
-	IEnumerator HurtableCoolDownTimer(float cooldown)
+	IEnumerator HurtableCoolDownTimer(float _cooldown)
 	{
-		yield return new WaitForSeconds (cooldown);
+		yield return new WaitForSeconds (_cooldown);
 		hurtable = true;
 	}
 
-	public bool Hurtable {
+    IEnumerator ExtraColorMovement()
+    {
+        extraColorMovement = maxExtraColorMovement;
+        float speedMultiplier = GameSpeed.SpeedMultiplier;
+        while (extraColorMovement > 0) {
+            extraColorMovement -= extraColorMovementDecrement * speedMultiplier;
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    public bool Hurtable {
 		get { return hurtable; }
 	}
 }

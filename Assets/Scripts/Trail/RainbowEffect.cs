@@ -107,7 +107,7 @@ public class RainbowEffect : MonoBehaviour {
             nextColorIndex = 0;
 
         //our next color in vector3
-        colorCodes = Vector3.SmoothDamp(colorCodes, colors[nextColorIndex], ref velocity, fadeTime / GameSpeed.SpeedMultiplier - (GameSpeed.ExtraSpeed * superModeExtraSpeedMultiplier));
+        colorCodes = Vector3.SmoothDamp(colorCodes, colors[nextColorIndex], ref velocity, fadeTime / GameSpeed.SpeedMultiplier - (GameSpeed.ExtraSpeed * superModeExtraSpeedMultiplier) - TriggerDetection.extraColorMovement);
 
         //when we should go to the next color
         if (Vector3.Distance(colorCodes, colors[nextColorIndex]) < 0.1f) {

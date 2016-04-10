@@ -12,7 +12,7 @@ public class MagnetAttractor : MonoBehaviour {
 
 	void OnEnable()
 	{
-		StartCoroutine ("WaitAndDestroy",duration);
+		StartCoroutine ("WaitAndDestroy", duration / GameSpeed.SpeedMultiplier);
 	}
 
 	void Update () 
@@ -23,7 +23,7 @@ public class MagnetAttractor : MonoBehaviour {
     public void ResetPowerup()
     {
 		StopCoroutine("WaitAndDestroy");
-        StartCoroutine("WaitAndDestroy",duration);
+        StartCoroutine("WaitAndDestroy",duration / GameSpeed.SpeedMultiplier);
     }
 
     IEnumerator WaitAndDestroy(float waitTime) {

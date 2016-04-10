@@ -6684,7 +6684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunkHolder: {fileID: 2015117536}
   playerDistance: {fileID: 702655280}
-  unlockSeconds: 080000000f0000001e000000230000002800000032000000
+  unlockSeconds: 0a000000140000001e00000028000000320000003c000000
 --- !u!114 &2015937163 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11471618, guid: 1c9f8b7a3cab7074a9a53b3b9c38ee18,

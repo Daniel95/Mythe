@@ -1151,8 +1151,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 678}
-  m_SizeDelta: {x: 1030, y: 684}
+  m_AnchoredPosition: {x: 16, y: 606}
+  m_SizeDelta: {x: 1030, y: 827}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &203720761
 MonoBehaviour:
@@ -1202,9 +1202,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Goal: \ntry to go as far as you can by using your finger to point where
-    the snake must go.\n\nColect:          to get health.\n\n\nAvoid:\n\nWhen your
-    health is full you go into the sky.\n\n"
+  m_Text: "Goal: \n\ntry to go as far as you can by moving the serpent with your finger.\n\nColect:
+    \         to get health.\n\n\nAvoid:\n\nWhen your health is full you will fly
+    into the sky.\n\n"
 --- !u!222 &203720763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3441,7 +3441,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: 591}
+  m_AnchoredPosition: {x: -84, y: 500}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &826560484
@@ -3820,7 +3820,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -238, y: 591}
+  m_AnchoredPosition: {x: -212, y: 500}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949368710
@@ -5182,7 +5182,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207, y: 736}
+  m_AnchoredPosition: {x: -167, y: 659}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1636959186

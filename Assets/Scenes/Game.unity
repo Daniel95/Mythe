@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeTime: 0.5
   superModeExtraSpeedMultiplier: 75
-  colorIndex: 1
+  autoUpdateColor: 1
 --- !u!114 &226399553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3164,6 +3164,7 @@ MonoBehaviour:
   trailPoolName: Trail
   trailMovement: {fileID: 752591566}
   healthBar: {fileID: 2094346090}
+  playerColor: {fileID: 1871364899}
   trailMaxLength: 25
   trailMinCutLength: 3
 --- !u!4 &754954601 stripped
@@ -4597,6 +4598,10 @@ Prefab:
       propertyPath: targetIcon
       value: 
       objectReference: {fileID: 1266503882}
+    - target: {fileID: 11422806, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: autoUpdateColor
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -5237,7 +5242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1665491610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6074,6 +6079,17 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1309491408}
   m_Script: {fileID: 11500000, guid: 682fc7139ba6342609c5195e73ea0212, type: 3}
+--- !u!114 &1871364899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871364897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b655e7d7a981b6240b3b478fa9cd2b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1871364904 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be,

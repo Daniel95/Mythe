@@ -4,13 +4,14 @@ public class GameSpeed : MonoBehaviour
 {
 
     [SerializeField]
-    private float gameSpeedIncrement = 0.0001f;
+    private float gameSpeedIncrement = 0.00021f;
 
     [SerializeField]
-    private float gameSpeedIncrementMultiplier = 0.9995f;
+    private float gameSpeedIncrementMultiplier = 0.99993f;
 
     [SerializeField]
-    private float startSpeed = 0.04f;
+    private float startSpeed = 0.05f;
+
     [SerializeField]
     private static float extraSpeed = 0f;
     private static float speed;

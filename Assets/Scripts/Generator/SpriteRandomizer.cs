@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpriteRandomiser : MonoBehaviour {
+public class SpriteRandomizer : MonoBehaviour {
 
 	[SerializeField]
 	private Sprite[] spriteArray;
@@ -9,9 +9,13 @@ public class SpriteRandomiser : MonoBehaviour {
 	void Awake () {
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 	}
-	
+
+    public void Randomize() {
+        spriteRenderer.sprite = spriteArray[Random.Range(0, spriteArray.Length)];
+    }
+
 	void OnEnable()
 	{
-		spriteRenderer.sprite = spriteArray[Random.Range(0, spriteArray.Length)];
+        Randomize();
 	}
 }

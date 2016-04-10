@@ -9,7 +9,7 @@ public class RainbowEffect : MonoBehaviour {
     private float fadeTime = 0.5f;
 
     [SerializeField]
-    private int superModeExtraSpeedMultiplier = 10;
+    private float superModeExtraSpeedMultiplier = 10;
 
     private List<Vector3> colors = new List<Vector3>() {
         new Vector3(1,0,0),
@@ -67,30 +67,44 @@ public class RainbowEffect : MonoBehaviour {
     [SerializeField]
     private int colorIndex = 1;
 
-    private bool isUI;
-
     private SpriteRenderer sprite;
 
     private Image image;
 
     void Awake()
     {
+
+    }
+
+    void OnEnable() {
         if (GetComponent<SpriteRenderer>() != null)
+        {
             sprite = GetComponent<SpriteRenderer>();
+            StartCoroutine(UpdateColor());
+        }
         else
         {
-            isUI = true;
             image = GetComponent<Image>();
+            StartCoroutine(UpdateColorUI());
         }
     }
-    
-    void FixedUpdate () {
-        
-        if (!isUI)
+
+    IEnumerator UpdateColor()
+    {
+        while (true)
+        {
             sprite.color = GetColor();
-        else
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    IEnumerator UpdateColorUI()
+    {
+        while (true)
+        {
             image.color = GetColor();
-            
+            yield return new WaitForFixedUpdate();
+        }
     }
 
     public void StartColor(int _attachedTrailColorIndex) {
@@ -107,10 +121,10 @@ public class RainbowEffect : MonoBehaviour {
             nextColorIndex = 0;
 
         //our next color in vector3
-        colorCodes = Vector3.SmoothDamp(colorCodes, colors[nextColorIndex], ref velocity, fadeTime / GameSpeed.SpeedMultiplier - (GameSpeed.ExtraSpeed * superModeExtraSpeedMultiplier) - TriggerDetection.extraColorMovement);
+        colorCodes = Vector3.SmoothDamp(colorCodes, colors[nextColorIndex], ref velocity, fadeTime / (GameSpeed.SpeedMultiplier + (GameSpeed.ExtraSpeed * superModeExtraSpeedMultiplier) + TriggerDetection.extraColorMovement));
 
         //when we should go to the next color
-        if (Vector3.Distance(colorCodes, colors[nextColorIndex]) < 0.1f) {
+        if (Vector3.Distance(colorCodes, colors[nextColorIndex]) < 0.01f) {
             colorIndex = nextColorIndex;
         }
 

@@ -37,10 +37,10 @@ public class TriggerDetection : MonoBehaviour {
     private bool optionVibration = true;
 
     [SerializeField]
-    private float maxExtraColorMovement = 10;
+    private float maxExtraColorMovement = 8;
 
     [SerializeField]
-    private float maxColorMovementDivider = 100;
+    private float maxColorMovementDivider = 25;
 
     private float extraColorMovementDecrement;
 
@@ -148,11 +148,11 @@ public class TriggerDetection : MonoBehaviour {
     IEnumerator ExtraColorMovement()
     {
         extraColorMovement = maxExtraColorMovement;
-        float speedMultiplier = GameSpeed.SpeedMultiplier;
         while (extraColorMovement > 0) {
-            extraColorMovement -= extraColorMovementDecrement * speedMultiplier;
+            extraColorMovement -= extraColorMovementDecrement * GameSpeed.SpeedMultiplier;
             yield return new WaitForFixedUpdate();
         }
+        extraColorMovement = 0;
     }
 
     public bool Hurtable {

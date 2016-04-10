@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 0.35
-  superModeExtraSpeedMultiplier: 10
+  superModeExtraSpeedMultiplier: 75
   colorIndex: 1
 --- !u!114 &11447412
 MonoBehaviour:
@@ -247,8 +247,8 @@ MonoBehaviour:
   shake: {fileID: 0}
   powerUpHandler: {fileID: 11447412}
   hurtableCooldown: 0.16
-  maxExtraColorMovement: 8
-  maxColorMovementDivider: 25
+  maxExtraColorMovement: 35
+  maxColorMovementDivider: 35
 --- !u!114 &11477792
 MonoBehaviour:
   m_ObjectHideFlags: 1

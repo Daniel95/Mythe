@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 0.35
-  superModeExtraSpeedMultiplier: 10
+  superModeExtraSpeedMultiplier: 50
   colorIndex: 1
 --- !u!114 &11467024
 MonoBehaviour:
@@ -262,6 +262,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: fadeTime
       value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: superModeExtraSpeedMultiplier
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

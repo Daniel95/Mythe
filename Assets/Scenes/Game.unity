@@ -130,7 +130,7 @@ Prefab:
       objectReference: {fileID: 1871364907}
     - target: {fileID: 129284, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5815354, guid: b02dc371ed28f4aca852fe5b27585913, type: 2}
       propertyPath: m_Radius
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 0.5
-  superModeExtraSpeedMultiplier: 10
+  superModeExtraSpeedMultiplier: 75
   colorIndex: 1
 --- !u!114 &226399553
 MonoBehaviour:
@@ -4581,10 +4581,6 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2094346090}
-    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: targetIcon
-      value: 
-      objectReference: {fileID: 1266503882}
     - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
       propertyPath: healthBar
       value: 
@@ -4597,18 +4593,10 @@ Prefab:
       propertyPath: shake
       value: 
       objectReference: {fileID: 1712116973}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: collisionClip
+    - target: {fileID: 11478424, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
+      propertyPath: targetIcon
       value: 
-      objectReference: {fileID: 8300000, guid: 54f7784bf537f634f864e36b4d3a62da, type: 3}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: pickupClip
-      value: 
-      objectReference: {fileID: 8300000, guid: bf6ab8570c396417bb452245e554afab, type: 3}
-    - target: {fileID: 11466708, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
-      propertyPath: maxColorMovementDivider
-      value: 20
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1266503882}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51b958a45b8d0454b88b9129848b01be, type: 2}
   m_IsPrefabParent: 0
@@ -6654,8 +6642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d6c0d07aa4f342b374407a0d007a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeedIncrement: 0.00019
-  gameSpeedIncrementMultiplier: 0.999985
+  gameSpeedIncrement: 0.0002
+  gameSpeedIncrementMultiplier: 0.99997
   startSpeed: 0.05
 --- !u!114 &2015117536
 MonoBehaviour:
